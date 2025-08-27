@@ -169,36 +169,47 @@ export default function UrologiaRoboticaLeon() {
       </header>
 
       {/* Hero */}
-      <section className="relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-teal-800"></div>
-        <div className="relative mx-auto max-w-6xl px-4 py-20 text-white">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div>
-              <h1 className="text-3xl md:text-5xl font-bold leading-tight">Urología Robótica en León</h1>
-              <p className="mt-4 text-slate-200 text-lg">Atención integral y humanizada con tecnología avanzada.</p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Button className="bg-white text-slate-900" onClick={() => scrollToId("servicios")}>Ver servicios</Button>
-                <Button className="bg-teal-600 text-white hover:bg-teal-700" onClick={() => setAskClinicOpen(true)}>Agenda por WhatsApp</Button>
-              </div>
-              {/* Social buttons */}
-              <div className="mt-4 flex items-center gap-3">
-                <a href={LINKS.instagram} target="_blank" rel="noreferrer">
-                  <Button className="bg-white text-slate-900">Instagram</Button>
-                </a>
-                <a href={LINKS.facebook} target="_blank" rel="noreferrer">
-                  <Button className="bg-white text-slate-900">Facebook</Button>
-                </a>
-              </div>
-              <div className="mt-6 text-xs text-slate-300">
-                Cédulas: C.P. 8860892 (U. La Salle) • C.E. 12465195 (UNAM) • Certificado por CONAMEU
-              </div>
-            </div>
-            <div className="h-72 md:h-80 rounded-2xl bg-white/10 backdrop-blur flex items-center justify-center">
-              <span className="text-white/70">[Foto profesional / Logo]</span>
-            </div>
-          </div>
+{/* Hero */}
+<section className="relative">
+  <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-teal-800"></div>
+  <div className="relative mx-auto max-w-6xl px-4 py-20 text-white">
+    <div className="grid md:grid-cols-2 gap-10 items-center">
+      {/* Columna izquierda: título, CTA, redes, cédulas */}
+      <div>
+        <h1 className="text-3xl md:text-5xl font-bold leading-tight">Urología Robótica en León</h1>
+        <p className="mt-4 text-slate-200 text-lg">Atención integral y humanizada con tecnología avanzada.</p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Button className="bg-white text-slate-900" onClick={() => scrollToId("servicios")}>Ver servicios</Button>
+          <Button className="bg-teal-600 text-white hover:bg-teal-700" onClick={() => setAskClinicOpen(true)}>Agenda por WhatsApp</Button>
         </div>
-      </section>
+        {/* Social buttons */}
+        <div className="mt-4 flex items-center gap-3">
+          <a href={LINKS.instagram} target="_blank" rel="noreferrer">
+            <Button className="bg-white text-slate-900">Instagram</Button>
+          </a>
+          <a href={LINKS.facebook} target="_blank" rel="noreferrer">
+            <Button className="bg-white text-slate-900">Facebook</Button>
+          </a>
+        </div>
+        <div className="mt-6 text-xs text-slate-300">
+          Cédulas: C.P. 8860892 (U. La Salle) • C.E. 12465195 (UNAM) • Certificado por CONAMEU
+        </div>
+      </div>
+
+      {/* Columna derecha: foto */}
+      <div className="h-72 md:h-80 rounded-2xl overflow-hidden relative">
+        <NextImage
+          src="/foto-dr-alejandro.jpg"
+          alt="Foto del Dr. Alejandro Quiroz Compeán"
+          fill
+          priority
+          className="object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Servicios */}
       <section id="servicios" className="mx-auto max-w-6xl px-4 py-16 scroll-mt-24">
