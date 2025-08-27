@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useMemo, useState } from "react";
+import NextImage from "next/image";
 
 // === Utility: smooth scroll ===
 const scrollToId = (id: string) => {
@@ -115,25 +116,50 @@ export default function UrologiaRoboticaLeon() {
     <div className="min-h-screen bg-slate-50 text-slate-800">
       {/* Header */}
       <header className="sticky top-0 z-50 backdrop-blur bg-white/80 border-b border-slate-200">
-        <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-full bg-teal-600/90" />
-            <div className="leading-tight">
-              <p className="font-semibold">Dr. Alejandro Quiroz Compeán</p>
-              <p className="text-sm text-slate-500">Urología Oncológica • Cirugía Robótica</p>
-            </div>
-          </div>
+        <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+<div className="flex items-center gap-2 md:gap-3 shrink-0">
+  {/* Logo clicable */}
+  <button
+    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+    aria-label="Ir al inicio"
+    className="relative h-16 w-48 md:h-20 md:w-56"
+    style={{ lineHeight: 0 }}
+  >
+    <NextImage
+      src="/logo-aq.png"
+      alt="Logo del Dr. Alejandro Quiroz Compeán"
+      fill
+      sizes="(min-width: 768px) 224px, 192px"
+      priority
+      className="object-contain"
+    />
+  </button>
 
-          <nav className="hidden md:flex items-center gap-6">
-            {NAV.map((n) => (
-              <button key={n.id} onClick={() => scrollToId(n.id)} className="text-sm text-slate-600 hover:text-slate-900">
-                {n.label}
-              </button>
-            ))}
-            <Button className="bg-teal-700 text-white hover:bg-teal-800" onClick={() => setAskClinicOpen(true)}>
-              Agenda tu cita
-            </Button>
-          </nav>
+  {/* Texto */}
+  <div className="leading-tight">
+    <p className="font-semibold whitespace-nowrap">Dr. Alejandro Quiroz Compeán</p>
+    {/* En móvil ocultamos la segunda línea para liberar espacio */}
+    <p className="hidden sm:block text-xs md:text-sm text-slate-500 whitespace-nowrap">
+      Urología Oncológica • Cirugía Robótica
+    </p>
+  </div>
+</div>
+
+
+<nav className="hidden md:flex items-center gap-4">
+  {NAV.map((n) => (
+    <button
+      key={n.id}
+      onClick={() => scrollToId(n.id)}
+      className="text-[13px] md:text-sm text-slate-600 hover:text-slate-900"
+    >
+      {n.label}
+    </button>
+  ))}
+  <Button className="ml-2 bg-teal-700 text-white hover:bg-teal-800" onClick={() => setAskClinicOpen(true)}>
+    Agenda tu cita
+  </Button>
+</nav>
 
           {/* Mobile */}
           <div className="md:hidden">
