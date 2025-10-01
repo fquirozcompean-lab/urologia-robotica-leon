@@ -97,7 +97,7 @@ export default function UrologiaRoboticaLeon() {
       { title: "Infecciones de transmisión sexual", desc: "Diagnóstico confidencial, tratamiento y seguimiento." },
       { title: "Disfunción eréctil", desc: "Alternativas terapéuticas basadas en evidencia." },
       { title: "Consulta externa", desc: "Valoración clínica, interpretación de estudios y plan individualizado." },
-      { title: "Atención de urgencias 24/7", desc: "Disponibilidad para eventos urológicos agudos." },
+      { title: "Atención de urgencias", desc: "Disponibilidad para eventos urológicos agudos." },
     ],
     []
   );
@@ -107,7 +107,7 @@ export default function UrologiaRoboticaLeon() {
     { q: "¿Qué incluye la consulta?", a: "Interrogatorio, exploración física, diagnóstico de presunción y receta acorde al caso." },
     { q: "¿Cuándo está indicada la cirugía robótica?", a: "En cáncer de próstata, vejiga o riñón, donde se busca mayor precisión y menor invasión." },
     { q: "¿Diferencias entre cirugía robótica y laparoscópica?", a: "La robótica ofrece visión 3D, mayor precisión y ergonomía; menos sangrado y recuperación rápida." },
-    { q: "¿Atienden urgencias urológicas?", a: "Sí, hay disponibilidad 24/7. Use el botón ‘Agenda tu cita’." },
+    { q: "¿Atienden urgencias urológicas?", a: "Sí, tenemos atención de urgencias. Use el botón ‘Agenda tu cita’." },
     { q: "¿Qué estudios llevo a la primera consulta?", a: "Laboratorios recientes, estudios de imagen y reportes previos." },
     { q: "¿Acepta seguros médicos?", a: "Se atienden pacientes privados y con aseguradoras (confirmar cobertura)." },
   ];
