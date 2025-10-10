@@ -300,7 +300,7 @@ export default function UrologiaRoboticaLeon() {
           <Card>
             <h3 className="font-semibold">Christus Muguerza Altagracia</h3>
             <p className="text-sm text-slate-600 mt-1">
-              Consultorio 724 • Blvd. Jorge Verbits Campero 761<br />Fracc. Cañada Alfaro, 37238
+              Consultorio 724 • Blvd. Jorge Vertiz Campero 761<br />Fracc. Cañada Alfaro, 37238
             </p>
             <div className="mt-3 flex flex-wrap gap-2">
               <a href={MAPS.altagracia} target="_blank" rel="noreferrer">
