@@ -176,11 +176,22 @@ export default function UrologiaRoboticaLeon() {
     <div className="grid md:grid-cols-2 gap-10 items-center">
       {/* Columna izquierda: título, CTA, redes, cédulas */}
       <div>
-        <h1 className="text-3xl md:text-5xl font-bold leading-tight">Urología Robótica en León</h1>
+        <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+  Cirugía Robótica Avanzada en León, Guanajuato 🚀
+</h1>
+
         <p className="mt-4 text-slate-200 text-lg">Atención integral y humanizada con tecnología avanzada.</p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Button className="bg-white text-slate-900" onClick={() => scrollToId("servicios")}>Ver servicios</Button>
-          <Button className="bg-teal-600 text-white hover:bg-teal-700" onClick={() => setAskClinicOpen(true)}>Agenda por WhatsApp</Button>
+          <a
+  href="https://wa.me/524776330492?text=Hola%20Dr.%20Quiroz%2C%20quiero%20agendar%20una%20consulta."
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button className="bg-teal-600 text-white hover:bg-teal-700">
+    Agenda por WhatsApp
+  </Button>
+</a>
         </div>
         {/* Social buttons */}
         <div className="mt-4 flex items-center gap-3">
