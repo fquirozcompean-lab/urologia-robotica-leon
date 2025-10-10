@@ -8,8 +8,7 @@ export const metadata: Metadata = {
     "Atención integral y humanizada con tecnología avanzada. Dr. Alejandro Quiroz Compeán, especialista en Urología Oncológica y Cirugía Robótica.",
   openGraph: {
     title: "Urología Robótica León | Dr. Alejandro Quiroz Compeán",
-    description:
-      "Cirugía Robótica y Urología Oncológica en León, Gto.",
+    description: "Cirugía Robótica y Urología Oncológica en León, Gto.",
     url: "https://urologiaroboticaleon.com",
     siteName: "Urología Robótica León",
     images: [
@@ -26,14 +25,13 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Urología Robótica León",
-    description:
-      "Cirugía Robótica y Urología Oncológica en León, Gto.",
+    description: "Cirugía Robótica y Urología Oncológica en León, Gto.",
     images: ["/og-image.jpg"], // coloca este archivo en /public
   },
   icons: {
-    icon: "/favicon.ico",      // coloca este archivo en /public
+    icon: "/favicon.ico", // coloca este archivo en /public
     shortcut: "/favicon.ico",
-    apple: "/icon-512.png",    // opcional: ícono grande en /public
+    apple: "/icon-512.png", // opcional: ícono grande en /public
   },
 };
 
@@ -48,14 +46,18 @@ export default function RootLayout({
         {/* Schema.org JSON-LD para SEO (Physician) */}
         <script
           type="application/ld+json"
-          // Ajusta las URLs/valores si cambian
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Physician",
               name: "Dr. Alejandro Quiroz Compeán",
-              image: "https://urologiaroboticaleon.com/foto-dr-alejandro.jpg", // asegúrate de tener esta imagen en /public
-              medicalSpecialty: ["Urology", "Oncology", "Robotic Surgery"],
+              image:
+                "https://urologiaroboticaleon.com/foto-dr-alejandro.jpg",
+              medicalSpecialty: [
+                "Urology",
+                "Oncology",
+                "Robotic Surgery",
+              ],
               url: "https://urologiaroboticaleon.com",
               sameAs: [
                 "https://www.instagram.com/urologo.alejandroquiroz/",
@@ -72,6 +74,22 @@ export default function RootLayout({
                 addressCountry: "MX",
               },
             }),
+          }}
+        />
+
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-FFEFH848TS"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-FFEFH848TS');
+            `,
           }}
         />
       </head>
