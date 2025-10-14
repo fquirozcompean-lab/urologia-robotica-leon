@@ -171,7 +171,7 @@ export default function UrologiaRoboticaLeon() {
       {/* Hero */}
 {/* Hero */}
 <section className="relative">
-  <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-teal-800"></div>
+<div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-indigo-700 to-teal-600"></div>
   <div className="relative mx-auto max-w-6xl px-4 py-20 text-white">
     <div className="grid md:grid-cols-2 gap-10 items-center">
       {/* Columna izquierda: título, CTA, redes, cédulas */}
@@ -182,17 +182,36 @@ export default function UrologiaRoboticaLeon() {
 
         <p className="mt-4 text-slate-200 text-lg">Atención integral y humanizada con tecnología avanzada.</p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Button className="bg-white text-slate-900" onClick={() => scrollToId("servicios")}>Ver servicios</Button>
-          <a
-  href="https://wa.me/524776330492?text=Hola%20Dr.%20Quiroz%2C%20quiero%20agendar%20una%20consulta."
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <Button className="bg-teal-600 text-white hover:bg-teal-700">
-    Agenda por WhatsApp
+  <Button
+    className="bg-white text-slate-900"
+    onClick={() => scrollToId("servicios")}
+  >
+    Ver servicios
   </Button>
-</a>
-        </div>
+
+  {/* Botón de WhatsApp */}
+  <a
+    href="https://wa.me/524776390492?text=Hola%20Dr.%20Quiroz%2C%20quiero%20agendar%20una%20consulta."
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button className="bg-teal-600 text-white hover:bg-teal-700">
+      Agenda por WhatsApp
+    </Button>
+  </a>
+
+  {/* Botón de Doctoralia */}
+  <a
+    href="https://www.doctoralia.com.mx/alejandro-quiroz-compean/urologo/leon"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button className="bg-emerald-600 text-white hover:bg-emerald-700">
+      Agenda por Doctoralia
+    </Button>
+  </a>
+</div>
+
         {/* Social buttons */}
         <div className="mt-4 flex items-center gap-3">
           <a href={LINKS.instagram} target="_blank" rel="noreferrer">
