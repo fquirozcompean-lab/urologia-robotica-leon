@@ -19,11 +19,12 @@ const fadeUp = {
 // === COMPONENTES BASE ===
 
 // ✅ Botón limpio y animado compatible con Vercel
+// ✅ Botón animado compatible con TypeScript y Vercel
 const Button = ({
   className = "",
   children,
   ...props
-}: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
+}: any) => (
   <motion.button
     whileHover={{ scale: 1.03 }}
     whileTap={{ scale: 0.97 }}
