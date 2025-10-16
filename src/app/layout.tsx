@@ -2,21 +2,25 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+// === Metadatos para SEO ===
 export const metadata: Metadata = {
-  title: "Urología Robótica León",
+  title:
+    "Dr. Alejandro Quiroz Compeán | Urólogo Oncólogo y Cirujano Robótico en León, Guanajuato",
   description:
-    "Atención integral y humanizada con tecnología avanzada. Dr. Alejandro Quiroz Compeán, especialista en Urología Oncológica y Cirugía Robótica.",
+    "Atención integral en urología oncológica y cirugía robótica avanzada. Especialista en cáncer de próstata, riñón y vejiga en León, Gto.",
   openGraph: {
-    title: "Urología Robótica León | Dr. Alejandro Quiroz Compeán",
-    description: "Cirugía Robótica y Urología Oncológica en León, Gto.",
+    title:
+      "Dr. Alejandro Quiroz Compeán | Urología Robótica León, Guanajuato",
+    description:
+      "Cirugía robótica y urología oncológica de alto nivel con atención personalizada y tecnología avanzada.",
     url: "https://urologiaroboticaleon.com",
     siteName: "Urología Robótica León",
     images: [
       {
-        url: "/og-image.jpg", // coloca este archivo en /public
+        url: "/og-image.jpg", // asegúrate que esté en /public
         width: 1200,
         height: 630,
-        alt: "Urología Robótica León",
+        alt: "Dr. Alejandro Quiroz Compeán | Urología Robótica León",
       },
     ],
     locale: "es_MX",
@@ -24,17 +28,19 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Urología Robótica León",
-    description: "Cirugía Robótica y Urología Oncológica en León, Gto.",
-    images: ["/og-image.jpg"], // coloca este archivo en /public
+    title: "Dr. Alejandro Quiroz Compeán | Urología Robótica León",
+    description:
+      "Atención integral en cirugía robótica y urología oncológica. León, Guanajuato.",
+    images: ["/og-image.jpg"],
   },
   icons: {
-    icon: "/favicon.ico", // coloca este archivo en /public
+    icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/icon-512.png", // opcional: ícono grande en /public
+    apple: "/icon-512.png",
   },
 };
 
+// === Layout principal ===
 export default function RootLayout({
   children,
 }: {
@@ -43,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        {/* Schema.org JSON-LD para SEO (Physician) */}
+        {/* === JSON-LD Schema.org (Physician) === */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -53,6 +59,8 @@ export default function RootLayout({
               name: "Dr. Alejandro Quiroz Compeán",
               image:
                 "https://urologiaroboticaleon.com/foto-dr-alejandro.jpg",
+              description:
+                "Urólogo oncólogo especializado en cirugía robótica en León, Guanajuato. Formación en INCMNSZ, INCAN y Hospital Albert Einstein.",
               medicalSpecialty: [
                 "Urology",
                 "Oncology",
@@ -69,15 +77,20 @@ export default function RootLayout({
               ],
               address: {
                 "@type": "PostalAddress",
+                streetAddress:
+                  "Av. Cerro Gordo 3110, Torre de Especialidades II, Consultorio 425",
                 addressLocality: "León",
                 addressRegion: "Guanajuato",
+                postalCode: "37160",
                 addressCountry: "MX",
               },
+              openingHours: "Mo-Fr 09:00-20:00",
+              telephone: "+52-477-561-7482",
             }),
           }}
         />
 
-        {/* Google tag (gtag.js) */}
+        {/* === Google Analytics (gtag.js) === */}
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-FFEFH848TS"
@@ -88,12 +101,18 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-FFEFH848TS');
+              gtag('config', 'G-FFEFH848TS', {
+                page_path: window.location.pathname,
+              });
             `,
           }}
         />
       </head>
-      <body>{children}</body>
+
+      {/* === Cuerpo del sitio === */}
+      <body className="antialiased bg-white text-slate-800 font-sans">
+        {children}
+      </body>
     </html>
   );
 }
