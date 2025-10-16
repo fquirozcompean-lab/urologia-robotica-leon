@@ -1,5 +1,6 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 // === Metadatos para SEO ===
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "Urología Robótica León",
     images: [
       {
-        url: "/og-image.jpg", // asegúrate que esté en /public
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Dr. Alejandro Quiroz Compeán | Urología Robótica León",
@@ -50,8 +51,10 @@ export default function RootLayout({
     <html lang="es">
       <head>
         {/* === JSON-LD Schema.org (Physician) === */}
-        <script
+        <Script
+          id="json-ld-physician"
           type="application/ld+json"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -61,11 +64,7 @@ export default function RootLayout({
                 "https://urologiaroboticaleon.com/foto-dr-alejandro.jpg",
               description:
                 "Urólogo oncólogo especializado en cirugía robótica en León, Guanajuato. Formación en INCMNSZ, INCAN y Hospital Albert Einstein.",
-              medicalSpecialty: [
-                "Urology",
-                "Oncology",
-                "Robotic Surgery",
-              ],
+              medicalSpecialty: ["Urology", "Oncology", "Robotic Surgery"],
               url: "https://urologiaroboticaleon.com",
               sameAs: [
                 "https://www.instagram.com/urologo.alejandroquiroz/",
@@ -91,22 +90,20 @@ export default function RootLayout({
         />
 
         {/* === Google Analytics (gtag.js) === */}
-        <script
-          async
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-FFEFH848TS"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-FFEFH848TS', {
-                page_path: window.location.pathname,
-              });
-            `,
-          }}
+          strategy="afterInteractive"
         />
+        <Script id="ga-setup" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-FFEFH848TS', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
       </head>
 
       {/* === Cuerpo del sitio === */}
@@ -116,3 +113,4 @@ export default function RootLayout({
     </html>
   );
 }
+
