@@ -27,8 +27,7 @@ const Button = ({ className = "", children, ...props }: ButtonProps) => (
     whileHover={{ scale: 1.03 }}
     whileTap={{ scale: 0.97 }}
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-{...(props as any)} // ← evita el conflicto MotionProps
-    {...(props as any)} // ← evita el conflicto MotionProps
+    {...(props as any)} // ← evita el conflicto MotionProps, tipo ignorado de forma segura
     className={
       "px-5 py-2 rounded-2xl font-medium shadow-sm transition-all hover:shadow-md active:scale-[0.98] " +
       className
@@ -37,6 +36,7 @@ const Button = ({ className = "", children, ...props }: ButtonProps) => (
     {children}
   </motion.button>
 );
+
 
 // === Tarjeta ===
 const Card = ({
