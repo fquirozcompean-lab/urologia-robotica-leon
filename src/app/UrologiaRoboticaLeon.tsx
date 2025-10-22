@@ -2,8 +2,7 @@
 
 import React, { useMemo, useState } from "react";
 import NextImage from "next/image";
-import { motion, type MotionProps } from "framer-motion";
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import { motion } from "framer-motion";
 
 // === Scroll suave ===
 const scrollToId = (id: string) => {
@@ -17,19 +16,17 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 };
 
-// === Botón animado compatible con Vercel ===
-interface ButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement>,
-    MotionProps {
+// === Botón sin conflicto de tipos ===
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   className?: string;
-  children: ReactNode;
-}
+  children: React.ReactNode;
+};
 
 const Button = ({ className = "", children, ...props }: ButtonProps) => (
   <motion.button
     whileHover={{ scale: 1.03 }}
     whileTap={{ scale: 0.97 }}
-    {...props}
+    {...(props as any)} // ← evita el conflicto MotionProps
     className={
       "px-5 py-2 rounded-2xl font-medium shadow-sm transition-all hover:shadow-md active:scale-[0.98] " +
       className
@@ -166,7 +163,12 @@ export default function UrologiaRoboticaLeon() {
       {/* === NAVBAR === */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="mx-auto max-w-6xl flex justify-between items-center px-4 py-3">
-          <h1 className="font-semibold text-slate-800">Urología Robótica León</h1>
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="font-semibold text-slate-800 hover:text-teal-600 transition"
+          >
+            Urología Robótica León
+          </button>
           <nav className="flex gap-4 text-sm">
             {sections.map((s) => (
               <button
@@ -242,7 +244,7 @@ export default function UrologiaRoboticaLeon() {
           </div>
         </section>
 
-        {/* === SOBRE MÍ === */}
+       {/* === SOBRE MÍ === */}
 <section id="sobre-mi" className="bg-white py-16">
   <div className="mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-10">
     <motion.div
