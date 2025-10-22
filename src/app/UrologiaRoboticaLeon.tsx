@@ -2,9 +2,10 @@
 
 import React, { useMemo, useState } from "react";
 import NextImage from "next/image";
-import { motion } from "framer-motion";
+import { motion, type MotionProps } from "framer-motion";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 
-// === Utilidad scroll suave ===
+// === Scroll suave ===
 const scrollToId = (id: string) => {
   const el = document.getElementById(id);
   if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -16,26 +17,29 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 };
 
-// === COMPONENTES BASE ===
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+// === Botón animado compatible con Vercel ===
+interface ButtonProps
+  extends ButtonHTMLAttributes<HTMLButtonElement>,
+    MotionProps {
   className?: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const Button = ({ className = "", children, ...props }: ButtonProps) => (
   <motion.button
     whileHover={{ scale: 1.03 }}
     whileTap={{ scale: 0.97 }}
+    {...props}
     className={
       "px-5 py-2 rounded-2xl font-medium shadow-sm transition-all hover:shadow-md active:scale-[0.98] " +
       className
     }
-    {...props}
   >
     {children}
   </motion.button>
 );
 
+// === Tarjeta ===
 const Card = ({
   className = "",
   children,
@@ -57,6 +61,7 @@ const Card = ({
   </motion.div>
 );
 
+// === FAQ ===
 function FAQItem({
   q,
   children,
@@ -100,10 +105,8 @@ function FAQItem({
   );
 }
 
-// === DATOS ===
+// === Datos ===
 const LINKS = {
-  instagram: "https://www.instagram.com/urologo.alejandroquiroz/",
-  facebook: "https://www.facebook.com/DrQuirozUrologoLeon",
   doctoralia:
     "https://www.doctoralia.com.mx/alejandro-quiroz-compean/urologo/leon",
 };
@@ -129,6 +132,13 @@ function waLink(phone: string, msg: string) {
 
 // === COMPONENTE PRINCIPAL ===
 export default function UrologiaRoboticaLeon() {
+  const sections = [
+    { id: "servicios", label: "Servicios" },
+    { id: "sobre-mi", label: "Sobre mí" },
+    { id: "faq", label: "Preguntas" },
+    { id: "ubicacion", label: "Contacto" },
+  ];
+
   const services = useMemo(
     () => [
       { title: "Cirugía robótica", desc: "Procedimientos urológicos avanzados con visión 3D y precisión milimétrica." },
@@ -153,67 +163,86 @@ export default function UrologiaRoboticaLeon() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800">
-      {/* === HERO === */}
-      <section className="relative text-white">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-indigo-700 to-teal-600" />
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="relative mx-auto max-w-6xl px-4 py-20"
-        >
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                Cirugía Robótica Avanzada en León, Guanajuato 🚀
-              </h1>
-              <p className="mt-4 text-lg text-slate-200">
-                Atención integral y humanizada con tecnología avanzada.
-              </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Button className="bg-white text-slate-900" onClick={() => scrollToId("servicios")}>
-                  Ver servicios
-                </Button>
-                <a href={waLink("524776390492", "Hola Dr. Quiroz, quiero agendar una consulta.")} target="_blank" rel="noreferrer">
-                  <Button className="bg-teal-600 text-white hover:bg-teal-700">Agenda por WhatsApp</Button>
-                </a>
-                <a href={LINKS.doctoralia} target="_blank" rel="noreferrer">
-                  <Button className="bg-[#009688] text-white hover:bg-[#00796b]">Agenda por Doctoralia</Button>
-                </a>
-              </div>
-              <div className="mt-6 text-xs text-slate-300">
-                Cédulas: C.P. 8860892 (U. La Salle) • C.E. 12465195 (UNAM) • Certificado por CONAMEU
-              </div>
-            </div>
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="h-72 md:h-80 rounded-2xl overflow-hidden relative shadow-lg"
-            >
-              <NextImage src="/foto-dr-alejandro.jpg" alt="Dr. Alejandro Quiroz" fill priority className="object-cover" />
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* === SERVICIOS === */}
-      <section id="servicios" className="mx-auto max-w-6xl px-4 py-16">
-        <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-3xl font-bold mb-4">
-          Servicios
-        </motion.h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {services.map((s) => (
-            <Card key={s.title}>
-              <h3 className="font-semibold">{s.title}</h3>
-              <p className="text-sm text-slate-600 mt-2">{s.desc}</p>
-            </Card>
-          ))}
+      {/* === NAVBAR === */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div className="mx-auto max-w-6xl flex justify-between items-center px-4 py-3">
+          <h1 className="font-semibold text-slate-800">Urología Robótica León</h1>
+          <nav className="flex gap-4 text-sm">
+            {sections.map((s) => (
+              <button
+                key={s.id}
+                onClick={() => scrollToId(s.id)}
+                className="text-slate-600 hover:text-teal-600 transition"
+              >
+                {s.label}
+              </button>
+            ))}
+          </nav>
         </div>
-      </section>
+      </header>
 
-{/* === SOBRE MÍ === */}
+      <main className="pt-20">
+        {/* === HERO === */}
+        <section className="relative text-white">
+          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-indigo-700 to-teal-600" />
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="relative mx-auto max-w-6xl px-4 py-20"
+          >
+            <div className="grid md:grid-cols-2 gap-10 items-center">
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                  Cirugía Robótica Avanzada en León, Guanajuato 🚀
+                </h2>
+                <p className="mt-4 text-lg text-slate-200">
+                  Atención integral y humanizada con tecnología avanzada.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <Button className="bg-white text-slate-900" onClick={() => scrollToId("servicios")}>
+                    Ver servicios
+                  </Button>
+                  <a href={waLink("524776390492", "Hola Dr. Quiroz, quiero agendar una consulta.")} target="_blank" rel="noreferrer">
+                    <Button className="bg-teal-600 text-white hover:bg-teal-700">Agenda por WhatsApp</Button>
+                  </a>
+                  <a href={LINKS.doctoralia} target="_blank" rel="noreferrer">
+                    <Button className="bg-[#009688] text-white hover:bg-[#00796b]">Doctoralia</Button>
+                  </a>
+                </div>
+                <div className="mt-6 text-xs text-slate-300">
+                  C.P. 8860892 • C.E. 12465195 • Certificado por CONAMEU
+                </div>
+              </div>
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="h-72 md:h-80 rounded-2xl overflow-hidden relative shadow-lg"
+              >
+                <NextImage src="/foto-dr-alejandro.jpg" alt="Dr. Alejandro Quiroz" fill priority className="object-cover" />
+              </motion.div>
+            </div>
+          </motion.div>
+        </section>
+
+        {/* === SERVICIOS === */}
+        <section id="servicios" className="mx-auto max-w-6xl px-4 py-16">
+          <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-3xl font-bold mb-4">
+            Servicios
+          </motion.h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {services.map((s) => (
+              <Card key={s.title}>
+                <h3 className="font-semibold">{s.title}</h3>
+                <p className="text-sm text-slate-600 mt-2">{s.desc}</p>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* === SOBRE MÍ === */}
 <section id="sobre-mi" className="bg-white py-16">
   <div className="mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-10">
     <motion.div
@@ -282,47 +311,37 @@ export default function UrologiaRoboticaLeon() {
   </div>
 </section>
 
+        {/* === FAQ === */}
+        <section id="faq" className="bg-white py-16">
+          <div className="mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-5">
+            {faqs.map((f, i) => (
+              <FAQItem key={i} q={f.q} highlight={f.highlight}>
+                {f.a}
+              </FAQItem>
+            ))}
+          </div>
+        </section>
 
-      {/* === OPINIONES === */}
-      <section id="opiniones" className="mx-auto max-w-6xl px-4 py-16">
-        <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-3xl font-bold mb-4">
-          Opiniones de pacientes
-        </motion.h2>
-        <a href={LINKS.doctoralia} target="_blank" rel="noreferrer">
-          <Button className="bg-teal-700 text-white hover:bg-teal-800">Ver en Doctoralia</Button>
-        </a>
-      </section>
-
-      {/* === FAQ === */}
-      <section id="faq" className="bg-white py-16">
-        <div className="mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-5">
-          {faqs.map((f, i) => (
-            <FAQItem key={i} q={f.q} highlight={f.highlight}>
-              {f.a}
-            </FAQItem>
-          ))}
-        </div>
-      </section>
-
-      {/* === UBICACIÓN === */}
-      <section id="ubicacion" className="mx-auto max-w-6xl px-4 py-16">
-        <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-3xl font-bold mb-4">
-          Ubicación y contacto
-        </motion.h2>
-        <div className="grid md:grid-cols-3 gap-5">
-          {Object.keys(MAPS).map((key) => (
-            <Card key={key}>
-              <h3 className="font-semibold capitalize">{key}</h3>
-              <a href={MAPS[key]} target="_blank" rel="noreferrer">
-                <Button className="mt-3 bg-slate-900 text-white">Abrir en Maps</Button>
-              </a>
-              <a href={waLink(WHATSAPP[key], `Hola, quiero agendar en ${key}`)} target="_blank" rel="noreferrer">
-                <Button className="mt-2 bg-teal-700 text-white">WhatsApp</Button>
-              </a>
-            </Card>
-          ))}
-        </div>
-      </section>
+        {/* === UBICACIÓN === */}
+        <section id="ubicacion" className="mx-auto max-w-6xl px-4 py-16">
+          <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-3xl font-bold mb-4">
+            Ubicación y contacto
+          </motion.h2>
+          <div className="grid md:grid-cols-3 gap-5">
+            {Object.keys(MAPS).map((key) => (
+              <Card key={key}>
+                <h3 className="font-semibold capitalize">{key}</h3>
+                <a href={MAPS[key]} target="_blank" rel="noreferrer">
+                  <Button className="mt-3 bg-slate-900 text-white">Abrir en Maps</Button>
+                </a>
+                <a href={waLink(WHATSAPP[key], `Hola, quiero agendar en ${key}`)} target="_blank" rel="noreferrer">
+                  <Button className="mt-2 bg-teal-700 text-white">WhatsApp</Button>
+                </a>
+              </Card>
+            ))}
+          </div>
+        </section>
+      </main>
 
       {/* === FOOTER === */}
       <footer className="bg-slate-900 text-slate-200 py-8 text-center">
