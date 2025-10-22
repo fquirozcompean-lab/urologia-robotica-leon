@@ -38,23 +38,25 @@ const Button = ({ className = "", children, ...props }: ButtonProps) => (
 );
 
 
-// === Tarjeta ===
-const Card = ({
-  className = "",
-  children,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
+// === Tarjeta sin conflicto de tipos ===
+type CardProps = React.HTMLAttributes<HTMLDivElement> & {
+  className?: string;
+  children: React.ReactNode;
+};
+
+const Card = ({ className = "", children, ...props }: CardProps) => (
   <motion.div
     variants={fadeUp}
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true }}
     transition={{ duration: 0.5 }}
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    {...(props as any)} // ← evita conflicto entre MotionProps y eventos HTML
     className={
       "rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:shadow-lg transition " +
       className
     }
-    {...props}
   >
     {children}
   </motion.div>
