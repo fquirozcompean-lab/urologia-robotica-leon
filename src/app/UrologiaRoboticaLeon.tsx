@@ -17,14 +17,12 @@ const fadeUp = {
 };
 
 // === COMPONENTES BASE ===
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  className?: string;
+  children: React.ReactNode;
+}
 
-// ✅ Botón limpio y animado compatible con Vercel
-// ✅ Botón animado compatible con TypeScript y Vercel
-const Button = ({
-  className = "",
-  children,
-  ...props
-}: any) => (
+const Button = ({ className = "", children, ...props }: ButtonProps) => (
   <motion.button
     whileHover={{ scale: 1.03 }}
     whileTap={{ scale: 0.97 }}
@@ -38,7 +36,6 @@ const Button = ({
   </motion.button>
 );
 
-// ✅ Tarjeta animada
 const Card = ({
   className = "",
   children,
@@ -60,7 +57,6 @@ const Card = ({
   </motion.div>
 );
 
-// ✅ FAQ
 function FAQItem({
   q,
   children,
@@ -135,64 +131,24 @@ function waLink(phone: string, msg: string) {
 export default function UrologiaRoboticaLeon() {
   const services = useMemo(
     () => [
-      {
-        title: "Cirugía robótica",
-        desc: "Procedimientos urológicos avanzados con visión 3D y precisión milimétrica.",
-      },
-      {
-        title: "Cáncer de próstata",
-        desc: "Diagnóstico y tratamiento integral, incluida prostatectomía robótica.",
-      },
-      {
-        title: "Cáncer de vejiga",
-        desc: "Abordaje oncológico mínimamente invasivo y preservación funcional.",
-      },
-      {
-        title: "Cáncer renal",
-        desc: "Nefrectomía parcial o radical con mínima invasión.",
-      },
-      {
-        title: "Hiperplasia prostática (HBP)",
-        desc: "Tratamiento moderno de síntomas urinarios con láser o vapor.",
-      },
-      {
-        title: "Litiasis urinaria",
-        desc: "Manejo avanzado de cálculos con mínima invasión.",
-      },
-      {
-        title: "Incontinencia urinaria",
-        desc: "Tratamiento personalizado para hombres y mujeres.",
-      },
-      {
-        title: "Disfunción eréctil",
-        desc: "Manejo integral basado en evidencia científica.",
-      },
-      {
-        title: "Infecciones urinarias",
-        desc: "Atención oportuna y prevención de recurrencias.",
-      },
+      { title: "Cirugía robótica", desc: "Procedimientos urológicos avanzados con visión 3D y precisión milimétrica." },
+      { title: "Cáncer de próstata", desc: "Diagnóstico y tratamiento integral, incluida prostatectomía robótica." },
+      { title: "Cáncer de vejiga", desc: "Abordaje oncológico mínimamente invasivo y preservación funcional." },
+      { title: "Cáncer renal", desc: "Nefrectomía parcial o radical con mínima invasión." },
+      { title: "Hiperplasia prostática (HBP)", desc: "Tratamiento moderno de síntomas urinarios con láser o vapor." },
+      { title: "Litiasis urinaria", desc: "Manejo avanzado de cálculos con mínima invasión." },
+      { title: "Incontinencia urinaria", desc: "Tratamiento personalizado para hombres y mujeres." },
+      { title: "Disfunción eréctil", desc: "Manejo integral basado en evidencia científica." },
+      { title: "Infecciones urinarias", desc: "Atención oportuna y prevención de recurrencias." },
     ],
     []
   );
 
   const faqs = [
-    {
-      q: "¿Cómo agendo una cita?",
-      a: "Puedes agendar desde esta página, por WhatsApp o Doctoralia.",
-      highlight: true,
-    },
-    {
-      q: "¿Qué incluye la consulta?",
-      a: "Historia clínica completa, exploración física, diagnóstico y tratamiento.",
-    },
-    {
-      q: "¿Cuándo está indicada la cirugía robótica?",
-      a: "En cáncer de próstata, riñón o vejiga donde se busca mínima invasión.",
-    },
-    {
-      q: "¿Acepta seguros médicos?",
-      a: "Sí, se atienden pacientes privados y con aseguradoras (verifica cobertura).",
-    },
+    { q: "¿Cómo agendo una cita?", a: "Puedes agendar desde esta página, por WhatsApp o Doctoralia.", highlight: true },
+    { q: "¿Qué incluye la consulta?", a: "Historia clínica completa, exploración física, diagnóstico y tratamiento." },
+    { q: "¿Cuándo está indicada la cirugía robótica?", a: "En cáncer de próstata, riñón o vejiga donde se busca mínima invasión." },
+    { q: "¿Acepta seguros médicos?", a: "Sí, se atienden pacientes privados y con aseguradoras (verifica cobertura)." },
   ];
 
   return (
@@ -215,33 +171,18 @@ export default function UrologiaRoboticaLeon() {
                 Atención integral y humanizada con tecnología avanzada.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <Button
-                  className="bg-white text-slate-900"
-                  onClick={() => scrollToId("servicios")}
-                >
+                <Button className="bg-white text-slate-900" onClick={() => scrollToId("servicios")}>
                   Ver servicios
                 </Button>
-                <a
-                  href={waLink(
-                    "524776390492",
-                    "Hola Dr. Quiroz, quiero agendar una consulta."
-                  )}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Button className="bg-teal-600 text-white hover:bg-teal-700">
-                    Agenda por WhatsApp
-                  </Button>
+                <a href={waLink("524776390492", "Hola Dr. Quiroz, quiero agendar una consulta.")} target="_blank" rel="noreferrer">
+                  <Button className="bg-teal-600 text-white hover:bg-teal-700">Agenda por WhatsApp</Button>
                 </a>
                 <a href={LINKS.doctoralia} target="_blank" rel="noreferrer">
-                  <Button className="bg-[#009688] text-white hover:bg-[#00796b]">
-                    Agenda por Doctoralia
-                  </Button>
+                  <Button className="bg-[#009688] text-white hover:bg-[#00796b]">Agenda por Doctoralia</Button>
                 </a>
               </div>
               <div className="mt-6 text-xs text-slate-300">
-                Cédulas: C.P. 8860892 (U. La Salle) • C.E. 12465195 (UNAM) •
-                Certificado por CONAMEU
+                Cédulas: C.P. 8860892 (U. La Salle) • C.E. 12465195 (UNAM) • Certificado por CONAMEU
               </div>
             </div>
             <motion.div
@@ -251,13 +192,7 @@ export default function UrologiaRoboticaLeon() {
               transition={{ duration: 0.8 }}
               className="h-72 md:h-80 rounded-2xl overflow-hidden relative shadow-lg"
             >
-              <NextImage
-                src="/foto-dr-alejandro.jpg"
-                alt="Dr. Alejandro Quiroz"
-                fill
-                priority
-                className="object-cover"
-              />
+              <NextImage src="/foto-dr-alejandro.jpg" alt="Dr. Alejandro Quiroz" fill priority className="object-cover" />
             </motion.div>
           </div>
         </motion.div>
@@ -265,13 +200,7 @@ export default function UrologiaRoboticaLeon() {
 
       {/* === SERVICIOS === */}
       <section id="servicios" className="mx-auto max-w-6xl px-4 py-16">
-        <motion.h2
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-3xl font-bold mb-4"
-        >
+        <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-3xl font-bold mb-4">
           Servicios
         </motion.h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -284,57 +213,83 @@ export default function UrologiaRoboticaLeon() {
         </div>
       </section>
 
-      {/* === SOBRE MÍ === */}
-      <section id="sobre-mi" className="bg-white py-16">
-        <div className="mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-10">
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold">Sobre mí</h2>
-            <p className="mt-4 text-slate-700 leading-relaxed">
-              El Dr. Alejandro Quiroz Compeán es urólogo con alta especialidad
-              en Urología Oncológica y posgrado en Cirugía Robótica por el
-              Hospital Israelita Albert Einstein. Formado en el Instituto
-              Nacional de Nutrición y el Instituto Nacional de Cancerología.
-            </p>
-          </motion.div>
-          <Card>
-            <h3 className="font-semibold">Credenciales</h3>
-            <ul className="list-disc pl-5 mt-3 space-y-1 text-sm text-slate-700">
-              <li>C.P. 8860892 (U. La Salle)</li>
-              <li>C.E. 12465195 (UNAM)</li>
-              <li>Certificado por CONAMEU</li>
-              <li>
-                Urología: Instituto Nacional de Ciencias Médicas y Nutrición
-                Salvador Zubirán
-              </li>
-              <li>
-                Urología Oncológica: Instituto Nacional de Cancerología
-              </li>
-              <li>Cirugía Robótica: Hospital Albert Einstein, Brasil</li>
-            </ul>
-          </Card>
-        </div>
-      </section>
+{/* === SOBRE MÍ === */}
+<section id="sobre-mi" className="bg-white py-16">
+  <div className="mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-10">
+    <motion.div
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      <h2 className="text-3xl font-bold text-slate-900">Sobre mí</h2>
+
+      <p className="mt-4 text-slate-700 leading-relaxed">
+        Soy el <strong>Dr. Alejandro Quiroz Compeán</strong>, urólogo con alta especialidad en
+        <strong> Urología Oncológica</strong> y <strong>Cirugía Robótica</strong>. Me formé en el
+        <strong> Instituto Nacional de Ciencias Médicas y Nutrición “Salvador Zubirán”</strong> y en el
+        <strong> Instituto Nacional de Cancerología</strong>, dos de los hospitales más reconocidos de México.
+        Posteriormente, realicé un <strong>posgrado en Cirugía Robótica</strong> en el
+        <strong> Hospital Israelita Albert Einstein</strong>, en São Paulo, Brasil, una de las instituciones más avanzadas de América Latina.
+      </p>
+
+      <p className="mt-4 text-slate-700 leading-relaxed">
+        Mi vocación es ofrecer una atención médica <strong>humana, cercana y basada en la mejor evidencia científica</strong>.
+        Creo profundamente en escuchar, acompañar y explicar con claridad cada paso del proceso,
+        porque sé que detrás de cada diagnóstico hay una persona, una historia y una familia.
+      </p>
+
+      <p className="mt-4 text-slate-700 leading-relaxed">
+        Me dedico al tratamiento integral del <strong>cáncer de próstata, riñón, vejiga y testículo</strong>,
+        así como a enfermedades urológicas generales. Además, soy
+        <strong> profesor y titular de la residencia de Urología en el Hospital General de León</strong>,
+        donde tengo el privilegio de formar a las nuevas generaciones de urólogos comprometidos con su labor.
+      </p>
+
+      <p className="mt-4 text-slate-700 leading-relaxed">
+        Mi objetivo es brindar a cada paciente una atención personalizada, con tecnología de vanguardia
+        y con la misma empatía con la que me gustaría que atendieran a mi propia familia.
+      </p>
+    </motion.div>
+
+    <Card className="shadow-lg rounded-2xl p-6 bg-slate-50 border border-slate-200">
+      <h3 className="text-xl font-semibold text-slate-800 mb-4">Formación y Certificaciones</h3>
+      <ul className="space-y-3 text-slate-700 text-sm leading-relaxed">
+        <li>
+          <strong>Médico Cirujano:</strong> Universidad La Salle, CDMX — Cédula Prof. 8860892
+        </li>
+        <li>
+          <strong>Especialidad en Urología:</strong> Instituto Nacional de Ciencias Médicas y Nutrición “Salvador Zubirán” — UNAM — Cédula Esp. 12465195
+        </li>
+        <li>
+          <strong>Alta Especialidad en Urología Oncológica:</strong> Instituto Nacional de Cancerología (INCan)
+        </li>
+        <li>
+          <strong>Posgrado en Cirugía Robótica:</strong> Hospital Israelita Albert Einstein, São Paulo, Brasil
+        </li>
+        <li>
+          <strong>Certificación Nacional:</strong> Consejo Nacional Mexicano de Urología (CONAMEU)
+        </li>
+        <li>
+          <strong>Profesor Titular:</strong> Programa de Residencia en Urología del Hospital General de León, avalado por el Tec de Monterrey
+        </li>
+      </ul>
+
+      <div className="mt-6 border-t border-slate-200 pt-4 text-sm text-slate-600 italic">
+        <p>“Cirugía urológica de alta precisión con enfoque humano y tecnología de vanguardia.”</p>
+      </div>
+    </Card>
+  </div>
+</section>
+
 
       {/* === OPINIONES === */}
       <section id="opiniones" className="mx-auto max-w-6xl px-4 py-16">
-        <motion.h2
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-3xl font-bold mb-4"
-        >
+        <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-3xl font-bold mb-4">
           Opiniones de pacientes
         </motion.h2>
         <a href={LINKS.doctoralia} target="_blank" rel="noreferrer">
-          <Button className="bg-teal-700 text-white hover:bg-teal-800">
-            Ver en Doctoralia
-          </Button>
+          <Button className="bg-teal-700 text-white hover:bg-teal-800">Ver en Doctoralia</Button>
         </a>
       </section>
 
@@ -351,13 +306,7 @@ export default function UrologiaRoboticaLeon() {
 
       {/* === UBICACIÓN === */}
       <section id="ubicacion" className="mx-auto max-w-6xl px-4 py-16">
-        <motion.h2
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-3xl font-bold mb-4"
-        >
+        <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-3xl font-bold mb-4">
           Ubicación y contacto
         </motion.h2>
         <div className="grid md:grid-cols-3 gap-5">
@@ -365,21 +314,10 @@ export default function UrologiaRoboticaLeon() {
             <Card key={key}>
               <h3 className="font-semibold capitalize">{key}</h3>
               <a href={MAPS[key]} target="_blank" rel="noreferrer">
-                <Button className="mt-3 bg-slate-900 text-white">
-                  Abrir en Maps
-                </Button>
+                <Button className="mt-3 bg-slate-900 text-white">Abrir en Maps</Button>
               </a>
-              <a
-                href={waLink(
-                  WHATSAPP[key],
-                  `Hola, quiero agendar en ${key}`
-                )}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Button className="mt-2 bg-teal-700 text-white">
-                  WhatsApp
-                </Button>
+              <a href={waLink(WHATSAPP[key], `Hola, quiero agendar en ${key}`)} target="_blank" rel="noreferrer">
+                <Button className="mt-2 bg-teal-700 text-white">WhatsApp</Button>
               </a>
             </Card>
           ))}
@@ -388,18 +326,11 @@ export default function UrologiaRoboticaLeon() {
 
       {/* === FOOTER === */}
       <footer className="bg-slate-900 text-slate-200 py-8 text-center">
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="font-semibold"
-        >
+        <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 1 }} className="font-semibold">
           © {new Date().getFullYear()} Urología Robótica León
         </motion.p>
         <p className="text-slate-400 text-sm mt-2">
-          Dr. Alejandro Quiroz Compeán • Atención integral con tecnología
-          avanzada
+          Dr. Alejandro Quiroz Compeán • Atención integral con tecnología avanzada
         </p>
       </footer>
     </div>
