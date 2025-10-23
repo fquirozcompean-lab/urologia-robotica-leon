@@ -16,7 +16,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 };
 
-// === Botón sin conflicto de tipos ===
+// === BOTÓN COMPATIBLE CON VERCEL Y TYPESCRIPT ===
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   className?: string;
   children: React.ReactNode;
@@ -27,7 +27,7 @@ const Button = ({ className = "", children, ...props }: ButtonProps) => (
     whileHover={{ scale: 1.03 }}
     whileTap={{ scale: 0.97 }}
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    {...(props as any)} // ← evita el conflicto MotionProps, tipo ignorado de forma segura
+    {...(props as any)} // evita conflicto entre MotionProps y ButtonHTMLAttributes
     className={
       "px-5 py-2 rounded-2xl font-medium shadow-sm transition-all hover:shadow-md active:scale-[0.98] " +
       className
@@ -37,8 +37,7 @@ const Button = ({ className = "", children, ...props }: ButtonProps) => (
   </motion.button>
 );
 
-
-// === Tarjeta sin conflicto de tipos ===
+// === TARJETA COMPATIBLE CON VERCEL Y TYPESCRIPT ===
 type CardProps = React.HTMLAttributes<HTMLDivElement> & {
   className?: string;
   children: React.ReactNode;
@@ -52,7 +51,7 @@ const Card = ({ className = "", children, ...props }: CardProps) => (
     viewport={{ once: true }}
     transition={{ duration: 0.5 }}
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    {...(props as any)} // ← evita conflicto entre MotionProps y eventos HTML
+    {...(props as any)} // evita conflicto entre MotionProps y HTMLAttributes
     className={
       "rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:shadow-lg transition " +
       className
@@ -81,9 +80,7 @@ function FAQItem({
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
       className={`rounded-2xl border p-5 shadow-sm ${
-        highlight
-          ? "bg-teal-50 border-teal-300"
-          : "bg-white border-slate-200"
+        highlight ? "bg-teal-50 border-teal-300" : "bg-white border-slate-200"
       }`}
     >
       <button
@@ -200,10 +197,10 @@ export default function UrologiaRoboticaLeon() {
             <div className="grid md:grid-cols-2 gap-10 items-center">
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                  Cirugía Robótica Avanzada en León, Guanajuato 🚀
+                  Urología / Urología Oncologíca / Cirugía Robótica 
                 </h2>
                 <p className="mt-4 text-lg text-slate-200">
-                  Atención integral y humanizada con tecnología avanzada.
+                  Especialista certificado en urología y cirugía robótica en León, Guanajuato
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Button className="bg-white text-slate-900" onClick={() => scrollToId("servicios")}>
@@ -248,74 +245,51 @@ export default function UrologiaRoboticaLeon() {
           </div>
         </section>
 
-       {/* === SOBRE MÍ === */}
-<section id="sobre-mi" className="bg-white py-16">
-  <div className="mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-10">
-    <motion.div
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-    >
-      <h2 className="text-3xl font-bold text-slate-900">Sobre mí</h2>
+        {/* === SOBRE MÍ === */}
+        <section id="sobre-mi" className="bg-white py-16">
+          <div className="mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-10">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl font-bold text-slate-900">Sobre mí</h2>
+              <p className="mt-4 text-slate-700 leading-relaxed">
+                Soy el <strong>Dr. Alejandro Quiroz Compeán</strong>, urólogo con alta especialidad en
+                <strong> Urología Oncológica</strong> y <strong>Cirugía Robótica</strong>. Me formé en el
+                <strong> Instituto Nacional de Ciencias Médicas y Nutrición “Salvador Zubirán”</strong> y en el
+                <strong> Instituto Nacional de Cancerología</strong>, dos de los hospitales más reconocidos de México.
+                Posteriormente, realicé un <strong>posgrado en Cirugía Robótica</strong> en el
+                <strong> Hospital Israelita Albert Einstein</strong>, en São Paulo, Brasil.
+              </p>
+              <p className="mt-4 text-slate-700 leading-relaxed">
+                Mi vocación es ofrecer una atención médica <strong>humana, cercana y basada en la mejor evidencia científica</strong>.
+                Creo profundamente en escuchar, acompañar y explicar con claridad cada paso del proceso.
+              </p>
+              <p className="mt-4 text-slate-700 leading-relaxed">
+                Me dedico al tratamiento integral del <strong>cáncer de próstata, riñón, vejiga y testículo</strong>,
+                así como a enfermedades urológicas generales. Además, soy
+                <strong> profesor y titular de la residencia de Urología en el Hospital General de León</strong>.
+              </p>
+            </motion.div>
 
-      <p className="mt-4 text-slate-700 leading-relaxed">
-        Soy el <strong>Dr. Alejandro Quiroz Compeán</strong>, urólogo con alta especialidad en
-        <strong> Urología Oncológica</strong> y <strong>Cirugía Robótica</strong>. Me formé en el
-        <strong> Instituto Nacional de Ciencias Médicas y Nutrición “Salvador Zubirán”</strong> y en el
-        <strong> Instituto Nacional de Cancerología</strong>, dos de los hospitales más reconocidos de México.
-        Posteriormente, realicé un <strong>posgrado en Cirugía Robótica</strong> en el
-        <strong> Hospital Israelita Albert Einstein</strong>, en São Paulo, Brasil, una de las instituciones más avanzadas de América Latina.
-      </p>
-
-      <p className="mt-4 text-slate-700 leading-relaxed">
-        Mi vocación es ofrecer una atención médica <strong>humana, cercana y basada en la mejor evidencia científica</strong>.
-        Creo profundamente en escuchar, acompañar y explicar con claridad cada paso del proceso,
-        porque sé que detrás de cada diagnóstico hay una persona, una historia y una familia.
-      </p>
-
-      <p className="mt-4 text-slate-700 leading-relaxed">
-        Me dedico al tratamiento integral del <strong>cáncer de próstata, riñón, vejiga y testículo</strong>,
-        así como a enfermedades urológicas generales. Además, soy
-        <strong> profesor y titular de la residencia de Urología en el Hospital General de León</strong>,
-        donde tengo el privilegio de formar a las nuevas generaciones de urólogos comprometidos con su labor.
-      </p>
-
-      <p className="mt-4 text-slate-700 leading-relaxed">
-        Mi objetivo es brindar a cada paciente una atención personalizada, con tecnología de vanguardia
-        y con la misma empatía con la que me gustaría que atendieran a mi propia familia.
-      </p>
-    </motion.div>
-
-    <Card className="shadow-lg rounded-2xl p-6 bg-slate-50 border border-slate-200">
-      <h3 className="text-xl font-semibold text-slate-800 mb-4">Formación y Certificaciones</h3>
-      <ul className="space-y-3 text-slate-700 text-sm leading-relaxed">
-        <li>
-          <strong>Médico Cirujano:</strong> Universidad La Salle, CDMX — Cédula Prof. 8860892
-        </li>
-        <li>
-          <strong>Especialidad en Urología:</strong> Instituto Nacional de Ciencias Médicas y Nutrición “Salvador Zubirán” — UNAM — Cédula Esp. 12465195
-        </li>
-        <li>
-          <strong>Alta Especialidad en Urología Oncológica:</strong> Instituto Nacional de Cancerología (INCan)
-        </li>
-        <li>
-          <strong>Posgrado en Cirugía Robótica:</strong> Hospital Israelita Albert Einstein, São Paulo, Brasil
-        </li>
-        <li>
-          <strong>Certificación Nacional:</strong> Consejo Nacional Mexicano de Urología (CONAMEU)
-        </li>
-        <li>
-          <strong>Profesor Titular:</strong> Programa de Residencia en Urología del Hospital General de León, avalado por el Tec de Monterrey
-        </li>
-      </ul>
-
-      <div className="mt-6 border-t border-slate-200 pt-4 text-sm text-slate-600 italic">
-        <p>“Cirugía urológica de alta precisión con enfoque humano y tecnología de vanguardia.”</p>
-      </div>
-    </Card>
-  </div>
-</section>
+            <Card className="shadow-lg rounded-2xl p-6 bg-slate-50 border border-slate-200">
+              <h3 className="text-xl font-semibold text-slate-800 mb-4">Formación y Certificaciones</h3>
+              <ul className="space-y-3 text-slate-700 text-sm leading-relaxed">
+                <li><strong>Médico Cirujano:</strong> Universidad La Salle, CDMX — Cédula Prof. 8860892</li>
+                <li><strong>Especialidad en Urología:</strong> Instituto Nacional de Ciencias Médicas y Nutrición “Salvador Zubirán” — UNAM — Cédula Esp. 12465195</li>
+                <li><strong>Alta Especialidad en Urología Oncológica:</strong> Instituto Nacional de Cancerología (INCan)</li>
+                <li><strong>Posgrado en Cirugía Robótica:</strong> Hospital Israelita Albert Einstein, São Paulo, Brasil</li>
+                <li><strong>Certificación Nacional:</strong> Consejo Nacional Mexicano de Urología (CONAMEU)</li>
+                <li><strong>Profesor Titular:</strong> Programa de Residencia en Urología del Hospital General de León</li>
+              </ul>
+              <div className="mt-6 border-t border-slate-200 pt-4 text-sm text-slate-600 italic">
+                “Cirugía urológica de alta precisión con enfoque humano y tecnología de vanguardia.”
+              </div>
+            </Card>
+          </div>
+        </section>
 
         {/* === FAQ === */}
         <section id="faq" className="bg-white py-16">
