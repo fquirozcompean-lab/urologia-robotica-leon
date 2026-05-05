@@ -200,7 +200,7 @@ export default function UrologiaRoboticaLeon() {
                   Urología / Urología Oncologíca / Cirugía Robótica 
                 </h2>
                 <p className="mt-4 text-lg text-slate-200">
-                  Especialista certificado en urología y cirugía robótica en León, Guanajuato
+                  Especialista certificado en urología, alta especialidad en urolgía oncológica y postgrado en cirugía robótica en León, Guanajuato
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Button className="bg-white text-slate-900" onClick={() => scrollToId("servicios")}>

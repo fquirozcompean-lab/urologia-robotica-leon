@@ -9,6 +9,40 @@ export const metadata: Metadata = {
     "Dr. Alejandro Quiroz Compeán | Urólogo Oncólogo y Cirujano Robótico en León, Guanajuato",
   description:
     "Atención integral en urología oncológica y cirugía robótica avanzada. Especialista en cáncer de próstata, riñón y vejiga en León, Gto.",
+
+  // 🧩 Aquí agregamos las keywords
+  keywords: [
+    "urología robótica León",
+    "urólogo en León",
+    "Dr. Alejandro Quiroz Compeán",
+    "cirugía robótica próstata",
+    "cáncer de próstata",
+    "urología oncológica León",
+    "urólogo oncológico en León",
+    "HoLEP en León",
+    "cirugía láser de próstata",
+    "cirugía mínimamente invasiva urológica",
+    "tratamiento de hiperplasia prostática",
+    "prostatectomía robótica",
+    "prostatectomía laparoscópica",
+    "nefrectomía robótica",
+    "cistectomía robótica",
+    "cirugía del cáncer renal",
+    "mejor urólogo en León",
+    "urólogo especializado en cáncer de próstata",
+    "experto en cirugía robótica de próstata",
+    "tratamiento de próstata agrandada en León",
+    "urólogo certificado en León Guanajuato",
+    "urología avanzada en León",
+    "consulta urológica con robot Da Vinci",
+    "opiniones Dr. Alejandro Quiroz León",
+    "urólogo recomendado en León Gto",
+    "hospital Ángeles León urólogo",
+    "hospital Muguerza León urólogo",
+    "cirujano robótico en Guanajuato",
+    "atención urológica avanzada León",
+  ],
+
   openGraph: {
     title:
       "Dr. Alejandro Quiroz Compeán | Urología Robótica León, Guanajuato",
@@ -113,4 +147,3 @@ export default function RootLayout({
     </html>
   );
 }
-
