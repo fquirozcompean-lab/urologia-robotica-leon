@@ -3,14 +3,11 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 
-// === Metadatos para SEO ===
 export const metadata: Metadata = {
   title:
     "Dr. Alejandro Quiroz Compeán | Urólogo Oncólogo y Cirujano Robótico en León, Guanajuato",
   description:
     "Atención integral en urología oncológica y cirugía robótica avanzada. Especialista en cáncer de próstata, riñón y vejiga en León, Gto.",
-
-  // 🧩 Aquí agregamos las keywords
   keywords: [
     "urología robótica León",
     "urólogo en León",
@@ -19,8 +16,6 @@ export const metadata: Metadata = {
     "cáncer de próstata",
     "urología oncológica León",
     "urólogo oncológico en León",
-    "HoLEP en León",
-    "cirugía láser de próstata",
     "cirugía mínimamente invasiva urológica",
     "tratamiento de hiperplasia prostática",
     "prostatectomía robótica",
@@ -31,21 +26,15 @@ export const metadata: Metadata = {
     "mejor urólogo en León",
     "urólogo especializado en cáncer de próstata",
     "experto en cirugía robótica de próstata",
-    "tratamiento de próstata agrandada en León",
     "urólogo certificado en León Guanajuato",
-    "urología avanzada en León",
     "consulta urológica con robot Da Vinci",
-    "opiniones Dr. Alejandro Quiroz León",
     "urólogo recomendado en León Gto",
     "hospital Ángeles León urólogo",
     "hospital Muguerza León urólogo",
     "cirujano robótico en Guanajuato",
-    "atención urológica avanzada León",
   ],
-
   openGraph: {
-    title:
-      "Dr. Alejandro Quiroz Compeán | Urología Robótica León, Guanajuato",
+    title: "Dr. Alejandro Quiroz Compeán | Urología Robótica León, Guanajuato",
     description:
       "Cirugía robótica y urología oncológica de alto nivel con atención personalizada y tecnología avanzada.",
     url: "https://urologiaroboticaleon.com",
@@ -75,7 +64,6 @@ export const metadata: Metadata = {
   },
 };
 
-// === Layout principal ===
 export default function RootLayout({
   children,
 }: {
@@ -84,7 +72,6 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        {/* === JSON-LD Schema.org (Physician) === */}
         <Script
           id="json-ld-physician"
           type="application/ld+json"
@@ -94,10 +81,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Physician",
               name: "Dr. Alejandro Quiroz Compeán",
-              image:
-                "https://urologiaroboticaleon.com/foto-dr-alejandro.jpg",
+              image: "https://urologiaroboticaleon.com/foto-dr-alejandro.jpg",
               description:
-                "Urólogo oncólogo especializado en cirugía robótica en León, Guanajuato. Formación en INCMNSZ, INCAN y Hospital Albert Einstein.",
+                "Urólogo oncólogo especializado en cirugía robótica en León, Guanajuato. Formación en INCMNSZ, INCan y Hospital Israelita Albert Einstein.",
               medicalSpecialty: ["Urology", "Oncology", "Robotic Surgery"],
               url: "https://urologiaroboticaleon.com",
               sameAs: [
@@ -110,8 +96,7 @@ export default function RootLayout({
               ],
               address: {
                 "@type": "PostalAddress",
-                streetAddress:
-                  "Av. Cerro Gordo 3110, Torre de Especialidades II, Consultorio 425",
+                streetAddress: "Av. Cerro Gordo 311, Consultorio 615, Torre II",
                 addressLocality: "León",
                 addressRegion: "Guanajuato",
                 postalCode: "37160",
@@ -122,8 +107,6 @@ export default function RootLayout({
             }),
           }}
         />
-
-        {/* === Google Analytics (gtag.js) === */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-FFEFH848TS"
           strategy="afterInteractive"
@@ -133,14 +116,10 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-FFEFH848TS', {
-              page_path: window.location.pathname,
-            });
+            gtag('config', 'G-FFEFH848TS', { page_path: window.location.pathname });
           `}
         </Script>
       </head>
-
-      {/* === Cuerpo del sitio === */}
       <body className="antialiased bg-white text-slate-800 font-sans">
         {children}
       </body>
