@@ -278,7 +278,7 @@ export default function UrologiaRoboticaLeon() {
               <p className="mt-4 text-slate-700 leading-relaxed">
                 Soy el <strong>Dr. Alejandro Quiroz Compeán</strong>, urólogo con alta especialidad en{" "}
                 <strong>Urología Oncológica</strong> y <strong>Cirugía Robótica</strong>. Me formé en el{" "}
-                <strong>Instituto Nacional de Ciencias Médicas y Nutrición "Salvador Zubirán"</strong> y en el{" "}
+                <strong>Instituto Nacional de Ciencias Médicas y Nutrición Salvador Zubirán</strong> y en el{" "}
                 <strong>Instituto Nacional de Cancerología (INCan)</strong>, dos de los centros más especializados de México.
                 Posteriormente realicé un <strong>posgrado en Cirugía Robótica</strong> en el{" "}
                 <strong>Hospital Israelita Albert Einstein</strong> en São Paulo, Brasil.
@@ -320,7 +320,7 @@ export default function UrologiaRoboticaLeon() {
                 </li>
               </ul>
               <div className="mt-6 border-t border-slate-200 pt-4 text-sm text-slate-600 italic">
-                "Cirugía urológica de alta precisión con enfoque humano y tecnología de vanguardia."
+                &ldquo;Cirugía urológica de alta precisión con enfoque humano y tecnología de vanguardia.&rdquo;
               </div>
             </Card>
           </div>
