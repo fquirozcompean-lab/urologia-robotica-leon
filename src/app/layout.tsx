@@ -4,6 +4,9 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  verification: {
+    google: "uHJCLoFt5l687JtukoNWbLvkfsziurjH7E2BmYZDc0E",
+  },
   title:
     "Dr. Alejandro Quiroz Compeán | Urólogo Oncólogo y Cirujano Robótico en León, Guanajuato",
   description:
@@ -103,7 +106,7 @@ export default function RootLayout({
                 addressCountry: "MX",
               },
               openingHours: "Mo-Fr 09:00-20:00",
-              telephone: "+52-477-561-7482",
+              telephone: "+52-477-633-0492",
             }),
           }}
         />
