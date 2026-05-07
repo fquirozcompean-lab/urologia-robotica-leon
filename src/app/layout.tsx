@@ -86,7 +86,7 @@ export default function RootLayout({
               name: "Dr. Alejandro Quiroz Compeán",
               image: "https://urologiaroboticaleon.com/foto-dr-alejandro.jpg",
               description:
-                "Urólogo oncólogo especializado en cirugía robótica en León, Guanajuato. Formación en INCMNSZ, INCan y Hospital Israelita Albert Einstein.",
+                "Urólogo oncólogo especializado en cirugía robótica en León, Guanajuato. Formación en INCMNSZ, INCan y Hospital Albert Einstein, São Paulo, Brasil.",
               medicalSpecialty: ["Urology", "Oncology", "Robotic Surgery"],
               url: "https://urologiaroboticaleon.com",
               sameAs: [

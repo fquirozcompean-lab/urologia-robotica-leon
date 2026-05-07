@@ -195,7 +195,7 @@ export default function UrologiaRoboticaLeon() {
                   Urología Oncológica y Cirugía Robótica en León, Guanajuato
                 </h1>
                 <p className="mt-4 text-lg text-slate-200">
-                  Dr. Alejandro Quiroz Compeán — Especialista certificado con formación en el INCan y Hospital Israelita Albert Einstein, Brasil.
+                  Dr. Alejandro Quiroz Compeán — Especialista certificado con formación en el INCan y Hospital Albert Einstein, São Paulo, Brasil, Brasil.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Button
