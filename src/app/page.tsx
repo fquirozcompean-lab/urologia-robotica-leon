@@ -2,6 +2,7 @@
 
 import React, { useMemo, useState } from "react";
 import NextImage from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const scrollToId = (id: string) => {
@@ -133,7 +134,7 @@ export default function UrologiaRoboticaLeon() {
   const services = useMemo(
     () => [
       { title: "Cirugía robótica", desc: "Procedimientos urológicos avanzados con visión 3D y precisión milimétrica." },
-      { title: "Cáncer de próstata", desc: "Diagnóstico y tratamiento integral, incluida prostatectomía robótica." },
+      { title: "Cáncer de próstata", desc: "Diagnóstico y tratamiento integral, incluida prostatectomía robótica.", href: "/cancer-prostata" },
       { title: "Cáncer de vejiga", desc: "Abordaje oncológico mínimamente invasivo y preservación funcional." },
       { title: "Cáncer renal", desc: "Nefrectomía parcial o radical con mínima invasión." },
       { title: "Hiperplasia prostática (HBP)", desc: "Tratamiento moderno de síntomas urinarios con láser o vapor." },
@@ -258,6 +259,14 @@ export default function UrologiaRoboticaLeon() {
               <Card key={s.title}>
                 <h3 className="font-semibold">{s.title}</h3>
                 <p className="text-sm text-slate-600 mt-2">{s.desc}</p>
+                {"href" in s && s.href && (
+                  <Link
+                    href={s.href}
+                    className="inline-block mt-3 text-sm text-teal-600 hover:text-teal-800 font-medium transition"
+                  >
+                    Ver más →
+                  </Link>
+                )}
               </Card>
             ))}
           </div>
