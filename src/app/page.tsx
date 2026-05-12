@@ -137,7 +137,7 @@ export default function UrologiaRoboticaLeon() {
       { title: "Cáncer de próstata", desc: "Diagnóstico y tratamiento integral, incluida prostatectomía robótica.", href: "/cancer-prostata" },
       { title: "Cáncer de vejiga", desc: "Abordaje oncológico mínimamente invasivo y preservación funcional." },
       { title: "Cáncer renal", desc: "Nefrectomía parcial o radical con mínima invasión." },
-      { title: "Hiperplasia prostática (HBP)", desc: "Tratamiento moderno de síntomas urinarios con láser o vapor." },
+      { title: "Hiperplasia prostática (HBP)", desc: "Tratamiento moderno de síntomas urinarios con láser o vapor.", link: "/hiperplasia-prostatica-benigna" },
       { title: "Litiasis urinaria", desc: "Manejo avanzado de cálculos con mínima invasión." },
       { title: "Incontinencia urinaria", desc: "Tratamiento personalizado para hombres y mujeres." },
       { title: "Disfunción eréctil", desc: "Manejo integral basado en evidencia científica." },
