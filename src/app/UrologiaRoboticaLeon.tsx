@@ -2,6 +2,7 @@
 
 import React, { useMemo, useState } from "react";
 import NextImage from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 // === Scroll suave ===
@@ -140,10 +141,10 @@ export default function UrologiaRoboticaLeon() {
   const services = useMemo(
     () => [
       { title: "Cirugía robótica", desc: "Procedimientos urológicos avanzados con visión 3D y precisión milimétrica." },
-      { title: "Cáncer de próstata", desc: "Diagnóstico y tratamiento integral, incluida prostatectomía robótica." },
+      { title: "Cáncer de próstata", desc: "Diagnóstico y tratamiento integral, incluida prostatectomía robótica.", href: "/cancer-prostata" },
       { title: "Cáncer de vejiga", desc: "Abordaje oncológico mínimamente invasivo y preservación funcional." },
       { title: "Cáncer renal", desc: "Nefrectomía parcial o radical con mínima invasión." },
-      { title: "Hiperplasia prostática (HBP)", desc: "Tratamiento moderno de síntomas urinarios con láser o vapor." },
+      { title: "Hiperplasia prostática (HBP)", desc: "Tratamiento moderno de síntomas urinarios con láser o vapor. Múltiples opciones incluyendo preservación de eyaculación.", href: "/hiperplasia-prostatica-benigna" },
       { title: "Litiasis urinaria", desc: "Manejo avanzado de cálculos con mínima invasión." },
       { title: "Incontinencia urinaria", desc: "Tratamiento personalizado para hombres y mujeres." },
       { title: "Disfunción eréctil", desc: "Manejo integral basado en evidencia científica." },
@@ -236,12 +237,24 @@ export default function UrologiaRoboticaLeon() {
             Servicios
           </motion.h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {services.map((s) => (
-              <Card key={s.title}>
-                <h3 className="font-semibold">{s.title}</h3>
-                <p className="text-sm text-slate-600 mt-2">{s.desc}</p>
-              </Card>
-            ))}
+            {services.map((s) =>
+              s.href ? (
+                <Link key={s.title} href={s.href} className="group block">
+                  <Card className="h-full group-hover:border-teal-400 group-hover:shadow-md transition">
+                    <div className="flex items-start justify-between gap-2">
+                      <h3 className="font-semibold group-hover:text-teal-700 transition">{s.title}</h3>
+                      <span className="text-teal-500 flex-shrink-0 text-sm font-medium">Ver más →</span>
+                    </div>
+                    <p className="text-sm text-slate-600 mt-2">{s.desc}</p>
+                  </Card>
+                </Link>
+              ) : (
+                <Card key={s.title}>
+                  <h3 className="font-semibold">{s.title}</h3>
+                  <p className="text-sm text-slate-600 mt-2">{s.desc}</p>
+                </Card>
+              )
+            )}
           </div>
         </section>
 
