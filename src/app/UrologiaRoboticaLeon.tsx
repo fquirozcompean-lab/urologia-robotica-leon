@@ -138,18 +138,6 @@ export default function UrologiaRoboticaLeon() {
     { id: "ubicacion", label: "Contacto" },
   ];
 
-  const services = [
-    { title: "Cirugía robótica", desc: "Procedimientos urológicos avanzados con visión 3D y precisión milimétrica." },
-    { title: "Cáncer de próstata", desc: "Diagnóstico y tratamiento integral, incluida prostatectomía robótica.", href: "/cancer-prostata" },
-    { title: "Cáncer de vejiga", desc: "Abordaje oncológico mínimamente invasivo y preservación funcional." },
-    { title: "Cáncer renal", desc: "Nefrectomía parcial o radical con mínima invasión." },
-    { title: "Hiperplasia prostática (HPB)", desc: "Tratamiento personalizado: láser HoLEP, láser verde, Rezum y opciones que preservan la eyaculación.", href: "/hiperplasia-prostatica-benigna" },
-    { title: "Litiasis urinaria", desc: "Manejo avanzado de cálculos con mínima invasión." },
-    { title: "Incontinencia urinaria", desc: "Tratamiento personalizado para hombres y mujeres." },
-    { title: "Disfunción eréctil", desc: "Manejo integral basado en evidencia científica." },
-    { title: "Infecciones urinarias", desc: "Atención oportuna y prevención de recurrencias." },
-  ];
-
   const faqs = [
     { q: "¿Cómo agendo una cita?", a: "Puedes agendar desde esta página, por WhatsApp o Doctoralia.", highlight: true },
     { q: "¿Qué incluye la consulta?", a: "Historia clínica completa, exploración física, diagnóstico y tratamiento." },
@@ -234,24 +222,61 @@ export default function UrologiaRoboticaLeon() {
             Servicios
           </motion.h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {services.map((s) =>
-              s.href ? (
-                <Link key={s.title} href={s.href} className="group block">
-                  <Card className="h-full group-hover:border-teal-400 group-hover:shadow-md transition">
-                    <div className="flex items-start justify-between gap-2">
-                      <h3 className="font-semibold group-hover:text-teal-700 transition">{s.title}</h3>
-                      <span className="text-teal-500 flex-shrink-0 text-sm font-medium">Ver más →</span>
-                    </div>
-                    <p className="text-sm text-slate-600 mt-2">{s.desc}</p>
-                  </Card>
-                </Link>
-              ) : (
-                <Card key={s.title}>
-                  <h3 className="font-semibold">{s.title}</h3>
-                  <p className="text-sm text-slate-600 mt-2">{s.desc}</p>
-                </Card>
-              )
-            )}
+
+            {/* Tarjetas sin enlace */}
+            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <h3 className="font-semibold">Cirugía robótica</h3>
+              <p className="text-sm text-slate-600 mt-2">Procedimientos urológicos avanzados con visión 3D y precisión milimétrica.</p>
+            </div>
+
+            {/* Tarjeta con enlace — Cáncer de próstata */}
+            <Link href="/cancer-prostata" className="block rounded-2xl border border-teal-300 bg-white p-5 shadow-sm hover:shadow-md hover:border-teal-500 transition">
+              <div className="flex items-start justify-between gap-2">
+                <h3 className="font-semibold text-slate-900">Cáncer de próstata</h3>
+                <span className="text-teal-600 text-sm font-medium flex-shrink-0">Ver más →</span>
+              </div>
+              <p className="text-sm text-slate-600 mt-2">Diagnóstico y tratamiento integral, incluida prostatectomía robótica.</p>
+            </Link>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <h3 className="font-semibold">Cáncer de vejiga</h3>
+              <p className="text-sm text-slate-600 mt-2">Abordaje oncológico mínimamente invasivo y preservación funcional.</p>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <h3 className="font-semibold">Cáncer renal</h3>
+              <p className="text-sm text-slate-600 mt-2">Nefrectomía parcial o radical con mínima invasión.</p>
+            </div>
+
+            {/* Tarjeta con enlace — Hiperplasia prostática */}
+            <Link href="/hiperplasia-prostatica-benigna" className="block rounded-2xl border border-teal-300 bg-white p-5 shadow-sm hover:shadow-md hover:border-teal-500 transition">
+              <div className="flex items-start justify-between gap-2">
+                <h3 className="font-semibold text-slate-900">Hiperplasia prostática (HPB)</h3>
+                <span className="text-teal-600 text-sm font-medium flex-shrink-0">Ver más →</span>
+              </div>
+              <p className="text-sm text-slate-600 mt-2">Tratamiento personalizado: láser HoLEP, láser verde, Rezum y opciones que preservan la eyaculación.</p>
+            </Link>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <h3 className="font-semibold">Litiasis urinaria</h3>
+              <p className="text-sm text-slate-600 mt-2">Manejo avanzado de cálculos con mínima invasión.</p>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <h3 className="font-semibold">Incontinencia urinaria</h3>
+              <p className="text-sm text-slate-600 mt-2">Tratamiento personalizado para hombres y mujeres.</p>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <h3 className="font-semibold">Disfunción eréctil</h3>
+              <p className="text-sm text-slate-600 mt-2">Manejo integral basado en evidencia científica.</p>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <h3 className="font-semibold">Infecciones urinarias</h3>
+              <p className="text-sm text-slate-600 mt-2">Atención oportuna y prevención de recurrencias.</p>
+            </div>
+
           </div>
         </section>
 
