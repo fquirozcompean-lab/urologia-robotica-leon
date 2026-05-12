@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import NextImage from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -138,20 +138,17 @@ export default function UrologiaRoboticaLeon() {
     { id: "ubicacion", label: "Contacto" },
   ];
 
-  const services = useMemo(
-    () => [
-      { title: "Cirugía robótica", desc: "Procedimientos urológicos avanzados con visión 3D y precisión milimétrica." },
-      { title: "Cáncer de próstata", desc: "Diagnóstico y tratamiento integral, incluida prostatectomía robótica.", href: "/cancer-prostata" },
-      { title: "Cáncer de vejiga", desc: "Abordaje oncológico mínimamente invasivo y preservación funcional." },
-      { title: "Cáncer renal", desc: "Nefrectomía parcial o radical con mínima invasión." },
-      { title: "Hiperplasia prostática (HBP)", desc: "Tratamiento moderno de síntomas urinarios con láser o vapor. Múltiples opciones incluyendo preservación de eyaculación.", href: "/hiperplasia-prostatica-benigna" },
-      { title: "Litiasis urinaria", desc: "Manejo avanzado de cálculos con mínima invasión." },
-      { title: "Incontinencia urinaria", desc: "Tratamiento personalizado para hombres y mujeres." },
-      { title: "Disfunción eréctil", desc: "Manejo integral basado en evidencia científica." },
-      { title: "Infecciones urinarias", desc: "Atención oportuna y prevención de recurrencias." },
-    ],
-    []
-  );
+  const services = [
+    { title: "Cirugía robótica", desc: "Procedimientos urológicos avanzados con visión 3D y precisión milimétrica." },
+    { title: "Cáncer de próstata", desc: "Diagnóstico y tratamiento integral, incluida prostatectomía robótica.", href: "/cancer-prostata" },
+    { title: "Cáncer de vejiga", desc: "Abordaje oncológico mínimamente invasivo y preservación funcional." },
+    { title: "Cáncer renal", desc: "Nefrectomía parcial o radical con mínima invasión." },
+    { title: "Hiperplasia prostática (HPB)", desc: "Tratamiento personalizado: láser HoLEP, láser verde, Rezum y opciones que preservan la eyaculación.", href: "/hiperplasia-prostatica-benigna" },
+    { title: "Litiasis urinaria", desc: "Manejo avanzado de cálculos con mínima invasión." },
+    { title: "Incontinencia urinaria", desc: "Tratamiento personalizado para hombres y mujeres." },
+    { title: "Disfunción eréctil", desc: "Manejo integral basado en evidencia científica." },
+    { title: "Infecciones urinarias", desc: "Atención oportuna y prevención de recurrencias." },
+  ];
 
   const faqs = [
     { q: "¿Cómo agendo una cita?", a: "Puedes agendar desde esta página, por WhatsApp o Doctoralia.", highlight: true },
