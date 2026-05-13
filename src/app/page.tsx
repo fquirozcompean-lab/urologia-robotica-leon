@@ -138,7 +138,7 @@ export default function UrologiaRoboticaLeon() {
       { title: "Cáncer de vejiga", desc: "Abordaje oncológico mínimamente invasivo y preservación funcional." },
       { title: "Cáncer renal", desc: "Nefrectomía parcial o radical con mínima invasión." },
       { title: "Hiperplasia prostática (HBP)", desc: "Tratamiento moderno de síntomas urinarios con láser o vapor.", href: "/hiperplasia-prostatica-benigna" },
-      { title: "Litiasis urinaria", desc: "Manejo avanzado de cálculos con mínima invasión." },
+      { title: "Litiasis urinaria", desc: "Manejo avanzado de cálculos con mínima invasión.", href: "/calculos-renales" },
       { title: "Incontinencia urinaria", desc: "Tratamiento personalizado para hombres y mujeres." },
       { title: "Disfunción eréctil", desc: "Manejo integral basado en evidencia científica." },
       { title: "Infecciones urinarias", desc: "Atención oportuna y prevención de recurrencias." },
