@@ -136,7 +136,7 @@ export default function UrologiaRoboticaLeon() {
       { title: "Cirugía robótica", desc: "Procedimientos urológicos avanzados con visión 3D y precisión milimétrica." },
       { title: "Cáncer de próstata", desc: "Diagnóstico y tratamiento integral, incluida prostatectomía robótica.", href: "/cancer-prostata" },
       { title: "Cáncer de vejiga", desc: "Abordaje oncológico mínimamente invasivo y preservación funcional.", href: "/cancer-vejiga" },
-      { title: "Cáncer renal", desc: "Nefrectomía parcial o radical con mínima invasión." },
+      { title: "Cáncer renal", desc: "Nefrectomía parcial o radical con mínima invasión.", href: "/cancer-renal" },
       { title: "Hiperplasia prostática (HBP)", desc: "Tratamiento moderno de síntomas urinarios con láser o vapor.", href: "/hiperplasia-prostatica-benigna" },
       { title: "Litiasis urinaria", desc: "Manejo avanzado de cálculos con mínima invasión.", href: "/calculos-renales" },
       { title: "Incontinencia urinaria", desc: "Tratamiento personalizado para hombres y mujeres." },
