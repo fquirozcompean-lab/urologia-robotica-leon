@@ -142,7 +142,7 @@ export default function UrologiaRoboticaLeon() {
       { title: "Litiasis urinaria", desc: "Manejo avanzado de cálculos con mínima invasión.", href: "/calculos-renales" },
       { title: "Incontinencia urinaria", desc: "Tratamiento personalizado para hombres y mujeres." },
       { title: "Disfunción eréctil", desc: "Manejo integral basado en evidencia científica." },
-      { title: "Infecciones urinarias", desc: "Atención oportuna y prevención de recurrencias." },
+      { title: "Infecciones urinarias", desc: "Atención oportuna y prevención de recurrencias.", href: "/infeccion-urinaria" },
     ],
     []
   );
