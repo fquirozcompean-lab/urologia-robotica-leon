@@ -176,75 +176,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const tamsulosinaDrugSchema = {
-  "@context": "https://schema.org",
-  "@type": "Drug",
-  name: "Tamsulosina",
-  alternateName: ["OMNIC", "Uroblock", "Flomax"],
-  description:
-    "Alfa-bloqueador uroselecto de primera línea para el tratamiento de los síntomas del tracto urinario inferior por hiperplasia prostática benigna. Relaja el músculo liso del cuello vesical y la próstata mejorando el flujo urinario.",
-  drugClass: "Alfa-1 bloqueador uroselecto",
-  dosageForm: "Cápsula de liberación prolongada",
-  doseSchedule: {
-    "@type": "DoseSchedule",
-    frequency: "Una vez al día",
-    dose: {
-      "@type": "QuantitativeValue",
-      value: "0.4",
-      unitCode: "mg",
-    },
-  },
-  sideEffect: [
-    "Eyaculación retrógrada (poco frecuente)",
-    "Síndrome de iris flácido intraoperatorio (IFIS) en cirugía ocular",
-    "Mareo postural (infrecuente con dosis estándar)",
-  ],
-  warning:
-    "Informar al oftalmólogo antes de cualquier cirugía ocular (cataratas, glaucoma) si el paciente toma tamsulosina. Puede causar IFIS incluso tiempo después de suspenderla.",
-  prescriptionStatus: "PrescriptionOnly",
-  administrationRoute: "Oral",
-  availableStrength: {
-    "@type": "DrugStrength",
-    strengthValue: "0.4",
-    strengthUnit: "mg",
-  },
-};
-
-const finasterideDrugSchema = {
-  "@context": "https://schema.org",
-  "@type": "Drug",
-  name: "Finasteride",
-  alternateName: ["PROSCAR", "Nopecia"],
-  description:
-    "Inhibidor de la 5-alfa-reductasa tipo 2 para el tratamiento de la hiperplasia prostática benigna. Reduce el volumen prostático un 20–25% tras 6 meses de tratamiento y disminuye el riesgo de retención urinaria aguda.",
-  drugClass: "Inhibidor de la 5-alfa-reductasa",
-  dosageForm: "Comprimido",
-  doseSchedule: {
-    "@type": "DoseSchedule",
-    frequency: "Una vez al día",
-    dose: {
-      "@type": "QuantitativeValue",
-      value: "5",
-      unitCode: "mg",
-    },
-  },
-  sideEffect: [
-    "Disminución del deseo sexual (~5%)",
-    "Disfunción eréctil leve (~5–8%)",
-    "Reducción del PSA a la mitad (efecto esperado, no patológico)",
-    "Alteraciones de la eyaculación",
-  ],
-  warning:
-    "Finasteride reduce el PSA aproximadamente a la mitad. El valor de PSA debe multiplicarse por 2 para interpretar el valor real. Comunicar siempre a cualquier médico que se está tomando este medicamento.",
-  prescriptionStatus: "PrescriptionOnly",
-  administrationRoute: "Oral",
-  availableStrength: {
-    "@type": "DrugStrength",
-    strengthValue: "5",
-    strengthUnit: "mg",
-  },
-};
-
 const medicalWebPageSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
@@ -282,14 +213,6 @@ export default function MedicamentosProstatacPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(tamsulosinaDrugSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(finasterideDrugSchema) }}
       />
       <script
         type="application/ld+json"
