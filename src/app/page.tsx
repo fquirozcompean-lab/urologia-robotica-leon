@@ -144,6 +144,7 @@ export default function UrologiaRoboticaLeon() {
       { title: "Disfunción eréctil", desc: "Manejo integral basado en evidencia científica.", href: "/disfuncion-erectil" },
       { title: "Infecciones urinarias", desc: "Atención oportuna y prevención de recurrencias.", href: "/infeccion-urinaria" },
       { title: "VPH en Hombres", desc: "Diagnóstico de verrugas genitales, vacuna Gardasil 9 y prevención. Consulta confidencial.", href: "/vph-en-hombres" },
+      { title: "Verrugas Genitales", desc: "Eliminación con crioterapia, láser y electrofulguración. Tratamiento inmediato y confidencial.", href: "/verrugas-genitales" },
     ],
     []
   );
