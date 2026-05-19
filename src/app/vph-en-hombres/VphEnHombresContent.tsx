@@ -560,7 +560,7 @@ export default function VphEnHombresContent() {
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
               className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
               <h3 className="font-bold text-lg mb-4">Tratamiento de Verrugas Genitales</h3>
-              <p className="text-sm text-slate-600 mb-4">El objetivo es eliminar las lesiones visibles y reducir el riesgo de transmisión.</p>
+              <p className="text-sm text-slate-600 mb-4">El objetivo es eliminar las lesiones visibles y reducir el riesgo de transmisión. <Link href="/verrugas-genitales" className="text-indigo-600 hover:text-indigo-800 font-medium underline">Ver guía completa de tratamientos →</Link></p>
               <div className="space-y-3">
                 {[
                   { nombre: "Crioterapia", desc: "Congelamiento con nitrógeno líquido. Efectivo, rápido, sin cicatriz." },
@@ -911,11 +911,11 @@ export default function VphEnHombresContent() {
             <div className="text-sm text-indigo-300 flex flex-wrap justify-center gap-3">
               <Link href="/" className="hover:text-white transition">← Inicio</Link>
               <span>·</span>
+              <Link href="/verrugas-genitales" className="hover:text-white transition">Verrugas genitales</Link>
+              <span>·</span>
               <Link href="/infeccion-urinaria" className="hover:text-white transition">Infección urinaria</Link>
               <span>·</span>
               <Link href="/disfuncion-erectil" className="hover:text-white transition">Disfunción eréctil</Link>
-              <span>·</span>
-              <Link href="/cancer-prostata" className="hover:text-white transition">Cáncer de próstata</Link>
             </div>
           </motion.div>
         </section>
