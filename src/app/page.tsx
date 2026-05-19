@@ -141,7 +141,7 @@ export default function UrologiaRoboticaLeon() {
       { title: "Medicamentos para la próstata", desc: "Guía clínica: tamsulosina, finasteride y cuándo el medicamento no es suficiente.", href: "/medicamentos-prostata" },
       { title: "Litiasis urinaria", desc: "Manejo avanzado de cálculos con mínima invasión.", href: "/calculos-renales" },
       { title: "Incontinencia urinaria", desc: "Tratamiento personalizado para hombres y mujeres." },
-      { title: "Disfunción eréctil", desc: "Manejo integral basado en evidencia científica." },
+      { title: "Disfunción eréctil", desc: "Manejo integral basado en evidencia científica.", href: "/disfuncion-erectil" },
       { title: "Infecciones urinarias", desc: "Atención oportuna y prevención de recurrencias.", href: "/infeccion-urinaria" },
     ],
     []
