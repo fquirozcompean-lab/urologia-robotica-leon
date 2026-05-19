@@ -143,6 +143,7 @@ export default function UrologiaRoboticaLeon() {
       { title: "Incontinencia urinaria", desc: "Tratamiento personalizado para hombres y mujeres." },
       { title: "Disfunción eréctil", desc: "Manejo integral basado en evidencia científica.", href: "/disfuncion-erectil" },
       { title: "Infecciones urinarias", desc: "Atención oportuna y prevención de recurrencias.", href: "/infeccion-urinaria" },
+      { title: "VPH en Hombres", desc: "Diagnóstico de verrugas genitales, vacuna Gardasil 9 y prevención. Consulta confidencial.", href: "/vph-en-hombres" },
     ],
     []
   );
