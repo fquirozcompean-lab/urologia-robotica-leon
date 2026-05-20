@@ -1,7 +1,20 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
+import { Plus_Jakarta_Sans, Lora } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta",
+  display: "swap",
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-lora",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   verification: {
@@ -73,7 +86,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
+    <html lang="es" className={`${jakarta.variable} ${lora.variable}`}>
       <head>
         <Script
           id="json-ld-physician"
@@ -123,7 +136,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className="antialiased bg-white text-slate-800 font-sans">
+      <body className="antialiased bg-white text-gris-profundo font-sans">
         {children}
       </body>
     </html>
