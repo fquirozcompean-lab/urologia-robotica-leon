@@ -7,6 +7,7 @@ import {
   Shield,
   Stethoscope,
   Hexagon,
+  Crosshair,
 } from 'lucide-react'
 import ServiceCard from '@/components/ServiceCard'
 
@@ -104,6 +105,13 @@ export default function Home() {
               title="Crecimiento de Próstata / HPB"
               description="Tratamiento médico y quirúrgico del crecimiento prostático benigno. Opciones de cirugía con láser y mínimamente invasiva para recuperación rápida."
               href="/hiperplasia-prostatica-benigna"
+            />
+
+            <ServiceCard
+              icon={<Crosshair size={48} className="text-quirurgico" strokeWidth={2} />}
+              title="HoLEP: Láser de Próstata"
+              description="Cirugía láser HoLEP para próstata grande. Recuperación en 24–48 h, mínimo sangrado y sin límite de tamaño prostático. Técnica gold standard mundial."
+              href="/holep-cirugia-laser"
             />
 
             <ServiceCard
