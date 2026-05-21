@@ -257,6 +257,15 @@ export default function UrologiaRoboticaLeon() {
               <p className="text-sm text-slate-600 mt-2">Tratamiento personalizado: láser HoLEP, láser verde, Rezum y opciones que preservan la eyaculación.</p>
             </Link>
 
+            {/* Tarjeta con enlace — HoLEP */}
+            <Link href="/holep-cirugia-laser" className="block rounded-2xl border border-teal-300 bg-white p-5 shadow-sm hover:shadow-md hover:border-teal-500 transition">
+              <div className="flex items-start justify-between gap-2">
+                <h3 className="font-semibold text-slate-900">HoLEP: Cirugía láser de próstata</h3>
+                <span className="text-teal-600 text-sm font-medium flex-shrink-0">Ver más →</span>
+              </div>
+              <p className="text-sm text-slate-600 mt-2">Enucleación con láser de holmium para próstatas de cualquier tamaño. Recuperación en 24–48 h.</p>
+            </Link>
+
             <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
               <h3 className="font-semibold">Litiasis urinaria</h3>
               <p className="text-sm text-slate-600 mt-2">Manejo avanzado de cálculos con mínima invasión.</p>
