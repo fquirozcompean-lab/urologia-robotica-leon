@@ -124,6 +124,72 @@ export default function RootLayout({
           }}
         />
         <Script
+          id="json-ld-local-business"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MedicalClinic",
+              name: "Dr. Alejandro Quiroz Compeán — Urología Oncológica y Cirugía Robótica",
+              image: "https://urologiaroboticaleon.com/og-image.jpg",
+              description:
+                "Consulta de urología oncológica y cirugía robótica en León, Guanajuato. Especialista en cáncer de próstata, hiperplasia prostática, HoLEP, cáncer renal y vejiga.",
+              url: "https://urologiaroboticaleon.com",
+              telephone: "+52-477-633-0492",
+              priceRange: "$$",
+              currenciesAccepted: "MXN",
+              paymentAccepted: "Efectivo, Tarjeta de crédito, Seguros médicos",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Av. Cerro Gordo 311, Consultorio 615, Torre II",
+                addressLocality: "León",
+                addressRegion: "Guanajuato",
+                postalCode: "37160",
+                addressCountry: "MX",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 21.1234,
+                longitude: -101.6839,
+              },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: ["Monday", "Tuesday", "Thursday"],
+                  opens: "09:00",
+                  closes: "20:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: ["Wednesday", "Friday"],
+                  opens: "09:00",
+                  closes: "20:00",
+                },
+              ],
+              sameAs: [
+                "https://www.instagram.com/urologo.alejandroquiroz/",
+                "https://www.facebook.com/DrQuirozUrologoLeon",
+                "https://www.doctoralia.com.mx/alejandro-quiroz-compean/urologo/leon",
+              ],
+              medicalSpecialty: [
+                "Urology",
+                "Oncology",
+                "Robotic Surgery",
+              ],
+              hasMap: "https://www.google.com/maps/search/?api=1&query=Hospital+Ángeles+León",
+              areaServed: {
+                "@type": "City",
+                name: "León",
+                containedInPlace: {
+                  "@type": "State",
+                  name: "Guanajuato",
+                },
+              },
+            }),
+          }}
+        />
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-FFEFH848TS"
           strategy="afterInteractive"
         />
