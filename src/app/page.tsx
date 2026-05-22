@@ -109,7 +109,7 @@ export default function Home() {
 
             <ServiceCard
               icon={<Crosshair size={48} className="text-quirurgico" strokeWidth={2} />}
-              title="HoLEP: Láser de Próstata"
+              title="HoLEP: Cirugía Láser de Próstata"
               description="Cirugía láser HoLEP para próstata grande. Recuperación en 24–48 h, mínimo sangrado y sin límite de tamaño prostático. Técnica gold standard mundial."
               href="/holep-cirugia-laser"
             />
