@@ -204,6 +204,11 @@ export default function RootLayout({
       </head>
       <body className="antialiased bg-white text-gris-profundo font-sans">
         {children}
+        <div className="w-full bg-petroleo text-center py-2 px-4">
+          <p className="text-[9px] text-gris-premium">
+            Aviso de Publicidad COFEPRIS: 2611072002A00152
+          </p>
+        </div>
       </body>
     </html>
   );
