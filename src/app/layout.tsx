@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Lora } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import MedicalAIAgent from "@/components/MedicalAIAgent";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -209,6 +210,7 @@ export default function RootLayout({
             Aviso de Publicidad COFEPRIS: 2611072002A00152
           </p>
         </div>
+        <MedicalAIAgent />
       </body>
     </html>
   );
