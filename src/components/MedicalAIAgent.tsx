@@ -9,6 +9,41 @@ interface Message {
   content: string;
 }
 
+// Convierte links markdown [texto](url) y URLs sueltas en enlaces clickeables
+function renderMessageContent(content: string) {
+  const pattern = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|(https?:\/\/[^\s)]+)/g;
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = pattern.exec(content)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(content.slice(lastIndex, match.index));
+    }
+    const label = match[1] ?? "Agendar cita en Doctoralia";
+    const url = match[2] ?? match[3];
+    parts.push(
+      <a
+        key={match.index}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline font-medium"
+        style={{ color: "#7dd3fc" }}
+      >
+        {label}
+      </a>
+    );
+    lastIndex = pattern.lastIndex;
+  }
+
+  if (lastIndex < content.length) {
+    parts.push(content.slice(lastIndex));
+  }
+
+  return parts;
+}
+
 export default function MedicalAIAgent() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
@@ -134,7 +169,9 @@ export default function MedicalAIAgent() {
                       : { background: "#1a3d4f", color: "#cbd5e1" }
                   }
                 >
-                  {msg.content}
+                  {msg.role === "assistant"
+                    ? renderMessageContent(msg.content)
+                    : msg.content}
                 </div>
               </div>
             ))}
