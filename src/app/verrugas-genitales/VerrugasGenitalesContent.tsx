@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -958,7 +958,7 @@ export default function VerrugasGenitalesContent() {
       <footer className="bg-slate-900 text-slate-200 py-8 text-center">
         <p className="font-semibold">© 2025 Dr. Alejandro Quiroz Compeán | Urología Robótica León</p>
         <p className="text-slate-400 text-sm mt-2">Urólogo Oncólogo · Cirugía Robótica · León, Guanajuato, México</p>
-        <p className="text-slate-500 text-xs mt-2">C.P. 8860892 · C.E. 12465195 · Certificado CONAMEU · Aviso de publicidad pendiente COFEPRIS</p>
+        <p className="text-slate-500 text-xs mt-2">C.P. 8860892 · C.E. 12465195 · Certificado CONAMEU · COFEPRIS No. 2611072002A00152</p>
       </footer>
     </div>
   );

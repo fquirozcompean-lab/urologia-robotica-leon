@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -981,7 +981,7 @@ export default function HoLEPContent() {
         </p>
         <p className="mt-1">HoLEP · Cirugía Láser de Próstata · León, Guanajuato, México</p>
         <p className="mt-1 text-xs text-editorial/40">
-          C.P. 8860892 · C.E. 12465195 · Certificado CONAMEU · Aviso COFEPRIS pendiente
+          C.P. 8860892 · C.E. 12465195 · Certificado CONAMEU · COFEPRIS No. 2611072002A00152
         </p>
         <div className="mt-4 flex justify-center gap-6">
           <Link href="/" className="text-quirurgico hover:text-editorial transition">

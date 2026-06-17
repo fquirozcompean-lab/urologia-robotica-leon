@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -857,7 +857,7 @@ export default function MedicamentosProstataContent() {
           Urólogo Oncólogo · Cirugía Robótica · León, Guanajuato, México
         </p>
         <p className="text-slate-500 text-xs mt-2">
-          C.P. 8860892 · C.E. 12465195 · Certificado CONAMEU · Aviso de publicidad pendiente COFEPRIS
+          C.P. 8860892 · C.E. 12465195 · Certificado CONAMEU · COFEPRIS No. 2611072002A00152
         </p>
       </footer>
     </div>

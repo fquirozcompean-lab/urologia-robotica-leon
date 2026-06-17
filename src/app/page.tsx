@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import {
   Activity,
   AlertCircle,
@@ -12,8 +13,8 @@ import {
 import ServiceCard from '@/components/ServiceCard'
 
 export const metadata = {
-  title: "Urólogo Oncólogo en León | Cirugía de Próstata y Riñón — Dr. Alejandro Quiroz",
-  description: "Urología oncológica y cirugía avanzada en León, Guanajuato. Tratamiento de cáncer de próstata, cáncer renal, HPB, infección urinaria, disfunción eréctil y VPH. Dr. Alejandro Quiroz Compeán.",
+  title: "Urólogo Oncólogo en León | Cáncer de Próstata, Cáncer Renal y Cirugía Robótica — Dr. Quiroz",
+  description: "Urólogo oncólogo en León, Guanajuato. Especialista en cáncer de próstata, cáncer renal y cirugía robótica urológica. Dr. Alejandro Quiroz Compeán, certificado CONAMEU, formado en INCan y Hospital Albert Einstein, Brasil.",
 }
 
 export default function Home() {
@@ -27,13 +28,18 @@ export default function Home() {
 
             {/* TEXTO - Izquierda */}
             <div className="lg:col-span-7 text-center lg:text-left">
+
+              {/* Credencial badge */}
+              <div className="inline-flex items-center bg-acero/30 border border-acero/50 rounded-full px-4 py-1.5 text-sm text-quirurgico mb-5 font-sans">
+                Urólogo oncólogo certificado · León, Guanajuato
+              </div>
+
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-sans leading-tight">
-                Urología Oncológica y Cirugía Avanzada en León, Guanajuato
+                Urólogo oncólogo en León especializado en cáncer de próstata, cáncer renal y cirugía robótica
               </h1>
 
               <p className="text-xl md:text-2xl mb-4 font-serif text-editorial/90 leading-relaxed">
-                Tratamiento integral de cáncer urológico, cirugía mínimamente invasiva y salud sexual masculina.
-                Atención especializada con tecnología de vanguardia.
+                Dr. Alejandro Quiroz Compeán — Certificado por CONAMEU, con alta especialidad en Urología Oncológica (INCan) y formación en cirugía robótica urológica en el Hospital Albert Einstein, São Paulo.
               </p>
 
               <p className="text-lg md:text-xl mb-10 font-serif italic text-dorado">
@@ -42,26 +48,36 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
                 <a
+                  href={`https://wa.me/5214776330492?text=${encodeURIComponent("Hola Dr. Quiroz, quiero agendar una valoración.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-lg font-bold font-sans hover:bg-[#20b358] transition-colors shadow-lg"
+                >
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                  Agendar valoración
+                </a>
+
+                <a
                   href="https://www.doctoralia.com.mx/z/oFar6h"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 bg-acero text-editorial px-8 py-4 rounded-lg font-bold font-sans hover:bg-acero/90 transition-colors shadow-lg"
+                  className="inline-flex items-center justify-center gap-3 bg-transparent border-2 border-editorial/50 text-editorial px-8 py-4 rounded-lg font-bold font-sans hover:border-editorial hover:bg-editorial/10 transition-colors"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                  Agenda tu consulta
+                  Ver en Doctoralia
                 </a>
+              </div>
 
-                <a
-                  href="tel:+524791037564"
-                  className="inline-flex items-center justify-center gap-3 bg-transparent border-2 border-acero text-editorial px-8 py-4 rounded-lg font-bold font-sans hover:bg-acero hover:text-editorial transition-colors"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  479 103 7564
-                </a>
+              {/* Trust signals */}
+              <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-editorial/45 justify-center lg:justify-start font-sans">
+                <span>C.P. 8860892</span><span>·</span>
+                <span>C.E. 12465195</span><span>·</span>
+                <span>Certificado CONAMEU</span><span>·</span>
+                <span>Hosp. Ángeles León · Hosp. Christus Muguerza</span>
               </div>
             </div>
 
@@ -69,12 +85,65 @@ export default function Home() {
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative">
                 <img
-                  src="/images/dr-quiroz-profesional.jpg"
-                  alt="Dr. Alejandro Quiroz Compeán - Urólogo Oncólogo"
+                  src="/images/foto-para-web.png"
+                  alt="Dr. Alejandro Quiroz Compeán — Urólogo oncólogo en León, Guanajuato"
                   className="rounded-2xl shadow-2xl border-4 border-acero/20 w-full max-w-md lg:max-w-lg object-cover"
                 />
               </div>
             </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ===== ACCESOS RÁPIDOS ===== */}
+      <section className="py-10 px-4 bg-white border-b border-gris-premium/10">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-xs text-gris-premium text-center mb-6 font-sans uppercase tracking-widest">
+            Consultas frecuentes
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+
+            <Link href="/cancer-prostata" className="group block bg-editorial rounded-xl p-5 border-2 border-gris-premium/15 hover:border-acero hover:shadow-lg transition-all duration-300">
+              <h3 className="font-bold text-petroleo font-sans text-[15px] mb-1">Cáncer de próstata</h3>
+              <p className="text-xs text-gris-premium font-serif leading-relaxed">Diagnóstico, PSA y prostatectomía robótica.</p>
+              <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Ver información →</span>
+            </Link>
+
+            <Link href="/hiperplasia-prostatica-benigna" className="group block bg-editorial rounded-xl p-5 border-2 border-gris-premium/15 hover:border-acero hover:shadow-lg transition-all duration-300">
+              <h3 className="font-bold text-petroleo font-sans text-[15px] mb-1">Crecimiento prostático y HoLEP</h3>
+              <p className="text-xs text-gris-premium font-serif leading-relaxed">Síntomas urinarios y cirugía láser sin implante.</p>
+              <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Ver opciones →</span>
+            </Link>
+
+            <Link href="/calculos-renales" className="group block bg-editorial rounded-xl p-5 border-2 border-gris-premium/15 hover:border-acero hover:shadow-lg transition-all duration-300">
+              <h3 className="font-bold text-petroleo font-sans text-[15px] mb-1">Piedras en riñón o uréter</h3>
+              <p className="text-xs text-gris-premium font-serif leading-relaxed">Cólico renal y tratamiento mínimamente invasivo.</p>
+              <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Ver tratamientos →</span>
+            </Link>
+
+            <Link href="/cancer-renal" className="group block bg-editorial rounded-xl p-5 border-2 border-gris-premium/15 hover:border-acero hover:shadow-lg transition-all duration-300">
+              <h3 className="font-bold text-petroleo font-sans text-[15px] mb-1">Cáncer renal</h3>
+              <p className="text-xs text-gris-premium font-serif leading-relaxed">Nefrectomía parcial o radical con técnica robótica.</p>
+              <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Ver información →</span>
+            </Link>
+
+            <Link href="#especialidades" className="group block bg-editorial rounded-xl p-5 border-2 border-gris-premium/15 hover:border-acero hover:shadow-lg transition-all duration-300">
+              <h3 className="font-bold text-petroleo font-sans text-[15px] mb-1">Cirugía robótica urológica</h3>
+              <p className="text-xs text-gris-premium font-serif leading-relaxed">Prostatectomía, nefrectomía y cistectomía Da Vinci.</p>
+              <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Ver especialidades →</span>
+            </Link>
+
+            <a
+              href={`https://wa.me/5214776330492?text=${encodeURIComponent("Hola Dr. Quiroz, quisiera una valoración oncológica especializada.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block bg-petroleo rounded-xl p-5 border-2 border-petroleo hover:border-acero hover:shadow-lg transition-all duration-300"
+            >
+              <h3 className="font-bold text-editorial font-sans text-[15px] mb-1">Valoración oncológica</h3>
+              <p className="text-xs text-editorial/60 font-serif leading-relaxed">Diagnóstico y criterio especializado en urología oncológica.</p>
+              <span className="text-xs text-quirurgico font-medium font-sans mt-3 inline-block group-hover:underline">Solicitar valoración →</span>
+            </a>
 
           </div>
         </div>

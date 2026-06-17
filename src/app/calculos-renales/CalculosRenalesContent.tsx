@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -1206,8 +1206,7 @@ export default function CalculosRenalesContent() {
           Urólogo Oncólogo · Cirugía Robótica · Cálculos Renales · León, Guanajuato, México
         </p>
         <p className="text-slate-500 text-xs mt-2">
-          C.P. 8860892 · C.E. 12465195 · Certificado CONAMEU · Aviso de publicidad pendiente
-          COFEPRIS
+          C.P. 8860892 · C.E. 12465195 · Certificado CONAMEU · COFEPRIS No. 2611072002A00152
         </p>
         <div className="mt-4 flex justify-center gap-6">
           <Link href="/" className="text-amber-400 hover:text-amber-300 text-sm transition">
