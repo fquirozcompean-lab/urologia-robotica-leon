@@ -412,7 +412,7 @@ export default function CancerProstataContent() {
               viewport={{ once: true }}
               className="text-3xl font-bold mb-3"
             >
-              Opciones de tratamiento
+              El tratamiento correcto es el que se adapta a tu caso
             </motion.h2>
             <motion.p
               variants={fadeUp}
@@ -420,98 +420,95 @@ export default function CancerProstataContent() {
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
-              className="text-slate-600 mb-8 max-w-2xl"
+              className="text-slate-600 mb-3 max-w-3xl"
             >
-              El tratamiento se individualiza según el estadio, el grado Gleason, el PSA, la
-              edad y el estado de salud del paciente. Las principales opciones son:
+              No existe un único tratamiento universal para el cáncer de próstata. Para cáncer localizado,
+              la cirugía robótica y la radioterapia ofrecen tasas de curación equivalentes a largo plazo.
+              La elección depende del estadio, el grado histológico (ISUP/Gleason), el PSA, tu edad,
+              tu estado de salud y — muy importante — tus prioridades personales.
             </motion.p>
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              className="bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 mb-8 max-w-3xl"
+            >
+              <p className="text-sm text-slate-600 leading-relaxed">
+                <span className="font-semibold text-slate-800">Lo que determina el plan de tratamiento:</span>{" "}
+                estadio clínico (T1–T4), grado ISUP (1–5), nivel de PSA, número de cilindros positivos
+                en biopsia, edad y expectativa de vida, comorbilidades, y tus preferencias respecto a
+                efectos secundarios posibles (función sexual, urinaria e intestinal).
+              </p>
+            </motion.div>
 
-            {/* PROSTATECTOMÍA ROBÓTICA — FEATURED */}
+            {/* 4 OPCIONES */}
+            <div className="grid sm:grid-cols-2 gap-5">
+              {[
+                {
+                  tag: "Riesgo muy bajo / bajo · ISUP 1",
+                  tagColor: "bg-green-100 text-green-700",
+                  title: "Vigilancia Activa",
+                  body: "Para cánceres de muy bajo o bajo riesgo, el tratamiento inmediato no mejora la supervivencia y sí puede generar efectos secundarios innecesarios. La vigilancia activa no es 'no hacer nada' — es un protocolo riguroso con PSA cada 3–6 meses, resonancia magnética y biopsias periódicas. Se interviene si hay progresión.",
+                  note: "Las guías AUA, EAU y NCCN la recomiendan como primera opción en ISUP 1 con buen perfil clínico.",
+                },
+                {
+                  tag: "Riesgo intermedio / alto · Localizado",
+                  tagColor: "bg-blue-100 text-blue-700",
+                  title: "Prostatectomía Robótica (Da Vinci)",
+                  body: "Cuando la cirugía es la mejor opción para tu caso, la vía robótica ofrece el mejor perfil quirúrgico: visión 3D magnificada, precisión milimétrica, preservación de nervios, mínimo sangrado y hospitalización de 1–2 días. El Dr. Quiroz realizó su formación en cirugía robótica en el Hospital Albert Einstein (Brasil) y el INCan.",
+                  note: "Ventaja clave: el PSA cae a cero días después de la cirugía, lo que permite detectar recurrencia de forma temprana y precisa.",
+                },
+                {
+                  tag: "Riesgo intermedio / alto · Localizado o localmente avanzado",
+                  tagColor: "bg-purple-100 text-purple-700",
+                  title: "Radioterapia (IMRT / Braquiterapia)",
+                  body: "Oncológicamente equivalente a la cirugía en cáncer localizado a 10–15 años de seguimiento. Es la opción preferida en pacientes con contraindicaciones quirúrgicas, próstata grande o preferencia personal. En riesgo alto y localmente avanzado, se combina con hormonoterapia (deprivación androgénica) durante 2–3 años.",
+                  note: "No requiere anestesia general. El perfil de efectos secundarios es diferente al de la cirugía — no mejor ni peor, sino distinto.",
+                },
+                {
+                  tag: "Enfermedad avanzada o metastásica",
+                  tagColor: "bg-orange-100 text-orange-700",
+                  title: "Hormonoterapia y tratamiento sistémico",
+                  body: "La deprivación androgénica (LHRH) es la base del tratamiento en enfermedad avanzada. Se combina con nuevos agentes hormonales de segunda generación (enzalutamida, abiraterona, apalutamida) y, en algunos casos, quimioterapia (docetaxel) o tratamiento con PSMA. El objetivo en esta etapa es control de la enfermedad y calidad de vida.",
+                  note: "El cáncer de próstata metastásico es hoy tratable durante muchos años gracias a los avances en tratamiento sistémico.",
+                },
+              ].map((t) => (
+                <Card key={t.title}>
+                  <span className={`inline-block text-xs font-semibold px-2 py-1 rounded-full mb-3 ${t.tagColor}`}>
+                    {t.tag}
+                  </span>
+                  <h3 className="font-bold text-slate-900 text-lg mb-2">{t.title}</h3>
+                  <p className="text-sm text-slate-600 leading-relaxed mb-3">{t.body}</p>
+                  <p className="text-xs text-slate-500 italic border-t border-slate-100 pt-3">{t.note}</p>
+                </Card>
+              ))}
+            </div>
+
             <motion.div
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="rounded-2xl border-2 border-indigo-400 bg-indigo-50 p-7 shadow-md mb-6"
+              className="mt-8 rounded-xl bg-slate-50 border border-slate-200 px-6 py-5"
             >
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-indigo-600 flex items-center justify-center">
-                  <span className="text-white text-xl">★</span>
-                </div>
-                <div>
-                  <div className="inline-block bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full mb-2">
-                    Tratamiento recomendado en cáncer localizado
-                  </div>
-                  <h3 className="text-xl font-bold text-indigo-900">
-                    Prostatectomía Robótica (Da Vinci)
-                  </h3>
-                  <p className="mt-2 text-slate-700 leading-relaxed">
-                    La extirpación de la próstata mediante el sistema robótico Da Vinci es el estándar
-                    de oro para el cáncer de próstata localizado de riesgo intermedio o alto en hombres
-                    candidatos a cirugía. El Dr. Quiroz realiza este procedimiento con formación
-                    especializada obtenida en el <strong>Hospital Albert Einstein (Brasil)</strong> y la
-                    experiencia adquirida en el <strong>INCan</strong>.
-                  </p>
-                  <div className="mt-4 grid sm:grid-cols-3 gap-3">
-                    {[
-                      "Visión 3D de alta definición y magnificada",
-                      "Brazos robóticos de precisión milimétrica",
-                      "Mínima pérdida de sangre (sin transfusiones en la mayoría)",
-                      "Hospitalización de 1-2 días",
-                      "Recuperación en 4-6 semanas",
-                      "Mayor preservación de nervios (continencia y erección)",
-                    ].map((b) => (
-                      <div key={b} className="flex items-start gap-2 text-sm text-slate-700">
-                        <span className="text-teal-600 font-bold mt-0.5">✓</span>
-                        {b}
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-5">
-                    <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-prostata")}>
-                      <Button className="bg-indigo-700 text-white hover:bg-indigo-800">
-                        Consultar sobre prostatectomía robótica
-                      </Button>
-                    </a>
-                  </div>
-                </div>
+              <p className="text-slate-700 leading-relaxed">
+                <span className="font-semibold">¿Cómo se decide el tratamiento?</span>{" "}
+                En consulta revisamos juntos tu biopsia, tu resonancia magnética multiparamétrica (si la tienes),
+                tu PSA y tu historial. Si ya tienes un diagnóstico de otro médico, puedo darte una valoración
+                oncológica independiente antes de que tomes una decisión. No hay prisa — salvo en enfermedad
+                de muy alto riesgo, tomar 2–4 semanas para decidir bien no cambia el pronóstico.
+              </p>
+              <div className="mt-4">
+                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-prostata")}>
+                  <Button className="bg-acero text-white hover:bg-acero/90">
+                    Solicitar valoración oncológica
+                  </Button>
+                </a>
               </div>
             </motion.div>
-
-            {/* OTHER OPTIONS */}
-            <div className="grid sm:grid-cols-3 gap-5">
-              {[
-                {
-                  title: "Vigilancia Activa",
-                  desc: "Para cánceres de muy bajo o bajo riesgo (Gleason 6 / ISUP 1). Seguimiento estrecho con PSA, exploración física y biopsias periódicas. Evita tratamiento inmediato sin sacrificar la posibilidad de curación.",
-                  tag: "Bajo riesgo",
-                  tagColor: "bg-green-100 text-green-700",
-                },
-                {
-                  title: "Radioterapia",
-                  desc: "Radioterapia externa de intensidad modulada (IMRT/VMAT) o braquiterapia. Alternativa a la cirugía en cáncer localizado, especialmente en pacientes con contraindicaciones quirúrgicas.",
-                  tag: "Alternativa a cirugía",
-                  tagColor: "bg-blue-100 text-blue-700",
-                },
-                {
-                  title: "Hormonoterapia",
-                  desc: "Deprivación androgénica para controlar el cáncer de próstata avanzado, metastásico o en recurrencia bioquímica. Generalmente se combina con radioterapia o nuevos agentes hormonales.",
-                  tag: "Enfermedad avanzada",
-                  tagColor: "bg-orange-100 text-orange-700",
-                },
-              ].map((t) => (
-                <Card key={t.title}>
-                  <span
-                    className={`inline-block text-xs font-semibold px-2 py-1 rounded-full mb-3 ${t.tagColor}`}
-                  >
-                    {t.tag}
-                  </span>
-                  <h3 className="font-semibold text-slate-900">{t.title}</h3>
-                  <p className="text-sm text-slate-600 mt-2 leading-relaxed">{t.desc}</p>
-                </Card>
-              ))}
-            </div>
           </div>
         </section>
 
