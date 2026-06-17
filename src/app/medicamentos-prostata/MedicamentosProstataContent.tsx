@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { trackWhatsApp } from "@/lib/analytics";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -384,6 +385,7 @@ export default function MedicamentosProstataContent() {
                 href={WA_UROFLUJOMETRIA}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackWhatsApp("medicamentos-prostata")}
                 className="bg-white text-violet-900 font-semibold px-6 py-3 rounded-xl hover:bg-violet-50 transition shadow"
               >
                 Agenda tu uroflujometría
@@ -392,6 +394,7 @@ export default function MedicamentosProstataContent() {
                 href={WA_CONSULTA}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackWhatsApp("medicamentos-prostata")}
                 className="bg-violet-500 text-white font-semibold px-6 py-3 rounded-xl hover:bg-violet-400 transition border border-violet-400"
               >
                 Consulta general

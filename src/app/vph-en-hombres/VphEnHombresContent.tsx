@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { trackWhatsApp } from "@/lib/analytics";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -136,11 +137,11 @@ export default function VphEnHombresContent() {
               Información clara sobre el virus del papiloma humano en hombres — diagnóstico, tratamiento y prevención. El VPH es más común de lo que piensas.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href={WA_EVALUACION} target="_blank" rel="noreferrer"
+              <a href={WA_EVALUACION} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("vph")}
                 className="bg-white text-indigo-900 font-semibold px-6 py-3 rounded-2xl hover:bg-indigo-50 transition shadow-lg">
                 Agenda evaluación de VPH
               </a>
-              <a href={WA_CONFIDENCIAL} target="_blank" rel="noreferrer"
+              <a href={WA_CONFIDENCIAL} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("vph")}
                 className="bg-indigo-700 border border-indigo-500 text-white font-semibold px-6 py-3 rounded-2xl hover:bg-indigo-600 transition">
                 💬 WhatsApp confidencial
               </a>
@@ -673,7 +674,7 @@ export default function VphEnHombresContent() {
 
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
               className="mt-8 text-center">
-              <a href={WA_CONFIDENCIAL} target="_blank" rel="noreferrer"
+              <a href={WA_CONFIDENCIAL} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("vph")}
                 className="inline-block bg-emerald-600 text-white font-semibold px-8 py-3 rounded-2xl hover:bg-emerald-700 transition shadow-md">
                 Consultar sobre vacunación VPH
               </a>
@@ -887,11 +888,11 @@ export default function VphEnHombresContent() {
               Consulta confidencial — tu salud y privacidad son prioridad
             </p>
             <div className="flex flex-wrap gap-4 justify-center mb-8">
-              <a href={WA_EVALUACION} target="_blank" rel="noreferrer"
+              <a href={WA_EVALUACION} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("vph")}
                 className="bg-white text-indigo-900 font-semibold px-8 py-3 rounded-2xl hover:bg-indigo-50 transition shadow-lg">
                 Agenda evaluación de VPH
               </a>
-              <a href={WA_CONFIDENCIAL} target="_blank" rel="noreferrer"
+              <a href={WA_CONFIDENCIAL} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("vph")}
                 className="bg-indigo-700 border border-indigo-500 text-white font-semibold px-8 py-3 rounded-2xl hover:bg-indigo-600 transition">
                 💬 WhatsApp confidencial
               </a>

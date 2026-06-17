@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { trackWhatsApp } from "@/lib/analytics";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -286,11 +287,11 @@ export default function VerrugasGenitalesContent() {
               Eliminación de verrugas genitales — crioterapia, láser y electrofulguración. Las verrugas genitales tienen solución: no necesitas vivir con ellas.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href={WA_TRATAMIENTO} target="_blank" rel="noreferrer"
+              <a href={WA_TRATAMIENTO} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("verrugas-genitales")}
                 className="bg-white text-rose-900 font-semibold px-6 py-3 rounded-2xl hover:bg-rose-50 transition shadow-lg">
                 Agenda tratamiento hoy
               </a>
-              <a href={WA_URGENTE} target="_blank" rel="noreferrer"
+              <a href={WA_URGENTE} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("verrugas-genitales")}
                 className="bg-rose-800 border border-rose-600 text-white font-semibold px-6 py-3 rounded-2xl hover:bg-rose-700 transition">
                 💬 WhatsApp urgente
               </a>
@@ -722,7 +723,7 @@ export default function VerrugasGenitalesContent() {
                 <li className="flex gap-2"><span>•</span>Enrojecimiento que se extiende</li>
               </ul>
               <div className="mt-4">
-                <a href={WA_URGENTE} target="_blank" rel="noreferrer"
+                <a href={WA_URGENTE} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("verrugas-genitales")}
                   className="block w-full text-center bg-red-600 text-white font-semibold py-2.5 rounded-xl hover:bg-red-700 transition text-sm">
                   Reportar problema post-tratamiento
                 </a>
@@ -921,11 +922,11 @@ export default function VerrugasGenitalesContent() {
               Eliminación efectiva de verrugas genitales — consulta confidencial y profesional
             </p>
             <div className="flex flex-wrap gap-4 justify-center mb-8">
-              <a href={WA_TRATAMIENTO} target="_blank" rel="noreferrer"
+              <a href={WA_TRATAMIENTO} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("verrugas-genitales")}
                 className="bg-white text-rose-900 font-semibold px-8 py-3 rounded-2xl hover:bg-rose-50 transition shadow-lg">
                 Agenda tratamiento hoy
               </a>
-              <a href={WA_URGENTE} target="_blank" rel="noreferrer"
+              <a href={WA_URGENTE} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("verrugas-genitales")}
                 className="bg-rose-800 border border-rose-600 text-white font-semibold px-8 py-3 rounded-2xl hover:bg-rose-700 transition">
                 💬 WhatsApp para consulta urgente
               </a>

@@ -3,10 +3,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { trackWhatsApp } from "@/lib/analytics";
 
 const WHATSAPP_NUMBER = "5214776330492";
 const WA_MSG = "Hola Dr. Quiroz, quiero agendar una valoración por próstata crecida (HPB).";
-const DOCTORALIA = "https://www.doctoralia.com.mx/alejandro-quiroz-compean/urologo/leon";
 
 function waLink(msg: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
@@ -299,14 +299,9 @@ export default function HiperplasiaContent() {
                 "Cada paciente es único — el tratamiento se adapta a ti."
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer">
+                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("hpb")}>
                   <Button className="bg-teal-500 text-white hover:bg-teal-400">
                     Agenda tu valoración
-                  </Button>
-                </a>
-                <a href={DOCTORALIA} target="_blank" rel="noreferrer">
-                  <Button className="bg-white text-slate-900 hover:bg-slate-100">
-                    Ver perfil en Doctoralia
                   </Button>
                 </a>
               </div>
@@ -474,7 +469,7 @@ export default function HiperplasiaContent() {
                 urinarias repetidas, retención aguda de orina o daño renal.
               </p>
               <div className="mt-4">
-                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer">
+                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("hpb")}>
                   <Button className="bg-amber-600 text-white hover:bg-amber-700 text-sm">
                     Agenda tu valoración
                   </Button>
@@ -997,7 +992,7 @@ export default function HiperplasiaContent() {
                 caso particular. No todos los pacientes necesitan el mismo tratamiento.
               </p>
               <div className="mt-4">
-                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer">
+                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("hpb")}>
                   <Button className="bg-teal-600 text-white hover:bg-teal-700 text-sm">
                     Agenda tu valoración personalizada
                   </Button>
@@ -1044,7 +1039,7 @@ export default function HiperplasiaContent() {
                   ))}
                 </ul>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer">
+                  <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("hpb")}>
                     <Button className="bg-teal-600 text-white hover:bg-teal-700">
                       Agendar valoración
                     </Button>
@@ -1220,14 +1215,9 @@ export default function HiperplasiaContent() {
               transition={{ duration: 0.5 }}
               className="mt-8 flex flex-wrap gap-4 justify-center"
             >
-              <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer">
+              <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("hpb")}>
                 <Button className="bg-white text-indigo-900 hover:bg-slate-100 text-base px-8 py-3">
                   Agenda tu valoración urológica
-                </Button>
-              </a>
-              <a href={DOCTORALIA} target="_blank" rel="noreferrer">
-                <Button className="bg-teal-400 text-white hover:bg-teal-300 text-base px-8 py-3">
-                  Doctoralia
                 </Button>
               </a>
             </motion.div>

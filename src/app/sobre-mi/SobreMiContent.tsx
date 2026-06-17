@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { trackWhatsApp, trackDoctoralia } from "@/lib/analytics";
 import {
   Award,
   GraduationCap,
@@ -150,6 +151,7 @@ export default function SobreMiContent() {
                   href={waLink(WA_MSG_HERO)}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsApp("sobre-mi")}
                   className="inline-flex items-center justify-center gap-2 bg-acero text-editorial px-6 py-3 rounded-lg font-bold font-sans hover:bg-acero/80 transition-colors"
                 >
                   <WaIcon />
@@ -159,6 +161,7 @@ export default function SobreMiContent() {
                   href={DOCTORALIA}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackDoctoralia("sobre-mi")}
                   className="inline-flex items-center justify-center gap-2 border border-acero/60 text-editorial/80 px-6 py-3 rounded-lg font-bold font-sans hover:bg-acero/10 transition-colors"
                 >
                   Ver en Doctoralia
@@ -611,6 +614,7 @@ export default function SobreMiContent() {
                   href={waLink(WA_MSG_FINAL)}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsApp("sobre-mi")}
                   className="flex-1 inline-flex items-center justify-center gap-2 bg-acero text-editorial px-4 py-2.5 rounded-lg font-bold font-sans text-sm hover:bg-acero/80 transition-colors"
                 >
                   <WaIcon />
@@ -673,6 +677,7 @@ export default function SobreMiContent() {
                   href={waLink(WA_MSG_FINAL)}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsApp("sobre-mi")}
                   className="flex-1 inline-flex items-center justify-center gap-2 bg-acero text-editorial px-4 py-2.5 rounded-lg font-bold font-sans text-sm hover:bg-acero/80 transition-colors"
                 >
                   <WaIcon />
@@ -730,6 +735,7 @@ export default function SobreMiContent() {
                 href={DOCTORALIA}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackDoctoralia("sobre-mi-cta")}
                 className="inline-flex items-center justify-center gap-2 border-2 border-editorial/50 text-editorial px-8 py-4 rounded-lg font-bold font-sans text-lg hover:bg-white/10 transition-colors"
               >
                 Ver en Doctoralia

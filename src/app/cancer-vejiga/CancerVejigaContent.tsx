@@ -3,11 +3,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { trackWhatsApp } from "@/lib/analytics";
 
 const WHATSAPP_NUMBER = "5214776330492";
 const WA_MSG = "Hola Dr. Quiroz, necesito una valoración urgente por sangre en la orina (hematuria).";
 const WA_MSG_GENERAL = "Hola Dr. Quiroz, quiero agendar una valoración por cáncer de vejiga.";
-const DOCTORALIA = "https://www.doctoralia.com.mx/alejandro-quiroz-compean/urologo/leon";
 
 function waLink(msg: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
@@ -370,14 +370,9 @@ export default function CancerVejigaContent() {
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
-                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer">
+                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-vejiga")}>
                   <Button className="bg-rose-600 text-white hover:bg-rose-500">
                     Valoración urgente por hematuria
-                  </Button>
-                </a>
-                <a href={DOCTORALIA} target="_blank" rel="noreferrer">
-                  <Button className="bg-white text-slate-900 hover:bg-slate-100">
-                    Ver perfil en Doctoralia
                   </Button>
                 </a>
               </div>
@@ -572,7 +567,7 @@ export default function CancerVejigaContent() {
                 independientemente de que el sangrado haya cesado.
               </p>
               <div className="mt-5">
-                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer">
+                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-vejiga")}>
                   <Button className="bg-rose-600 text-white hover:bg-rose-500">
                     Agenda tu valoración ahora
                   </Button>
@@ -1300,7 +1295,7 @@ export default function CancerVejigaContent() {
                   ))}
                 </ul>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <a href={waLink(WA_MSG_GENERAL)} target="_blank" rel="noreferrer">
+                  <a href={waLink(WA_MSG_GENERAL)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-vejiga")}>
                     <Button className="bg-rose-600 text-white hover:bg-rose-700">
                       Agendar valoración
                     </Button>
@@ -1502,14 +1497,9 @@ export default function CancerVejigaContent() {
               transition={{ duration: 0.5 }}
               className="mt-8 flex flex-wrap gap-4 justify-center"
             >
-              <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer">
+              <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-vejiga")}>
                 <Button className="bg-rose-600 text-white hover:bg-rose-500 text-base px-8 py-3">
                   Valoración urgente por hematuria
-                </Button>
-              </a>
-              <a href={DOCTORALIA} target="_blank" rel="noreferrer">
-                <Button className="bg-white text-slate-900 hover:bg-slate-100 text-base px-8 py-3">
-                  Doctoralia
                 </Button>
               </a>
             </motion.div>

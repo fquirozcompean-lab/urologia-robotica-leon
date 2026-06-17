@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { trackWhatsApp } from "@/lib/analytics";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -443,6 +444,7 @@ export default function DisfuncionErectilContent() {
                 href={WA_CONFIDENCIAL}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackWhatsApp("disfuncion-erectil")}
                 className="bg-white text-blue-900 font-bold px-6 py-3 rounded-xl hover:bg-blue-50 transition shadow"
               >
                 Agenda consulta confidencial

@@ -4,9 +4,9 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { trackWhatsApp } from "@/lib/analytics";
 
 const WHATSAPP = "5214776330492";
-const DOCTORALIA = "https://www.doctoralia.com.mx/z/oFar6h";
 const WA_MSG = "Hola Dr. Quiroz, quiero agendar una evaluación para cirugía HoLEP de próstata.";
 
 function waLink() {
@@ -128,22 +128,13 @@ export default function HoLEPContent() {
               "Precisión que inspira confianza"
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href={DOCTORALIA} target="_blank" rel="noreferrer">
+              <a href={waLink()} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("holep")}>
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                   className="inline-flex items-center gap-2 bg-acero text-editorial px-8 py-4 rounded-lg font-bold font-sans hover:bg-acero/90 transition-colors shadow-lg cursor-pointer"
                 >
                   Agendar Evaluación HoLEP
-                </motion.div>
-              </a>
-              <a href={waLink()} target="_blank" rel="noreferrer">
-                <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.97 }}
-                  className="inline-flex items-center gap-2 bg-transparent border-2 border-editorial text-editorial px-8 py-4 rounded-lg font-bold font-sans hover:bg-editorial hover:text-petroleo transition-colors cursor-pointer"
-                >
-                  WhatsApp
                 </motion.div>
               </a>
             </div>
@@ -818,13 +809,13 @@ export default function HoLEPContent() {
                 </li>
               </ul>
               <div className="flex flex-wrap gap-3">
-                <a href={DOCTORALIA} target="_blank" rel="noreferrer">
+                <a href={waLink()} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("holep")}>
                   <motion.div
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
                     className="inline-block bg-acero text-editorial px-6 py-3 rounded-lg font-bold font-sans text-sm hover:bg-acero/90 transition-colors cursor-pointer"
                   >
-                    Agendar en Doctoralia
+                    Agendar por WhatsApp
                   </motion.div>
                 </a>
                 <Link href="/hiperplasia-prostatica-benigna">
@@ -903,22 +894,13 @@ export default function HoLEPContent() {
               transition={{ duration: 0.5 }}
               className="flex flex-col sm:flex-row gap-5 justify-center items-center"
             >
-              <a href={DOCTORALIA} target="_blank" rel="noreferrer">
+              <a href={waLink()} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("holep")}>
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                   className="inline-flex items-center gap-3 bg-editorial text-petroleo px-10 py-5 rounded-lg font-bold font-sans hover:bg-editorial/90 transition-colors shadow-2xl text-lg cursor-pointer"
                 >
-                  Agendar Consulta de Evaluación
-                </motion.div>
-              </a>
-              <a href={waLink()} target="_blank" rel="noreferrer">
-                <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.97 }}
-                  className="inline-flex items-center gap-3 bg-transparent border-2 border-editorial text-editorial px-10 py-5 rounded-lg font-bold font-sans hover:bg-editorial hover:text-acero transition-colors text-lg cursor-pointer"
-                >
-                  WhatsApp
+                  Agendar Evaluación HoLEP
                 </motion.div>
               </a>
             </motion.div>

@@ -6,6 +6,7 @@ import "./globals.css";
 import MedicalAIAgent from "@/components/MedicalAIAgent";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -211,6 +212,7 @@ export default function RootLayout({
           {children}
         </div>
         <Footer />
+        <FloatingWhatsApp />
         <MedicalAIAgent />
       </body>
     </html>

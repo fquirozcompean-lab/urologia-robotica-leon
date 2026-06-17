@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { trackWhatsApp } from "@/lib/analytics";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -237,6 +238,7 @@ export default function InfeccionUrinariaContent() {
                 href={WA_URGENTE}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackWhatsApp("infeccion-urinaria")}
                 className="bg-white text-teal-900 font-bold px-6 py-3 rounded-xl hover:bg-teal-50 transition shadow"
               >
                 Agenda consulta urgente
@@ -245,6 +247,7 @@ export default function InfeccionUrinariaContent() {
                 href={WA_RECURRENTE}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackWhatsApp("infeccion-urinaria")}
                 className="bg-teal-600 text-white font-semibold px-6 py-3 rounded-xl hover:bg-teal-500 transition border border-teal-400"
               >
                 Infecciones recurrentes

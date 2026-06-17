@@ -3,10 +3,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { trackWhatsApp } from "@/lib/analytics";
 
 const WHATSAPP_NUMBER = "5214776330492";
 const WA_MSG = "Hola Dr. Quiroz, quiero agendar una valoración por cálculos renales (piedras en el riñón).";
-const DOCTORALIA = "https://www.doctoralia.com.mx/alejandro-quiroz-compean/urologo/leon";
 
 function waLink(msg: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
@@ -308,14 +308,9 @@ export default function CalculosRenalesContent() {
                 "El mismo día que eliminamos el cálculo, hablamos de cómo evitar el siguiente."
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer">
+                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("calculos-renales")}>
                   <Button className="bg-amber-500 text-white hover:bg-amber-400">
                     Agenda tu valoración
-                  </Button>
-                </a>
-                <a href={DOCTORALIA} target="_blank" rel="noreferrer">
-                  <Button className="bg-white text-slate-900 hover:bg-slate-100">
-                    Ver perfil en Doctoralia
                   </Button>
                 </a>
               </div>
@@ -963,7 +958,7 @@ export default function CalculosRenalesContent() {
                   ))}
                 </ul>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer">
+                  <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("calculos-renales")}>
                     <Button className="bg-amber-600 text-white hover:bg-amber-700">
                       Agendar valoración
                     </Button>
@@ -1135,14 +1130,9 @@ export default function CalculosRenalesContent() {
               transition={{ duration: 0.5 }}
               className="mt-8 flex flex-wrap gap-4 justify-center"
             >
-              <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer">
+              <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("calculos-renales")}>
                 <Button className="bg-white text-slate-900 hover:bg-slate-100 text-base px-8 py-3">
                   Agenda tu valoración urológica
-                </Button>
-              </a>
-              <a href={DOCTORALIA} target="_blank" rel="noreferrer">
-                <Button className="bg-amber-500 text-white hover:bg-amber-400 text-base px-8 py-3">
-                  Doctoralia
                 </Button>
               </a>
             </motion.div>

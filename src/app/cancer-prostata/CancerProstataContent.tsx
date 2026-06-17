@@ -3,10 +3,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { trackWhatsApp } from "@/lib/analytics";
 
 const WHATSAPP_NUMBER = "5214776330492";
 const WA_MSG = "Hola Dr. Quiroz, quiero agendar una consulta por cáncer de próstata.";
-const DOCTORALIA = "https://www.doctoralia.com.mx/alejandro-quiroz-compean/urologo/leon";
 
 function waLink(msg: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
@@ -138,14 +138,9 @@ export default function CancerProstataContent() {
                 atención integral en León.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer">
+                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-prostata")}>
                   <Button className="bg-teal-500 text-white hover:bg-teal-400">
                     Agendar consulta por WhatsApp
-                  </Button>
-                </a>
-                <a href={DOCTORALIA} target="_blank" rel="noreferrer">
-                  <Button className="bg-white text-slate-900 hover:bg-slate-100">
-                    Ver perfil en Doctoralia
                   </Button>
                 </a>
               </div>
@@ -329,7 +324,7 @@ export default function CancerProstataContent() {
                   <strong>50 años</strong> (o 40-45 si tiene factores de riesgo).
                 </p>
                 <div className="mt-5">
-                  <a href={waLink("Hola Dr. Quiroz, quiero solicitar una prueba de PSA.")} target="_blank" rel="noreferrer">
+                  <a href={waLink("Hola Dr. Quiroz, quiero solicitar una prueba de PSA.")} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("psa")}>
                     <Button className="bg-amber-600 text-white hover:bg-amber-700 text-sm">
                       Solicitar prueba de PSA
                     </Button>
@@ -473,7 +468,7 @@ export default function CancerProstataContent() {
                     ))}
                   </div>
                   <div className="mt-5">
-                    <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer">
+                    <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-prostata")}>
                       <Button className="bg-indigo-700 text-white hover:bg-indigo-800">
                         Consultar sobre prostatectomía robótica
                       </Button>
@@ -621,7 +616,7 @@ export default function CancerProstataContent() {
                   humano durante todo el proceso.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer">
+                  <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-prostata")}>
                     <Button className="bg-teal-600 text-white hover:bg-teal-700">
                       Agendar consulta
                     </Button>
@@ -760,14 +755,9 @@ export default function CancerProstataContent() {
               transition={{ duration: 0.5 }}
               className="mt-8 flex flex-wrap gap-4 justify-center"
             >
-              <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer">
+              <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-prostata")}>
                 <Button className="bg-white text-indigo-900 hover:bg-slate-100 text-base px-8 py-3">
                   Agendar por WhatsApp
-                </Button>
-              </a>
-              <a href={DOCTORALIA} target="_blank" rel="noreferrer">
-                <Button className="bg-teal-400 text-white hover:bg-teal-300 text-base px-8 py-3">
-                  Doctoralia
                 </Button>
               </a>
             </motion.div>

@@ -1,4 +1,8 @@
+"use client";
+
 import Link from 'next/link'
+import WAButton from '@/components/WAButton'
+import { trackDoctoralia } from '@/lib/analytics'
 
 export default function Footer() {
   return (
@@ -25,18 +29,24 @@ export default function Footer() {
                 WhatsApp: 477 633 0492
               </a>
             </p>
-            <p className="text-xs text-editorial/60 font-serif mb-4">Para consultas y dudas</p>
-            <p className="text-sm font-serif">
+            <p className="text-xs text-editorial/60 font-serif mb-3">Para consultas y dudas</p>
+            <WAButton
+              mensaje="Hola Dr. Quiroz, quiero agendar una consulta."
+              motivo="footer-general"
+              variant="ghost"
+              className="text-editorial/80 hover:text-quirurgico text-sm mb-3"
+            >
+              Agendar por WhatsApp →
+            </WAButton>
+            <p className="text-sm font-serif mt-2">
               <a
                 href="https://www.doctoralia.com.mx/z/oFar6h"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-quirurgico transition-colors inline-flex items-center gap-1"
+                onClick={() => trackDoctoralia('footer')}
+                className="text-gris-premium text-sm hover:text-quirurgico transition-colors"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                Agendar consulta
+                Ver perfil en Doctoralia →
               </a>
             </p>
           </div>
