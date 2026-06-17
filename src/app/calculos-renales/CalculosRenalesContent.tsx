@@ -266,7 +266,7 @@ export default function CalculosRenalesContent() {
   const [openTreatment, setOpenTreatment] = useState<string | null>(null);
 
   return (
-    <div className="bg-slate-50 text-slate-800">
+    <div className="bg-white text-gris-profundo">
       <main>
         {/* BREADCRUMB */}
         <div className="mx-auto max-w-6xl px-4 pt-4 pb-2">
@@ -280,40 +280,36 @@ export default function CalculosRenalesContent() {
         </div>
 
         {/* HERO */}
-        <section className="relative text-white">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-amber-900 to-amber-700" />
+        <section className="relative bg-petroleo text-editorial py-24 px-4">
+          <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-quirurgico to-acero" />
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative mx-auto max-w-6xl px-4 py-20"
+            className="relative max-w-5xl mx-auto text-center"
           >
-            <div className="max-w-3xl">
-              <p className="text-amber-300 font-medium text-sm uppercase tracking-widest mb-3">
-                Urología · León, Guanajuato
-              </p>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                Piedras en el Riñón (Cálculos Renales) en León, Guanajuato: Diagnóstico y
-                Tratamiento sin Cirugía Abierta
-              </h1>
-              <p className="mt-5 text-lg text-slate-200 leading-relaxed">
-                Los cálculos renales pueden causar un dolor intensísimo, pero hoy la gran
-                mayoría se tratan sin cirugía abierta. El{" "}
-                <strong className="text-white">Dr. Alejandro Quiroz Compeán</strong> ofrece
-                todas las opciones mínimamente invasivas — ureteroscopía con láser, LEOC y
-                nefrolitotomía percutánea — para eliminar el cálculo y{" "}
-                <strong className="text-white">prevenir que vuelva</strong>.
-              </p>
-              <p className="mt-3 text-amber-200 font-medium italic">
-                "El mismo día que eliminamos el cálculo, hablamos de cómo evitar el siguiente."
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("calculos-renales")}>
-                  <Button className="bg-amber-500 text-white hover:bg-amber-400">
-                    Agenda tu valoración
-                  </Button>
-                </a>
-              </div>
+            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+              Urología · León, Guanajuato
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
+              Piedras en el Riñón (Cálculos Renales) en León, Guanajuato: Diagnóstico y Tratamiento sin Cirugía Abierta
+            </h1>
+            <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
+              Ureteroscopía con láser, LEOC y nefrolitotomía percutánea — la gran mayoría de los cálculos renales se tratan hoy sin cirugía abierta.
+            </p>
+            <p className="text-quirurgico font-sans font-medium italic mb-10">
+              "El mismo día que eliminamos el cálculo, hablamos de cómo evitar el siguiente."
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("calculos-renales")}>
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="inline-flex items-center gap-2 bg-acero text-editorial px-8 py-4 rounded-lg font-bold font-sans hover:bg-acero/90 transition-colors shadow-lg cursor-pointer"
+                >
+                  Agenda tu valoración
+                </motion.div>
+              </a>
             </div>
           </motion.div>
         </section>
@@ -593,7 +589,7 @@ export default function CalculosRenalesContent() {
         </section>
 
         {/* FACTORES QUE DETERMINAN EL TRATAMIENTO */}
-        <section className="bg-gradient-to-br from-slate-900 to-amber-900 text-white py-14">
+        <section className="bg-petroleo text-editorial py-14">
           <div className="mx-auto max-w-6xl px-4">
             <motion.h2
               variants={fadeUp}

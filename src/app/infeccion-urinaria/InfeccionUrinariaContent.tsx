@@ -213,44 +213,57 @@ const especiales = [
 
 export default function InfeccionUrinariaContent() {
   return (
-    <div className="bg-slate-50 text-slate-800">
+    <div className="bg-white text-gris-profundo">
       <main>
         {/* ── HERO ── */}
-        <section className="relative text-white">
-          <div className="absolute inset-0 bg-gradient-to-br from-teal-900 via-teal-700 to-cyan-600" />
+        <section className="relative bg-petroleo text-editorial py-24 px-4">
+          <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-quirurgico to-acero" />
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative mx-auto max-w-5xl px-4 py-20"
+            className="relative max-w-5xl mx-auto text-center"
           >
-            <p className="text-teal-200 text-sm font-medium mb-3 uppercase tracking-wide">
+            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
               Infección de Vías Urinarias · Cistitis · León, Guanajuato
             </p>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight max-w-3xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
               Infección Urinaria en León, Guanajuato: Tratamiento Inmediato y Prevención de Recurrencias
             </h1>
-            <p className="mt-5 text-lg text-teal-100 max-w-2xl leading-relaxed">
-              Alivio rápido de síntomas + plan personalizado para que no regresen. Si tienes ardor al orinar, no esperes — las infecciones urinarias no tratadas pueden complicarse.
+            <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
+              Alivio rápido de síntomas y plan personalizado para que no regresen. Si tienes ardor al orinar, no esperes.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <p className="text-quirurgico font-sans font-medium italic mb-10">
+              "Tratamiento inmediato y plan a largo plazo para no volver a tener infecciones."
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
               <a
                 href={WA_URGENTE}
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => trackWhatsApp("infeccion-urinaria")}
-                className="bg-white text-teal-900 font-bold px-6 py-3 rounded-xl hover:bg-teal-50 transition shadow"
               >
-                Agenda consulta urgente
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="inline-flex items-center gap-2 bg-acero text-editorial px-8 py-4 rounded-lg font-bold font-sans hover:bg-acero/90 transition-colors shadow-lg cursor-pointer"
+                >
+                  Agenda consulta urgente
+                </motion.div>
               </a>
               <a
                 href={WA_RECURRENTE}
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => trackWhatsApp("infeccion-urinaria")}
-                className="bg-teal-600 text-white font-semibold px-6 py-3 rounded-xl hover:bg-teal-500 transition border border-teal-400"
               >
-                Infecciones recurrentes
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="inline-flex items-center gap-2 border-2 border-editorial/60 text-editorial px-8 py-4 rounded-lg font-bold font-sans hover:bg-white/10 transition-colors cursor-pointer"
+                >
+                  Infecciones recurrentes
+                </motion.div>
               </a>
             </div>
             <div className="mt-8 grid sm:grid-cols-3 gap-4">
@@ -261,7 +274,7 @@ export default function InfeccionUrinariaContent() {
               ].map((s, i) => (
                 <div key={i} className="bg-white/10 rounded-xl p-4 text-center">
                   <div className="text-2xl font-bold">{s.stat}</div>
-                  <div className="text-teal-100 text-sm mt-1">{s.label}</div>
+                  <div className="text-editorial/70 text-sm mt-1">{s.label}</div>
                 </div>
               ))}
             </div>

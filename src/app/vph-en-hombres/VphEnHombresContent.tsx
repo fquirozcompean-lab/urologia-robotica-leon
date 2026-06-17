@@ -115,35 +115,47 @@ function FAQItem({ q, a }: FAQ) {
 
 export default function VphEnHombresContent() {
   return (
-    <div className="bg-slate-50 text-slate-800">
+    <div className="bg-white text-gris-profundo">
       <main>
         {/* HERO */}
-        <section className="relative text-white">
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-950 via-indigo-800 to-purple-700" />
+        <section className="relative bg-petroleo text-editorial py-24 px-4">
+          <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-quirurgico to-acero" />
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative mx-auto max-w-5xl px-4 py-20 text-center"
+            className="relative max-w-5xl mx-auto text-center"
           >
-            <div className="inline-flex items-center gap-2 bg-indigo-700/50 text-indigo-100 text-sm px-4 py-1.5 rounded-full mb-6 border border-indigo-500/40">
-              🔒 Consulta confidencial — sin juicios, con profesionalismo
-            </div>
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4">
-              VPH en Hombres en León, Guanajuato:<br className="hidden md:block" />
-              Síntomas, Diagnóstico y Tratamiento
+            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+              Urología · Salud Sexual · León, Guanajuato
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
+              VPH en Hombres en León, Guanajuato: Síntomas, Diagnóstico y Tratamiento
             </h1>
-            <p className="text-lg text-indigo-100 max-w-2xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
               Información clara sobre el virus del papiloma humano en hombres — diagnóstico, tratamiento y prevención. El VPH es más común de lo que piensas.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <a href={WA_EVALUACION} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("vph")}
-                className="bg-white text-indigo-900 font-semibold px-6 py-3 rounded-2xl hover:bg-indigo-50 transition shadow-lg">
-                Agenda evaluación de VPH
+            <p className="text-quirurgico font-sans font-medium italic mb-10">
+              "Consulta confidencial, sin juicios, con profesionalismo."
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href={WA_EVALUACION} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("vph")}>
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="inline-flex items-center gap-2 bg-acero text-editorial px-8 py-4 rounded-lg font-bold font-sans hover:bg-acero/90 transition-colors shadow-lg cursor-pointer"
+                >
+                  Agenda evaluación de VPH
+                </motion.div>
               </a>
-              <a href={WA_CONFIDENCIAL} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("vph")}
-                className="bg-indigo-700 border border-indigo-500 text-white font-semibold px-6 py-3 rounded-2xl hover:bg-indigo-600 transition">
-                💬 WhatsApp confidencial
+              <a href={WA_CONFIDENCIAL} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("vph")}>
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="inline-flex items-center gap-2 border-2 border-editorial/60 text-editorial px-8 py-4 rounded-lg font-bold font-sans hover:bg-white/10 transition-colors cursor-pointer"
+                >
+                  Consulta confidencial
+                </motion.div>
               </a>
             </div>
           </motion.div>
@@ -492,7 +504,7 @@ export default function VphEnHombresContent() {
         </section>
 
         {/* ¿SE CURA? */}
-        <section className="bg-gradient-to-br from-indigo-950 to-purple-900 text-white py-16">
+        <section className="bg-petroleo text-editorial py-16">
           <div className="mx-auto max-w-5xl px-4">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               <h2 className="text-3xl font-bold mb-2">¿El VPH en Hombres se Cura?</h2>
@@ -871,7 +883,7 @@ export default function VphEnHombresContent() {
         </section>
 
         {/* CTA FINAL */}
-        <section className="bg-gradient-to-br from-indigo-950 via-indigo-800 to-purple-700 py-16 text-white text-center">
+        <section className="bg-petroleo py-16 text-editorial text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

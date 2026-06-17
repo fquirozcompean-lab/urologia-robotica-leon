@@ -371,53 +371,50 @@ export default function CancerRenalContent() {
   const [openTreatment, setOpenTreatment] = useState<string | null>(null);
 
   return (
-    <div className="bg-slate-50 text-slate-800">
+    <div className="bg-white text-gris-profundo">
       <main>
         {/* BREADCRUMB */}
-        <div className="mx-auto max-w-6xl px-4 pt-4 pb-2">
-          <nav className="text-sm text-slate-500" aria-label="breadcrumb">
-            <Link href="/" className="hover:text-blue-600 transition">Inicio</Link>
-            <span className="mx-2">›</span>
-            <span className="text-slate-700 font-medium">Cáncer Renal</span>
-          </nav>
+        <div className="bg-petroleo px-4 pt-4 pb-2">
+          <div className="max-w-6xl mx-auto">
+            <nav className="text-xs text-editorial/60 font-sans" aria-label="breadcrumb">
+              <Link href="/" className="hover:text-editorial transition">Inicio</Link>
+              <span className="mx-2">›</span>
+              <span className="text-editorial/90">Cáncer Renal</span>
+            </nav>
+          </div>
         </div>
 
         {/* HERO */}
-        <section className="relative text-white">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-950 to-blue-800" />
+        <section className="relative bg-petroleo text-editorial py-24 px-4">
+          <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-quirurgico to-acero" />
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative mx-auto max-w-6xl px-4 py-20"
+            className="relative max-w-5xl mx-auto text-center"
           >
-            <div className="max-w-3xl">
-              <p className="text-blue-300 font-medium text-sm uppercase tracking-widest mb-3">
-                Urología Oncológica · León, Guanajuato
-              </p>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                Cáncer Renal en León, Guanajuato: Cirugía Mínimamente Invasiva y Preservación
-                de la Función Renal
-              </h1>
-              <p className="mt-5 text-lg text-slate-200 leading-relaxed">
-                <strong className="text-white">Nefrectomía parcial robótica y laparoscópica</strong> —
-                curamos el cáncer preservando tu función renal cuando es posible. El{" "}
-                <strong className="text-white">Dr. Alejandro Quiroz Compeán</strong> realiza
-                varias cirugías renales al mes, la mayoría por vía mínimamente invasiva.
-              </p>
-              <div className="mt-5 rounded-2xl bg-blue-900/60 border border-blue-700/50 px-5 py-4">
-                <p className="text-white font-medium">
-                  No todos los tumores renales requieren extirpación completa del riñón.
-                  Preservar tu función renal es tan importante como curar el cáncer.
-                </p>
-              </div>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-renal")}>
-                  <Button className="bg-blue-600 text-white hover:bg-blue-500">
-                    Agenda tu valoración oncológica
-                  </Button>
-                </a>
-              </div>
+            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+              Urología Oncológica · León, Guanajuato
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
+              Cáncer Renal en León, Guanajuato: Cirugía Mínimamente Invasiva y Preservación de la Función Renal
+            </h1>
+            <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
+              Nefrectomía parcial robótica y laparoscópica — curamos el cáncer preservando tu función renal cuando es posible.
+            </p>
+            <p className="text-quirurgico font-sans font-medium italic mb-10">
+              "No todos los tumores renales requieren extirpar el riñón completo — preservar tu función renal es tan importante como curar el cáncer."
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-renal")}>
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="inline-flex items-center gap-2 bg-acero text-editorial px-8 py-4 rounded-lg font-bold font-sans hover:bg-acero/90 transition-colors shadow-lg cursor-pointer"
+                >
+                  Agenda tu valoración oncológica
+                </motion.div>
+              </a>
             </div>
           </motion.div>
         </section>
@@ -733,7 +730,7 @@ export default function CancerRenalContent() {
         </section>
 
         {/* PRESERVACIÓN RENAL */}
-        <section id="preservacion" className="bg-gradient-to-br from-slate-900 to-blue-950 text-white py-14">
+        <section id="preservacion" className="bg-petroleo text-editorial py-14">
           <div className="mx-auto max-w-6xl px-4">
             <motion.h2
               variants={fadeUp}
@@ -1239,7 +1236,7 @@ export default function CancerRenalContent() {
         </section>
 
         {/* CTA FINAL */}
-        <section id="contacto" className="bg-gradient-to-br from-slate-900 to-blue-950 text-white py-16">
+        <section id="contacto" className="bg-petroleo text-editorial py-16">
           <div className="mx-auto max-w-3xl px-4 text-center">
             <motion.h2
               variants={fadeUp}

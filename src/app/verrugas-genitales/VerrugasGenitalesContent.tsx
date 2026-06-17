@@ -265,35 +265,47 @@ function TratamientoCard({ t, index }: { t: TratamientoInfo; index: number }) {
 
 export default function VerrugasGenitalesContent() {
   return (
-    <div className="bg-slate-50 text-slate-800">
+    <div className="bg-white text-gris-profundo">
       <main>
         {/* HERO */}
-        <section className="relative text-white">
-          <div className="absolute inset-0 bg-gradient-to-br from-rose-950 via-rose-900 to-pink-800" />
+        <section className="relative bg-petroleo text-editorial py-24 px-4">
+          <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-quirurgico to-acero" />
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative mx-auto max-w-5xl px-4 py-20 text-center"
+            className="relative max-w-5xl mx-auto text-center"
           >
-            <div className="inline-flex items-center gap-2 bg-rose-800/60 text-rose-100 text-sm px-4 py-1.5 rounded-full mb-6 border border-rose-600/40">
-              🔒 Atención confidencial — diagnóstico y tratamiento profesional
-            </div>
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4">
-              Verrugas Genitales en León, Guanajuato:<br className="hidden md:block" />
-              Tratamiento Efectivo y Rápido
-            </h1>
-            <p className="text-lg text-rose-100 max-w-2xl mx-auto mb-8">
-              Eliminación de verrugas genitales — crioterapia, láser y electrofulguración. Las verrugas genitales tienen solución: no necesitas vivir con ellas.
+            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+              Urología · Dermatología Urológica · León, Guanajuato
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <a href={WA_TRATAMIENTO} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("verrugas-genitales")}
-                className="bg-white text-rose-900 font-semibold px-6 py-3 rounded-2xl hover:bg-rose-50 transition shadow-lg">
-                Agenda tratamiento hoy
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
+              Verrugas Genitales en León, Guanajuato: Tratamiento Efectivo y Rápido
+            </h1>
+            <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
+              Eliminación con crioterapia, láser y electrofulguración. Las verrugas genitales tienen solución — no necesitas vivir con ellas.
+            </p>
+            <p className="text-quirurgico font-sans font-medium italic mb-10">
+              "Atención confidencial, diagnóstico y tratamiento profesional."
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href={WA_TRATAMIENTO} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("verrugas-genitales")}>
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="inline-flex items-center gap-2 bg-acero text-editorial px-8 py-4 rounded-lg font-bold font-sans hover:bg-acero/90 transition-colors shadow-lg cursor-pointer"
+                >
+                  Agenda tratamiento hoy
+                </motion.div>
               </a>
-              <a href={WA_URGENTE} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("verrugas-genitales")}
-                className="bg-rose-800 border border-rose-600 text-white font-semibold px-6 py-3 rounded-2xl hover:bg-rose-700 transition">
-                💬 WhatsApp urgente
+              <a href={WA_URGENTE} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("verrugas-genitales")}>
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="inline-flex items-center gap-2 border-2 border-editorial/60 text-editorial px-8 py-4 rounded-lg font-bold font-sans hover:bg-white/10 transition-colors cursor-pointer"
+                >
+                  Consulta urgente
+                </motion.div>
               </a>
             </div>
           </motion.div>
@@ -902,7 +914,7 @@ export default function VerrugasGenitalesContent() {
         </section>
 
         {/* CTA FINAL */}
-        <section className="bg-gradient-to-br from-rose-950 via-rose-900 to-pink-800 py-16 text-white text-center">
+        <section className="bg-petroleo py-16 text-editorial text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

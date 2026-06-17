@@ -325,57 +325,50 @@ export default function CancerVejigaContent() {
   const [openTreatment, setOpenTreatment] = useState<string | null>(null);
 
   return (
-    <div className="bg-slate-50 text-slate-800">
+    <div className="bg-white text-gris-profundo">
       <main>
         {/* BREADCRUMB */}
-        <div className="mx-auto max-w-6xl px-4 pt-4 pb-2">
-          <nav className="text-sm text-slate-500" aria-label="breadcrumb">
-            <Link href="/" className="hover:text-rose-600 transition">
-              Inicio
-            </Link>
-            <span className="mx-2">›</span>
-            <span className="text-slate-700 font-medium">Cáncer de Vejiga</span>
-          </nav>
+        <div className="bg-petroleo px-4 pt-4 pb-2">
+          <div className="max-w-6xl mx-auto">
+            <nav className="text-xs text-editorial/60 font-sans" aria-label="breadcrumb">
+              <Link href="/" className="hover:text-editorial transition">Inicio</Link>
+              <span className="mx-2">›</span>
+              <span className="text-editorial/90">Cáncer de Vejiga</span>
+            </nav>
+          </div>
         </div>
 
         {/* HERO */}
-        <section className="relative text-white">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-rose-950 to-rose-800" />
+        <section className="relative bg-petroleo text-editorial py-24 px-4">
+          <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-quirurgico to-acero" />
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative mx-auto max-w-6xl px-4 py-20"
+            className="relative max-w-5xl mx-auto text-center"
           >
-            <div className="max-w-3xl">
-              <p className="text-rose-300 font-medium text-sm uppercase tracking-widest mb-3">
-                Urología Oncológica · León, Guanajuato
-              </p>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                Cáncer de Vejiga en León, Guanajuato: Detección Temprana, Diagnóstico y
-                Tratamiento Especializado
-              </h1>
-              <p className="mt-5 text-lg text-slate-200 leading-relaxed">
-                La <strong className="text-white">sangre en la orina</strong> puede ser señal
-                de cáncer de vejiga — el diagnóstico temprano salva vidas. El{" "}
-                <strong className="text-white">Dr. Alejandro Quiroz Compeán</strong>, urólogo
-                oncólogo certificado, ofrece cistoscopia, resección transuretral y cistectomía
-                robótica en León.
-              </p>
-              <div className="mt-5 rounded-2xl bg-white/10 border border-white/30 px-5 py-4">
-                <p className="text-white font-medium">
-                  Si has visto sangre en tu orina, es momento de una evaluación profesional.
-                  No esperes a que el sangrado desaparezca — eso no significa que el problema
-                  se haya resuelto.
-                </p>
-              </div>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-vejiga")}>
-                  <Button className="bg-rose-600 text-white hover:bg-rose-500">
-                    Valoración urgente por hematuria
-                  </Button>
-                </a>
-              </div>
+            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+              Urología Oncológica · León, Guanajuato
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
+              Cáncer de Vejiga en León, Guanajuato: Detección Temprana, Diagnóstico y Tratamiento Especializado
+            </h1>
+            <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
+              La sangre en la orina puede ser señal de cáncer de vejiga — el diagnóstico temprano salva vidas. Cistoscopia, resección transuretral y cistectomía robótica en León.
+            </p>
+            <p className="text-quirurgico font-sans font-medium italic mb-10">
+              "Si ves sangre en tu orina, no esperes — el diagnóstico temprano lo cambia todo."
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-vejiga")}>
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="inline-flex items-center gap-2 bg-acero text-editorial px-8 py-4 rounded-lg font-bold font-sans hover:bg-acero/90 transition-colors shadow-lg cursor-pointer"
+                >
+                  Valoración urgente por hematuria
+                </motion.div>
+              </a>
             </div>
           </motion.div>
         </section>
@@ -1165,7 +1158,7 @@ export default function CancerVejigaContent() {
         </section>
 
         {/* PREVENCIÓN */}
-        <section className="bg-gradient-to-br from-slate-900 to-rose-950 text-white py-14">
+        <section className="bg-petroleo text-editorial py-14">
           <div className="mx-auto max-w-6xl px-4">
             <motion.h2
               variants={fadeUp}

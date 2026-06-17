@@ -360,49 +360,59 @@ const ipssItems = [
 
 export default function MedicamentosProstataContent() {
   return (
-    <div className="bg-slate-50 text-slate-800">
+    <div className="bg-white text-gris-profundo">
       <main>
         {/* HERO */}
-        <section className="relative text-white">
-          <div className="absolute inset-0 bg-gradient-to-br from-violet-900 via-violet-700 to-purple-600" />
+        <section className="relative bg-petroleo text-editorial py-24 px-4">
+          <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-quirurgico to-acero" />
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative mx-auto max-w-5xl px-4 py-20"
+            className="relative max-w-5xl mx-auto text-center"
           >
-            <p className="text-violet-200 text-sm font-medium mb-3 uppercase tracking-wide">
+            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
               Hiperplasia Prostática Benigna · Tratamiento Médico
             </p>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight max-w-3xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
               Medicamentos para la Próstata: Cuándo Funcionan y Cuándo No Son Suficientes
             </h1>
-            <p className="mt-5 text-lg text-violet-100 max-w-2xl leading-relaxed">
-              Tamsulosina, finasteride, dutasteride, silodosina — cada uno actúa diferente y sirve para un perfil distinto de paciente. La clave está en saber si tu situación es la adecuada para el medicamento o si ya es momento de ir más allá.
+            <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
+              Tamsulosina, finasteride, dutasteride, silodosina — cada uno actúa diferente. La clave está en saber si tu situación es la adecuada para el medicamento o si ya es momento de ir más allá.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <p className="text-quirurgico font-sans font-medium italic mb-10">
+              "La uroflujometría determina si los medicamentos son suficientes o si necesitas cirugía."
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
               <a
                 href={WA_UROFLUJOMETRIA}
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => trackWhatsApp("medicamentos-prostata")}
-                className="bg-white text-violet-900 font-semibold px-6 py-3 rounded-xl hover:bg-violet-50 transition shadow"
               >
-                Agenda tu uroflujometría
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="inline-flex items-center gap-2 bg-acero text-editorial px-8 py-4 rounded-lg font-bold font-sans hover:bg-acero/90 transition-colors shadow-lg cursor-pointer"
+                >
+                  Agenda tu uroflujometría
+                </motion.div>
               </a>
               <a
                 href={WA_CONSULTA}
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => trackWhatsApp("medicamentos-prostata")}
-                className="bg-violet-500 text-white font-semibold px-6 py-3 rounded-xl hover:bg-violet-400 transition border border-violet-400"
               >
-                Consulta general
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="inline-flex items-center gap-2 border-2 border-editorial/60 text-editorial px-8 py-4 rounded-lg font-bold font-sans hover:bg-white/10 transition-colors cursor-pointer"
+                >
+                  Consulta general
+                </motion.div>
               </a>
             </div>
-            <p className="mt-5 text-violet-200 text-sm">
-              Dr. Alejandro Quiroz Compeán · Urólogo certificado por CONAMEU · León, Guanajuato
-            </p>
           </motion.div>
         </section>
 

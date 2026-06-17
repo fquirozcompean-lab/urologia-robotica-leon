@@ -419,35 +419,43 @@ function FAQItem({ q, a }: FAQ) {
 
 export default function DisfuncionErectilContent() {
   return (
-    <div className="bg-slate-50 text-slate-800">
+    <div className="bg-white text-gris-profundo">
       <main>
         {/* ── HERO ── */}
-        <section className="relative text-white">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-blue-700" />
+        <section className="relative bg-petroleo text-editorial py-24 px-4">
+          <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-quirurgico to-acero" />
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative mx-auto max-w-5xl px-4 py-20"
+            className="relative max-w-5xl mx-auto text-center"
           >
-            <p className="text-blue-300 text-sm font-medium mb-3 uppercase tracking-wide">
+            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
               Andrología · Medicina Sexual · León, Guanajuato
             </p>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight max-w-3xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
               Disfunción Eréctil en León, Guanajuato: Causas, Tratamiento y Soluciones Efectivas
             </h1>
-            <p className="mt-5 text-lg text-blue-100 max-w-2xl leading-relaxed">
-              Consulta confidencial, diagnóstico preciso y tratamiento personalizado. La disfunción eréctil NO es vergonzosa — es un problema médico real con causas identificables y soluciones efectivas en más del 90% de los casos.
+            <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
+              Consulta confidencial, diagnóstico preciso y tratamiento personalizado. La disfunción eréctil es un problema médico real con soluciones efectivas en más del 90% de los casos.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <p className="text-quirurgico font-sans font-medium italic mb-10">
+              "Consulta confidencial, privada y sin juicios."
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
               <a
                 href={WA_CONFIDENCIAL}
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => trackWhatsApp("disfuncion-erectil")}
-                className="bg-white text-blue-900 font-bold px-6 py-3 rounded-xl hover:bg-blue-50 transition shadow"
               >
-                Agenda consulta confidencial
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="inline-flex items-center gap-2 bg-acero text-editorial px-8 py-4 rounded-lg font-bold font-sans hover:bg-acero/90 transition-colors shadow-lg cursor-pointer"
+                >
+                  Agenda consulta confidencial
+                </motion.div>
               </a>
             </div>
             <div className="mt-8 grid sm:grid-cols-3 gap-4">
@@ -458,7 +466,7 @@ export default function DisfuncionErectilContent() {
               ].map((s, i) => (
                 <div key={i} className="bg-white/10 rounded-xl p-4 text-center">
                   <div className="text-xl font-bold">{s.stat}</div>
-                  <div className="text-blue-200 text-sm mt-1">{s.label}</div>
+                  <div className="text-editorial/70 text-sm mt-1">{s.label}</div>
                 </div>
               ))}
             </div>

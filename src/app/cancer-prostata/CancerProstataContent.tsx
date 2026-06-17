@@ -101,49 +101,50 @@ function FAQItem({
 
 export default function CancerProstataContent() {
   return (
-    <div className="bg-slate-50 text-slate-800">
+    <div className="bg-white text-gris-profundo">
       <main>
         {/* BREADCRUMB */}
-        <div className="mx-auto max-w-6xl px-4 pt-4 pb-2">
-          <nav className="text-sm text-slate-500" aria-label="breadcrumb">
-            <Link href="/" className="hover:text-teal-600 transition">
-              Inicio
-            </Link>
-            <span className="mx-2">›</span>
-            <span className="text-slate-700 font-medium">Cáncer de Próstata</span>
-          </nav>
+        <div className="bg-petroleo px-4 pt-4 pb-2">
+          <div className="max-w-6xl mx-auto">
+            <nav className="text-xs text-editorial/60 font-sans" aria-label="breadcrumb">
+              <Link href="/" className="hover:text-editorial transition">Inicio</Link>
+              <span className="mx-2">›</span>
+              <span className="text-editorial/90">Cáncer de Próstata</span>
+            </nav>
+          </div>
         </div>
 
         {/* HERO */}
-        <section className="relative text-white">
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-indigo-700 to-teal-600" />
+        <section className="relative bg-petroleo text-editorial py-24 px-4">
+          <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-quirurgico to-acero" />
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative mx-auto max-w-6xl px-4 py-20"
+            className="relative max-w-5xl mx-auto text-center"
           >
-            <div className="max-w-3xl">
-              <p className="text-teal-300 font-medium text-sm uppercase tracking-widest mb-3">
-                Urología Oncológica · León, Guanajuato
-              </p>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                Cáncer de Próstata: Diagnóstico y Tratamiento Especializado en León
-              </h1>
-              <p className="mt-5 text-lg text-slate-200 leading-relaxed">
-                Detección temprana y tratamiento de precisión. El Dr. Alejandro Quiroz Compeán,
-                urólogo oncólogo certificado y cirujano robótico formado en el{" "}
-                <strong className="text-white">INCan</strong> y{" "}
-                <strong className="text-white">Hospital Albert Einstein (Brasil)</strong>, ofrece
-                atención integral en León.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-prostata")}>
-                  <Button className="bg-teal-500 text-white hover:bg-teal-400">
-                    Agendar consulta por WhatsApp
-                  </Button>
-                </a>
-              </div>
+            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+              Urología Oncológica · León, Guanajuato
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
+              Cáncer de Próstata: Diagnóstico y Tratamiento Especializado en León
+            </h1>
+            <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
+              Detección temprana y tratamiento de precisión. Urólogo oncólogo certificado y cirujano robótico formado en el INCan y Hospital Albert Einstein (Brasil).
+            </p>
+            <p className="text-quirurgico font-sans font-medium italic mb-10">
+              "El diagnóstico temprano transforma el pronóstico del cáncer de próstata."
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-prostata")}>
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="inline-flex items-center gap-2 bg-acero text-editorial px-8 py-4 rounded-lg font-bold font-sans hover:bg-acero/90 transition-colors shadow-lg cursor-pointer"
+                >
+                  Agendar consulta por WhatsApp
+                </motion.div>
+              </a>
             </div>
           </motion.div>
         </section>
@@ -515,7 +516,7 @@ export default function CancerProstataContent() {
         </section>
 
         {/* POR QUÉ CIRUGÍA ROBÓTICA */}
-        <section className="bg-gradient-to-br from-indigo-900 to-indigo-700 text-white py-14">
+        <section className="bg-petroleo text-editorial py-14">
           <div className="mx-auto max-w-6xl px-4">
             <motion.h2
               variants={fadeUp}
