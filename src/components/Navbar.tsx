@@ -24,6 +24,9 @@ export default function Navbar() {
           <Link href="/#hospitales" className="hover:text-editorial transition-colors">
             Hospitales
           </Link>
+          <Link href="/sobre-mi" className="hover:text-editorial transition-colors">
+            Sobre el Dr.
+          </Link>
           <a
             href={WA_HREF}
             target="_blank"
