@@ -88,47 +88,10 @@ function FAQItem({ q, children }: { q: string; children: React.ReactNode }) {
   );
 }
 
-const navSections = [
-  { id: "que-es", label: "¿Qué es?" },
-  { id: "ventajas", label: "Ventajas" },
-  { id: "candidatos", label: "Candidatos" },
-  { id: "procedimiento", label: "Procedimiento" },
-  { id: "recuperacion", label: "Recuperación" },
-  { id: "faq", label: "Preguntas" },
-  { id: "contacto", label: "Contacto" },
-];
-
 export default function HoLEPContent() {
   return (
-    <div className="min-h-screen bg-white text-gris-profundo">
-      {/* NAVBAR */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-petroleo/95 backdrop-blur-md border-b border-white/10">
-        <div className="mx-auto max-w-6xl flex justify-between items-center px-4 py-3">
-          <Link
-            href="/"
-            className="font-semibold text-editorial hover:text-quirurgico transition text-sm font-sans"
-          >
-            ← Urología Robótica León
-          </Link>
-          <nav className="hidden md:flex gap-5 text-xs font-sans">
-            {navSections.map((s) => (
-              <button
-                key={s.id}
-                onClick={() =>
-                  document
-                    .getElementById(s.id)
-                    ?.scrollIntoView({ behavior: "smooth", block: "start" })
-                }
-                className="text-editorial/70 hover:text-editorial transition"
-              >
-                {s.label}
-              </button>
-            ))}
-          </nav>
-        </div>
-      </header>
-
-      <main className="pt-16">
+    <div className="bg-white text-gris-profundo">
+      <main>
         {/* BREADCRUMB */}
         <div className="bg-petroleo px-4 pt-4 pb-2">
           <div className="max-w-6xl mx-auto">
@@ -973,28 +936,6 @@ export default function HoLEPContent() {
           </div>
         </section>
       </main>
-
-      {/* FOOTER */}
-      <footer className="bg-petroleo text-editorial/70 py-8 text-center font-sans text-sm">
-        <p className="font-semibold text-editorial">
-          © 2025 Dr. Alejandro Quiroz Compeán | Urología Robótica León
-        </p>
-        <p className="mt-1">HoLEP · Cirugía Láser de Próstata · León, Guanajuato, México</p>
-        <p className="mt-1 text-xs text-editorial/40">
-          C.P. 8860892 · C.E. 12465195 · Certificado CONAMEU · COFEPRIS No. 2611072002A00152
-        </p>
-        <div className="mt-4 flex justify-center gap-6">
-          <Link href="/" className="text-quirurgico hover:text-editorial transition">
-            ← Inicio
-          </Link>
-          <Link
-            href="/hiperplasia-prostatica-benigna"
-            className="text-quirurgico hover:text-editorial transition"
-          >
-            HPB →
-          </Link>
-        </div>
-      </footer>
     </div>
   );
 }

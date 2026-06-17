@@ -99,19 +99,6 @@ function FAQItem({
   );
 }
 
-const navSections = [
-  { id: "sintomas", label: "Síntomas" },
-  { id: "diagnostico", label: "Diagnóstico" },
-  { id: "tratamientos", label: "Tratamientos" },
-  { id: "comparativa", label: "Comparativa" },
-  { id: "faq", label: "Preguntas" },
-  { id: "contacto", label: "Contacto" },
-];
-
-function scrollToId(id: string) {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-}
-
 const treatments = [
   {
     id: "rtup",
@@ -271,31 +258,8 @@ export default function HiperplasiaContent() {
   const [openTreatment, setOpenTreatment] = useState<string | null>(null);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800">
-      {/* NAVBAR */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
-        <div className="mx-auto max-w-6xl flex justify-between items-center px-4 py-3">
-          <Link
-            href="/"
-            className="font-semibold text-slate-800 hover:text-teal-600 transition text-sm"
-          >
-            ← Urología Robótica León
-          </Link>
-          <nav className="hidden sm:flex gap-4 text-sm">
-            {navSections.map((s) => (
-              <button
-                key={s.id}
-                onClick={() => scrollToId(s.id)}
-                className="text-slate-600 hover:text-teal-600 transition"
-              >
-                {s.label}
-              </button>
-            ))}
-          </nav>
-        </div>
-      </header>
-
-      <main className="pt-20">
+    <div className="bg-slate-50 text-slate-800">
+      <main>
         {/* BREADCRUMB */}
         <div className="mx-auto max-w-6xl px-4 pt-4 pb-2">
           <nav className="text-sm text-slate-500" aria-label="breadcrumb">
@@ -1281,30 +1245,6 @@ export default function HiperplasiaContent() {
           </div>
         </section>
       </main>
-
-      {/* FOOTER */}
-      <footer className="bg-slate-900 text-slate-200 py-8 text-center">
-        <p className="font-semibold">
-          © 2025 Dr. Alejandro Quiroz Compeán | Urología Robótica León
-        </p>
-        <p className="text-slate-400 text-sm mt-2">
-          Urólogo Oncólogo · Cirugía Robótica · HPB · León, Guanajuato, México
-        </p>
-        <p className="text-slate-500 text-xs mt-2">
-          C.P. 8860892 · C.E. 12465195 · Certificado CONAMEU · COFEPRIS No. 2611072002A00152
-        </p>
-        <div className="mt-4 flex justify-center gap-6">
-          <Link href="/" className="text-teal-400 hover:text-teal-300 text-sm transition">
-            ← Inicio
-          </Link>
-          <Link
-            href="/cancer-prostata"
-            className="text-teal-400 hover:text-teal-300 text-sm transition"
-          >
-            Cáncer de Próstata →
-          </Link>
-        </div>
-      </footer>
     </div>
   );
 }

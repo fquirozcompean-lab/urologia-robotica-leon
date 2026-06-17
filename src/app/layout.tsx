@@ -4,6 +4,8 @@ import { Plus_Jakarta_Sans, Lora } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import MedicalAIAgent from "@/components/MedicalAIAgent";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -204,12 +206,11 @@ export default function RootLayout({
         </Script>
       </head>
       <body className="antialiased bg-white text-gris-profundo font-sans">
-        {children}
-        <div className="w-full bg-petroleo text-center py-2 px-4">
-          <p className="text-[9px] text-gris-premium">
-            Aviso de Publicidad COFEPRIS: 2611072002A00152
-          </p>
+        <Navbar />
+        <div className="pt-16">
+          {children}
         </div>
+        <Footer />
         <MedicalAIAgent />
       </body>
     </html>

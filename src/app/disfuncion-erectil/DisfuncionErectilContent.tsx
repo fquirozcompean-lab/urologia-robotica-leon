@@ -418,25 +418,8 @@ function FAQItem({ q, a }: FAQ) {
 
 export default function DisfuncionErectilContent() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800">
-      {/* NAVBAR */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
-        <div className="mx-auto max-w-6xl flex justify-between items-center px-4 py-3">
-          <Link href="/" className="font-semibold text-slate-800 hover:text-blue-600 transition text-sm">
-            ← Urología Robótica León
-          </Link>
-          <a
-            href={WA_CONFIDENCIAL}
-            target="_blank"
-            rel="noreferrer"
-            className="bg-blue-700 text-white text-sm px-4 py-2 rounded-xl font-medium hover:bg-blue-800 transition"
-          >
-            Consulta confidencial
-          </a>
-        </div>
-      </header>
-
-      <main className="pt-20">
+    <div className="bg-slate-50 text-slate-800">
+      <main>
         {/* ── HERO ── */}
         <section className="relative text-white">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-blue-700" />
@@ -1030,14 +1013,6 @@ export default function DisfuncionErectilContent() {
           </div>
         </section>
       </main>
-
-      <footer className="bg-slate-900 text-slate-200 py-8 text-center">
-        <p className="font-semibold">© 2025 Dr. Alejandro Quiroz Compeán | Urología Robótica León</p>
-        <p className="text-slate-400 text-sm mt-2">Urólogo Oncólogo · Cirugía Robótica · León, Guanajuato, México</p>
-        <p className="text-slate-500 text-xs mt-2">
-          C.P. 8860892 · C.E. 12465195 · Certificado CONAMEU · COFEPRIS No. 2611072002A00152
-        </p>
-      </footer>
     </div>
   );
 }
