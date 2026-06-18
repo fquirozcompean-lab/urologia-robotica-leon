@@ -146,7 +146,7 @@ export default function SobreMiContent() {
                 </span>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col gap-3">
                 <a
                   href={waLink(WA_MSG_HERO)}
                   target="_blank"
@@ -162,9 +162,9 @@ export default function SobreMiContent() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackDoctoralia("sobre-mi")}
-                  className="inline-flex items-center justify-center gap-2 border border-acero/60 text-editorial/80 px-6 py-3 rounded-lg font-bold font-sans hover:bg-acero/10 transition-colors"
+                  className="text-gris-premium text-sm hover:text-editorial transition-colors text-center"
                 >
-                  Ver en Doctoralia
+                  Ver perfil en Doctoralia →
                 </a>
               </div>
             </motion.div>
