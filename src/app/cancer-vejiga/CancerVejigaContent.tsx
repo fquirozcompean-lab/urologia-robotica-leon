@@ -1445,6 +1445,29 @@ export default function CancerVejigaContent() {
           </div>
         </section>
 
+        {/* SEGUNDA OPINIÓN CROSS-LINK */}
+        <section className="bg-editorial py-12 px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-xs font-sans font-semibold uppercase tracking-widest text-quirurgico mb-3">
+              ¿Ya tienes un diagnóstico?
+            </p>
+            <h3 className="font-sans font-bold text-petroleo text-2xl mb-3">
+              Solicita una valoración oncológica antes de decidir
+            </h3>
+            <p className="font-serif text-gris-profundo/75 mb-6 max-w-xl mx-auto">
+              Si ya tienes un diagnóstico de cáncer de vejiga y quieres confirmar el
+              estadio o evaluar las opciones de tratamiento disponibles, el Dr. Quiroz
+              puede darte una opinión especializada.
+            </p>
+            <Link
+              href="/segunda-opinion-oncologica"
+              className="inline-flex items-center gap-2 bg-acero text-editorial font-sans font-bold px-7 py-3 rounded-lg hover:bg-acero/90 transition-colors text-sm"
+            >
+              Ver segunda opinión oncológica →
+            </Link>
+          </div>
+        </section>
+
         {/* CTA FINAL */}
         <section
           id="contacto"
