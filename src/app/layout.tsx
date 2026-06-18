@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Lora } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import MedicalAIAgent from "@/components/MedicalAIAgent";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -213,7 +212,6 @@ export default function RootLayout({
         </div>
         <Footer />
         <FloatingWhatsApp />
-        <MedicalAIAgent />
       </body>
     </html>
   );
