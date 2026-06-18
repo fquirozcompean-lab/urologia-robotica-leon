@@ -715,11 +715,12 @@ export default function SobreMiContent() {
               Atención especializada en urología oncológica y cirugía robótica
               en León, Guanajuato.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col items-center gap-4">
               <a
                 href={waLink(WA_MSG_FINAL)}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackWhatsApp("sobre-mi")}
                 className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-lg font-bold font-sans text-lg hover:bg-[#20b358] transition-colors shadow-lg"
               >
                 <svg
@@ -736,9 +737,9 @@ export default function SobreMiContent() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackDoctoralia("sobre-mi-cta")}
-                className="inline-flex items-center justify-center gap-2 border-2 border-editorial/50 text-editorial px-8 py-4 rounded-lg font-bold font-sans text-lg hover:bg-white/10 transition-colors"
+                className="text-gris-premium text-sm hover:text-editorial transition-colors"
               >
-                Ver en Doctoralia
+                Ver perfil en Doctoralia →
               </a>
             </div>
           </motion.div>
