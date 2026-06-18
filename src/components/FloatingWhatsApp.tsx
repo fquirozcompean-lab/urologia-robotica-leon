@@ -13,7 +13,7 @@ export default function FloatingWhatsApp() {
       rel="noopener noreferrer"
       onClick={() => trackWhatsApp("flotante-global")}
       aria-label="Contactar por WhatsApp"
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#22c55e] rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110"
+      className="fixed bottom-6 right-24 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#22c55e] rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110"
     >
       <svg
         viewBox="0 0 24 24"
