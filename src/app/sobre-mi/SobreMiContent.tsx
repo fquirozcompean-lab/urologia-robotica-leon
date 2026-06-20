@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { trackWhatsApp, trackDoctoralia } from "@/lib/analytics";
+import CallButton from "@/components/CallButton";
 import {
   Award,
   GraduationCap,
@@ -600,12 +601,14 @@ export default function SobreMiContent() {
                 </div>
                 <div className="flex items-start gap-3">
                   <Phone className="w-4 h-4 text-quirurgico flex-shrink-0 mt-0.5" />
-                  <a
-                    href="tel:4791037564"
+                  <CallButton
+                    telefono="4791037564"
+                    sede="angeles"
+                    variant="ghost"
                     className="text-sm text-acero font-serif hover:underline"
                   >
                     479 103 7564
-                  </a>
+                  </CallButton>
                 </div>
               </div>
 
@@ -663,12 +666,14 @@ export default function SobreMiContent() {
                 </div>
                 <div className="flex items-start gap-3">
                   <Phone className="w-4 h-4 text-quirurgico flex-shrink-0 mt-0.5" />
-                  <a
-                    href="tel:4772351442"
+                  <CallButton
+                    telefono="4772351442"
+                    sede="muguerza"
+                    variant="ghost"
                     className="text-sm text-acero font-serif hover:underline"
                   >
                     477 235 1442
-                  </a>
+                  </CallButton>
                 </div>
               </div>
 
