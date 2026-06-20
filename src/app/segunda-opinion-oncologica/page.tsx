@@ -6,17 +6,20 @@ export const metadata: Metadata = {
   title:
     "Segunda Opinión en Cáncer Urológico en León | Próstata, Renal y Vejiga — Dr. Quiroz Compeán",
   description:
-    "¿Tienes un diagnóstico de cáncer de próstata, renal o de vejiga? Solicita una segunda opinión con el Dr. Quiroz Compeán, urólogo oncólogo formado en INCan y Hospital Albert Einstein. Atención en León, Guanajuato.",
+    "¿Tienes un diagnóstico de cáncer urológico? Solicita una segunda opinión con el Dr. Quiroz Compeán, urólogo oncólogo referencia en el Bajío, formado en INCan, INCMNSZ y Hospital Albert Einstein. León, Guanajuato.",
   keywords: [
     "segunda opinión cáncer próstata León",
     "segunda opinión urólogo oncólogo León",
     "segunda opinión cáncer renal",
     "segunda opinión cáncer vejiga",
+    "segunda opinión tumor testicular León",
     "segunda opinión cáncer próstata Guanajuato",
     "urólogo oncólogo segunda opinión León",
+    "urólogo oncólogo referencia Bajío",
     "confirmar diagnóstico cáncer próstata",
     "valoración oncológica León Guanajuato",
     "segunda opinión urológica León",
+    "INCMNSZ urología oncológica",
   ],
   openGraph: {
     title: "Segunda Opinión en Cáncer Urológico | Dr. Quiroz Compeán — León, Gto.",

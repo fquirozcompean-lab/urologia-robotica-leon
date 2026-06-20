@@ -19,6 +19,8 @@ import {
   GraduationCap,
   BadgeCheck,
   ArrowRight,
+  Building2,
+  BookOpen,
 } from "lucide-react";
 
 const DOCTORALIA = "https://www.doctoralia.com.mx/z/oFar6h";
@@ -31,6 +33,8 @@ const WA_RENAL =
   "Hola Dr. Quiroz, tengo un diagnóstico de tumor en el riñón y quisiera una segunda opinión.";
 const WA_VEJIGA =
   "Hola Dr. Quiroz, tengo un diagnóstico de cáncer de vejiga y quisiera una segunda opinión.";
+const WA_TESTICULAR =
+  "Hola Dr. Quiroz, tengo un diagnóstico de tumor testicular y quisiera una segunda opinión.";
 const WA_FINAL =
   "Hola Dr. Quiroz, tengo un diagnóstico de cáncer y quisiera solicitar una segunda opinión.";
 
@@ -163,8 +167,7 @@ export default function SegundaOpinionContent() {
             Latinoamérica.
           </p>
           <p className="text-dorado font-sans font-medium text-sm mb-10">
-            Formación en Instituto Nacional de Cancerología (INCan) y Hospital Albert
-            Einstein, Brasil
+            Referencia en Urología Oncológica en el Bajío · Formación en INCan, INCMNSZ y Hospital Albert Einstein, Brasil
           </p>
           <div className="flex justify-center">
             <WAButton
@@ -260,7 +263,7 @@ export default function SegundaOpinionContent() {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl font-bold font-sans text-petroleo text-center mb-4"
           >
-            Segunda opinión en los tres cánceres urológicos principales
+            Segunda opinión en los principales cánceres urológicos
           </motion.h2>
           <motion.p
             variants={fadeUp}
@@ -312,6 +315,18 @@ export default function SegundaOpinionContent() {
                 waMotivo: "segunda-opinion-vejiga",
                 waTexto: "Segunda opinión en vejiga",
               },
+              {
+                color: "border-l-petroleo",
+                badge: "bg-petroleo/10 text-petroleo",
+                badgeText: "Testicular",
+                title: "Tumor Testicular",
+                text: "El tumor testicular es el cáncer más frecuente en hombres jóvenes de 15 a 35 años y, cuando se diagnostica y estadifica correctamente, uno de los más curables. La decisión crítica llega después de la orquiectomía: vigilancia activa, quimioterapia o radioterapia dependen del tipo histológico y el estadio exacto. Una segunda opinión ayuda a confirmar que el plan no incluye tratamientos innecesarios en estadios tempranos ni deja sin atender un caso que requiere mayor intervención.",
+                link: "",
+                linkText: "",
+                waMensaje: WA_TESTICULAR,
+                waMotivo: "segunda-opinion-testicular",
+                waTexto: "Segunda opinión en tumor testicular",
+              },
             ].map(
               (
                 {
@@ -350,13 +365,15 @@ export default function SegundaOpinionContent() {
                       <p className="font-serif text-gris-profundo/80 text-base leading-relaxed mb-4">
                         {text}
                       </p>
-                      <Link
-                        href={link}
-                        className="inline-flex items-center gap-1 text-acero font-sans font-medium text-sm hover:gap-2 transition-all"
-                      >
-                        {linkText}
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
+                      {link && (
+                        <Link
+                          href={link}
+                          className="inline-flex items-center gap-1 text-acero font-sans font-medium text-sm hover:gap-2 transition-all"
+                        >
+                          {linkText}
+                          <ArrowRight className="w-4 h-4" />
+                        </Link>
+                      )}
                     </div>
                     <div className="mt-5 md:mt-0 md:flex-shrink-0">
                       <WAButton
@@ -484,11 +501,13 @@ export default function SegundaOpinionContent() {
               transition={{ duration: 0.5 }}
               className="font-serif text-gris-profundo text-lg leading-relaxed"
             >
-              El Dr. Alejandro Quiroz Compeán es urólogo oncólogo con alta especialidad
-              en el Instituto Nacional de Cancerología (INCan), el centro de referencia
-              para el tratamiento del cáncer en México, y formación en cirugía robótica
-              en el Hospital Albert Einstein de São Paulo, uno de los referentes de
-              Latinoamérica.
+              El Dr. Alejandro Quiroz Compeán consolidó su formación en los centros de
+              mayor exigencia en México y Latinoamérica: el Instituto Nacional de Ciencias
+              Médicas y Nutrición (INCMNSZ), el Instituto Nacional de Cancerología (INCan)
+              — referencia nacional para el tratamiento oncológico — y el Hospital Albert
+              Einstein de São Paulo en cirugía robótica urológica. Esa trayectoria lo ha
+              posicionado como referencia en urología oncológica para médicos del Bajío
+              que derivan sus casos de mayor complejidad.
             </motion.p>
             <motion.p
               variants={fadeUp}
@@ -498,16 +517,23 @@ export default function SegundaOpinionContent() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="font-serif text-gris-profundo text-lg leading-relaxed"
             >
-              Esto significa que tu caso será revisado por alguien entrenado
-              específicamente en el manejo oncológico del cáncer urológico — no solo en
-              urología general — y con dominio de las técnicas quirúrgicas mínimamente
-              invasivas que pueden preservar tu función y calidad de vida.
+              Como médico adscrito y titular del programa de residencias en Urología del
+              Hospital General de León, el Dr. Quiroz enfrenta casos oncológicos complejos
+              de manera cotidiana. Estar al frente de la formación de los próximos
+              urólogos de la región exige una actualización continua en evidencia
+              científica — lo que se traduce directamente en un criterio clínico más
+              sólido para evaluar tu caso.
             </motion.p>
           </div>
 
           {/* Credentials */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
             {[
+              {
+                Icon: BookOpen,
+                label: "INCMNSZ",
+                sub: "Residencia en Urología",
+              },
               {
                 Icon: GraduationCap,
                 label: "INCan",
@@ -522,6 +548,11 @@ export default function SegundaOpinionContent() {
                 Icon: BadgeCheck,
                 label: "CONAMEU",
                 sub: "Certificación vigente",
+              },
+              {
+                Icon: Building2,
+                label: "Hosp. Gral. León",
+                sub: "Adscrito · Titular de Residencias · Investigación",
               },
             ].map(({ Icon, label, sub }, i) => (
               <motion.div
