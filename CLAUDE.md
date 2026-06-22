@@ -28,7 +28,6 @@
 - **Iconos:** lucide-react
 - **Animaciones:** framer-motion (solo en páginas interiores)
 - **Analytics:** Google Analytics G-FFEFH848TS
-- **IA flotante:** `src/components/MedicalAIAgent.tsx` (chat médico con Anthropic SDK)
 
 ## Tokens de diseño (globals.css)
 ```
@@ -48,8 +47,7 @@ src/
 ├── components/
 │   ├── Navbar.tsx          ← navbar global fija (bg-petroleo), WA verde
 │   ├── Footer.tsx          ← footer global (bg-petroleo, 4 cols + COFEPRIS)
-│   ├── ServiceCard.tsx     ← tarjeta de especialidad con link
-│   └── MedicalAIAgent.tsx  ← chat IA flotante
+│   └── ServiceCard.tsx     ← tarjeta de especialidad con link
 ├── app/
 │   ├── layout.tsx          ← inyecta Navbar + Footer + pt-16 spacer
 │   ├── page.tsx            ← home (Server Component, metadata propia)
@@ -82,9 +80,10 @@ Cada ruta interior sigue este patrón de dos archivos:
 | `/medicamentos-prostata` | `app/medicamentos-prostata/` |
 | `/vph-en-hombres` | `app/vph-en-hombres/` |
 | `/verrugas-genitales` | `app/verrugas-genitales/` |
+| `/sobre-mi` | `app/sobre-mi/` |
+| `/segunda-opinion-oncologica` | `app/segunda-opinion-oncologica/` |
 
 ## Reglas editoriales / médico-legales
-- ❌ NO usar: "segunda opinión" (genera fricción con colegas) → usar **"valoración oncológica"**
 - ❌ NO usar: "el mejor", "garantizado", "100% seguro", "cura definitiva"
 - ❌ NO prometer resultados clínicos individuales
 - ✅ SÍ usar: "basado en evidencia científica", "en la mayoría de los pacientes", "con intención curativa"
@@ -92,12 +91,14 @@ Cada ruta interior sigue este patrón de dos archivos:
 - ✅ Doctoralia va como CTA secundario o en el footer
 
 ## Jerarquía de especialidades para SEO
-1. Cáncer de próstata (búsqueda principal)
-2. Cáncer renal
-3. Cirugía robótica urológica (diferenciador)
-4. Crecimiento prostático / HoLEP
-5. Cálculos renales
-6. Otras (VPH, disfunción eréctil, infección urinaria, etc.)
+1. Cáncer de próstata (hub principal)
+2. HoLEP / crecimiento prostático (+750% búsquedas — máxima prioridad de crecimiento)
+3. Disfunción eréctil + tadalafil (+950% en tadalafil, alto volumen)
+4. Infección urinaria (+110%, volumen alto)
+5. Cáncer renal / Cáncer de vejiga
+6. VPH en hombres / Verrugas genitales
+7. Cálculos renales
+8. Cirugía robótica — NO usar como keyword principal (volumen bajo, -10% decreciente). Mencionar únicamente dentro de las páginas anteriores como técnica, nunca como página o keyword objetivo propia.
 
 ## Imágenes disponibles en /public/images/
 - `foto-para-web.png` — foto principal del Dr. (hero home)
@@ -109,3 +110,13 @@ Cada ruta interior sigue este patrón de dos archivos:
 - Repo: `https://github.com/fquirozcompean-lab/urologia-robotica-leon`
 - Branch principal: `main`
 - Deploy automático en Vercel al hacer push a main
+
+## Mantenimiento de este archivo
+Este archivo es la fuente de verdad del proyecto. Cada vez que completes una tarea que:
+- agregue o elimine una página
+- agregue, elimine o renombre un componente
+- cambie una regla editorial o médico-legal
+- cambie la estrategia de keywords/SEO
+- cambie cualquier dato de contacto, hospital o credencial
+
+...debes actualizar la sección correspondiente de CLAUDE.md como parte de la misma tarea, antes de dar la tarea por terminada. Si no estás seguro de si un cambio amerita actualizar este archivo, pregunta antes de continuar.
