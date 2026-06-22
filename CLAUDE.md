@@ -34,12 +34,23 @@
 --color-petroleo:    #0F2D3A  ← fondo principal / navbar / footer
 --color-acero:       #1F5C73  ← azul secundario / bordes activos
 --color-editorial:   #F5F7F9  ← texto sobre fondo oscuro / fondo claro
---color-gris-premium:#7B8790  ← textos secundarios
---color-gris-profundo:#37474F ← textos cuerpo
---color-quirurgico:  #4A90A4  ← acento teal / iconos
+--color-gris-premium:#7B8790  ← textos secundarios (solo sobre fondos OSCUROS)
+--color-gris-profundo:#37474F ← textos cuerpo (usar sobre fondos claros — 7.7:1 sobre editorial)
+--color-quirurgico:  #4A90A4  ← acento teal / iconos (solo decorativo, NO para texto sobre fondos claros)
 --color-dorado:      #B8A36A  ← detalles premium / divisores
+
+-- UTILIDAD (no es parte de la paleta de marca médica) --
+--color-whatsapp:    #15803d  ← exclusivo para botones WA (5.01:1 con texto blanco, WCAG AA)
+                               No usar en contenido editorial ni UI general
 ```
-Clases: `bg-petroleo`, `text-editorial`, `bg-acero`, `text-quirurgico`, `text-dorado`, etc.
+Clases: `bg-petroleo`, `text-editorial`, `bg-acero`, `text-quirurgico`, `text-dorado`, `bg-whatsapp`, etc.
+
+### Reglas de contraste WCAG AA (aprendidas en auditoría)
+- `text-gris-premium` sobre fondos CLAROS (`bg-white`, `bg-editorial`): FALLA (3.42:1). Usar `text-gris-profundo`.
+- `text-gris-premium` sobre `bg-petroleo`: borderline (3.91:1). Usar `text-editorial/65` o superior.
+- `text-quirurgico` sobre fondos claros: FALLA (3.61:1). Usar `text-acero` para links/texto.
+- `text-quirurgico` es correcto como color de icono (no-texto) o bullet decorativo.
+- Botones WA: usar `bg-whatsapp` (nunca `bg-[#25D366]` que da 1.98:1 con texto blanco).
 
 ## Arquitectura de componentes
 ```

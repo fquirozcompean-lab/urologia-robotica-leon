@@ -44,7 +44,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackDoctoralia('footer')}
-                className="text-gris-premium text-sm hover:text-quirurgico transition-colors"
+                className="text-editorial/65 text-sm hover:text-quirurgico transition-colors"
               >
                 Ver perfil en Doctoralia →
               </a>
@@ -99,7 +99,7 @@ export default function Footer() {
         <div className="border-t border-dorado/30 pt-8 text-center text-sm text-editorial/70 font-serif space-y-1">
           <p>© 2025 Dr. Alejandro Quiroz Compeán. Todos los derechos reservados.</p>
           <p>Urología Oncológica y Cirugía Avanzada en León, Guanajuato</p>
-          <p className="text-xs text-editorial/40 pt-1">
+          <p className="text-xs text-editorial/65 pt-1">
             Aviso de Publicidad COFEPRIS: 2611072002A00152
           </p>
         </div>

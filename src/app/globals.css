@@ -15,6 +15,12 @@
   --color-quirurgico: #4A90A4;
   --color-dorado: #B8A36A;
 
+  /* Utility color — NOT part of the medical brand palette.
+     Used exclusively for WhatsApp CTA buttons.
+     #15803d achieves 5.01:1 contrast with white text (WCAG AA).
+     The original WA green #25D366 only gives 1.98:1 and fails accessibility. */
+  --color-whatsapp: #15803d;
+
   /* Typography */
   --font-sans: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
   --font-serif: var(--font-lora), 'Lora', serif;

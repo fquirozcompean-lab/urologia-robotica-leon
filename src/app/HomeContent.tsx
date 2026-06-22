@@ -35,7 +35,7 @@ export default function HomeContent() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
             <div className="lg:col-span-7 text-center lg:text-left">
-              <div className="inline-flex items-center bg-acero/30 border border-acero/50 rounded-full px-4 py-1.5 text-sm text-quirurgico mb-5 font-sans">
+              <div className="inline-flex items-center bg-acero/30 border border-acero/50 rounded-full px-4 py-1.5 text-sm text-editorial mb-5 font-sans">
                 Urólogo oncólogo certificado · León, Guanajuato
               </div>
 
@@ -63,7 +63,7 @@ export default function HomeContent() {
                 </WAButton>
               </div>
 
-              <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-editorial/45 justify-center lg:justify-start font-sans">
+              <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-editorial/70 justify-center lg:justify-start font-sans">
                 <span>C.P. 8860892</span><span>·</span>
                 <span>C.E. 12465195</span><span>·</span>
                 <span>Certificado CONAMEU</span><span>·</span>
@@ -88,38 +88,38 @@ export default function HomeContent() {
       {/* ===== ACCESOS RÁPIDOS ===== */}
       <section className="py-10 px-4 bg-white border-b border-gris-premium/10">
         <div className="max-w-7xl mx-auto">
-          <p className="text-xs text-gris-premium text-center mb-6 font-sans uppercase tracking-widest">
+          <p className="text-xs text-gris-profundo text-center mb-6 font-sans uppercase tracking-widest">
             Consultas frecuentes
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
 
             <Link href="/cancer-prostata" className="group block bg-editorial rounded-xl p-5 border-2 border-gris-premium/15 hover:border-acero hover:shadow-lg transition-all duration-300">
               <h3 className="font-bold text-petroleo font-sans text-[15px] mb-1">Cáncer de próstata</h3>
-              <p className="text-xs text-gris-premium font-serif leading-relaxed">Diagnóstico, PSA y prostatectomía robótica.</p>
+              <p className="text-xs text-gris-profundo font-serif leading-relaxed">Diagnóstico, PSA y prostatectomía robótica.</p>
               <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Ver información →</span>
             </Link>
 
             <Link href="/hiperplasia-prostatica-benigna" className="group block bg-editorial rounded-xl p-5 border-2 border-gris-premium/15 hover:border-acero hover:shadow-lg transition-all duration-300">
               <h3 className="font-bold text-petroleo font-sans text-[15px] mb-1">Crecimiento prostático y HoLEP</h3>
-              <p className="text-xs text-gris-premium font-serif leading-relaxed">Síntomas urinarios y cirugía láser sin implante.</p>
+              <p className="text-xs text-gris-profundo font-serif leading-relaxed">Síntomas urinarios y cirugía láser sin implante.</p>
               <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Ver opciones →</span>
             </Link>
 
             <Link href="/calculos-renales" className="group block bg-editorial rounded-xl p-5 border-2 border-gris-premium/15 hover:border-acero hover:shadow-lg transition-all duration-300">
               <h3 className="font-bold text-petroleo font-sans text-[15px] mb-1">Piedras en riñón o uréter</h3>
-              <p className="text-xs text-gris-premium font-serif leading-relaxed">Cólico renal y tratamiento mínimamente invasivo.</p>
+              <p className="text-xs text-gris-profundo font-serif leading-relaxed">Cólico renal y tratamiento mínimamente invasivo.</p>
               <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Ver tratamientos →</span>
             </Link>
 
             <Link href="/cancer-renal" className="group block bg-editorial rounded-xl p-5 border-2 border-gris-premium/15 hover:border-acero hover:shadow-lg transition-all duration-300">
               <h3 className="font-bold text-petroleo font-sans text-[15px] mb-1">Cáncer renal</h3>
-              <p className="text-xs text-gris-premium font-serif leading-relaxed">Nefrectomía parcial o radical con técnica robótica.</p>
+              <p className="text-xs text-gris-profundo font-serif leading-relaxed">Nefrectomía parcial o radical con técnica robótica.</p>
               <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Ver información →</span>
             </Link>
 
             <Link href="#especialidades" className="group block bg-editorial rounded-xl p-5 border-2 border-gris-premium/15 hover:border-acero hover:shadow-lg transition-all duration-300">
               <h3 className="font-bold text-petroleo font-sans text-[15px] mb-1">Cirugía robótica urológica</h3>
-              <p className="text-xs text-gris-premium font-serif leading-relaxed">Prostatectomía, nefrectomía y cistectomía Da Vinci.</p>
+              <p className="text-xs text-gris-profundo font-serif leading-relaxed">Prostatectomía, nefrectomía y cistectomía Da Vinci.</p>
               <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Ver especialidades →</span>
             </Link>
 
@@ -131,7 +131,7 @@ export default function HomeContent() {
             >
               <h3 className="font-bold text-editorial font-sans text-[15px] mb-1">Valoración oncológica</h3>
               <p className="text-xs text-editorial/60 font-serif leading-relaxed">Diagnóstico y criterio especializado en urología oncológica.</p>
-              <span className="text-xs text-quirurgico font-medium font-sans mt-3 inline-block group-hover:underline">Solicitar valoración →</span>
+              <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Solicitar valoración →</span>
             </WAButton>
 
           </div>
@@ -145,7 +145,7 @@ export default function HomeContent() {
             <h2 className="text-4xl md:text-5xl font-bold text-petroleo mb-4 font-sans">
               Especialidades Urológicas
             </h2>
-            <p className="text-xl text-gris-premium max-w-3xl mx-auto font-serif">
+            <p className="text-xl text-gris-profundo max-w-3xl mx-auto font-serif">
               Atención integral en urología general, urología oncológica y salud sexual masculina
             </p>
           </div>
@@ -182,7 +182,7 @@ export default function HomeContent() {
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-3 text-petroleo font-sans">Formación en Centros de Excelencia</h3>
-              <div className="text-gris-premium font-serif text-[15px] leading-relaxed text-left max-w-sm mx-auto">
+              <div className="text-gris-profundo font-serif text-[15px] leading-relaxed text-left max-w-sm mx-auto">
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2"><span className="text-quirurgico mt-1 flex-shrink-0">•</span><span><strong className="font-sans">Urología</strong> — Instituto Nacional de Ciencias Médicas y Nutrición Salvador Zubirán</span></li>
                   <li className="flex items-start gap-2"><span className="text-quirurgico mt-1 flex-shrink-0">•</span><span><strong className="font-sans">Alta Especialidad en Urología Oncológica</strong> — Instituto Nacional de Cancerología (INCan)</span></li>
@@ -199,7 +199,7 @@ export default function HomeContent() {
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-3 text-petroleo font-sans">Cirugía Mínimamente Invasiva</h3>
-              <p className="text-gris-premium font-serif text-[15px] leading-relaxed">Entrenamiento en cirugía robótica (Hospital Albert Einstein, Brasil). Laparoscopia avanzada y láser. Menor dolor, recuperación más rápida.</p>
+              <p className="text-gris-profundo font-serif text-[15px] leading-relaxed">Entrenamiento en cirugía robótica (Hospital Albert Einstein, Brasil). Laparoscopia avanzada y láser. Menor dolor, recuperación más rápida.</p>
             </div>
 
             <div className="text-center">
@@ -209,7 +209,7 @@ export default function HomeContent() {
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-3 text-petroleo font-sans">Atención Integral</h3>
-              <p className="text-gris-premium font-serif text-[15px] leading-relaxed">Desde diagnóstico hasta seguimiento. Enfoque en preservación de función y calidad de vida.</p>
+              <p className="text-gris-profundo font-serif text-[15px] leading-relaxed">Desde diagnóstico hasta seguimiento. Enfoque en preservación de función y calidad de vida.</p>
             </div>
 
             <div className="text-center">
@@ -219,7 +219,7 @@ export default function HomeContent() {
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-3 text-petroleo font-sans">Ubicaciones en León</h3>
-              <p className="text-gris-premium font-serif text-[15px] leading-relaxed">Hospital Ángeles León y Hospital Christus Muguerza Altagracia.</p>
+              <p className="text-gris-profundo font-serif text-[15px] leading-relaxed">Hospital Ángeles León y Hospital Christus Muguerza Altagracia.</p>
             </div>
           </div>
         </div>
@@ -238,9 +238,9 @@ export default function HomeContent() {
             <div className="bg-editorial p-8 rounded-xl shadow-lg border-2 border-gris-premium/20">
               <h3 className="text-2xl font-bold mb-4 text-acero font-sans">Hospital Ángeles León</h3>
               <p className="text-gris-profundo mb-2 font-serif"><strong className="font-sans">Consultorio 615, Torre II</strong></p>
-              <p className="text-gris-premium mb-4 font-serif text-[15px]">Av. Cerro Gordo 311, Lomas del Campestre</p>
+              <p className="text-gris-profundo mb-4 font-serif text-[15px]">Av. Cerro Gordo 311, Lomas del Campestre</p>
               <p className="text-gris-profundo mb-2 font-serif"><strong className="font-sans">Horarios:</strong> Lun / Mar / Jue</p>
-              <p className="text-gris-premium mb-6 font-serif text-[15px]">9:00 AM - 8:00 PM</p>
+              <p className="text-gris-profundo mb-6 font-serif text-[15px]">9:00 AM - 8:00 PM</p>
               <div className="space-y-3">
                 <WAButton
                   mensaje="Hola Dr. Quiroz, quiero agendar una consulta en Hospital Ángeles León."
@@ -255,18 +255,18 @@ export default function HomeContent() {
                   telefono="4791037564"
                   sede="angeles"
                   variant="ghost"
-                  className="inline-flex items-center gap-2 text-gris-premium hover:text-acero font-medium font-sans transition-colors"
+                  className="inline-flex items-center gap-2 text-gris-profundo hover:text-acero font-medium font-sans transition-colors"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                   Tel: 479 103 7564
                 </CallButton>
                 <br />
-                <a href="https://maps.app.goo.gl/xX2Rgs1cjE4e4vAz8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gris-premium hover:text-acero font-medium font-sans transition-colors">
+                <a href="https://maps.app.goo.gl/xX2Rgs1cjE4e4vAz8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gris-profundo hover:text-acero font-medium font-sans transition-colors">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                   Ver en Google Maps
                 </a>
                 <br />
-                <a href={DOCTORALIA} target="_blank" rel="noopener noreferrer" onClick={() => trackDoctoralia("home-angeles")} className="text-gris-premium text-sm hover:text-acero transition-colors font-sans">
+                <a href={DOCTORALIA} target="_blank" rel="noopener noreferrer" onClick={() => trackDoctoralia("home-angeles")} className="text-gris-profundo text-sm hover:text-acero transition-colors font-sans">
                   Ver opiniones en Doctoralia →
                 </a>
               </div>
@@ -275,9 +275,9 @@ export default function HomeContent() {
             <div className="bg-editorial p-8 rounded-xl shadow-lg border-2 border-gris-premium/20">
               <h3 className="text-2xl font-bold mb-4 text-acero font-sans">Hospital Christus Muguerza Altagracia</h3>
               <p className="text-gris-profundo mb-2 font-serif"><strong className="font-sans">Consultorio 724</strong></p>
-              <p className="text-gris-premium mb-4 font-serif text-[15px]">Blvd. Juan Alonso de Torres 2002, Valle del Campestre</p>
+              <p className="text-gris-profundo mb-4 font-serif text-[15px]">Blvd. Juan Alonso de Torres 2002, Valle del Campestre</p>
               <p className="text-gris-profundo mb-2 font-serif"><strong className="font-sans">Horarios:</strong> Mié / Vie</p>
-              <p className="text-gris-premium mb-6 font-serif text-[15px]">9:00 AM - 8:00 PM</p>
+              <p className="text-gris-profundo mb-6 font-serif text-[15px]">9:00 AM - 8:00 PM</p>
               <div className="space-y-3">
                 <WAButton
                   mensaje="Hola Dr. Quiroz, quiero agendar una consulta en Hospital Muguerza Altagracia."
@@ -292,18 +292,18 @@ export default function HomeContent() {
                   telefono="4772351442"
                   sede="muguerza"
                   variant="ghost"
-                  className="inline-flex items-center gap-2 text-gris-premium hover:text-acero font-medium font-sans transition-colors"
+                  className="inline-flex items-center gap-2 text-gris-profundo hover:text-acero font-medium font-sans transition-colors"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                   Tel: 477 235 1442
                 </CallButton>
                 <br />
-                <a href="https://maps.app.goo.gl/9GaeXhzTKwQ8ngZP6" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gris-premium hover:text-acero font-medium font-sans transition-colors">
+                <a href="https://maps.app.goo.gl/9GaeXhzTKwQ8ngZP6" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gris-profundo hover:text-acero font-medium font-sans transition-colors">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                   Ver en Google Maps
                 </a>
                 <br />
-                <a href={DOCTORALIA} target="_blank" rel="noopener noreferrer" onClick={() => trackDoctoralia("home-muguerza")} className="text-gris-premium text-sm hover:text-acero transition-colors font-sans">
+                <a href={DOCTORALIA} target="_blank" rel="noopener noreferrer" onClick={() => trackDoctoralia("home-muguerza")} className="text-gris-profundo text-sm hover:text-acero transition-colors font-sans">
                   Ver opiniones en Doctoralia →
                 </a>
               </div>

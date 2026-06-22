@@ -19,7 +19,7 @@ export default function ServiceCard({ icon, title, description, href }: ServiceC
           {title}
         </h3>
 
-        <p className="text-gris-premium mb-6 flex-grow text-center leading-relaxed font-serif text-[15px]">
+        <p className="text-gris-profundo mb-6 flex-grow text-center leading-relaxed font-serif text-[15px]">
           {description}
         </p>
 

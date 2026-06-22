@@ -25,8 +25,8 @@ const variants = {
     "inline-flex items-center gap-2 text-acero font-sans font-medium " +
     "hover:underline transition-colors",
   green:
-    "inline-flex items-center justify-center gap-2 bg-[#25D366] text-white " +
-    "font-sans font-bold px-8 py-4 rounded-lg hover:bg-[#20b358] transition-colors",
+    "inline-flex items-center justify-center gap-2 bg-whatsapp text-white " +
+    "font-sans font-bold px-8 py-4 rounded-lg hover:bg-whatsapp/85 transition-colors",
 };
 
 export default function WAButton({

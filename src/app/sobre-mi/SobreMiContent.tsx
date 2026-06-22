@@ -726,7 +726,7 @@ export default function SobreMiContent() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackWhatsApp("sobre-mi")}
-                className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-lg font-bold font-sans text-lg hover:bg-[#20b358] transition-colors shadow-lg"
+                className="inline-flex items-center justify-center gap-2 bg-whatsapp text-white px-8 py-4 rounded-lg font-bold font-sans text-lg hover:bg-whatsapp/85 transition-colors shadow-lg"
               >
                 <svg
                   className="w-6 h-6 flex-shrink-0"
