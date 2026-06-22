@@ -17,7 +17,7 @@ export default function Navbar() {
         </Link>
 
         {/* Nav links — desktop */}
-        <nav className="hidden md:flex items-center gap-6 text-sm text-editorial/75 font-sans">
+        <nav aria-label="Navegación principal" className="hidden md:flex items-center gap-6 text-sm text-editorial/75 font-sans">
           <Link href="/#especialidades" className="hover:text-editorial transition-colors">
             Especialidades
           </Link>

@@ -20,6 +20,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://urologiaroboticaleon.com"),
   verification: {
     google: "uHJCLoFt5l687JtukoNWbLvkfsziurjH7E2BmYZDc0E",
   },
@@ -42,7 +43,6 @@ export const metadata: Metadata = {
     "nefrectomía robótica",
     "cistectomía robótica",
     "cirugía del cáncer renal",
-    "mejor urólogo en León",
     "urólogo especializado en cáncer de próstata",
     "experto en cirugía robótica de próstata",
     "urólogo certificado en León Guanajuato",
@@ -108,7 +108,7 @@ export default function RootLayout({
               sameAs: [
                 "https://www.instagram.com/urologo.alejandroquiroz/",
                 "https://www.facebook.com/DrQuirozUrologoLeon",
-                "https://www.doctoralia.com.mx/alejandro-quiroz-compean/urologo/leon",
+                "https://www.doctoralia.com.mx/z/oFar6h",
                 "https://hospitalangeles.com/medico/alejandro-quiroz-compean",
                 "https://www.researchgate.net/profile/Alejandro-Quiroz-Compean",
                 "https://www.linkedin.com/in/alejandro-quiroz-compean-9955ba61",
@@ -153,8 +153,8 @@ export default function RootLayout({
               },
               geo: {
                 "@type": "GeoCoordinates",
-                latitude: 21.1234,
-                longitude: -101.6839,
+                latitude: 21.1272,
+                longitude: -101.6840,
               },
               openingHoursSpecification: [
                 {
@@ -173,7 +173,7 @@ export default function RootLayout({
               sameAs: [
                 "https://www.instagram.com/urologo.alejandroquiroz/",
                 "https://www.facebook.com/DrQuirozUrologoLeon",
-                "https://www.doctoralia.com.mx/alejandro-quiroz-compean/urologo/leon",
+                "https://www.doctoralia.com.mx/z/oFar6h",
               ],
               medicalSpecialty: [
                 "Urology",
