@@ -239,6 +239,7 @@ export default function HoLEPContent() {
               alt="Comparación HoLEP vs TURP cirugía convencional de próstata"
               width={1200}
               height={700}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 900px"
               className="w-full h-auto"
             />
           </motion.div>

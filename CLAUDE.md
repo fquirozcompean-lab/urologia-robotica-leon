@@ -76,6 +76,31 @@ Cada ruta interior sigue este patrón de dos archivos:
 **El layout ya provee navbar y footer — NO crearlos dentro del Content.**
 **El layout ya agrega `pt-16` — NO añadir `pt-20` al `<main>`.**
 
+## Reglas de performance (aprendidas en auditoría Lighthouse)
+
+### JSON-LD schemas
+- ✅ Usar `<script type="application/ld+json" dangerouslySetInnerHTML={...} />` nativo de React
+- ❌ NUNCA usar `<Script strategy="beforeInteractive">` de next/script para JSON-LD — bloquea render 2,470 ms
+- El componente `<Script>` (next/script) solo es válido para JS externo con lifecycle (GA, chat widgets, etc.)
+
+### Imágenes
+- ✅ Siempre usar `<Image>` de `next/image` (genera WebP/AVIF, srcset, lazy automático)
+- ✅ El LCP element de cada página DEBE tener `priority` (Navbar + hero son siempre LCP)
+- ✅ Incluir `sizes` para imágenes responsive: `sizes="(max-width: 1024px) 90vw, 45vw"`
+- ❌ NUNCA usar `<img>` nativo para imágenes de contenido (solo SVGs inline justifican `<img>`)
+- Imágenes >500 KB deben re-exportarse en WebP antes de subir a `/public`
+
+### Lighthouse — cómo correr sin falsos positivos
+Siempre correr con extensiones deshabilitadas. Kaspersky y ad-blockers inyectan JS/CSS propios
+que Lighthouse reporta como "unused" del sitio (251 KB CSS y 162 KB JS eran 100% de Kaspersky/uBlock).
+Comando correcto:
+```
+npx lighthouse https://urologiaroboticaleon.com/ --output=json \
+  --output-path="C:\Users\aqc_a\lh-report.json" \
+  --chrome-flags="--headless --no-sandbox --disable-extensions --disable-gpu" \
+  --only-categories=performance,accessibility,best-practices,seo
+```
+
 ## Páginas existentes
 | Ruta | Archivo |
 |---|---|

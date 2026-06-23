@@ -91,10 +91,8 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${jakarta.variable} ${lora.variable}`}>
       <head>
-        <Script
-          id="json-ld-physician"
+        <script
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -126,10 +124,8 @@ export default function RootLayout({
             }),
           }}
         />
-        <Script
-          id="json-ld-local-business"
+        <script
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   Activity,
   AlertCircle,
@@ -73,9 +74,13 @@ export default function HomeContent() {
 
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative">
-                <img
+                <Image
                   src="/images/foto-para-web.png"
                   alt="Dr. Alejandro Quiroz Compeán — Urólogo oncólogo en León, Guanajuato"
+                  width={800}
+                  height={900}
+                  priority
+                  sizes="(max-width: 1024px) 90vw, 45vw"
                   className="rounded-2xl shadow-2xl border-4 border-acero/20 w-full max-w-md lg:max-w-lg object-cover"
                 />
               </div>
