@@ -169,6 +169,38 @@ export default function HomeContent() {
         </div>
       </section>
 
+      {/* ===== SEGUNDA OPINIÓN — BLOQUE DESTACADO ===== */}
+      <section className="bg-petroleo py-16 px-6 md:px-12">
+        <div className="max-w-4xl mx-auto text-center">
+          <span className="text-dorado font-serif italic text-lg">
+            Para pacientes con diagnóstico previo
+          </span>
+          <h2 className="font-sans font-bold text-3xl md:text-4xl text-editorial mt-4 mb-6">
+            ¿Ya tienes un diagnóstico de cáncer urológico?
+          </h2>
+          <p className="font-serif text-editorial/75 text-lg mb-8 max-w-2xl mx-auto">
+            Una segunda opinión especializada en cáncer de próstata, renal o de vejiga
+            te ayuda a confirmar tu diagnóstico y conocer todas tus opciones de
+            tratamiento antes de decidir. Formación en INCan y Hospital Albert Einstein.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <WAButton
+              mensaje="Hola Dr. Quiroz, tengo un diagnóstico de cáncer y quisiera solicitar una segunda opinión."
+              motivo="home-bloque-segunda-opinion"
+              variant="primary"
+            >
+              Solicitar segunda opinión
+            </WAButton>
+            <Link
+              href="/segunda-opinion-oncologica"
+              className="inline-flex items-center justify-center gap-2 border-2 border-dorado text-dorado font-sans font-bold px-8 py-4 rounded hover:bg-dorado hover:text-petroleo transition-colors"
+            >
+              Conoce el proceso →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ===== POR QUÉ ELEGIR ===== */}
       <section className="py-20 px-4 bg-editorial">
         <div className="max-w-7xl mx-auto">

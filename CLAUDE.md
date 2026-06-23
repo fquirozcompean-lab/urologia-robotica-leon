@@ -133,6 +133,7 @@ npx lighthouse https://urologiaroboticaleon.com/ --output=json \
 | `/verrugas-genitales` | `app/verrugas-genitales/` |
 | `/sobre-mi` | `app/sobre-mi/` |
 | `/segunda-opinion-oncologica` | `app/segunda-opinion-oncologica/` |
+| `/cancer-testicular` | `app/cancer-testicular/` |
 
 ## Reglas editoriales / médico-legales
 - ❌ NO usar: "el mejor", "garantizado", "100% seguro", "cura definitiva"

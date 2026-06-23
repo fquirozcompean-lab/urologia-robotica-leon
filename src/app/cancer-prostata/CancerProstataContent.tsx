@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import WAButton from "@/components/WAButton";
 import { motion } from "framer-motion";
 import { trackWhatsApp } from "@/lib/analytics";
 
@@ -723,25 +724,34 @@ export default function CancerProstataContent() {
         </section>
 
         {/* SEGUNDA OPINIÓN CROSS-LINK */}
-        <section className="bg-editorial py-12 px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-xs font-sans font-semibold uppercase tracking-widest text-quirurgico mb-3">
-              ¿Ya tienes un diagnóstico?
-            </p>
-            <h3 className="font-sans font-bold text-petroleo text-2xl mb-3">
-              Solicita una valoración oncológica antes de decidir
+        <section className="bg-editorial border-l-4 border-dorado py-10 px-6 md:px-12 my-12 rounded-r-xl">
+          <div className="max-w-3xl">
+            <span className="text-dorado font-sans font-bold text-sm uppercase tracking-wide">
+              ¿Ya tienes este diagnóstico?
+            </span>
+            <h3 className="font-sans font-bold text-2xl text-petroleo mt-2 mb-3">
+              Solicita una segunda opinión especializada
             </h3>
-            <p className="font-serif text-gris-profundo/75 mb-6 max-w-xl mx-auto">
-              Si ya tienes un diagnóstico de cáncer de próstata y quieres confirmar el
-              estadio, las opciones de tratamiento o el plan propuesto, el Dr. Quiroz
-              puede darte una opinión especializada.
+            <p className="font-serif text-gris-profundo mb-6">
+              Si ya tienes un diagnóstico de cáncer de próstata y quieres confirmar
+              que el tratamiento propuesto es el mejor para tu caso, una segunda opinión
+              con un urólogo oncólogo te ayuda a decidir con mayor tranquilidad.
             </p>
-            <Link
-              href="/segunda-opinion-oncologica"
-              className="inline-flex items-center gap-2 bg-acero text-editorial font-sans font-bold px-7 py-3 rounded-lg hover:bg-acero/90 transition-colors text-sm"
-            >
-              Ver segunda opinión oncológica →
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <WAButton
+                mensaje="Hola Dr. Quiroz, tengo un diagnóstico de cáncer de próstata y quisiera solicitar una segunda opinión."
+                motivo="cross-link-prostata-segunda-opinion"
+                variant="primary"
+              >
+                Solicitar segunda opinión
+              </WAButton>
+              <Link
+                href="/segunda-opinion-oncologica"
+                className="inline-flex items-center gap-2 text-acero font-sans font-medium hover:underline"
+              >
+                Conoce el proceso completo →
+              </Link>
+            </div>
           </div>
         </section>
 
