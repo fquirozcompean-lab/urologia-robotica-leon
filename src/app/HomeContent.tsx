@@ -12,6 +12,9 @@ import {
   Stethoscope,
   Hexagon,
   Crosshair,
+  FlaskConical,
+  Microscope,
+  Pill,
 } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
 import WAButton from "@/components/WAButton";
@@ -144,28 +147,81 @@ export default function HomeContent() {
       </section>
 
       {/* ===== ESPECIALIDADES ===== */}
-      <section className="py-20 px-4 bg-white" id="especialidades">
+      <section className="py-16 px-6 md:px-12 bg-white" id="especialidades">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-petroleo mb-4 font-sans">
+          <div className="text-center mb-12">
+            <h2 className="font-sans font-bold text-3xl md:text-4xl text-petroleo">
               Especialidades Urológicas
             </h2>
-            <p className="text-xl text-gris-profundo max-w-3xl mx-auto font-serif">
+            <p className="font-serif text-gris-profundo mt-3 max-w-2xl mx-auto">
               Atención integral en urología general, urología oncológica y salud sexual masculina
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <ServiceCard icon={<Activity size={48} className="text-quirurgico" strokeWidth={2} />} title="Cáncer de Próstata" description="Diagnóstico, estadificación y cirugía oncológica. Prostatectomía radical con tecnología mínimamente invasiva para preservar función sexual y urinaria." href="/cancer-prostata" />
-            <ServiceCard icon={<AlertCircle size={48} className="text-quirurgico" strokeWidth={2} />} title="Crecimiento de Próstata / HPB" description="Tratamiento médico y quirúrgico del crecimiento prostático benigno. Opciones de cirugía con láser y mínimamente invasiva para recuperación rápida." href="/hiperplasia-prostatica-benigna" />
-            <ServiceCard icon={<Crosshair size={48} className="text-quirurgico" strokeWidth={2} />} title="HoLEP: Cirugía Láser de Próstata" description="Cirugía láser HoLEP para próstata grande. Recuperación en 24–48 h, mínimo sangrado y sin límite de tamaño prostático. Técnica gold standard mundial." href="/holep-cirugia-laser" />
-            <ServiceCard icon={<Droplet size={48} className="text-quirurgico" strokeWidth={2} />} title="Cáncer Renal" description="Cirugía oncológica renal con preservación de función. Nefrectomía parcial y radical por técnicas mínimamente invasivas." href="/cancer-renal" />
-            <ServiceCard icon={<Zap size={48} className="text-quirurgico" strokeWidth={2} />} title="Infección Urinaria" description="Diagnóstico y tratamiento de infecciones urinarias agudas y recurrentes. Evaluación completa y plan de prevención personalizado." href="/infeccion-urinaria" />
-            <ServiceCard icon={<Heart size={48} className="text-quirurgico" strokeWidth={2} />} title="Disfunción Eréctil" description="Evaluación y tratamiento de problemas de erección. Opciones médicas y manejo integral de salud sexual masculina." href="/disfuncion-erectil" />
-            <ServiceCard icon={<Shield size={48} className="text-quirurgico" strokeWidth={2} />} title="VPH en Hombres" description="Diagnóstico, tratamiento y prevención del virus del papiloma humano en hombres. Evaluación de verrugas genitales y asesoría sobre vacunación." href="/vph-en-hombres" />
-            <ServiceCard icon={<Stethoscope size={48} className="text-quirurgico" strokeWidth={2} />} title="Verrugas Genitales" description="Tratamiento y eliminación de verrugas genitales. Crioterapia, electrofulguración y láser para resultados efectivos." href="/verrugas-genitales" />
-            <ServiceCard icon={<Hexagon size={48} className="text-quirurgico" strokeWidth={2} />} title="Cálculos Renales" description="Diagnóstico y tratamiento de piedras en riñón. Manejo del cólico renal y prevención de recurrencias." href="/calculos-renales" />
+          {/* CATEGORÍA 1 — Oncología Urológica */}
+          <div className="mb-14">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-1 w-8 bg-dorado flex-shrink-0"></span>
+              <h3 className="font-sans font-bold text-sm text-petroleo uppercase tracking-widest">
+                Oncología Urológica
+              </h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <ServiceCard icon={<Activity size={48} className="text-quirurgico" strokeWidth={2} />} title="Cáncer de Próstata" description="Diagnóstico, estadificación y cirugía oncológica. Prostatectomía radical con tecnología mínimamente invasiva para preservar función sexual y urinaria." href="/cancer-prostata" />
+              <ServiceCard icon={<Droplet size={48} className="text-quirurgico" strokeWidth={2} />} title="Cáncer Renal" description="Cirugía oncológica renal con preservación de función. Nefrectomía parcial y radical por técnicas mínimamente invasivas." href="/cancer-renal" />
+              <ServiceCard icon={<FlaskConical size={48} className="text-quirurgico" strokeWidth={2} />} title="Cáncer de Vejiga" description="Diagnóstico y tratamiento del cáncer vesical. Desde cistoscopia hasta cistectomía robótica según la estadificación del tumor." href="/cancer-vejiga" />
+              <ServiceCard icon={<Microscope size={48} className="text-quirurgico" strokeWidth={2} />} title="Cáncer Testicular" description="El cáncer más curable en oncología cuando se detecta a tiempo. Diagnóstico, cirugía y seguimiento especializado en hombres jóvenes." href="/cancer-testicular" />
+            </div>
+            <div className="mt-6 bg-editorial border-l-4 border-dorado p-6 rounded-r-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <span className="text-dorado font-sans font-bold text-xs uppercase tracking-wide">
+                  ¿Ya tienes un diagnóstico?
+                </span>
+                <p className="font-serif text-gris-profundo mt-1">
+                  Solicita una segunda opinión especializada antes de decidir tu tratamiento.
+                </p>
+              </div>
+              <Link
+                href="/segunda-opinion-oncologica"
+                className="inline-flex items-center justify-center gap-2 bg-acero text-editorial font-sans font-bold px-6 py-3 rounded hover:bg-acero/90 transition-colors whitespace-nowrap"
+              >
+                Segunda Opinión →
+              </Link>
+            </div>
           </div>
+
+          {/* CATEGORÍA 2 — Próstata */}
+          <div className="mb-14">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-1 w-8 bg-quirurgico flex-shrink-0"></span>
+              <h3 className="font-sans font-bold text-sm text-petroleo uppercase tracking-widest">
+                Próstata
+              </h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <ServiceCard icon={<AlertCircle size={48} className="text-quirurgico" strokeWidth={2} />} title="Crecimiento de Próstata / HPB" description="Tratamiento médico y quirúrgico del crecimiento prostático benigno. Opciones de cirugía con láser y mínimamente invasiva para recuperación rápida." href="/hiperplasia-prostatica-benigna" />
+              <ServiceCard icon={<Crosshair size={48} className="text-quirurgico" strokeWidth={2} />} title="HoLEP: Cirugía Láser de Próstata" description="Cirugía láser HoLEP para próstata grande. Recuperación en 24–48 h, mínimo sangrado y sin límite de tamaño prostático. Técnica gold standard mundial." href="/holep-cirugia-laser" />
+              <ServiceCard icon={<Pill size={48} className="text-quirurgico" strokeWidth={2} />} title="Medicamentos para Próstata" description="Guía de medicamentos para síntomas urinarios y crecimiento prostático. Opciones de tratamiento médico antes de considerar cirugía." href="/medicamentos-prostata" />
+            </div>
+          </div>
+
+          {/* CATEGORÍA 3 — Salud Sexual y Urológica General */}
+          <div>
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-1 w-8 bg-quirurgico flex-shrink-0"></span>
+              <h3 className="font-sans font-bold text-sm text-petroleo uppercase tracking-widest">
+                Salud Sexual y Urológica General
+              </h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <ServiceCard icon={<Heart size={48} className="text-quirurgico" strokeWidth={2} />} title="Disfunción Eréctil" description="Evaluación y tratamiento de problemas de erección. Opciones médicas y manejo integral de salud sexual masculina." href="/disfuncion-erectil" />
+              <ServiceCard icon={<Shield size={48} className="text-quirurgico" strokeWidth={2} />} title="VPH en Hombres" description="Diagnóstico, tratamiento y prevención del virus del papiloma humano en hombres. Evaluación de verrugas genitales y asesoría sobre vacunación." href="/vph-en-hombres" />
+              <ServiceCard icon={<Stethoscope size={48} className="text-quirurgico" strokeWidth={2} />} title="Verrugas Genitales" description="Tratamiento y eliminación de verrugas genitales. Crioterapia, electrofulguración y láser para resultados efectivos." href="/verrugas-genitales" />
+              <ServiceCard icon={<Zap size={48} className="text-quirurgico" strokeWidth={2} />} title="Infección Urinaria" description="Diagnóstico y tratamiento de infecciones urinarias agudas y recurrentes. Evaluación completa y plan de prevención personalizado." href="/infeccion-urinaria" />
+              <ServiceCard icon={<Hexagon size={48} className="text-quirurgico" strokeWidth={2} />} title="Cálculos Renales" description="Diagnóstico y tratamiento de piedras en riñón. Manejo del cólico renal y prevención de recurrencias." href="/calculos-renales" />
+            </div>
+          </div>
+
         </div>
       </section>
 

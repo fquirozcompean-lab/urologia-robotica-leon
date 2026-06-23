@@ -135,6 +135,52 @@ npx lighthouse https://urologiaroboticaleon.com/ --output=json \
 | `/segunda-opinion-oncologica` | `app/segunda-opinion-oncologica/` |
 | `/cancer-testicular` | `app/cancer-testicular/` |
 
+## Arquitectura de Información — Categorías de Especialidades (Junio 2026)
+
+### Decisión
+El sitio creció de 12 a 14+ páginas sin una arquitectura de categorías, lo que
+generó páginas huérfanas sin acceso desde el home (caso: /cancer-vejiga y
+/cancer-testicular no tenían ningún link desde la página principal).
+
+A partir de esta fecha, TODA página nueva de condición/especialidad debe
+clasificarse en una de las siguientes categorías y añadirse a su bloque
+correspondiente en la sección "Especialidades" del home (`src/app/HomeContent.tsx`):
+
+**Categoría 1 — Oncología Urológica** ← acento dorado
+Cáncer de próstata, renal, vejiga, testicular, y cualquier futura página
+oncológica (ej. PSMA-PET, biopsia de fusión). La página /segunda-opinion-oncologica
+recibe tratamiento especial como banda destacada dentro de esta categoría, no
+como card individual más.
+
+**Categoría 2 — Próstata (no oncológica)** ← acento quirurgico
+HPB, HoLEP, medicamentos para próstata, y futuras páginas relacionadas con
+próstata benigna.
+
+**Categoría 3 — Salud Sexual y Urológica General** ← acento quirurgico
+Disfunción eréctil, VPH, verrugas genitales, infección urinaria, cálculos
+renales, y futuras condiciones de este tipo.
+
+**Categoría 4 — Recursos y Educación (futura, aún sin implementar)**
+Reservada para cuando se active el blog (Fase 3 del roadmap). No crear esta
+sección en el home todavía.
+
+### Regla obligatoria para futuras páginas
+Antes de crear cualquier página nueva de condición/especialidad, identificar
+a qué categoría pertenece y:
+1. Añadir su card al bloque correspondiente en el home
+2. Añadir cross-linking hacia /segunda-opinion-oncologica SI es una condición
+   oncológica
+3. Actualizar el sitemap.ts
+4. Evaluar si el navbar necesita evolucionar a un dropdown bajo "Especialidades"
+   cuando el número de páginas por categoría lo justifique (referencia: más de
+   5-6 páginas en una sola categoría es la señal para considerar un dropdown)
+
+### Pendiente de evaluar (no implementar aún)
+Cuando se agregue contenido de PSMA-PET, medicamentos urológicos generales, o
+el blog, evaluar si el navbar "Especialidades" debe evolucionar de anchor simple
+a menú desplegable con las 3-4 categorías. No implementar esto de forma
+preventiva — solo cuando el volumen de páginas lo amerite.
+
 ## Reglas editoriales / médico-legales
 - ❌ NO usar: "el mejor", "garantizado", "100% seguro", "cura definitiva"
 - ❌ NO prometer resultados clínicos individuales
