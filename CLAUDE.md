@@ -76,6 +76,21 @@ Cada ruta interior sigue este patrón de dos archivos:
 **El layout ya provee navbar y footer — NO crearlos dentro del Content.**
 **El layout ya agrega `pt-16` — NO añadir `pt-20` al `<main>`.**
 
+## Reglas de accesibilidad — headings (WCAG 2.4.6)
+La jerarquía de headings no puede saltar niveles (h1→h3 sin h2, o h3→h5, etc.).
+Orden correcto en cada página:
+- `h1` — título principal de la página (uno solo)
+- `h2` — secciones principales de la página (pueden ser varios)
+- `h3` — sub-secciones dentro de un h2
+- Footer usa `h3` para sus columnas (nunca h4 — saltaría nivel)
+
+**El tamaño visual y el nivel semántico son independientes.** Un h2 puede llevar
+`text-[15px]` si semánticamente es una sección de primer nivel. Usar Tailwind para
+el estilo, HTML semántico para la jerarquía.
+
+Ejemplo corregido en HomeContent.tsx: las tarjetas de "Consultas frecuentes" aparecen
+antes del primer h2 de sección, por lo que deben ser h2 aunque sean visualmente pequeñas.
+
 ## Reglas de performance (aprendidas en auditoría Lighthouse)
 
 ### JSON-LD schemas
