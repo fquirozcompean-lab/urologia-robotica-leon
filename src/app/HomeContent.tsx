@@ -99,31 +99,31 @@ export default function HomeContent() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
 
             <Link href="/cancer-prostata" className="group block bg-editorial rounded-xl p-5 border-2 border-gris-premium/15 hover:border-acero hover:shadow-lg transition-all duration-300">
-              <h3 className="font-bold text-petroleo font-sans text-[15px] mb-1">Cáncer de próstata</h3>
+              <h2 className="font-bold text-petroleo font-sans text-[15px] mb-1">Cáncer de próstata</h2>
               <p className="text-xs text-gris-profundo font-serif leading-relaxed">Diagnóstico, PSA y prostatectomía robótica.</p>
               <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Ver información →</span>
             </Link>
 
             <Link href="/hiperplasia-prostatica-benigna" className="group block bg-editorial rounded-xl p-5 border-2 border-gris-premium/15 hover:border-acero hover:shadow-lg transition-all duration-300">
-              <h3 className="font-bold text-petroleo font-sans text-[15px] mb-1">Crecimiento prostático y HoLEP</h3>
+              <h2 className="font-bold text-petroleo font-sans text-[15px] mb-1">Crecimiento prostático y HoLEP</h2>
               <p className="text-xs text-gris-profundo font-serif leading-relaxed">Síntomas urinarios y cirugía láser sin implante.</p>
               <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Ver opciones →</span>
             </Link>
 
             <Link href="/calculos-renales" className="group block bg-editorial rounded-xl p-5 border-2 border-gris-premium/15 hover:border-acero hover:shadow-lg transition-all duration-300">
-              <h3 className="font-bold text-petroleo font-sans text-[15px] mb-1">Piedras en riñón o uréter</h3>
+              <h2 className="font-bold text-petroleo font-sans text-[15px] mb-1">Piedras en riñón o uréter</h2>
               <p className="text-xs text-gris-profundo font-serif leading-relaxed">Cólico renal y tratamiento mínimamente invasivo.</p>
               <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Ver tratamientos →</span>
             </Link>
 
             <Link href="/cancer-renal" className="group block bg-editorial rounded-xl p-5 border-2 border-gris-premium/15 hover:border-acero hover:shadow-lg transition-all duration-300">
-              <h3 className="font-bold text-petroleo font-sans text-[15px] mb-1">Cáncer renal</h3>
+              <h2 className="font-bold text-petroleo font-sans text-[15px] mb-1">Cáncer renal</h2>
               <p className="text-xs text-gris-profundo font-serif leading-relaxed">Nefrectomía parcial o radical con técnica robótica.</p>
               <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Ver información →</span>
             </Link>
 
             <Link href="#especialidades" className="group block bg-editorial rounded-xl p-5 border-2 border-gris-premium/15 hover:border-acero hover:shadow-lg transition-all duration-300">
-              <h3 className="font-bold text-petroleo font-sans text-[15px] mb-1">Cirugía robótica urológica</h3>
+              <h2 className="font-bold text-petroleo font-sans text-[15px] mb-1">Cirugía robótica urológica</h2>
               <p className="text-xs text-gris-profundo font-serif leading-relaxed">Prostatectomía, nefrectomía y cistectomía Da Vinci.</p>
               <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Ver especialidades →</span>
             </Link>
@@ -134,7 +134,7 @@ export default function HomeContent() {
               variant="ghost"
               className="group block bg-petroleo rounded-xl p-5 border-2 border-petroleo hover:border-acero hover:shadow-lg transition-all duration-300 h-full text-left items-start"
             >
-              <h3 className="font-bold text-editorial font-sans text-[15px] mb-1">Valoración oncológica</h3>
+              <h2 className="font-bold text-editorial font-sans text-[15px] mb-1">Valoración oncológica</h2>
               <p className="text-xs text-editorial/60 font-serif leading-relaxed">Diagnóstico y criterio especializado en urología oncológica.</p>
               <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Solicitar valoración →</span>
             </WAButton>

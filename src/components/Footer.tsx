@@ -11,16 +11,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
           <div>
-            <h4 className="text-editorial font-bold text-lg mb-4 font-sans">
+            <h3 className="text-editorial font-bold text-lg mb-4 font-sans">
               Dr. Alejandro Quiroz Compeán
-            </h4>
+            </h3>
             <p className="text-sm mb-2 font-serif text-editorial/80">Urólogo Oncólogo</p>
             <p className="text-sm mb-1 text-editorial/70">Cédula: 8860892</p>
             <p className="text-sm text-editorial/70">Especialidad: 12465195</p>
           </div>
 
           <div>
-            <h4 className="text-editorial font-bold text-lg mb-4 font-sans">Contacto</h4>
+            <h3 className="text-editorial font-bold text-lg mb-4 font-sans">Contacto</h3>
             <p className="text-sm mb-2 font-serif">
               <a
                 href="https://wa.me/5214776330492"
@@ -52,7 +52,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-editorial font-bold text-lg mb-4 font-sans">Horarios</h4>
+            <h3 className="text-editorial font-bold text-lg mb-4 font-sans">Horarios</h3>
             <p className="text-sm mb-2 font-serif">
               <strong className="text-editorial/90 font-sans">Lun / Mar / Jue:</strong><br />
               Hospital Ángeles León
@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-editorial font-bold text-lg mb-4 font-sans">Síguenos</h4>
+            <h3 className="text-editorial font-bold text-lg mb-4 font-sans">Síguenos</h3>
             <div className="flex gap-4">
               <a
                 href="https://www.instagram.com/urologo.alejandroquiroz/"
