@@ -170,8 +170,11 @@ export default function CancerProstataContent() {
                 <strong>más frecuente en hombres mexicanos</strong> —después del cáncer de piel— y
                 la segunda causa de muerte por cáncer en varones. Se origina en las células de la
                 glándula prostática y en sus etapas tempranas generalmente{" "}
-                <strong>no produce síntomas</strong>, por eso la detección oportuna mediante PSA
-                es fundamental.
+                <strong>no produce síntomas</strong>, por eso la detección oportuna mediante el PSA
+                es fundamental. El PSA —o APE, <strong>antígeno prostático específico</strong>— es
+                una proteína producida por la próstata que se mide con un sencillo análisis de
+                sangre; cuando sus niveles se elevan puede ser una señal temprana que amerita
+                evaluación.
               </p>
               <p className="mt-3 text-slate-700 leading-relaxed max-w-3xl">
                 La buena noticia: cuando se detecta en etapa localizada, la tasa de supervivencia
@@ -339,7 +342,7 @@ export default function CancerProstataContent() {
                   Muchos síntomas urinarios como los listados también pueden deberse a{" "}
                   <strong>hiperplasia prostática benigna (HBP)</strong>, que no es cáncer.
                   Por eso, <strong>no espere a tener síntomas</strong>: la prueba del PSA
-                  (antígeno prostático específico) en sangre, junto con la exploración
+                  (antígeno prostático específico o APE) en sangre, junto con la exploración
                   física, permite detectar el cáncer de próstata en etapas donde es
                   curable.
                 </p>
