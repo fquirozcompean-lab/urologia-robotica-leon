@@ -161,9 +161,14 @@ correspondiente en la sección "Especialidades" del home (`src/app/HomeContent.t
 
 **Categoría 1 — Oncología Urológica** ← acento dorado
 Cáncer de próstata, renal, vejiga, testicular, y cualquier futura página
-oncológica (ej. PSMA-PET, biopsia de fusión). La página /segunda-opinion-oncologica
+oncológica (ej. biopsia de fusión). La página /segunda-opinion-oncologica
 recibe tratamiento especial como banda destacada dentro de esta categoría, no
 como card individual más.
+
+**Excepción documentada (Jul 2026):** /pet-psma-leon es **sub-página del hub
+/cancer-prostata**, no una condición: NO lleva card en el home. Se accede desde
+la sección PET-PSMA y el FAQ de cáncer de próstata. Este es el patrón para
+futuras páginas de estudios/técnicas que pertenecen a un hub (ver checklist).
 
 **Categoría 2 — Próstata (no oncológica)** ← acento quirurgico
 HPB, HoLEP, medicamentos para próstata, y futuras páginas relacionadas con
@@ -177,16 +182,25 @@ renales, y futuras condiciones de este tipo.
 Reservada para cuando se active el blog (Fase 3 del roadmap). No crear esta
 sección en el home todavía.
 
-### Regla obligatoria para futuras páginas
-Antes de crear cualquier página nueva de condición/especialidad, identificar
-a qué categoría pertenece y:
-1. Añadir su card al bloque correspondiente en el home
-2. Añadir cross-linking hacia /segunda-opinion-oncologica SI es una condición
-   oncológica
-3. Actualizar el sitemap.ts
-4. Evaluar si el navbar necesita evolucionar a un dropdown bajo "Especialidades"
-   cuando el número de páginas por categoría lo justifique (referencia: más de
-   5-6 páginas en una sola categoría es la señal para considerar un dropdown)
+### Checklist obligatorio para páginas nuevas
+Este es el checklist ÚNICO y completo. Una página nueva no está terminada hasta
+cumplir los 8 puntos (los huecos de este checklist causaron todas las páginas
+huérfanas y schemas rotos corregidos en Jun-Jul 2026):
+
+1. **Clasificar:** ¿es condición/especialidad (→ card en el home, en su categoría)
+   o sub-página de un hub (estudios/técnicas, ej. /pet-psma-leon → sin card, pero
+   con link visible desde su hub)?
+2. **Links entrantes:** además del home o hub, linkearla desde al menos UNA página
+   clínicamente relacionada. Ninguna página puede quedar accesible solo desde el
+   sitemap. Validar coherencia médica de cada cross-link (ej. NO renal→PET-PSMA).
+3. **Cross-link a /segunda-opinion-oncologica** SI es condición oncológica.
+4. **sitemap.ts** actualizado.
+5. **JSON-LD:** `<script>` nativo (nunca next/script) y **FAQ schema idéntico a
+   las FAQs visibles del Content** — misma lista, mismos textos.
+6. **Reglas editoriales aplican también a metadata:** title, description, keywords,
+   OG y schemas siguen las mismas prohibiciones que el contenido visible.
+7. **Actualizar la tabla "Páginas existentes"** de este archivo en la misma tarea.
+8. **Evaluar dropdown del navbar** si una categoría supera 5-6 páginas.
 
 ### Interlinking estratégico (Julio 2026)
 Fortalecimiento de las 4 páginas prioritarias (HoLEP, cáncer de próstata,
@@ -207,11 +221,6 @@ médica (ej. NO linkear cáncer renal → PET-PSMA: el PSMA es específico de pr
 - Cuando se agregue contenido de medicamentos urológicos generales o el blog,
   evaluar si el navbar "Especialidades" debe evolucionar de anchor simple a menú
   desplegable con las 3-4 categorías. No implementar de forma preventiva.
-- **/pet-psma-leon no tiene card en el home** (Categoría 1). Está en el sitemap
-  y linkeada desde /cancer-prostata, pero según la regla obligatoria de arriba
-  le corresponde card en el bloque de Oncología Urológica. Decidir si se agrega
-  como card o si se considera sub-página de cáncer de próstata (excepción a
-  documentar).
 
 ## Reglas editoriales / médico-legales
 - ❌ NO usar: "el mejor", "garantizado", "100% seguro", "cura definitiva"
@@ -219,6 +228,10 @@ médica (ej. NO linkear cáncer renal → PET-PSMA: el PSMA es específico de pr
 - ✅ SÍ usar: "basado en evidencia científica", "en la mayoría de los pacientes", "con intención curativa"
 - ✅ El CTA primario siempre debe ir a **WhatsApp**, no a Doctoralia
 - ✅ Doctoralia va como CTA secundario o en el footer
+- **Alcance:** estas reglas aplican a TODO el output indexable, no solo al contenido
+  visible: metadata (title, description, keywords), OG/Twitter cards y schemas
+  JSON-LD. (Caso corregido Jul 2026: keyword "mejor cirugia prostata grande" en
+  metadata de /holep.)
 
 ## Jerarquía de especialidades para SEO
 1. Cáncer de próstata (hub principal)
@@ -241,6 +254,15 @@ médica (ej. NO linkear cáncer renal → PET-PSMA: el PSMA es específico de pr
 - Branch principal: `main`
 - Deploy automático en Vercel al hacer push a main
 
+## Regla de eliminación de features
+Al eliminar un componente o feature, eliminar en la MISMA tarea todo su árbol de
+dependencias: endpoints API que solo él consumía, libs/helpers exclusivos, assets
+en /public que solo él usaba, y dependencias de package.json que quedan sin uso.
+Verificar con grep antes de dar por terminado: el nombre del feature no debe
+aparecer en ningún archivo de src/.
+(Caso: MedicalAIAgent se eliminó pero /api/medical-chat, medicalKnowledgeBase.ts
+y @anthropic-ai/sdk quedaron huérfanos ~7 meses hasta la auditoría de Jul 2026.)
+
 ## Mantenimiento de este archivo
 Este archivo es la fuente de verdad del proyecto. Cada vez que completes una tarea que:
 - agregue o elimine una página
@@ -248,5 +270,6 @@ Este archivo es la fuente de verdad del proyecto. Cada vez que completes una tar
 - cambie una regla editorial o médico-legal
 - cambie la estrategia de keywords/SEO
 - cambie cualquier dato de contacto, hospital o credencial
+- actualice una versión del stack (framework, librerías principales)
 
 ...debes actualizar la sección correspondiente de CLAUDE.md como parte de la misma tarea, antes de dar la tarea por terminada. Si no estás seguro de si un cambio amerita actualizar este archivo, pregunta antes de continuar.
