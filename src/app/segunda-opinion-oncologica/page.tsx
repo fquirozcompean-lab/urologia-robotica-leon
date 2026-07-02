@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import SegundaOpinionContent from "./SegundaOpinionContent";
 
 export const metadata: Metadata = {
@@ -54,6 +53,8 @@ const medicalWebPageSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
   name: "Segunda Opinión en Cáncer Urológico",
+  description:
+    "Segunda opinión especializada en cáncer de próstata, renal, vejiga y testicular con urólogo oncólogo formado en INCan, INCMNSZ y Hospital Albert Einstein. León, Guanajuato.",
   url: "https://urologiaroboticaleon.com/segunda-opinion-oncologica",
   about: {
     "@type": "MedicalCondition",
@@ -63,6 +64,10 @@ const medicalWebPageSchema = {
     "@type": "Physician",
     name: "Dr. Alejandro Quiroz Compeán",
     medicalSpecialty: ["Urology", "Oncology"],
+  },
+  medicalAudience: {
+    "@type": "MedicalAudience",
+    audienceType: "Patient",
   },
 };
 
@@ -134,6 +139,22 @@ const faqSchema = {
         text: "Puedes escribir por WhatsApp describiendo tu diagnóstico. Te indicaremos disponibilidad, sede y qué estudios traer a tu consulta.",
       },
     },
+    {
+      "@type": "Question",
+      name: "¿Cuánto cuesta una segunda opinión oncológica?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Tiene el costo de una consulta especializada, que se te informa al agendar por WhatsApp. No implica ningún compromiso de continuar el tratamiento con el Dr. Quiroz: el objetivo es que salgas con la información necesaria para decidir con tranquilidad.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué preguntas conviene hacer en una segunda opinión?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Cuál es tu estadio exacto y cómo se confirmó, qué opciones de tratamiento existen para tu caso (incluyendo vigilancia cuando aplica), los riesgos y efectos secundarios de cada una, cuál es la urgencia real para decidir, y qué experiencia tiene el equipo con casos como el tuyo. En la consulta se responden todas.",
+      },
+    },
   ],
 };
 
@@ -159,18 +180,15 @@ const breadcrumbSchema = {
 export default function SegundaOpinionPage() {
   return (
     <>
-      <Script
-        id="schema-medical-webpage"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageSchema) }}
       />
-      <Script
-        id="schema-faq"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Script
-        id="schema-breadcrumb"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />

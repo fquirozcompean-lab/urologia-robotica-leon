@@ -116,6 +116,38 @@ const faqSchema = {
         text: "Sí. Cuando se detecta en etapa localizada, la tasa de supervivencia a 5 años supera el 98%. La clave es la detección temprana mediante PSA y una evaluación urológica oportuna. Con el tratamiento adecuado — ya sea cirugía robótica, radioterapia o vigilancia activa — la mayoría de los hombres viven una vida plena y sin recurrencia.",
       },
     },
+    {
+      "@type": "Question",
+      name: "¿El cáncer de próstata es hereditario?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La mayoría de los casos son esporádicos, pero un 5-10% tiene componente hereditario. Tener padre o hermano con cáncer de próstata duplica el riesgo, y las mutaciones en BRCA1/BRCA2 o el síndrome de Lynch se asocian con formas más agresivas. Si tienes antecedentes familiares, la detección con PSA debe iniciar desde los 40-45 años.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿La biopsia de próstata es dolorosa?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Se realiza con anestesia local o sedación y la molestia es tolerable para la gran mayoría de los pacientes. Dura 15-20 minutos y se guía por ultrasonido o fusión con resonancia magnética para mayor precisión. Puede haber molestias leves posteriores — pequeñas cantidades de sangre en orina o semen — que se resuelven en días.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué pasa si mi biopsia salió negativa pero el PSA sigue elevado?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Una biopsia negativa no descarta el cáncer al 100%. En ese escenario se evalúa con resonancia magnética multiparamétrica (si no se hizo antes de la biopsia), biopsia de fusión dirigida a zonas sospechosas y seguimiento estrecho del PSA. Lo importante es no abandonar el seguimiento mientras el PSA permanezca elevado.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Los seguros médicos cubren el tratamiento del cáncer de próstata?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Muchos seguros de gastos médicos mayores cubren el diagnóstico y el tratamiento, incluida la cirugía robótica según la póliza. Se entrega una carta médica detallando la indicación para el trámite con la aseguradora. Se recomienda verificar la cobertura específica antes de iniciar el proceso.",
+      },
+    },
   ],
 };
 
@@ -142,6 +174,12 @@ const medicalConditionSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalCondition",
   name: "Cáncer de Próstata",
+  alternateName: [
+    "Cáncer prostático",
+    "Tumor de próstata",
+    "Adenocarcinoma de próstata",
+    "Carcinoma prostático",
+  ],
   description:
     "Tumor maligno originado en la glándula prostática. Es el cáncer más frecuente en hombres mexicanos. Cuando se detecta en etapa localizada, la tasa de supervivencia supera el 98%.",
   code: {
@@ -149,6 +187,12 @@ const medicalConditionSchema = {
     code: "C61",
     codingSystem: "ICD-10",
   },
+  riskFactor: [
+    { "@type": "MedicalRiskFactor", name: "Edad mayor de 50 años" },
+    { "@type": "MedicalRiskFactor", name: "Antecedentes familiares de cáncer de próstata" },
+    { "@type": "MedicalRiskFactor", name: "Mutaciones BRCA1/BRCA2" },
+    { "@type": "MedicalRiskFactor", name: "Dieta alta en grasas animales y obesidad" },
+  ],
   possibleTreatment: [
     { "@type": "MedicalTherapy", name: "Prostatectomía robótica" },
     { "@type": "MedicalTherapy", name: "Radioterapia externa" },
@@ -159,6 +203,24 @@ const medicalConditionSchema = {
   recognizingAuthority: {
     "@type": "MedicalOrganization",
     name: "Instituto Nacional de Cancerología (INCan)",
+  },
+};
+
+const medicalWebPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  name: "Cáncer de Próstata en León, Guanajuato — Diagnóstico y Tratamiento Especializado",
+  description:
+    "Información completa sobre detección con PSA/APE, diagnóstico, estadificación con PET-PSMA y tratamiento del cáncer de próstata en León, Guanajuato. Dr. Alejandro Quiroz Compeán, urólogo oncólogo certificado.",
+  url: "https://urologiaroboticaleon.com/cancer-prostata",
+  author: {
+    "@type": "Physician",
+    name: "Dr. Alejandro Quiroz Compeán",
+    url: "https://urologiaroboticaleon.com",
+  },
+  medicalAudience: {
+    "@type": "MedicalAudience",
+    audienceType: "Patient",
   },
 };
 
@@ -176,6 +238,10 @@ export default function CancerProstataPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalConditionSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageSchema) }}
       />
       <CancerProstataContent />
     </>

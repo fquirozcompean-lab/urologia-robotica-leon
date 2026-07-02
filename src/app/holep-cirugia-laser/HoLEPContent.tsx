@@ -734,7 +734,7 @@ export default function HoLEPContent() {
               },
               {
                 q: "¿Cuándo veré mejoría en síntomas?",
-                a: "Mejoría inmediata después de retirar la sonda (día 2-3). Puede haber urgencia e frecuencia inicial que mejoran en 2-4 semanas. Mejoría completa del flujo urinario: 1-3 meses.",
+                a: "Mejoría inmediata después de retirar la sonda (día 2-3). Puede haber urgencia y frecuencia inicial que mejoran en 2-4 semanas. Mejoría completa del flujo urinario: 1-3 meses.",
               },
               {
                 q: "¿Necesitaré otra cirugía en el futuro?",

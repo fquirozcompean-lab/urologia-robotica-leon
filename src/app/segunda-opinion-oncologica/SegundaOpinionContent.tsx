@@ -76,6 +76,14 @@ const faqs = [
     q: "¿Cómo agendo una segunda opinión?",
     a: "Puedes escribir por WhatsApp describiendo tu diagnóstico. Te indicaremos disponibilidad, sede y qué estudios traer a tu consulta.",
   },
+  {
+    q: "¿Cuánto cuesta una segunda opinión oncológica?",
+    a: "Tiene el costo de una consulta especializada, que se te informa al agendar por WhatsApp. No implica ningún compromiso de continuar el tratamiento con el Dr. Quiroz: el objetivo es que salgas con la información necesaria para decidir con tranquilidad.",
+  },
+  {
+    q: "¿Qué preguntas conviene hacer en una segunda opinión?",
+    a: "Cuál es tu estadio exacto y cómo se confirmó, qué opciones de tratamiento existen para tu caso (incluyendo vigilancia cuando aplica), los riesgos y efectos secundarios de cada una, cuál es la urgencia real para decidir, y qué experiencia tiene el equipo con casos como el tuyo. En la consulta se responden todas.",
+  },
 ];
 
 function FaqItem({

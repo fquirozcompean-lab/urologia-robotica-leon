@@ -825,6 +825,39 @@ export default function CancerProstataContent() {
                 radioterapia o vigilancia activa— la mayoría de los hombres viven una vida plena.
                 La clave es la detección temprana mediante PSA y una evaluación urológica oportuna.
               </FAQItem>
+
+              <FAQItem q="¿El cáncer de próstata es hereditario?">
+                La mayoría de los casos son esporádicos, pero un <strong>5-10% tiene
+                componente hereditario</strong>. Tener padre o hermano con cáncer de próstata
+                duplica el riesgo, y las mutaciones en <strong>BRCA1/BRCA2</strong> o el
+                síndrome de Lynch se asocian con formas más agresivas. Si tienes antecedentes
+                familiares, la detección con PSA debe iniciar desde los{" "}
+                <strong>40-45 años</strong>.
+              </FAQItem>
+
+              <FAQItem q="¿La biopsia de próstata es dolorosa?">
+                Se realiza con <strong>anestesia local o sedación</strong> y la molestia es
+                tolerable para la gran mayoría de los pacientes. Dura 15-20 minutos y se guía
+                por ultrasonido o fusión con resonancia magnética para mayor precisión. Puede
+                haber molestias leves posteriores —pequeñas cantidades de sangre en orina o
+                semen— que se resuelven en días.
+              </FAQItem>
+
+              <FAQItem q="¿Qué pasa si mi biopsia salió negativa pero el PSA sigue elevado?">
+                Una biopsia negativa <strong>no descarta el cáncer al 100%</strong>. En ese
+                escenario se evalúa con resonancia magnética multiparamétrica (si no se hizo
+                antes de la biopsia), biopsia de fusión dirigida a zonas sospechosas y
+                seguimiento estrecho del PSA. Lo importante es <strong>no abandonar el
+                seguimiento</strong> mientras el PSA permanezca elevado.
+              </FAQItem>
+
+              <FAQItem q="¿Los seguros médicos cubren el tratamiento del cáncer de próstata?">
+                Muchos seguros de gastos médicos mayores cubren el diagnóstico y el
+                tratamiento, incluida la cirugía robótica según la póliza. Se te entrega una{" "}
+                <strong>carta médica detallando la indicación</strong> para el trámite con tu
+                aseguradora. Te recomendamos verificar tu cobertura específica antes de
+                iniciar el proceso.
+              </FAQItem>
             </div>
           </div>
         </section>

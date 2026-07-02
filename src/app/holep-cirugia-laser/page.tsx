@@ -17,7 +17,8 @@ export const metadata: Metadata = {
     "cirugía próstata láser holmium",
     "laser holmium prostata León",
     "holep cirugia recuperacion",
-    "mejor cirugia prostata grande",
+    "cirugia prostata grande León",
+    "cuanto cuesta holep León",
     "holep vs cirugia abierta",
     "cirugía láser próstata León Guanajuato",
   ],
@@ -66,8 +67,7 @@ const medicalWebPageSchema = {
     preparation: "Evaluación preoperatoria, estudios de laboratorio e imagen",
     followup: "Alta hospitalaria 24-48h, seguimiento ambulatorio",
     howPerformed:
-      "El láser de holmium separa el adenoma prostático de la cápsula sin incisiones externas. Acceso endoscópico transurethral.",
-    medicationUsed: "Láser de Holmium",
+      "El láser de holmium separa el adenoma prostático de la cápsula sin incisiones externas. Acceso endoscópico transuretral.",
     indication: {
       "@type": "MedicalIndication",
       name: "Hiperplasia Prostática Benigna (HPB)",
@@ -84,6 +84,10 @@ const medicalWebPageSchema = {
       addressCountry: "MX",
     },
   },
+  medicalAudience: {
+    "@type": "MedicalAudience",
+    audienceType: "Patient",
+  },
 };
 
 const faqSchema = {
@@ -95,31 +99,55 @@ const faqSchema = {
       name: "¿HoLEP es mejor que TURP?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Para próstatas grandes (>80g), HoLEP es superior a TURP en resultados a largo plazo, menor tasa de reoperación (<2% vs 10-15%) y capacidad de tratar cualquier tamaño prostático. Para próstatas pequeñas-medianas, ambas técnicas son efectivas, pero HoLEP ofrece recuperación más rápida y menor sangrado.",
+        text: "Para próstatas grandes (>80g), HoLEP es superior a TURP: menor tasa de reoperación (<2% vs 10-15%), puede tratar cualquier tamaño y menor sangrado. Para próstatas pequeñas-medianas, ambas son efectivas, pero HoLEP ofrece recuperación más rápida y resultados más duraderos.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Cuánto tiempo dura la recuperación de HoLEP?",
+      name: "¿Cuánto tiempo dura la cirugía?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Alta hospitalaria en 24-48 horas. Sonda vesical 1-2 días. Retorno a actividades ligeras en 1 semana y actividades completas en 2 semanas. Mejoría completa del flujo urinario en 1-3 meses.",
+        text: "Entre 60 y 120 minutos dependiendo del tamaño prostático. Próstatas 50-80g: ~60-90 min. Próstatas >100g: 90-120 min. Es más larga que TURP pero evita cirugía abierta en próstatas grandes.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Qué tamaño de próstata puede tratar HoLEP?",
+      name: "¿Cuánto tiempo estaré hospitalizado?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No hay límite superior. Se han tratado próstatas de más de 300 gramos. Es el único procedimiento láser que puede tratar próstatas de cualquier tamaño sin necesidad de cirugía abierta.",
+        text: "24 a 48 horas. La mayoría de pacientes se va a casa al segundo día — significativamente menos que cirugía abierta (5-7 días).",
       },
     },
     {
       "@type": "Question",
-      name: "¿HoLEP afecta la función sexual?",
+      name: "¿Cuántos días tendré sonda?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La erección se preserva en más del 90% de casos si la función era normal antes. La eyaculación retrógrada (semen va a vejiga) es común, al igual que con TURP o cirugía abierta, pero no afecta el orgasmo ni el placer sexual.",
+        text: "1 a 2 días. Se retira antes del alta o al día siguiente en consulta — mucho menor que cirugía abierta (5-7 días) o TURP (2-3 días).",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Tendré incontinencia urinaria después?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Incontinencia permanente es rara (<1%). Puede haber urgencia urinaria las primeras semanas — mejora gradualmente. Los ejercicios de Kegel ayudan. El esfínter urinario externo se preserva durante la cirugía.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Afectará mi función sexual?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Erección: se preserva en >90% si la función era normal antes. Eyaculación: >90% tendrá eyaculación retrógrada (semen va a vejiga, no hacia afuera), lo que no afecta el orgasmo ni el placer. Esto es común a TURP y cirugía abierta también.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuándo podré retomar actividad sexual?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Se recomienda esperar 4 semanas para permitir cicatrización completa. Después de ese tiempo la actividad sexual es completamente normal.",
       },
     },
     {
@@ -127,7 +155,79 @@ const faqSchema = {
       name: "¿Puedo hacerme HoLEP si tomo anticoagulantes?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí. HoLEP es especialmente ventajoso en pacientes anticoagulados porque el láser minimiza el sangrado. Se coordina con cardiología para el manejo perioperatorio del anticoagulante.",
+        text: "Sí. HoLEP es especialmente ventajoso en pacientes anticoagulados (warfarina, apixaban, rivaroxaban) porque el láser minimiza el sangrado. Se coordina con cardiología para el manejo perioperatorio.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué tan grande puede ser la próstata para HoLEP?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No hay límite superior. Se han tratado próstatas de más de 300 gramos con éxito. Es el único procedimiento láser que puede tratar próstatas gigantes sin cirugía abierta.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuándo veré mejoría en síntomas?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Mejoría inmediata después de retirar la sonda (día 2-3). Puede haber urgencia y frecuencia inicial que mejoran en 2-4 semanas. Mejoría completa del flujo urinario: 1-3 meses.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Necesitaré otra cirugía en el futuro?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "HoLEP tiene la tasa de reoperación más baja de todas las técnicas: <2% a 10 años vs 10-15% de TURP. Esto es porque HoLEP elimina completamente el tejido obstructivo.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿HoLEP puede detectar cáncer de próstata?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí. El tejido extraído se analiza en patología. En 10-15% de casos se detecta cáncer no diagnosticado previamente. Si se encuentra, se puede realizar tratamiento oncológico posterior (cirugía robótica, radioterapia).",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuánto cuesta HoLEP en León?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El costo varía según el hospital y el tamaño prostático. Incluye honorarios médicos, hospital, anestesia, uso del láser y análisis patológico. Se ofrece cotización personalizada en consulta. Algunos seguros médicos cubren HoLEP.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Los seguros médicos cubren HoLEP?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Muchos seguros sí lo cubren como tratamiento estándar para HPB. Se recomienda verificar cobertura con la aseguradora antes del procedimiento. Llevamos carta médica detallando la indicación.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué diferencia HoLEP de otros láseres (GreenLight, Thulium)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "HoLEP: enuclea (extrae) tejido completo, análisis patológico completo y trata cualquier tamaño. GreenLight/Thulium: vaporizan tejido, análisis incompleto, más limitados en próstatas grandes. HoLEP tiene más evidencia científica a largo plazo.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Tengo que venir a León para el procedimiento?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, la cirugía se realiza en Hospital Ángeles León. Para pacientes foráneos: consulta inicial puede ser por videollamada, cirugía presencial, seguimiento mixto. Estadía en León: 3-4 días.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Por qué elegir al Dr. Quiroz para HoLEP?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Formación en centros de excelencia (Hospital Albert Einstein Brasil, Instituto Nacional de Cancerología), certificado por el Consejo Mexicano de Urología, experiencia en cirugía mínimamente invasiva, enfoque en preservación de función y seguimiento integral personalizado.",
       },
     },
   ],
