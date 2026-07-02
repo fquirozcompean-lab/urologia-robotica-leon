@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { trackWhatsApp } from "@/lib/analytics";
 
@@ -290,7 +291,7 @@ export default function HiperplasiaContent() {
               Tratamiento individualizado adaptado a tu caso — desde láser HoLEP hasta opciones que preservan la eyaculación.
             </p>
             <p className="text-quirurgico font-sans font-medium italic mb-10">
-              "Cada paciente es único — el tratamiento se adapta a ti."
+              &ldquo;Cada paciente es único — el tratamiento se adapta a ti.&rdquo;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("hpb")}>
@@ -342,6 +343,13 @@ export default function HiperplasiaContent() {
                     cáncer de próstata mediante PSA y examen físico.
                   </p>
                 </div>
+                <Image
+                  src="/images/cancer-prostata/anatomia-funcion-prostata.webp"
+                  alt="Infografía anatómica: la próstata, su ubicación debajo de la vejiga rodeando la uretra, su estructura interna por zonas y su función en la producción del líquido seminal"
+                  width={1369}
+                  height={1149}
+                  className="mt-8 rounded-2xl border border-slate-200 shadow-sm w-full h-auto"
+                />
               </motion.div>
 
               <motion.div
@@ -867,7 +875,7 @@ export default function HiperplasiaContent() {
               transition={{ duration: 0.4 }}
               className="text-slate-600 mb-8 max-w-2xl"
             >
-              "La decisión se toma en conjunto — tú y yo." Esta tabla es una guía general;
+              &ldquo;La decisión se toma en conjunto — tú y yo.&rdquo; Esta tabla es una guía general;
               la valoración individual siempre es necesaria.
             </motion.p>
 
@@ -1201,8 +1209,8 @@ export default function HiperplasiaContent() {
               transition={{ duration: 0.4, delay: 0.1 }}
               className="mt-2 text-teal-300 font-medium italic"
             >
-              "No todos los pacientes necesitan el mismo tratamiento — la clave está en tu
-              valoración individual."
+              &ldquo;No todos los pacientes necesitan el mismo tratamiento — la clave está en tu
+              valoración individual.&rdquo;
             </motion.p>
             <motion.div
               variants={fadeUp}

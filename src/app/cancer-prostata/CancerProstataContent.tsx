@@ -178,6 +178,13 @@ export default function CancerProstataContent() {
                 a 5 años <strong>supera el 98%</strong>. El diagnóstico a tiempo y un tratamiento
                 especializado hacen la diferencia.
               </p>
+              <Image
+                src="/images/cancer-prostata/que-es-cancer-prostata.webp"
+                alt="Infografía: qué es el cáncer de próstata — células de la glándula prostática que crecen sin control, ubicada debajo de la vejiga"
+                width={1080}
+                height={1080}
+                className="mt-8 rounded-2xl border border-slate-200 shadow-sm w-full max-w-xl mx-auto h-auto"
+              />
             </motion.div>
 
             <div className="grid sm:grid-cols-3 gap-5">
@@ -301,6 +308,13 @@ export default function CancerProstataContent() {
                     </li>
                   ))}
                 </ul>
+                <Image
+                  src="/images/cancer-prostata/sintomas-cancer-prostata.webp"
+                  alt="Infografía: síntomas del cáncer de próstata — necesidad frecuente de orinar, flujo débil, sangre en orina o semen, dolor pélvico y problemas de erección"
+                  width={1080}
+                  height={1080}
+                  className="mt-6 rounded-2xl border border-slate-200 shadow-sm w-full h-auto"
+                />
               </motion.div>
 
               <motion.div
@@ -401,6 +415,13 @@ export default function CancerProstataContent() {
                 </Card>
               ))}
             </div>
+            <Image
+              src="/images/cancer-prostata/como-se-detecta-cancer-prostata.webp"
+              alt="Infografía: cómo se detecta el cáncer de próstata — prueba de PSA en sangre, examen rectal y biopsia de próstata"
+              width={1072}
+              height={840}
+              className="mt-10 rounded-2xl border border-slate-200 shadow-sm w-full max-w-2xl mx-auto h-auto"
+            />
           </div>
         </section>
 
@@ -444,6 +465,14 @@ export default function CancerProstataContent() {
                 efectos secundarios posibles (función sexual, urinaria e intestinal).
               </p>
             </motion.div>
+
+            <Image
+              src="/images/cancer-prostata/tratamientos-cancer-prostata.webp"
+              alt="Infografía: opciones de tratamiento del cáncer de próstata — vigilancia activa, cirugía, radioterapia y terapia hormonal según etapa y riesgo"
+              width={1080}
+              height={1080}
+              className="mb-10 rounded-2xl border border-slate-200 shadow-sm w-full max-w-2xl mx-auto h-auto"
+            />
 
             {/* 4 OPCIONES */}
             <div className="grid sm:grid-cols-2 gap-5">
