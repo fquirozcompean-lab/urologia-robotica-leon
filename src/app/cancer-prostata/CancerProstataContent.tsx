@@ -262,6 +262,13 @@ export default function CancerProstataContent() {
                 </Card>
               ))}
             </div>
+            <Image
+              src="/images/cancer-prostata/que-tan-comun-es.webp"
+              alt="Infografía: qué tan común es el cáncer de próstata — aproximadamente 1 de cada 8 hombres será diagnosticado en su vida, por eso los chequeos son importantes"
+              width={1080}
+              height={1080}
+              className="mt-10 rounded-2xl border border-slate-200 shadow-sm w-full max-w-xl mx-auto h-auto"
+            />
           </div>
         </section>
 
