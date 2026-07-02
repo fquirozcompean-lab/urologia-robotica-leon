@@ -1299,6 +1299,11 @@ export default function CancerVejigaContent() {
                       Cáncer de Próstata
                     </Button>
                   </Link>
+                  <Link href="/cancer-renal">
+                    <Button className="bg-slate-100 text-slate-800 hover:bg-slate-200">
+                      Cáncer Renal
+                    </Button>
+                  </Link>
                 </div>
               </motion.div>
 

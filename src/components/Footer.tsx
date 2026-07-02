@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-petroleo text-editorial py-12 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
 
           <div>
             <h3 className="text-editorial font-bold text-lg mb-4 font-sans">
@@ -17,6 +17,32 @@ export default function Footer() {
             <p className="text-sm mb-2 font-serif text-editorial/80">Urólogo Oncólogo</p>
             <p className="text-sm mb-1 text-editorial/70">Cédula: 8860892</p>
             <p className="text-sm text-editorial/70">Especialidad: 12465195</p>
+          </div>
+
+          <div>
+            <h3 className="text-editorial font-bold text-lg mb-4 font-sans">Especialidades</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/cancer-prostata" className="text-sm font-serif text-editorial/70 hover:text-quirurgico transition-colors">
+                  Cáncer de Próstata
+                </Link>
+              </li>
+              <li>
+                <Link href="/holep-cirugia-laser" className="text-sm font-serif text-editorial/70 hover:text-quirurgico transition-colors">
+                  HoLEP: Cirugía Láser de Próstata
+                </Link>
+              </li>
+              <li>
+                <Link href="/cancer-renal" className="text-sm font-serif text-editorial/70 hover:text-quirurgico transition-colors">
+                  Cáncer Renal
+                </Link>
+              </li>
+              <li>
+                <Link href="/segunda-opinion-oncologica" className="text-sm font-serif text-dorado/90 hover:text-dorado transition-colors">
+                  Segunda Opinión Oncológica
+                </Link>
+              </li>
+            </ul>
           </div>
 
           <div>

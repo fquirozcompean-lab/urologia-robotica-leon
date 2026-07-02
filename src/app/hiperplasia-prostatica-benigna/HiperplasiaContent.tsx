@@ -833,7 +833,7 @@ export default function HiperplasiaContent() {
                             </ul>
                           </div>
                         </div>
-                        <div className="mt-5">
+                        <div className="mt-5 flex flex-wrap items-center gap-4">
                           <a
                             href={waLink(
                               `Hola Dr. Quiroz, quiero información sobre el tratamiento ${t.name} para HPB.`
@@ -845,6 +845,14 @@ export default function HiperplasiaContent() {
                               Consultar sobre este tratamiento
                             </Button>
                           </a>
+                          {t.id === "holep" && (
+                            <Link
+                              href="/holep-cirugia-laser"
+                              className="text-sm font-medium text-teal-700 hover:underline"
+                            >
+                              Ver guía completa de HoLEP →
+                            </Link>
+                          )}
                         </div>
                       </motion.div>
                     )}

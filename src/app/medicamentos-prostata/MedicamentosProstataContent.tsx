@@ -785,12 +785,18 @@ export default function MedicamentosProstataContent() {
               ))}
             </div>
 
-            <div className="mt-10 text-center">
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
-                href="/hiperplasia-prostatica-benigna"
+                href="/holep-cirugia-laser"
                 className="inline-block bg-white text-slate-900 font-semibold px-6 py-3 rounded-xl hover:bg-slate-100 transition"
               >
-                Ver guía completa de tratamientos para HPB →
+                Conoce HoLEP: cirugía láser de próstata →
+              </Link>
+              <Link
+                href="/hiperplasia-prostatica-benigna"
+                className="inline-block border border-slate-500 text-slate-200 font-semibold px-6 py-3 rounded-xl hover:bg-slate-700 transition"
+              >
+                Guía completa de tratamientos para HPB →
               </Link>
             </div>
           </div>
