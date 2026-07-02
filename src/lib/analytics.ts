@@ -10,7 +10,8 @@ declare global {
 type GAEvent =
   | "click_whatsapp"
   | "click_call"
-  | "doctoralia_outbound_click";
+  | "doctoralia_outbound_click"
+  | "conversion_contact";
 
 interface GAEventParams {
   event_category?: string;

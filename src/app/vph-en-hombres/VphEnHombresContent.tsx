@@ -4,18 +4,15 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { trackWhatsApp } from "@/lib/analytics";
+import WASelectorLink from "@/components/WASelectorLink";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 },
 };
 
-const WHATSAPP_NUMBER = "5214776330492";
-function waLink(msg: string) {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-}
-const WA_CONFIDENCIAL = waLink("Hola Dr. Quiroz, me gustaría una consulta confidencial sobre VPH (virus del papiloma humano).");
-const WA_EVALUACION = waLink("Hola Dr. Quiroz, quiero agendar una evaluación de VPH en León.");
+const WA_CONFIDENCIAL = "Hola Dr. Quiroz, me gustaría una consulta confidencial sobre VPH (virus del papiloma humano).";
+const WA_EVALUACION = "Hola Dr. Quiroz, quiero agendar una evaluación de VPH en León.";
 
 type FAQ = { q: string; a: string };
 
@@ -139,7 +136,7 @@ export default function VphEnHombresContent() {
               "Consulta confidencial, sin juicios, con profesionalismo."
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href={WA_EVALUACION} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("vph")}>
+              <WASelectorLink mensaje={WA_EVALUACION} motivo="vph">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
@@ -147,8 +144,8 @@ export default function VphEnHombresContent() {
                 >
                   Agenda evaluación de VPH
                 </motion.div>
-              </a>
-              <a href={WA_CONFIDENCIAL} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("vph")}>
+              </WASelectorLink>
+              <WASelectorLink mensaje={WA_CONFIDENCIAL} motivo="vph">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
@@ -156,7 +153,7 @@ export default function VphEnHombresContent() {
                 >
                   Consulta confidencial
                 </motion.div>
-              </a>
+              </WASelectorLink>
             </div>
           </motion.div>
         </section>
@@ -686,10 +683,9 @@ export default function VphEnHombresContent() {
 
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
               className="mt-8 text-center">
-              <a href={WA_CONFIDENCIAL} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("vph")}
-                className="inline-block bg-emerald-600 text-white font-semibold px-8 py-3 rounded-2xl hover:bg-emerald-700 transition shadow-md">
+              <WASelectorLink mensaje={WA_CONFIDENCIAL} motivo="vph" className="inline-block bg-emerald-600 text-white font-semibold px-8 py-3 rounded-2xl hover:bg-emerald-700 transition shadow-md">
                 Consultar sobre vacunación VPH
-              </a>
+              </WASelectorLink>
             </motion.div>
           </div>
         </section>
@@ -900,14 +896,12 @@ export default function VphEnHombresContent() {
               Consulta confidencial — tu salud y privacidad son prioridad
             </p>
             <div className="flex flex-wrap gap-4 justify-center mb-8">
-              <a href={WA_EVALUACION} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("vph")}
-                className="bg-white text-indigo-900 font-semibold px-8 py-3 rounded-2xl hover:bg-indigo-50 transition shadow-lg">
+              <WASelectorLink mensaje={WA_EVALUACION} motivo="vph" className="bg-white text-indigo-900 font-semibold px-8 py-3 rounded-2xl hover:bg-indigo-50 transition shadow-lg">
                 Agenda evaluación de VPH
-              </a>
-              <a href={WA_CONFIDENCIAL} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("vph")}
-                className="bg-indigo-700 border border-indigo-500 text-white font-semibold px-8 py-3 rounded-2xl hover:bg-indigo-600 transition">
+              </WASelectorLink>
+              <WASelectorLink mensaje={WA_CONFIDENCIAL} motivo="vph" className="bg-indigo-700 border border-indigo-500 text-white font-semibold px-8 py-3 rounded-2xl hover:bg-indigo-600 transition">
                 💬 WhatsApp confidencial
-              </a>
+              </WASelectorLink>
             </div>
             <div className="text-sm text-indigo-300 flex flex-wrap justify-center gap-3">
               <Link href="/" className="hover:text-white transition">← Inicio</Link>

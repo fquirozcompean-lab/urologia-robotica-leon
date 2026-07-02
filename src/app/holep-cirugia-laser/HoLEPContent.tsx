@@ -5,13 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { trackWhatsApp } from "@/lib/analytics";
+import WASelectorLink from "@/components/WASelectorLink";
 
-const WHATSAPP = "5214776330492";
 const WA_MSG = "Hola Dr. Quiroz, quiero agendar una evaluación para cirugía HoLEP de próstata.";
 
-function waLink() {
-  return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(WA_MSG)}`;
-}
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -128,7 +125,7 @@ export default function HoLEPContent() {
               "Precisión que inspira confianza"
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href={waLink()} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("holep")}>
+              <WASelectorLink mensaje={WA_MSG} motivo="holep">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
@@ -136,7 +133,7 @@ export default function HoLEPContent() {
                 >
                   Agendar Evaluación HoLEP
                 </motion.div>
-              </a>
+              </WASelectorLink>
             </div>
           </motion.div>
         </section>
@@ -810,7 +807,7 @@ export default function HoLEPContent() {
                 </li>
               </ul>
               <div className="flex flex-wrap gap-3">
-                <a href={waLink()} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("holep")}>
+                <WASelectorLink mensaje={WA_MSG} motivo="holep">
                   <motion.div
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
@@ -818,7 +815,7 @@ export default function HoLEPContent() {
                   >
                     Agendar por WhatsApp
                   </motion.div>
-                </a>
+                </WASelectorLink>
                 <Link href="/hiperplasia-prostatica-benigna">
                   <motion.div
                     whileHover={{ scale: 1.03 }}
@@ -895,7 +892,7 @@ export default function HoLEPContent() {
               transition={{ duration: 0.5 }}
               className="flex flex-col sm:flex-row gap-5 justify-center items-center"
             >
-              <a href={waLink()} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("holep")}>
+              <WASelectorLink mensaje={WA_MSG} motivo="holep">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
@@ -903,7 +900,7 @@ export default function HoLEPContent() {
                 >
                   Agendar Evaluación HoLEP
                 </motion.div>
-              </a>
+              </WASelectorLink>
             </motion.div>
             <motion.div
               variants={fadeUp}

@@ -4,15 +4,13 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import WAButton from "@/components/WAButton";
+import { WA_DR } from "@/lib/contactos";
 import { motion } from "framer-motion";
 import { trackWhatsApp } from "@/lib/analytics";
+import WASelectorLink from "@/components/WASelectorLink";
 
-const WHATSAPP_NUMBER = "5214776330492";
 const WA_MSG = "Hola Dr. Quiroz, quiero agendar una consulta por cáncer de próstata.";
 
-function waLink(msg: string) {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-}
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -138,7 +136,7 @@ export default function CancerProstataContent() {
               &ldquo;El diagnóstico temprano transforma el pronóstico del cáncer de próstata.&rdquo;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-prostata")}>
+              <WASelectorLink mensaje={WA_MSG} motivo="cancer-prostata">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
@@ -146,7 +144,7 @@ export default function CancerProstataContent() {
                 >
                   Agendar consulta por WhatsApp
                 </motion.div>
-              </a>
+              </WASelectorLink>
             </div>
           </motion.div>
         </section>
@@ -351,11 +349,11 @@ export default function CancerProstataContent() {
                   <strong>50 años</strong> (o 40-45 si tiene factores de riesgo).
                 </p>
                 <div className="mt-5">
-                  <a href={waLink("Hola Dr. Quiroz, quiero solicitar una prueba de PSA.")} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("psa")}>
+                  <WASelectorLink mensaje={"Hola Dr. Quiroz, quiero solicitar una prueba de PSA."} motivo="psa">
                     <Button className="bg-amber-600 text-white hover:bg-amber-700 text-sm">
                       Solicitar prueba de PSA
                     </Button>
-                  </a>
+                  </WASelectorLink>
                 </div>
               </motion.div>
             </div>
@@ -543,11 +541,11 @@ export default function CancerProstataContent() {
                 de muy alto riesgo, tomar 2–4 semanas para decidir bien no cambia el pronóstico.
               </p>
               <div className="mt-4">
-                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-prostata")}>
+                <WASelectorLink mensaje={WA_MSG} motivo="cancer-prostata">
                   <Button className="bg-acero text-white hover:bg-acero/90">
                     Solicitar valoración oncológica
                   </Button>
-                </a>
+                </WASelectorLink>
               </div>
             </motion.div>
           </div>
@@ -655,11 +653,11 @@ export default function CancerProstataContent() {
                   humano durante todo el proceso.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-prostata")}>
+                  <WASelectorLink mensaje={WA_MSG} motivo="cancer-prostata">
                     <Button className="bg-teal-600 text-white hover:bg-teal-700">
                       Agendar consulta
                     </Button>
-                  </a>
+                  </WASelectorLink>
                   <Link href="/">
                     <Button className="bg-slate-100 text-slate-800 hover:bg-slate-200">
                       Ver perfil completo
@@ -880,6 +878,8 @@ export default function CancerProstataContent() {
               <WAButton
                 mensaje="Hola Dr. Quiroz, tengo un diagnóstico de cáncer de próstata y quisiera solicitar una segunda opinión."
                 motivo="cross-link-prostata-segunda-opinion"
+                telefono={WA_DR}
+                sede="dr-directo"
                 variant="primary"
               >
                 Solicitar segunda opinión
@@ -925,11 +925,11 @@ export default function CancerProstataContent() {
               transition={{ duration: 0.5 }}
               className="mt-8 flex flex-wrap gap-4 justify-center"
             >
-              <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-prostata")}>
+              <WASelectorLink mensaje={WA_MSG} motivo="cancer-prostata">
                 <Button className="bg-white text-indigo-900 hover:bg-slate-100 text-base px-8 py-3">
                   Agendar por WhatsApp
                 </Button>
-              </a>
+              </WASelectorLink>
             </motion.div>
             <motion.div
               variants={fadeUp}

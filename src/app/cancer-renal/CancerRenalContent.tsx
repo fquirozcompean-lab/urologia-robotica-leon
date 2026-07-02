@@ -3,15 +3,13 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import WAButton from "@/components/WAButton";
+import { WA_DR } from "@/lib/contactos";
 import { motion } from "framer-motion";
 import { trackWhatsApp } from "@/lib/analytics";
+import WASelectorLink from "@/components/WASelectorLink";
 
-const WHATSAPP_NUMBER = "5214776330492";
 const WA_MSG = "Hola Dr. Quiroz, quiero agendar una valoración oncológica por un tumor renal.";
 
-function waLink(msg: string) {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-}
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -407,7 +405,7 @@ export default function CancerRenalContent() {
               "No todos los tumores renales requieren extirpar el riñón completo — preservar tu función renal es tan importante como curar el cáncer."
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-renal")}>
+              <WASelectorLink mensaje={WA_MSG} motivo="cancer-renal">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
@@ -415,7 +413,7 @@ export default function CancerRenalContent() {
                 >
                   Agenda tu valoración oncológica
                 </motion.div>
-              </a>
+              </WASelectorLink>
             </div>
           </motion.div>
         </section>
@@ -627,11 +625,11 @@ export default function CancerRenalContent() {
                 síntoma — agenda una valoración urológica. El hallazgo temprano es tu mejor aliado.
               </p>
               <div className="mt-5">
-                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-renal")}>
+                <WASelectorLink mensaje={WA_MSG} motivo="cancer-renal">
                   <Button className="bg-blue-600 text-white hover:bg-blue-500">
                     Valoración por masa renal
                   </Button>
-                </a>
+                </WASelectorLink>
               </div>
             </motion.div>
           </div>
@@ -907,11 +905,11 @@ export default function CancerRenalContent() {
                                 </div>
                               </div>
                               <div className="mt-5">
-                                <a href={waLink(`Hola Dr. Quiroz, quiero información sobre ${t.name} para cáncer renal.`)} target="_blank" rel="noreferrer">
+                                <WASelectorLink mensaje={`Hola Dr. Quiroz, quiero información sobre ${t.name} para cáncer renal.`} motivo="cancer-renal-tratamiento">
                                   <Button className="bg-blue-600 text-white hover:bg-blue-700 text-sm">
                                     Consultar sobre este tratamiento
                                   </Button>
-                                </a>
+                                </WASelectorLink>
                               </div>
                             </motion.div>
                           )}
@@ -1084,11 +1082,11 @@ export default function CancerRenalContent() {
                   ))}
                 </ul>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-renal")}>
+                  <WASelectorLink mensaje={WA_MSG} motivo="cancer-renal">
                     <Button className="bg-blue-600 text-white hover:bg-blue-700">
                       Agendar valoración oncológica
                     </Button>
-                  </a>
+                  </WASelectorLink>
                   <Link href="/cancer-vejiga">
                     <Button className="bg-slate-100 text-slate-800 hover:bg-slate-200">
                       Cáncer de Vejiga
@@ -1310,11 +1308,11 @@ export default function CancerRenalContent() {
               transition={{ duration: 0.5 }}
               className="mt-8 flex flex-wrap gap-4 justify-center"
             >
-              <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-renal")}>
+              <WASelectorLink mensaje={WA_MSG} motivo="cancer-renal">
                 <Button className="bg-blue-600 text-white hover:bg-blue-500 text-base px-8 py-3">
                   Agenda tu valoración oncológica
                 </Button>
-              </a>
+              </WASelectorLink>
             </motion.div>
             <motion.div
               variants={fadeUp}

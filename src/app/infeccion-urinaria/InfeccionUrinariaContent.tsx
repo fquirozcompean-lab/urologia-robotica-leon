@@ -4,18 +4,15 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { trackWhatsApp } from "@/lib/analytics";
+import WASelectorLink from "@/components/WASelectorLink";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 },
 };
 
-const WHATSAPP_NUMBER = "5214776330492";
-function waLink(msg: string) {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-}
-const WA_URGENTE = waLink("Hola Dr. Quiroz, tengo síntomas de infección urinaria y necesito una consulta urgente.");
-const WA_RECURRENTE = waLink("Hola Dr. Quiroz, tengo infecciones urinarias recurrentes y quiero un plan de prevención personalizado.");
+const WA_URGENTE = "Hola Dr. Quiroz, tengo síntomas de infección urinaria y necesito una consulta urgente.";
+const WA_RECURRENTE = "Hola Dr. Quiroz, tengo infecciones urinarias recurrentes y quiero un plan de prevención personalizado.";
 
 type FAQ = { q: string; a: string };
 
@@ -237,12 +234,7 @@ export default function InfeccionUrinariaContent() {
               "Tratamiento inmediato y plan a largo plazo para no volver a tener infecciones."
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
-              <a
-                href={WA_URGENTE}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => trackWhatsApp("infeccion-urinaria")}
-              >
+              <WASelectorLink mensaje={WA_URGENTE} motivo="infeccion-urinaria">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
@@ -250,13 +242,8 @@ export default function InfeccionUrinariaContent() {
                 >
                   Agenda consulta urgente
                 </motion.div>
-              </a>
-              <a
-                href={WA_RECURRENTE}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => trackWhatsApp("infeccion-urinaria")}
-              >
+              </WASelectorLink>
+              <WASelectorLink mensaje={WA_RECURRENTE} motivo="infeccion-urinaria">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
@@ -264,7 +251,7 @@ export default function InfeccionUrinariaContent() {
                 >
                   Infecciones recurrentes
                 </motion.div>
-              </a>
+              </WASelectorLink>
             </div>
             <div className="mt-8 grid sm:grid-cols-3 gap-4">
               {[
@@ -848,14 +835,9 @@ export default function InfeccionUrinariaContent() {
                 ))}
               </div>
               <div className="mt-5 text-center">
-                <a
-                  href={WA_RECURRENTE}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-block bg-white text-teal-900 font-bold px-6 py-3 rounded-xl hover:bg-teal-50 transition shadow"
-                >
+                <WASelectorLink mensaje={WA_RECURRENTE} motivo="infeccion-urinaria" className="inline-block bg-white text-teal-900 font-bold px-6 py-3 rounded-xl hover:bg-teal-50 transition shadow">
                   Quiero un plan para mis infecciones recurrentes
-                </a>
+                </WASelectorLink>
               </div>
             </motion.div>
           </div>
@@ -1038,14 +1020,9 @@ export default function InfeccionUrinariaContent() {
                 ))}
               </ul>
               <div className="mt-4">
-                <a
-                  href={WA_URGENTE}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="block w-full text-center bg-red-600 text-white font-bold py-3 rounded-xl hover:bg-red-700 transition"
-                >
+                <WASelectorLink mensaje={WA_URGENTE} motivo="infeccion-urinaria" className="block w-full text-center bg-red-600 text-white font-bold py-3 rounded-xl hover:bg-red-700 transition">
                   Atención urgente — WhatsApp ahora
-                </a>
+                </WASelectorLink>
               </div>
             </motion.div>
 
@@ -1127,22 +1104,12 @@ export default function InfeccionUrinariaContent() {
                 <p className="text-teal-100 text-sm mt-1">No es normal y tiene solución. Un plan personalizado puede eliminar las recurrencias.</p>
               </div>
               <div className="flex flex-wrap gap-4 justify-center">
-                <a
-                  href={WA_URGENTE}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="bg-white text-teal-900 font-bold px-8 py-3 rounded-xl hover:bg-teal-50 transition shadow-lg text-lg"
-                >
+                <WASelectorLink mensaje={WA_URGENTE} motivo="infeccion-urinaria" className="bg-white text-teal-900 font-bold px-8 py-3 rounded-xl hover:bg-teal-50 transition shadow-lg text-lg">
                   Agenda consulta urgente
-                </a>
-                <a
-                  href={WA_RECURRENTE}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="bg-teal-600 text-white font-semibold px-8 py-3 rounded-xl hover:bg-teal-500 transition border border-teal-400 text-lg"
-                >
+                </WASelectorLink>
+                <WASelectorLink mensaje={WA_RECURRENTE} motivo="infeccion-urinaria" className="bg-teal-600 text-white font-semibold px-8 py-3 rounded-xl hover:bg-teal-500 transition border border-teal-400 text-lg">
                   Plan para infecciones recurrentes
-                </a>
+                </WASelectorLink>
               </div>
               <p className="mt-5 text-teal-200 text-sm">
                 Hospital Ángeles León (Cons. 615, Torre II · Lun, Mar, Jue) · Hospital Christus Muguerza Altagracia (Mié, Vie)

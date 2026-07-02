@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link'
-import WAButton from '@/components/WAButton'
+import WAButtonConSelector from '@/components/WAButtonConSelector'
 import { trackDoctoralia } from '@/lib/analytics'
 
 export default function Footer() {
@@ -47,23 +47,22 @@ export default function Footer() {
 
           <div>
             <h3 className="text-editorial font-bold text-lg mb-4 font-sans">Contacto</h3>
-            <p className="text-sm mb-2 font-serif">
-              <a
-                href="https://wa.me/5214776330492"
-                className="hover:text-quirurgico transition-colors"
-              >
-                WhatsApp: 477 633 0492
-              </a>
-            </p>
-            <p className="text-xs text-editorial/60 font-serif mb-3">Para consultas y dudas</p>
-            <WAButton
+            <WAButtonConSelector
               mensaje="Hola Dr. Quiroz, quiero agendar una consulta."
               motivo="footer-general"
-              variant="ghost"
-              className="text-editorial/80 hover:text-quirurgico text-sm mb-3"
+              variant="custom"
+              className="text-editorial/80 hover:text-quirurgico text-sm mb-3 font-sans font-medium text-left block"
             >
               Agendar por WhatsApp →
-            </WAButton>
+            </WAButtonConSelector>
+            <p className="text-sm font-serif mb-3">
+              <Link
+                href="/agendar"
+                className="text-editorial/80 hover:text-quirurgico transition-colors"
+              >
+                Solicitar cita en línea →
+              </Link>
+            </p>
             <p className="text-sm font-serif mt-2">
               <a
                 href="https://www.doctoralia.com.mx/z/oFar6h"
@@ -127,6 +126,13 @@ export default function Footer() {
           <p>Urología Oncológica y Cirugía Avanzada en León, Guanajuato</p>
           <p className="text-xs text-editorial/65 pt-1">
             Aviso de Publicidad COFEPRIS: 2611072002A00152
+            <span className="mx-2">·</span>
+            <Link
+              href="/aviso-de-privacidad"
+              className="hover:text-quirurgico transition-colors underline"
+            >
+              Aviso de Privacidad
+            </Link>
           </p>
         </div>
       </div>

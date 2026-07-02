@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import WAButton from "@/components/WAButton";
+import WAButtonConSelector from "@/components/WAButtonConSelector";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -60,13 +60,13 @@ export default function PetPsmaContent() {
             Esta tecnología, disponible en pocos centros del país, está en León.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <WAButton
+            <WAButtonConSelector
               mensaje="Hola Dr. Quiroz, quisiera información sobre el estudio PET-PSMA."
               motivo="pet-psma-hero"
               variant="green"
             >
               Consultar si está indicado en mi caso
-            </WAButton>
+            </WAButtonConSelector>
           </div>
         </div>
       </section>
@@ -188,13 +188,13 @@ export default function PetPsmaContent() {
                 estudio dentro del contexto clínico completo de cada paciente.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <WAButton
+                <WAButtonConSelector
                   mensaje="Hola Dr. Quiroz, quisiera una valoración para saber si el PET-PSMA está indicado en mi caso."
                   motivo="pet-psma-valoracion"
                   variant="primary"
                 >
                   Agendar valoración
-                </WAButton>
+                </WAButtonConSelector>
                 <Link
                   href="/cancer-prostata"
                   className="inline-flex items-center gap-2 text-acero font-sans font-medium hover:underline px-4 py-4"
@@ -306,13 +306,13 @@ export default function PetPsmaContent() {
             el rumbo de su tratamiento.
           </motion.p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <WAButton
+            <WAButtonConSelector
               mensaje="Hola Dr. Quiroz, quisiera agendar una valoración. Tengo interés en el estudio PET-PSMA."
               motivo="pet-psma-cta-final"
               variant="green"
             >
               Agendar por WhatsApp
-            </WAButton>
+            </WAButtonConSelector>
             <Link
               href="/segunda-opinion-oncologica"
               className="inline-flex items-center justify-center gap-2 border-2 border-white/70 text-white font-sans font-bold px-8 py-4 rounded-lg hover:bg-white/10 transition-colors"

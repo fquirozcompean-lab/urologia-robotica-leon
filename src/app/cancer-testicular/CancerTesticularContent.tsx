@@ -16,6 +16,8 @@ import {
   TrendingUp,
 } from "lucide-react";
 import WAButton from "@/components/WAButton";
+import WAButtonConSelector from "@/components/WAButtonConSelector";
+import { WA_DR } from "@/lib/contactos";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -253,13 +255,13 @@ export default function CancerTesticularContent() {
               puede ser determinante.&quot;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <WAButton
+              <WAButtonConSelector
                 mensaje="Hola Dr. Quiroz, quiero agendar una valoración oncológica por una masa testicular."
                 motivo="cancer-testicular-hero-cta"
                 variant="primary"
               >
                 Agenda tu valoración oncológica
-              </WAButton>
+              </WAButtonConSelector>
               <a
                 href="https://www.doctoralia.com.mx/z/oFar6h"
                 target="_blank"
@@ -601,13 +603,13 @@ export default function CancerTesticularContent() {
                 día.
               </p>
               <div className="mt-5">
-                <WAButton
+                <WAButtonConSelector
                   mensaje="Hola Dr. Quiroz, noto algo diferente en mi testículo y quisiera una valoración urgente."
                   motivo="cancer-testicular-sintomas-cta"
                   variant="green"
                 >
                   Solicitar valoración urgente
-                </WAButton>
+                </WAButtonConSelector>
               </div>
             </motion.div>
           </div>
@@ -890,13 +892,13 @@ export default function CancerTesticularContent() {
                           </div>
                         </div>
                         <div className="mt-5">
-                          <WAButton
+                          <WAButtonConSelector
                             mensaje={`Hola Dr. Quiroz, quisiera información sobre ${t.name} para cáncer testicular.`}
                             motivo={`cancer-testicular-tratamiento-${t.id}`}
                             variant="ghost"
                           >
                             Consultar sobre este tratamiento →
-                          </WAButton>
+                          </WAButtonConSelector>
                         </div>
                       </motion.div>
                     )}
@@ -1047,6 +1049,8 @@ export default function CancerTesticularContent() {
               <WAButton
                 mensaje="Hola Dr. Quiroz, tengo un diagnóstico de cáncer testicular y quisiera solicitar una segunda opinión."
                 motivo="cross-link-testicular-segunda-opinion"
+                telefono={WA_DR}
+                sede="dr-directo"
                 variant="primary"
               >
                 Solicitar segunda opinión
@@ -1104,13 +1108,13 @@ export default function CancerTesticularContent() {
                   ))}
                 </ul>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <WAButton
+                  <WAButtonConSelector
                     mensaje="Hola Dr. Quiroz, quiero agendar una valoración oncológica por cáncer testicular."
                     motivo="cancer-testicular-dr-quiroz-cta"
                     variant="primary"
                   >
                     Agendar valoración oncológica
-                  </WAButton>
+                  </WAButtonConSelector>
                   <Link
                     href="/cancer-prostata"
                     className="inline-flex items-center gap-2 bg-slate-100 text-gris-profundo font-sans font-medium px-5 py-3 rounded-lg hover:bg-slate-200 transition text-sm"
@@ -1297,13 +1301,13 @@ export default function CancerTesticularContent() {
               transition={{ duration: 0.5 }}
               className="mt-8 flex flex-wrap gap-4 justify-center"
             >
-              <WAButton
+              <WAButtonConSelector
                 mensaje="Hola Dr. Quiroz, quiero agendar una valoración oncológica por cáncer testicular o una masa testicular."
                 motivo="cancer-testicular-cta-final"
                 variant="primary"
               >
                 Agenda tu valoración oncológica
-              </WAButton>
+              </WAButtonConSelector>
               <a
                 href="https://www.doctoralia.com.mx/z/oFar6h"
                 target="_blank"

@@ -5,13 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { trackWhatsApp } from "@/lib/analytics";
+import WASelectorLink from "@/components/WASelectorLink";
 
-const WHATSAPP_NUMBER = "5214776330492";
 const WA_MSG = "Hola Dr. Quiroz, quiero agendar una valoración por próstata crecida (HPB).";
 
-function waLink(msg: string) {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-}
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -294,7 +291,7 @@ export default function HiperplasiaContent() {
               &ldquo;Cada paciente es único — el tratamiento se adapta a ti.&rdquo;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("hpb")}>
+              <WASelectorLink mensaje={WA_MSG} motivo="hpb">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
@@ -302,7 +299,7 @@ export default function HiperplasiaContent() {
                 >
                   Agenda tu valoración
                 </motion.div>
-              </a>
+              </WASelectorLink>
             </div>
           </motion.div>
         </section>
@@ -474,11 +471,11 @@ export default function HiperplasiaContent() {
                 urinarias repetidas, retención aguda de orina o daño renal.
               </p>
               <div className="mt-4">
-                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("hpb")}>
+                <WASelectorLink mensaje={WA_MSG} motivo="hpb">
                   <Button className="bg-amber-600 text-white hover:bg-amber-700 text-sm">
                     Agenda tu valoración
                   </Button>
-                </a>
+                </WASelectorLink>
               </div>
             </motion.div>
           </div>
@@ -834,17 +831,11 @@ export default function HiperplasiaContent() {
                           </div>
                         </div>
                         <div className="mt-5 flex flex-wrap items-center gap-4">
-                          <a
-                            href={waLink(
-                              `Hola Dr. Quiroz, quiero información sobre el tratamiento ${t.name} para HPB.`
-                            )}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
+                          <WASelectorLink mensaje={`Hola Dr. Quiroz, quiero información sobre el tratamiento ${t.name} para HPB.`} motivo="hpb-tratamiento">
                             <Button className="bg-teal-600 text-white hover:bg-teal-700 text-sm">
                               Consultar sobre este tratamiento
                             </Button>
-                          </a>
+                          </WASelectorLink>
                           {t.id === "holep" && (
                             <Link
                               href="/holep-cirugia-laser"
@@ -1005,11 +996,11 @@ export default function HiperplasiaContent() {
                 caso particular. No todos los pacientes necesitan el mismo tratamiento.
               </p>
               <div className="mt-4">
-                <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("hpb")}>
+                <WASelectorLink mensaje={WA_MSG} motivo="hpb">
                   <Button className="bg-teal-600 text-white hover:bg-teal-700 text-sm">
                     Agenda tu valoración personalizada
                   </Button>
-                </a>
+                </WASelectorLink>
               </div>
             </motion.div>
           </div>
@@ -1052,11 +1043,11 @@ export default function HiperplasiaContent() {
                   ))}
                 </ul>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("hpb")}>
+                  <WASelectorLink mensaje={WA_MSG} motivo="hpb">
                     <Button className="bg-teal-600 text-white hover:bg-teal-700">
                       Agendar valoración
                     </Button>
-                  </a>
+                  </WASelectorLink>
                   <Link href="/cancer-prostata">
                     <Button className="bg-slate-100 text-slate-800 hover:bg-slate-200">
                       Cáncer de Próstata
@@ -1228,11 +1219,11 @@ export default function HiperplasiaContent() {
               transition={{ duration: 0.5 }}
               className="mt-8 flex flex-wrap gap-4 justify-center"
             >
-              <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("hpb")}>
+              <WASelectorLink mensaje={WA_MSG} motivo="hpb">
                 <Button className="bg-white text-indigo-900 hover:bg-slate-100 text-base px-8 py-3">
                   Agenda tu valoración urológica
                 </Button>
-              </a>
+              </WASelectorLink>
             </motion.div>
             <motion.div
               variants={fadeUp}

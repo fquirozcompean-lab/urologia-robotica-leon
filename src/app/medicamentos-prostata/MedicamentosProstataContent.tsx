@@ -4,18 +4,15 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { trackWhatsApp } from "@/lib/analytics";
+import WASelectorLink from "@/components/WASelectorLink";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 },
 };
 
-const WHATSAPP_NUMBER = "5214776330492";
-function waLink(msg: string) {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-}
-const WA_UROFLUJOMETRIA = waLink("Hola Dr. Quiroz, quiero agendar una uroflujometría para evaluar mis síntomas prostáticos.");
-const WA_CONSULTA = waLink("Hola Dr. Quiroz, quiero agendar una consulta por síntomas prostáticos.");
+const WA_UROFLUJOMETRIA = "Hola Dr. Quiroz, quiero agendar una uroflujometría para evaluar mis síntomas prostáticos.";
+const WA_CONSULTA = "Hola Dr. Quiroz, quiero agendar una consulta por síntomas prostáticos.";
 
 type DrugCard = {
   name: string;
@@ -384,12 +381,7 @@ export default function MedicamentosProstataContent() {
               "La uroflujometría determina si los medicamentos son suficientes o si necesitas cirugía."
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
-              <a
-                href={WA_UROFLUJOMETRIA}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => trackWhatsApp("medicamentos-prostata")}
-              >
+              <WASelectorLink mensaje={WA_UROFLUJOMETRIA} motivo="medicamentos-prostata">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
@@ -397,13 +389,8 @@ export default function MedicamentosProstataContent() {
                 >
                   Agenda tu uroflujometría
                 </motion.div>
-              </a>
-              <a
-                href={WA_CONSULTA}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => trackWhatsApp("medicamentos-prostata")}
-              >
+              </WASelectorLink>
+              <WASelectorLink mensaje={WA_CONSULTA} motivo="medicamentos-prostata">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
@@ -411,7 +398,7 @@ export default function MedicamentosProstataContent() {
                 >
                   Consulta general
                 </motion.div>
-              </a>
+              </WASelectorLink>
             </div>
           </motion.div>
         </section>
@@ -546,14 +533,9 @@ export default function MedicamentosProstataContent() {
               </div>
 
               <div className="mt-6 text-center">
-                <a
-                  href={WA_UROFLUJOMETRIA}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-block bg-white text-violet-900 font-bold px-8 py-3 rounded-xl hover:bg-violet-50 transition shadow-lg text-lg"
-                >
+                <WASelectorLink mensaje={WA_UROFLUJOMETRIA} motivo="medicamentos-prostata" className="inline-block bg-white text-violet-900 font-bold px-8 py-3 rounded-xl hover:bg-violet-50 transition shadow-lg text-lg">
                   Agenda tu uroflujometría con el Dr. Quiroz
-                </a>
+                </WASelectorLink>
                 <p className="text-violet-300 text-sm mt-2">Hospital Ángeles León · Hospital Christus Muguerza Altagracia</p>
               </div>
             </motion.div>
@@ -825,22 +807,12 @@ export default function MedicamentosProstataContent() {
                 Con una uroflujometría podemos determinar si tu medicamento actual está funcionando, si necesitas ajuste de tratamiento, o si ya llegó el momento de resolver el problema de forma definitiva.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
-                <a
-                  href={WA_UROFLUJOMETRIA}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="bg-white text-violet-900 font-bold px-8 py-3 rounded-xl hover:bg-violet-50 transition shadow-lg text-lg"
-                >
+                <WASelectorLink mensaje={WA_UROFLUJOMETRIA} motivo="medicamentos-prostata" className="bg-white text-violet-900 font-bold px-8 py-3 rounded-xl hover:bg-violet-50 transition shadow-lg text-lg">
                   Agenda tu uroflujometría
-                </a>
-                <a
-                  href={WA_CONSULTA}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="bg-violet-600 text-white font-semibold px-8 py-3 rounded-xl hover:bg-violet-500 transition border border-violet-400 text-lg"
-                >
+                </WASelectorLink>
+                <WASelectorLink mensaje={WA_CONSULTA} motivo="medicamentos-prostata" className="bg-violet-600 text-white font-semibold px-8 py-3 rounded-xl hover:bg-violet-500 transition border border-violet-400 text-lg">
                   Consulta general
-                </a>
+                </WASelectorLink>
               </div>
               <p className="mt-4 text-violet-200 text-sm">
                 Hospital Ángeles León (Cons. 615, Torre II) · Hospital Christus Muguerza Altagracia

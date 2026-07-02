@@ -18,8 +18,10 @@ import {
 } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
 import WAButton from "@/components/WAButton";
+import WAButtonConSelector from "@/components/WAButtonConSelector";
 import CallButton from "@/components/CallButton";
 import { trackDoctoralia } from "@/lib/analytics";
+import { WA_DR, WA_ANGELES, WA_MUGUERZA } from "@/lib/contactos";
 
 const DOCTORALIA = "https://www.doctoralia.com.mx/z/oFar6h";
 
@@ -56,7 +58,7 @@ export default function HomeContent() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-                <WAButton
+                <WAButtonConSelector
                   mensaje="Hola Dr. Quiroz, quiero agendar una valoración."
                   motivo="home-general"
                   variant="green"
@@ -64,7 +66,7 @@ export default function HomeContent() {
                 >
                   {WA_ICON}
                   Agendar valoración
-                </WAButton>
+                </WAButtonConSelector>
               </div>
 
               <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-editorial/70 justify-center lg:justify-start font-sans">
@@ -131,16 +133,17 @@ export default function HomeContent() {
               <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Ver especialidades →</span>
             </Link>
 
-            <WAButton
+            <WAButtonConSelector
               mensaje="Hola Dr. Quiroz, quisiera una valoración oncológica especializada."
               motivo="home-oncologica"
               variant="ghost"
+              as="div"
               className="group block bg-petroleo rounded-xl p-5 border-2 border-petroleo hover:border-acero hover:shadow-lg transition-all duration-300 h-full text-left items-start"
             >
               <h2 className="font-bold text-editorial font-sans text-[15px] mb-1">Valoración oncológica</h2>
               <p className="text-xs text-editorial/60 font-serif leading-relaxed">Diagnóstico y criterio especializado en urología oncológica.</p>
               <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Solicitar valoración →</span>
-            </WAButton>
+            </WAButtonConSelector>
 
           </div>
         </div>
@@ -243,6 +246,8 @@ export default function HomeContent() {
             <WAButton
               mensaje="Hola Dr. Quiroz, tengo un diagnóstico de cáncer y quisiera solicitar una segunda opinión."
               motivo="home-bloque-segunda-opinion"
+              telefono={WA_DR}
+              sede="dr-directo"
               variant="primary"
             >
               Solicitar segunda opinión
@@ -339,6 +344,7 @@ export default function HomeContent() {
                   mensaje="Hola Dr. Quiroz, quiero agendar una consulta en Hospital Ángeles León."
                   motivo="hospital-angeles"
                   sede="angeles"
+                  telefono={WA_ANGELES}
                   variant="primary"
                   className="w-full text-sm px-4 py-2.5"
                 >
@@ -376,6 +382,7 @@ export default function HomeContent() {
                   mensaje="Hola Dr. Quiroz, quiero agendar una consulta en Hospital Muguerza Altagracia."
                   motivo="hospital-muguerza"
                   sede="muguerza"
+                  telefono={WA_MUGUERZA}
                   variant="primary"
                   className="w-full text-sm px-4 py-2.5"
                 >
@@ -416,7 +423,7 @@ export default function HomeContent() {
             Atención profesional y confidencial en León, Guanajuato
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <WAButton
+            <WAButtonConSelector
               mensaje="Hola Dr. Quiroz, quiero agendar una valoración."
               motivo="home-general"
               variant="green"
@@ -424,7 +431,7 @@ export default function HomeContent() {
             >
               {WA_ICON}
               Agendar valoración
-            </WAButton>
+            </WAButtonConSelector>
             <CallButton
               telefono="4791037564"
               sede="angeles"

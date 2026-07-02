@@ -61,9 +61,12 @@ src/
 │   │                          Col. "Especialidades": links sitewide a las 4 páginas
 │   │                          prioritarias (próstata, HoLEP, renal, segunda opinión)
 │   ├── ServiceCard.tsx     ← tarjeta de especialidad con link
-│   ├── WAButton.tsx        ← botón WhatsApp con tracking GA4 (motivo por CTA)
+│   ├── WAButton.tsx        ← botón WA directo con tracking GA4 (prop telefono obligatoria de facto)
+│   ├── WAButtonConSelector.tsx ← botón idéntico a WAButton pero abre SedeSelector (CTAs genéricos)
+│   ├── WASelectorLink.tsx  ← reemplazo drop-in de anchors inline: conserva children, abre SedeSelector
+│   ├── SedeSelector.tsx    ← modal de elección de sede (portal, Escape/overlay/X, focus trap)
 │   ├── CallButton.tsx      ← botón tel: con tracking GA4 (sede)
-│   └── FloatingWhatsApp.tsx ← botón WA flotante global (bottom-right)
+│   └── FloatingWhatsApp.tsx ← botón WA flotante global → abre SedeSelector
 ├── app/
 │   ├── layout.tsx          ← inyecta Navbar + Footer + pt-16 spacer
 │   ├── page.tsx            ← home (Server Component, metadata propia)
@@ -147,6 +150,9 @@ npx lighthouse https://urologiaroboticaleon.com/ --output=json \
 | `/segunda-opinion-oncologica` | `app/segunda-opinion-oncologica/` |
 | `/cancer-testicular` | `app/cancer-testicular/` |
 | `/pet-psma-leon` | `app/pet-psma-leon/` |
+| `/agendar` | `app/agendar/` |
+| `/gracias` | `app/gracias/` (noindex — post-conversión, NO va en sitemap) |
+| `/aviso-de-privacidad` | `app/aviso-de-privacidad/` |
 
 ## Arquitectura de Información — Categorías de Especialidades (Junio 2026)
 
@@ -248,6 +254,37 @@ médica (ej. NO linkear cáncer renal → PET-PSMA: el PSMA es específico de pr
 - `dr-quiroz-profesional.jpg` — foto profesional alternativa
 - `foto con davinci.jpg` — con consola robótica Da Vinci
 - `Foto atras davinci.jpg` — atrás del sistema Da Vinci
+
+## Enrutamiento de WhatsApp y Sistema de Agendamiento (Julio 2026)
+
+### Decisión operativa
+Los CTAs de WhatsApp del sitio se enrutan según destino:
+- CTAs de sede específica → WhatsApp de la asistente de cada sede
+  (Ángeles: 52 479 103 7564 · Muguerza: 52 477 235 1442)
+- CTAs de segunda opinión oncológica → WhatsApp personal del Dr. Quiroz
+  (52 477 633 0492) — paciente de mayor valor, respuesta personal del Dr.
+- CTAs genéricos → modal SedeSelector → asistente de la sede elegida
+
+Los números viven en `src/lib/contactos.ts`. NUNCA hardcodear números en
+componentes o páginas.
+
+**Tracking:** el parámetro `sede` del evento GA4 refleja la sede real elegida
+("angeles" / "muguerza") o "dr-directo" en los CTAs de segunda opinión.
+
+### Formulario /agendar
+- Envía email a urologoquiroz@gmail.com vía Resend (API key en env `RESEND_API_KEY`)
+- Anti-spam: campo honeypot `website` (si viene lleno → 200 sin enviar)
+- Redirige a /gracias, que dispara el evento GA4 `conversion_contact` una sola vez
+- `conversion_contact` es la conversión principal para Google Ads (Smart Bidding)
+- /gracias tiene `robots: noindex` y NO va en el sitemap
+- Remitente actual: onboarding@resend.dev (default de Resend) — migrar a dominio
+  propio verificado cuando se configure
+
+### Regla para futuras páginas
+Todo CTA nuevo de WhatsApp debe clasificarse: ¿sede específica, segunda opinión,
+o genérico? y usar el número/selector correspondiente (`WAButton telefono={...}`,
+`WAButtonConSelector` o `WASelectorLink`). Todo formulario nuevo debe redirigir
+a /gracias para aprovechar el evento de conversión.
 
 ## Git
 - Repo: `https://github.com/fquirozcompean-lab/urologia-robotica-leon`

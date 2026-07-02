@@ -4,18 +4,15 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { trackWhatsApp } from "@/lib/analytics";
+import WASelectorLink from "@/components/WASelectorLink";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 },
 };
 
-const WHATSAPP_NUMBER = "5214776330492";
-function waLink(msg: string) {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-}
-const WA_TRATAMIENTO = waLink("Hola Dr. Quiroz, quisiera agendar una consulta para tratamiento de verrugas genitales en León.");
-const WA_URGENTE = waLink("Hola Dr. Quiroz, tengo verrugas genitales y quisiera atención lo antes posible.");
+const WA_TRATAMIENTO = "Hola Dr. Quiroz, quisiera agendar una consulta para tratamiento de verrugas genitales en León.";
+const WA_URGENTE = "Hola Dr. Quiroz, tengo verrugas genitales y quisiera atención lo antes posible.";
 
 type FAQ = { q: string; a: string };
 
@@ -289,7 +286,7 @@ export default function VerrugasGenitalesContent() {
               "Atención confidencial, diagnóstico y tratamiento profesional."
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href={WA_TRATAMIENTO} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("verrugas-genitales")}>
+              <WASelectorLink mensaje={WA_TRATAMIENTO} motivo="verrugas-genitales">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
@@ -297,8 +294,8 @@ export default function VerrugasGenitalesContent() {
                 >
                   Agenda tratamiento hoy
                 </motion.div>
-              </a>
-              <a href={WA_URGENTE} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("verrugas-genitales")}>
+              </WASelectorLink>
+              <WASelectorLink mensaje={WA_URGENTE} motivo="verrugas-genitales">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
@@ -306,7 +303,7 @@ export default function VerrugasGenitalesContent() {
                 >
                   Consulta urgente
                 </motion.div>
-              </a>
+              </WASelectorLink>
             </div>
           </motion.div>
         </section>
@@ -735,10 +732,9 @@ export default function VerrugasGenitalesContent() {
                 <li className="flex gap-2"><span>•</span>Enrojecimiento que se extiende</li>
               </ul>
               <div className="mt-4">
-                <a href={WA_URGENTE} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("verrugas-genitales")}
-                  className="block w-full text-center bg-red-600 text-white font-semibold py-2.5 rounded-xl hover:bg-red-700 transition text-sm">
+                <WASelectorLink mensaje={WA_URGENTE} motivo="verrugas-genitales" className="block w-full text-center bg-red-600 text-white font-semibold py-2.5 rounded-xl hover:bg-red-700 transition text-sm">
                   Reportar problema post-tratamiento
-                </a>
+                </WASelectorLink>
               </div>
             </motion.div>
           </div>
@@ -934,14 +930,12 @@ export default function VerrugasGenitalesContent() {
               Eliminación efectiva de verrugas genitales — consulta confidencial y profesional
             </p>
             <div className="flex flex-wrap gap-4 justify-center mb-8">
-              <a href={WA_TRATAMIENTO} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("verrugas-genitales")}
-                className="bg-white text-rose-900 font-semibold px-8 py-3 rounded-2xl hover:bg-rose-50 transition shadow-lg">
+              <WASelectorLink mensaje={WA_TRATAMIENTO} motivo="verrugas-genitales" className="bg-white text-rose-900 font-semibold px-8 py-3 rounded-2xl hover:bg-rose-50 transition shadow-lg">
                 Agenda tratamiento hoy
-              </a>
-              <a href={WA_URGENTE} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("verrugas-genitales")}
-                className="bg-rose-800 border border-rose-600 text-white font-semibold px-8 py-3 rounded-2xl hover:bg-rose-700 transition">
+              </WASelectorLink>
+              <WASelectorLink mensaje={WA_URGENTE} motivo="verrugas-genitales" className="bg-rose-800 border border-rose-600 text-white font-semibold px-8 py-3 rounded-2xl hover:bg-rose-700 transition">
                 💬 WhatsApp para consulta urgente
-              </a>
+              </WASelectorLink>
             </div>
             <div className="text-sm text-rose-300 flex flex-wrap justify-center gap-3">
               <Link href="/" className="hover:text-white transition">← Inicio</Link>

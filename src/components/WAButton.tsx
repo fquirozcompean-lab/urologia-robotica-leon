@@ -1,17 +1,17 @@
 "use client";
 
 import { trackWhatsApp } from "@/lib/analytics";
+import { WA_DR, waUrl } from "@/lib/contactos";
 
 interface WAButtonProps {
   mensaje: string;
   motivo: string;
   sede?: string;
+  telefono?: string; // default: WA_DR — todo CTA debe declararlo explícito según el enrutamiento
   children: React.ReactNode;
   className?: string;
   variant?: "primary" | "secondary" | "ghost" | "green";
 }
-
-const BASE = "wa.me/5214776330492";
 
 const variants = {
   primary:
@@ -33,11 +33,12 @@ export default function WAButton({
   mensaje,
   motivo,
   sede = "",
+  telefono = WA_DR,
   children,
   className = "",
   variant = "primary",
 }: WAButtonProps) {
-  const url = `https://${BASE}?text=${encodeURIComponent(mensaje)}`;
+  const url = waUrl(telefono, mensaje);
 
   return (
     <a

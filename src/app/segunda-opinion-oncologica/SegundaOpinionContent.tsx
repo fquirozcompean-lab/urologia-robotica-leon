@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { trackDoctoralia } from "@/lib/analytics";
 import WAButton from "@/components/WAButton";
+import { WA_DR } from "@/lib/contactos";
 import {
   CheckCircle,
   ListChecks,
@@ -181,6 +182,8 @@ export default function SegundaOpinionContent() {
             <WAButton
               mensaje={WA_HERO}
               motivo="segunda-opinion-hero"
+              telefono={WA_DR}
+              sede="dr-directo"
               variant="primary"
               className="shadow-lg"
             >
@@ -652,6 +655,8 @@ export default function SegundaOpinionContent() {
             <WAButton
               mensaje={WA_FINAL}
               motivo="segunda-opinion-cta-final"
+              telefono={WA_DR}
+              sede="dr-directo"
               variant="primary"
               className="shadow-lg"
             >

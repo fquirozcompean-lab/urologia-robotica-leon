@@ -4,17 +4,14 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { trackWhatsApp } from "@/lib/analytics";
+import WASelectorLink from "@/components/WASelectorLink";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 },
 };
 
-const WHATSAPP_NUMBER = "5214776330492";
-function waLink(msg: string) {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-}
-const WA_CONFIDENCIAL = waLink("Hola Dr. Quiroz, me gustaría agendar una consulta confidencial para tratar un problema de disfunción eréctil.");
+const WA_CONFIDENCIAL = "Hola Dr. Quiroz, me gustaría agendar una consulta confidencial para tratar un problema de disfunción eréctil.";
 
 type FAQ = { q: string; a: string };
 
@@ -443,12 +440,7 @@ export default function DisfuncionErectilContent() {
               "Consulta confidencial, privada y sin juicios."
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
-              <a
-                href={WA_CONFIDENCIAL}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => trackWhatsApp("disfuncion-erectil")}
-              >
+              <WASelectorLink mensaje={WA_CONFIDENCIAL} motivo="disfuncion-erectil">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
@@ -456,7 +448,7 @@ export default function DisfuncionErectilContent() {
                 >
                   Agenda consulta confidencial
                 </motion.div>
-              </a>
+              </WASelectorLink>
             </div>
             <div className="mt-8 grid sm:grid-cols-3 gap-4">
               {[
@@ -1007,14 +999,9 @@ export default function DisfuncionErectilContent() {
                 Tu privacidad es nuestra prioridad. La consulta es completamente confidencial — no compartimos información con nadie. Atención discreta en León, Guanajuato.
               </div>
               <div className="flex flex-wrap gap-4 justify-center">
-                <a
-                  href={WA_CONFIDENCIAL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="bg-white text-blue-900 font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition shadow-lg text-lg"
-                >
+                <WASelectorLink mensaje={WA_CONFIDENCIAL} motivo="disfuncion-erectil" className="bg-white text-blue-900 font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition shadow-lg text-lg">
                   Agenda consulta confidencial
-                </a>
+                </WASelectorLink>
               </div>
               <p className="mt-5 text-blue-300 text-sm">
                 Hospital Ángeles León (Cons. 615, Torre II · Lun, Mar, Jue) · Hospital Christus Muguerza Altagracia (Mié, Vie)
