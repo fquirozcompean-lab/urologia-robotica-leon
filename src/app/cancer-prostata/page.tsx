@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import CancerProstataContent from "./CancerProstataContent";
 
 export const metadata: Metadata = {
-  title: "Cáncer de Próstata en León, Gto | Dr. Quiroz Compeán — Prostatectomía Robótica",
+  title: "Cáncer de Próstata en León | Cirugía Robótica — Dr. Quiroz",
   description:
-    "Diagnóstico y tratamiento especializado del cáncer de próstata en León, Guanajuato. Dr. Alejandro Quiroz Compeán, urólogo oncólogo certificado. Prostatectomía robótica Da Vinci con mínima invasión y recuperación rápida.",
+    "Urólogo oncólogo en León, Gto. Diagnóstico con PET-PSMA y prostatectomía robótica de mínima invasión. Agende su valoración con el Dr. Quiroz Compeán.",
   keywords: [
     "cáncer de próstata León",
     "cáncer de próstata Guanajuato",
@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     "urólogo cáncer próstata Guanajuato",
     "diagnóstico precoz cáncer próstata",
     "RM multiparamétrica próstata León",
+    "PET PSMA León",
+    "PET PSMA Guanajuato",
+    "estadificación cáncer próstata PSMA",
     "gleason próstata León",
     "tratamiento cáncer próstata sin cirugía León",
     "oncología urológica León",
@@ -95,6 +98,14 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "La cirugía robótica, con su visión 3D de alta definición, permite mayor precisión en la preservación de los nervios responsables de la erección y de los esfínteres urinarios. La mayoría de los pacientes recupera la continencia en semanas a meses. La recuperación de la función eréctil depende de la preservación nerviosa y de la edad y salud preoperatoria del paciente.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué es el PET-PSMA y está disponible en León?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El PET-PSMA es el estudio de imagen más preciso disponible para detectar la extensión del cáncer de próstata: identifica metástasis que la tomografía y el gammagrama óseo pueden pasar por alto. Está recomendado por las guías internacionales (NCCN, EAU) para estadificación de riesgo alto y para detectar recurrencia con PSA en ascenso. Sí está disponible en León, Guanajuato, y el Dr. Quiroz lo integra rutinariamente en la evaluación de sus pacientes cuando está indicado.",
       },
     },
     {

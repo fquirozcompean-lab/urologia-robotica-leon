@@ -15,6 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: 'https://urologiaroboticaleon.com/pet-psma-leon',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: 'https://urologiaroboticaleon.com/hiperplasia-prostatica-benigna',
       lastModified: new Date(),
       changeFrequency: 'monthly',

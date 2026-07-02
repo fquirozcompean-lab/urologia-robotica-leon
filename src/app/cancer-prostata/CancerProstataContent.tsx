@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import WAButton from "@/components/WAButton";
 import { motion } from "framer-motion";
 import { trackWhatsApp } from "@/lib/analytics";
@@ -134,7 +135,7 @@ export default function CancerProstataContent() {
               Detección temprana y tratamiento de precisión. Urólogo oncólogo certificado y cirujano robótico formado en el INCan y Hospital Albert Einstein (Brasil).
             </p>
             <p className="text-quirurgico font-sans font-medium italic mb-10">
-              "El diagnóstico temprano transforma el pronóstico del cáncer de próstata."
+              &ldquo;El diagnóstico temprano transforma el pronóstico del cáncer de próstata.&rdquo;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href={waLink(WA_MSG)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp("cancer-prostata")}>
@@ -629,6 +630,13 @@ export default function CancerProstataContent() {
               </motion.div>
 
               <Card className="bg-slate-50 shadow-lg">
+                <Image
+                  src="/foto-dr-alejandro.jpg"
+                  alt="Dr. Alejandro Quiroz Compeán — urólogo oncólogo especialista en cáncer de próstata y cirugía robótica en León, Guanajuato"
+                  width={480}
+                  height={480}
+                  className="rounded-xl w-full h-auto object-cover mb-5"
+                />
                 <h3 className="text-xl font-semibold text-slate-800 mb-4">
                   Formación y certificaciones
                 </h3>
@@ -657,6 +665,54 @@ export default function CancerProstataContent() {
                 </div>
               </Card>
             </div>
+          </div>
+        </section>
+
+        {/* PET-PSMA */}
+        <section id="pet-psma" className="bg-white py-14">
+          <div className="mx-auto max-w-6xl px-4">
+            <motion.h2
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="text-3xl font-bold mb-3"
+            >
+              Estadificación de precisión con PET-PSMA en León
+            </motion.h2>
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="max-w-3xl"
+            >
+              <p className="mt-4 text-slate-700 leading-relaxed">
+                Antes de decidir un tratamiento, es fundamental saber con exactitud{" "}
+                <strong>dónde está el cáncer y hasta dónde llega</strong>. El{" "}
+                <strong>PET-PSMA</strong> es hoy el estudio de imagen más preciso para
+                estadificar el cáncer de próstata: detecta enfermedad en ganglios y hueso
+                que la tomografía y el gammagrama óseo convencionales pueden pasar por
+                alto.
+              </p>
+              <p className="mt-3 text-slate-700 leading-relaxed">
+                Las guías internacionales (NCCN, EAU) lo recomiendan en{" "}
+                <strong>cáncer de riesgo alto</strong> y en{" "}
+                <strong>recurrencia bioquímica</strong> (PSA en ascenso tras tratamiento).
+                Pocos centros en el Bajío cuentan con acceso a esta tecnología —{" "}
+                <strong>en León está disponible</strong> y el Dr. Quiroz la integra en la
+                evaluación de sus pacientes cuando está indicada, evitando tanto
+                tratamientos insuficientes como cirugías innecesarias.
+              </p>
+              <div className="mt-6">
+                <Link href="/pet-psma-leon">
+                  <Button className="bg-teal-600 text-white hover:bg-teal-700">
+                    Conocer más sobre el PET-PSMA
+                  </Button>
+                </Link>
+              </div>
+            </motion.div>
           </div>
         </section>
 
@@ -713,6 +769,17 @@ export default function CancerProstataContent() {
                 eréctil depende de la preservación nerviosa, la edad y la salud preoperatoria.
               </FAQItem>
 
+              <FAQItem q="¿Qué es el PET-PSMA y está disponible en León?">
+                Es el estudio de imagen <strong>más preciso</strong> para conocer la
+                extensión del cáncer de próstata: detecta metástasis que la tomografía y
+                el gammagrama óseo pueden pasar por alto. Las guías NCCN y EAU lo
+                recomiendan en riesgo alto y en recurrencia bioquímica.{" "}
+                <strong>Sí está disponible en León</strong> y el Dr. Quiroz lo integra en
+                la evaluación cuando está indicado.{" "}
+                <Link href="/pet-psma-leon" className="text-teal-700 font-medium hover:underline">
+                  Más sobre el PET-PSMA →
+                </Link>
+              </FAQItem>
               <FAQItem q="¿Puedo curarme del cáncer de próstata?">
                 Sí. Cuando se detecta en etapa localizada, la tasa de supervivencia a 5 años{" "}
                 <strong>supera el 98%</strong>. Con el tratamiento adecuado —cirugía robótica,
