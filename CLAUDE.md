@@ -22,7 +22,7 @@
 - **Dominio:** `https://urologiaroboticaleon.com`
 
 ## Stack técnico
-- **Framework:** Next.js 15 (App Router) + Vercel
+- **Framework:** Next.js 16 (App Router) + Vercel
 - **Estilos:** Tailwind CSS v4 con tokens custom definidos en `globals.css`
 - **Fuentes:** Plus Jakarta Sans (`font-sans`) + Lora (`font-serif`)
 - **Iconos:** lucide-react
@@ -56,9 +56,14 @@ Clases: `bg-petroleo`, `text-editorial`, `bg-acero`, `text-quirurgico`, `text-do
 ```
 src/
 ├── components/
-│   ├── Navbar.tsx          ← navbar global fija (bg-petroleo), WA verde
-│   ├── Footer.tsx          ← footer global (bg-petroleo, 4 cols + COFEPRIS)
-│   └── ServiceCard.tsx     ← tarjeta de especialidad con link
+│   ├── Navbar.tsx          ← navbar global fija (bg-petroleo), WA verde + link Segunda Opinión (dorado)
+│   ├── Footer.tsx          ← footer global (bg-petroleo, 5 cols + COFEPRIS)
+│   │                          Col. "Especialidades": links sitewide a las 4 páginas
+│   │                          prioritarias (próstata, HoLEP, renal, segunda opinión)
+│   ├── ServiceCard.tsx     ← tarjeta de especialidad con link
+│   ├── WAButton.tsx        ← botón WhatsApp con tracking GA4 (motivo por CTA)
+│   ├── CallButton.tsx      ← botón tel: con tracking GA4 (sede)
+│   └── FloatingWhatsApp.tsx ← botón WA flotante global (bottom-right)
 ├── app/
 │   ├── layout.tsx          ← inyecta Navbar + Footer + pt-16 spacer
 │   ├── page.tsx            ← home (Server Component, metadata propia)
@@ -95,8 +100,15 @@ antes del primer h2 de sección, por lo que deben ser h2 aunque sean visualmente
 
 ### JSON-LD schemas
 - ✅ Usar `<script type="application/ld+json" dangerouslySetInnerHTML={...} />` nativo de React
-- ❌ NUNCA usar `<Script strategy="beforeInteractive">` de next/script para JSON-LD — bloquea render 2,470 ms
+- ❌ NUNCA usar `<Script>` de next/script para JSON-LD, con NINGUNA strategy:
+  - `beforeInteractive` bloquea render 2,470 ms
+  - `afterInteractive` (default) inyecta post-hidratación → crawlers sin JS no ven el schema
+    (bug encontrado y corregido en /segunda-opinion-oncologica, Jul 2026)
 - El componente `<Script>` (next/script) solo es válido para JS externo con lifecycle (GA, chat widgets, etc.)
+- **FAQ schema SIEMPRE sincronizado con las FAQs visibles del Content**: mismas preguntas,
+  mismos textos (requisito de Google para rich results). Al agregar/editar una FAQ en el
+  Content, actualizar el faqSchema del page.tsx en la misma tarea. (En /holep el schema
+  exponía 5 de 17 FAQs ya escritas — corregido Jul 2026.)
 
 ### Imágenes
 - ✅ Siempre usar `<Image>` de `next/image` (genera WebP/AVIF, srcset, lazy automático)
@@ -134,6 +146,7 @@ npx lighthouse https://urologiaroboticaleon.com/ --output=json \
 | `/sobre-mi` | `app/sobre-mi/` |
 | `/segunda-opinion-oncologica` | `app/segunda-opinion-oncologica/` |
 | `/cancer-testicular` | `app/cancer-testicular/` |
+| `/pet-psma-leon` | `app/pet-psma-leon/` |
 
 ## Arquitectura de Información — Categorías de Especialidades (Junio 2026)
 
@@ -175,11 +188,30 @@ a qué categoría pertenece y:
    cuando el número de páginas por categoría lo justifique (referencia: más de
    5-6 páginas en una sola categoría es la señal para considerar un dropdown)
 
+### Interlinking estratégico (Julio 2026)
+Fortalecimiento de las 4 páginas prioritarias (HoLEP, cáncer de próstata,
+cáncer renal, segunda opinión) en 3 fases:
+- **Fase 1 — links internos:** columna "Especialidades" en el Footer con las 4
+  páginas prioritarias (links sitewide); HBP → HoLEP dentro de la tarjeta del
+  tratamiento; medicamentos-prostata → HoLEP como CTA primario en Alternativas;
+  cancer-vejiga ↔ cancer-renal recíproco.
+- **Fase 2 — SEO técnico:** FAQ schema de HoLEP sincronizado 5→17; schemas
+  MedicalCondition/MedicalWebPage enriquecidos en próstata; fix de `<Script>`
+  → `<script>` nativo en segunda opinión.
+- **Fase 3 — contenido:** próstata 7→11 FAQs; segunda opinión 8→10 FAQs.
+
+Regla derivada: al crear cross-links entre páginas clínicas, validar coherencia
+médica (ej. NO linkear cáncer renal → PET-PSMA: el PSMA es específico de próstata).
+
 ### Pendiente de evaluar (no implementar aún)
-Cuando se agregue contenido de PSMA-PET, medicamentos urológicos generales, o
-el blog, evaluar si el navbar "Especialidades" debe evolucionar de anchor simple
-a menú desplegable con las 3-4 categorías. No implementar esto de forma
-preventiva — solo cuando el volumen de páginas lo amerite.
+- Cuando se agregue contenido de medicamentos urológicos generales o el blog,
+  evaluar si el navbar "Especialidades" debe evolucionar de anchor simple a menú
+  desplegable con las 3-4 categorías. No implementar de forma preventiva.
+- **/pet-psma-leon no tiene card en el home** (Categoría 1). Está en el sitemap
+  y linkeada desde /cancer-prostata, pero según la regla obligatoria de arriba
+  le corresponde card en el bloque de Oncología Urológica. Decidir si se agrega
+  como card o si se considera sub-página de cáncer de próstata (excepción a
+  documentar).
 
 ## Reglas editoriales / médico-legales
 - ❌ NO usar: "el mejor", "garantizado", "100% seguro", "cura definitiva"
