@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import { EMAIL_CONTACTO } from "@/lib/contactos";
+
+// TEMPORAL: cambiar a urologoquiroz@gmail.com (EMAIL_CONTACTO de @/lib/contactos)
+// cuando el dominio esté verificado en Resend (bloqueado por limitación de Wix DNS).
+// El plan gratuito sin dominio verificado solo permite enviar al correo de la cuenta.
+const EMAIL_DESTINO = "aqc.alejandr@gmail.com";
 
 interface AgendarBody {
   nombre: string;
@@ -123,7 +127,7 @@ export async function POST(request: Request) {
     // Migrar a dominio propio verificado (urologiaroboticaleon.com) después.
     const { error } = await resend.emails.send({
       from: "Sitio Web <onboarding@resend.dev>",
-      to: EMAIL_CONTACTO,
+      to: EMAIL_DESTINO,
       subject: `🩺 Nueva solicitud de cita — ${body.motivo} — ${body.sede}`,
       html,
     });
