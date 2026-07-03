@@ -272,7 +272,11 @@ componentes o páginas.
 ("angeles" / "muguerza") o "dr-directo" en los CTAs de segunda opinión.
 
 ### Formulario /agendar
-- Envía email a urologoquiroz@gmail.com vía Resend (API key en env `RESEND_API_KEY`)
+- Envía email vía Resend (API key en env `RESEND_API_KEY`)
+- **Destinatario TEMPORAL: aqc.alejandr@gmail.com** — Resend gratuito sin dominio
+  verificado solo permite enviar al correo de la cuenta. Revertir a
+  urologoquiroz@gmail.com (EMAIL_CONTACTO) cuando el dominio esté verificado
+  (bloqueado por limitación de Wix DNS)
 - Anti-spam: campo honeypot `website` (si viene lleno → 200 sin enviar)
 - Redirige a /gracias, que dispara el evento GA4 `conversion_contact` una sola vez
 - `conversion_contact` es la conversión principal para Google Ads (Smart Bidding)
