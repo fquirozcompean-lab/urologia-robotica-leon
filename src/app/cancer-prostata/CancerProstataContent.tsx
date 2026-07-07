@@ -430,6 +430,19 @@ export default function CancerProstataContent() {
               height={840}
               className="mt-10 rounded-2xl border border-slate-200 shadow-sm w-full max-w-2xl mx-auto h-auto"
             />
+            <div className="mt-8 max-w-2xl mx-auto rounded-xl border-l-4 border-teal-500 bg-teal-50 p-5">
+              <p className="text-sm text-slate-700 leading-relaxed">
+                <strong>La resonancia multiparamétrica (mpRM)</strong> guía hoy buena parte
+                de estas decisiones: puede evitar biopsias innecesarias y dirigir las
+                necesarias al punto exacto.{" "}
+                <Link
+                  href="/resonancia-magnetica-prostata"
+                  className="text-acero font-medium hover:underline"
+                >
+                  Conoce la resonancia de próstata y la escala PI-RADS →
+                </Link>
+              </p>
+            </div>
           </div>
         </section>
 

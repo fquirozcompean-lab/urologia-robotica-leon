@@ -540,6 +540,15 @@ export default function CancerVejigaContent() {
               </Card>
             </div>
 
+            <div className="mb-8 text-center">
+              <Link
+                href="/hematuria"
+                className="text-acero font-sans font-medium hover:underline"
+              >
+                ¿Sangre en la orina sin diagnóstico? Conoce todas las causas de la hematuria →
+              </Link>
+            </div>
+
             {/* MENSAJE CRÍTICO */}
             <motion.div
               variants={fadeUp}

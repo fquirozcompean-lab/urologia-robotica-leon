@@ -15,6 +15,7 @@ import {
   FlaskConical,
   Microscope,
   Pill,
+  Droplets,
 } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
 import WAButton from "@/components/WAButton";
@@ -222,6 +223,7 @@ export default function HomeContent() {
               <ServiceCard icon={<Stethoscope size={48} className="text-quirurgico" strokeWidth={2} />} title="Verrugas Genitales" description="Tratamiento y eliminación de verrugas genitales. Crioterapia, electrofulguración y láser para resultados efectivos." href="/verrugas-genitales" />
               <ServiceCard icon={<Zap size={48} className="text-quirurgico" strokeWidth={2} />} title="Infección Urinaria" description="Diagnóstico y tratamiento de infecciones urinarias agudas y recurrentes. Evaluación completa y plan de prevención personalizado." href="/infeccion-urinaria" />
               <ServiceCard icon={<Hexagon size={48} className="text-quirurgico" strokeWidth={2} />} title="Cálculos Renales" description="Diagnóstico y tratamiento de piedras en riñón. Manejo del cólico renal y prevención de recurrencias." href="/calculos-renales" />
+              <ServiceCard icon={<Droplets size={48} className="text-quirurgico" strokeWidth={2} />} title="Sangre en la Orina (Hematuria)" description="Causas de la sangre en la orina, de infección o cálculos a tumores urológicos. Cuándo es una señal de alarma y cómo se evalúa." href="/hematuria" />
             </div>
           </div>
 

@@ -150,6 +150,8 @@ npx lighthouse https://urologiaroboticaleon.com/ --output=json \
 | `/segunda-opinion-oncologica` | `app/segunda-opinion-oncologica/` |
 | `/cancer-testicular` | `app/cancer-testicular/` |
 | `/pet-psma-leon` | `app/pet-psma-leon/` |
+| `/resonancia-magnetica-prostata` | `app/resonancia-magnetica-prostata/` |
+| `/hematuria` | `app/hematuria/` |
 | `/agendar` | `app/agendar/` |
 | `/gracias` | `app/gracias/` (noindex — post-conversión, NO va en sitemap) |
 | `/aviso-de-privacidad` | `app/aviso-de-privacidad/` |
@@ -171,10 +173,12 @@ oncológica (ej. biopsia de fusión). La página /segunda-opinion-oncologica
 recibe tratamiento especial como banda destacada dentro de esta categoría, no
 como card individual más.
 
-**Excepción documentada (Jul 2026):** /pet-psma-leon es **sub-página del hub
-/cancer-prostata**, no una condición: NO lleva card en el home. Se accede desde
-la sección PET-PSMA y el FAQ de cáncer de próstata. Este es el patrón para
-futuras páginas de estudios/técnicas que pertenecen a un hub (ver checklist).
+**Excepción documentada (Jul 2026):** /pet-psma-leon y
+/resonancia-magnetica-prostata son **sub-páginas del hub /cancer-prostata**, no
+condiciones: NO llevan card en el home. Se acceden desde secciones y links dentro
+de /cancer-prostata (PET-PSMA desde su sección y FAQ; la RM desde la sección de
+diagnóstico). Este es el patrón para futuras páginas de estudios/técnicas que
+pertenecen a un hub (ver checklist).
 
 **Categoría 2 — Próstata (no oncológica)** ← acento quirurgico
 HPB, HoLEP, medicamentos para próstata, y futuras páginas relacionadas con

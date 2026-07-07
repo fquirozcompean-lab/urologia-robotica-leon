@@ -99,6 +99,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: 'https://urologiaroboticaleon.com/resonancia-magnetica-prostata',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: 'https://urologiaroboticaleon.com/hematuria',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
       url: 'https://urologiaroboticaleon.com/agendar',
       lastModified: new Date(),
       changeFrequency: 'yearly',
