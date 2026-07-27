@@ -259,6 +259,39 @@ médica (ej. NO linkear cáncer renal → PET-PSMA: el PSMA es específico de pr
 - `foto con davinci.jpg` — con consola robótica Da Vinci
 - `Foto atras davinci.jpg` — atrás del sistema Da Vinci
 
+## Estado de seguridad (npm audit)
+
+Última revisión: **Julio 2026**.
+
+| Fecha | Antes | Después | Acción |
+|---|---|---|---|
+| Jul 2026 | 6 (5 high, 1 critical) | 17 high, **0 critical** | `npm audit fix` (no-breaking, solo `package-lock.json`) |
+
+**Resuelto por el fix no-breaking** (dentro de rangos semver, package.json intacto):
+- `tar` 7.5.16 → 7.5.22 — **critical eliminada** (node-tar DoS/crash)
+- `js-yaml` 4.2.0 → 4.3.0
+- `postcss` (de Tailwind) 8.5.15 → 8.5.23
+- `next` 16.2.9 → **16.2.12** (patch, es el `latest` estable)
+
+**Pendiente — sin fix no-breaking disponible.** Las 17 high restantes NO son
+regresión: el número subió de 6 a 17 porque, al quitar tar/js-yaml, npm re-expande
+la cadena transitiva de eslint. Son dos raíces, ambas solo corregibles con cambios
+breaking (por eso `npm audit fix` se detuvo aquí):
+
+1. **Next.js + postcss/sharp embebidos.** `next@16.2.12` es el último estable; el
+   parche de estos avisos está en **16.3.0** (aún en preview/canary, sin release
+   estable). El `postcss@8.4.31` y `sharp@0.34.5` viven dentro de `node_modules/next/`
+   y solo se mueven cuando Next.js los sube. El único fix que ofrece npm es
+   `next@9.3.3` (downgrade catastrófico) — **NO aplicar `--force`**. Acción: esperar
+   Next.js 16.3.0 estable y volver a correr `npm audit fix`.
+2. **Cadena de eslint** (`brace-expansion` → minimatch → eslint → @typescript-eslint
+   → eslint-plugin-*). Fix requiere `eslint@10` (major) + downgrade de
+   `eslint-config-next`. Es **tooling de desarrollo**, nunca se envía al navegador →
+   riesgo real ~nulo para un sitio estático. Aplazado como decisión breaking aparte.
+
+Regla: en la auditoría semanal, correr `npm audit fix` (sin `--force`) y actualizar
+esta tabla. `--force` está prohibido salvo decisión explícita — degradaría Next.js.
+
 ## Enrutamiento de WhatsApp y Sistema de Agendamiento (Julio 2026)
 
 ### Decisión operativa
