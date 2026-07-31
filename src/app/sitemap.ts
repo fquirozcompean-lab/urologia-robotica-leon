@@ -111,6 +111,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: 'https://urologiaroboticaleon.com/en/international-patients',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
       url: 'https://urologiaroboticaleon.com/agendar',
       lastModified: new Date(),
       changeFrequency: 'yearly',

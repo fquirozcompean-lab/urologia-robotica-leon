@@ -133,6 +133,14 @@ export default function Footer() {
             >
               Aviso de Privacidad
             </Link>
+            <span className="mx-2">·</span>
+            <Link
+              href="/en/international-patients"
+              lang="en"
+              className="hover:text-quirurgico transition-colors underline"
+            >
+              English
+            </Link>
           </p>
         </div>
       </div>

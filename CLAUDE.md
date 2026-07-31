@@ -155,6 +155,7 @@ npx lighthouse https://urologiaroboticaleon.com/ --output=json \
 | `/agendar` | `app/agendar/` |
 | `/gracias` | `app/gracias/` (noindex — post-conversión, NO va en sitemap) |
 | `/aviso-de-privacidad` | `app/aviso-de-privacidad/` |
+| `/en/international-patients` | `app/en/international-patients/` (única página en inglés) |
 
 ## Arquitectura de Información — Categorías de Especialidades (Junio 2026)
 
@@ -326,6 +327,29 @@ Todo CTA nuevo de WhatsApp debe clasificarse: ¿sede específica, segunda opini�
 o genérico? y usar el número/selector correspondiente (`WAButton telefono={...}`,
 `WAButtonConSelector` o `WASelectorLink`). Todo formulario nuevo debe redirigir
 a /gracias para aprovechar el evento de conversión.
+
+## Página en inglés — international patients (Julio 2026)
+
+### Decisión (basada en datos, no traducir el sitio completo)
+GA4 (3–30 jul 2026) mostró **24 de 25 conversiones (96%) desde México**; EE. UU.
+aportó 10 usuarios y 1 conversión, con la mitad de interacción, y "país ≠ idioma"
+(probable diáspora hispanohablante). Traducir las ~20 páginas + hreflang +
+mantenimiento duplicado NO tiene ROI para ese volumen.
+
+**Respuesta proporcional:** UNA sola página en inglés, `/en/international-patients`,
+como puente para expats/pacientes internacionales. NO es i18n del sitio.
+
+### Reglas de esta página
+- Es autocontenida: **no enlaza a las páginas en español** (no volcar lectores en
+  inglés a contenido en español). Su conversión es WhatsApp.
+- **Enrutamiento de CTAs → WhatsApp directo del Dr.** (`telefono={WA_DR}`,
+  `sede="dr-directo"`), NO el SedeSelector: las asistentes son hispanohablantes y el
+  Dr. atiende en inglés. Misma lógica que segunda opinión.
+- `<main lang="en">` marca la región en inglés (el `<html lang="es">` global no cambia).
+- Descubrible vía link discreto "English" en el Footer (sitewide). Si algún día los
+  datos muestran demanda real en inglés, evaluar un toggle "EN" en el navbar.
+- Si se agregan más páginas en inglés, anidarlas bajo `/en/` y recién entonces
+  considerar hreflang formal.
 
 ## Git
 - Repo: `https://github.com/fquirozcompean-lab/urologia-robotica-leon`
