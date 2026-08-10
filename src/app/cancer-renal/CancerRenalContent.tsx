@@ -442,6 +442,12 @@ export default function CancerRenalContent() {
                   abdominal, revisión rutinaria, estudio de otra enfermedad. El paciente no
                   tenía ningún síntoma relacionado al riñón.
                 </p>
+                <p className="mt-3 text-sm text-slate-600">
+                  ¿No tienes claro qué hace el riñón o cómo distinguir un problema de otro?{" "}
+                  <Link href="/que-es-el-rinon" className="text-acero font-medium hover:underline">
+                    Empieza por lo básico: ¿qué es el riñón? →
+                  </Link>
+                </p>
                 <div className="mt-5 rounded-2xl bg-blue-50 border border-blue-200 p-5">
                   <h3 className="font-bold text-blue-900 mb-2">Hallazgo incidental: una segunda oportunidad</h3>
                   <p className="text-sm text-blue-800 leading-relaxed">

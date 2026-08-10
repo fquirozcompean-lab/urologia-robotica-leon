@@ -129,6 +129,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: 'https://urologiaroboticaleon.com/que-es-el-rinon',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: 'https://urologiaroboticaleon.com/dolor-de-rinon',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
       url: 'https://urologiaroboticaleon.com/en/international-patients',
       lastModified: new Date(),
       changeFrequency: 'monthly',

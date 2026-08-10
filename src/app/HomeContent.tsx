@@ -18,6 +18,7 @@ import {
   Droplets,
   BookOpen,
   Flame,
+  MapPin,
 } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
 import WAButton from "@/components/WAButton";
@@ -228,6 +229,8 @@ export default function HomeContent() {
               <ServiceCard icon={<Zap size={48} className="text-quirurgico" strokeWidth={2} />} title="Infección Urinaria" description="Diagnóstico y tratamiento de infecciones urinarias agudas y recurrentes. Evaluación completa y plan de prevención personalizado." href="/infeccion-urinaria" />
               <ServiceCard icon={<Hexagon size={48} className="text-quirurgico" strokeWidth={2} />} title="Cálculos Renales" description="Diagnóstico y tratamiento de piedras en riñón. Manejo del cólico renal y prevención de recurrencias." href="/calculos-renales" />
               <ServiceCard icon={<Droplets size={48} className="text-quirurgico" strokeWidth={2} />} title="Sangre en la Orina (Hematuria)" description="Causas de la sangre en la orina, de infección o cálculos a tumores urológicos. Cuándo es una señal de alarma y cómo se evalúa." href="/hematuria" />
+              <ServiceCard icon={<BookOpen size={48} className="text-quirurgico" strokeWidth={2} />} title="¿Qué es el Riñón?" description="Guía básica: qué es, cómo funciona, para qué sirve y sus problemas más frecuentes. El punto de partida para entender tu salud renal." href="/que-es-el-rinon" />
+              <ServiceCard icon={<MapPin size={48} className="text-quirurgico" strokeWidth={2} />} title="Dolor de Riñón" description="Dónde se ubica el dolor de riñón, cómo distinguirlo del dolor de espalda, sus causas y cuándo es urgente. Incluye dolor de riñón en mujeres." href="/dolor-de-rinon" />
             </div>
           </div>
 

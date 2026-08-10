@@ -93,6 +93,14 @@ const faqSchema = {
     },
     {
       "@type": "Question",
+      name: "¿Cómo se expulsan las piedras del riñón?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Los cálculos pequeños (menores de 5 mm) suelen expulsarse solos con hidratación abundante y manejo del dolor; a veces se indica un medicamento (como la tamsulosina) que relaja el uréter y facilita el paso. No existen remedios que disuelvan de forma fiable un cálculo ya formado. Cuando la piedra es grande, se atora o hay infección, se retira con procedimientos sin incisiones (ureteroscopía con láser o litotricia). El plan depende del tamaño, la localización y los síntomas, por lo que conviene una valoración.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "¿Los cálculos renales se pueden prevenir?",
       acceptedAnswer: {
         "@type": "Answer",

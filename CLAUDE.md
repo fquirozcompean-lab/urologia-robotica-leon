@@ -155,6 +155,8 @@ npx lighthouse https://urologiaroboticaleon.com/ --output=json \
 | `/uroflujometria-leon` | `app/uroflujometria-leon/` (estudio — sub-página, sin card en home) |
 | `/que-es-la-prostata` | `app/que-es-la-prostata/` (pilar informativo — card en home Cat. 2) |
 | `/prostatitis` | `app/prostatitis/` |
+| `/que-es-el-rinon` | `app/que-es-el-rinon/` (pilar informativo renal — card en home Cat. 3) |
+| `/dolor-de-rinon` | `app/dolor-de-rinon/` (síntoma — card en home Cat. 3) |
 | `/agendar` | `app/agendar/` |
 | `/gracias` | `app/gracias/` (noindex — post-conversión, NO va en sitemap) |
 | `/aviso-de-privacidad` | `app/aviso-de-privacidad/` |
@@ -236,10 +238,16 @@ cáncer renal, segunda opinión) en 3 fases:
 Regla derivada: al crear cross-links entre páginas clínicas, validar coherencia
 médica (ej. NO linkear cáncer renal → PET-PSMA: el PSMA es específico de próstata).
 
-### Pendiente de evaluar (no implementar aún)
+### Pendiente de evaluar
+- **Categoría 3 del home llegó a 8 cards (Jul 2026)** al sumar el clúster renal
+  (cálculos, hematuria, ¿qué es el riñón?, dolor de riñón, además de disfunción,
+  VPH, verrugas, infección). Ya cruzó el umbral de 5-6: toca **reorganizar**. Opción
+  recomendada: crear una categoría **"Riñón y Vías Urinarias"** (mover cálculos,
+  hematuria, ¿qué es el riñón?, dolor de riñón; el cáncer renal se queda en
+  Oncología) y dejar Cat. 3 solo con salud sexual (disfunción, VPH, verrugas) +
+  infección. Alternativa: dropdown en el navbar. Pendiente de decisión del usuario.
 - Cuando se agregue contenido de medicamentos urológicos generales o el blog,
-  evaluar si el navbar "Especialidades" debe evolucionar de anchor simple a menú
-  desplegable con las 3-4 categorías. No implementar de forma preventiva.
+  reevaluar el navbar "Especialidades" como menú desplegable.
 
 ## Reglas editoriales / médico-legales
 - ❌ NO usar: "el mejor", "garantizado", "100% seguro", "cura definitiva"

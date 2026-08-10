@@ -337,6 +337,12 @@ export default function CalculosRenalesContent() {
                   característico — llamado <strong>cólico renal</strong> — aparece cuando el
                   cálculo se moviliza y queda atrapado en el uréter, bloqueando el flujo de orina.
                 </p>
+                <p className="mt-3 text-sm text-slate-600">
+                  ¿No sabes si tu dolor es de riñón o de espalda?{" "}
+                  <Link href="/dolor-de-rinon" className="text-acero font-medium hover:underline">
+                    Guía: dolor de riñón, dónde duele y cómo identificarlo →
+                  </Link>
+                </p>
                 <div className="mt-6 rounded-2xl bg-amber-50 border border-amber-200 p-5">
                   <h3 className="font-bold text-amber-900 mb-2">
                     Un cálculo no tratado puede dañar el riñón
@@ -1028,6 +1034,17 @@ export default function CalculosRenalesContent() {
                 semanas, o antes si hay infección, fiebre, dolor incontrolable o daño renal,
                 se procede con tratamiento activo. El Dr. Quiroz define el plazo de espera
                 apropiado según tu caso específico.
+              </FAQItem>
+
+              <FAQItem q="¿Cómo se expulsan las piedras del riñón?">
+                Los cálculos pequeños (&lt;5 mm) suelen expulsarse solos con{" "}
+                <strong>hidratación abundante</strong> y manejo del dolor; a veces se indica
+                un medicamento (como la tamsulosina) que <strong>relaja el uréter</strong> y
+                facilita el paso. No existen "remedios" que disuelvan de forma fiable un
+                cálculo ya formado. Cuando la piedra es grande, se atora o hay infección, se
+                retira con procedimientos sin incisiones (ureteroscopía con láser o litotricia).
+                Nunca conviene forzar la situación sin valoración: el plan depende del tamaño,
+                la localización y tus síntomas.
               </FAQItem>
 
               <FAQItem q="¿Qué es la ureteroscopía con láser y duele?">
