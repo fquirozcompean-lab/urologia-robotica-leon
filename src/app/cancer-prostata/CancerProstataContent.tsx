@@ -846,6 +846,16 @@ export default function CancerProstataContent() {
                 La clave es la detección temprana mediante PSA y una evaluación urológica oportuna.
               </FAQItem>
 
+              <FAQItem q="¿Qué síntomas da el cáncer de próstata en etapa 1 (inicial)?">
+                En etapa inicial (localizada), el cáncer de próstata{" "}
+                <strong>habitualmente no produce síntomas</strong>. Precisamente por eso la
+                detección con PSA es tan importante: permite encontrarlo cuando aún no da
+                molestias, que es cuando las probabilidades de curación son más altas
+                (supervivencia a 5 años <strong>superior al 98%</strong> en enfermedad
+                localizada). Cuando hay síntomas urinarios en esta etapa, suelen deberse al
+                crecimiento benigno de la próstata, no al cáncer.
+              </FAQItem>
+
               <FAQItem q="¿El cáncer de próstata es hereditario?">
                 La mayoría de los casos son esporádicos, pero un <strong>5-10% tiene
                 componente hereditario</strong>. Tener padre o hermano con cáncer de próstata

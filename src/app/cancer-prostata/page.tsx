@@ -118,6 +118,14 @@ const faqSchema = {
     },
     {
       "@type": "Question",
+      name: "¿Qué síntomas da el cáncer de próstata en etapa 1 (inicial)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "En etapa inicial (localizada), el cáncer de próstata habitualmente no produce síntomas. Precisamente por eso la detección con PSA es tan importante: permite encontrarlo cuando aún no da molestias, que es cuando las probabilidades de curación son más altas (supervivencia a 5 años superior al 98% en enfermedad localizada). Cuando hay síntomas urinarios en esta etapa, suelen deberse al crecimiento benigno de la próstata, no al cáncer.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "¿El cáncer de próstata es hereditario?",
       acceptedAnswer: {
         "@type": "Answer",

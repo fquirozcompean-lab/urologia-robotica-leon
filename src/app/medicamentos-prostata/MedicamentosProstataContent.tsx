@@ -212,6 +212,10 @@ const indications: Indication[] = [
 type FAQ = { q: string; a: string };
 const faqs: FAQ[] = [
   {
+    q: "¿Cuál es el mejor medicamento para la próstata agrandada?",
+    a: "No existe un único medicamento 'mejor' para todos: el más adecuado depende del tamaño de tu próstata, del tipo de síntomas y de tus condiciones de salud. Los alfabloqueadores (como la tamsulosina) alivian los síntomas en días y suelen ser la primera opción; los inhibidores de la 5-alfa-reductasa (finasteride, dutasteride) reducen el volumen en próstatas grandes, aunque tardan meses; y en casos seleccionados se combinan. El adecuado para ti se define tras una valoración con uroflujometría; por eso conviene no automedicarse.",
+  },
+  {
     q: "¿Cuánto tarda en hacer efecto la tamsulosina?",
     a: "La mejoría del flujo urinario y los síntomas se nota habitualmente en 24–72 horas. El efecto máximo suele alcanzarse en 2–4 semanas. Si tras 4 semanas no hay mejoría significativa, es necesario reevaluar el diagnóstico y el tratamiento.",
   },

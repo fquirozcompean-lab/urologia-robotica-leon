@@ -60,6 +60,14 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
+      name: "¿Cuál es el mejor medicamento para la próstata agrandada?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No existe un único medicamento 'mejor' para todos: el más adecuado depende del tamaño de tu próstata, del tipo de síntomas y de tus condiciones de salud. Los alfabloqueadores (como la tamsulosina) alivian los síntomas en días y suelen ser la primera opción; los inhibidores de la 5-alfa-reductasa (finasteride, dutasteride) reducen el volumen en próstatas grandes, aunque tardan meses; y en casos seleccionados se combinan. El adecuado para ti se define tras una valoración con uroflujometría; por eso conviene no automedicarse.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "¿Cuánto tarda en hacer efecto la tamsulosina?",
       acceptedAnswer: {
         "@type": "Answer",
