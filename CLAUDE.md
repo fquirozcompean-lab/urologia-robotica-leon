@@ -196,10 +196,16 @@ HPB, HoLEP, medicamentos para próstata, y futuras páginas relacionadas con
 próstata benigna.
 
 **Categoría 3 — Salud Sexual y Urológica General** ← acento quirurgico
-Disfunción eréctil, VPH, verrugas genitales, infección urinaria, cálculos
-renales, y futuras condiciones de este tipo.
+Disfunción eréctil, VPH, verrugas genitales, infección urinaria, y futuras
+condiciones de salud sexual o urológica general.
 
-**Categoría 4 — Recursos y Educación (futura, aún sin implementar)**
+**Categoría 4 — Riñón y Vías Urinarias** ← acento quirurgico (implementada Jul 2026)
+Pilar /que-es-el-rinon, dolor de riñón, cálculos renales, hematuria, y futuras
+páginas renales/de vías urinarias NO oncológicas. El cáncer renal permanece en
+Categoría 1 (Oncología). Se creó al separar el clúster renal de la Cat. 3, que
+había llegado a 8 cards.
+
+**Categoría 5 — Recursos y Educación (futura, aún sin implementar)**
 Reservada para cuando se active el blog (Fase 3 del roadmap). No crear esta
 sección en el home todavía.
 
@@ -239,15 +245,13 @@ Regla derivada: al crear cross-links entre páginas clínicas, validar coherenci
 médica (ej. NO linkear cáncer renal → PET-PSMA: el PSMA es específico de próstata).
 
 ### Pendiente de evaluar
-- **Categoría 3 del home llegó a 8 cards (Jul 2026)** al sumar el clúster renal
-  (cálculos, hematuria, ¿qué es el riñón?, dolor de riñón, además de disfunción,
-  VPH, verrugas, infección). Ya cruzó el umbral de 5-6: toca **reorganizar**. Opción
-  recomendada: crear una categoría **"Riñón y Vías Urinarias"** (mover cálculos,
-  hematuria, ¿qué es el riñón?, dolor de riñón; el cáncer renal se queda en
-  Oncología) y dejar Cat. 3 solo con salud sexual (disfunción, VPH, verrugas) +
-  infección. Alternativa: dropdown en el navbar. Pendiente de decisión del usuario.
+- **Reorganización Cat. 3 → resuelta (Jul 2026):** se creó la Categoría 4 "Riñón y
+  Vías Urinarias" moviendo cálculos, hematuria, ¿qué es el riñón? y dolor de riñón;
+  Cat. 3 quedó con disfunción, VPH, verrugas e infección (4 cards). El home ahora
+  tiene 4 categorías clínicas de ~4 cards cada una.
 - Cuando se agregue contenido de medicamentos urológicos generales o el blog,
-  reevaluar el navbar "Especialidades" como menú desplegable.
+  reevaluar el navbar "Especialidades" como menú desplegable (hoy son 4 categorías;
+  un dropdown por categoría sería el siguiente paso natural si crecen).
 
 ## Reglas editoriales / médico-legales
 - ❌ NO usar: "el mejor", "garantizado", "100% seguro", "cura definitiva"

@@ -215,22 +215,34 @@ export default function HomeContent() {
           </div>
 
           {/* CATEGORÍA 3 — Salud Sexual y Urológica General */}
-          <div>
+          <div className="mb-14">
             <div className="flex items-center gap-3 mb-6">
               <span className="h-1 w-8 bg-quirurgico flex-shrink-0"></span>
               <h3 className="font-sans font-bold text-sm text-petroleo uppercase tracking-widest">
                 Salud Sexual y Urológica General
               </h3>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <ServiceCard icon={<Heart size={48} className="text-quirurgico" strokeWidth={2} />} title="Disfunción Eréctil" description="Evaluación y tratamiento de problemas de erección. Opciones médicas y manejo integral de salud sexual masculina." href="/disfuncion-erectil" />
               <ServiceCard icon={<Shield size={48} className="text-quirurgico" strokeWidth={2} />} title="VPH en Hombres" description="Diagnóstico, tratamiento y prevención del virus del papiloma humano en hombres. Evaluación de verrugas genitales y asesoría sobre vacunación." href="/vph-en-hombres" />
               <ServiceCard icon={<Stethoscope size={48} className="text-quirurgico" strokeWidth={2} />} title="Verrugas Genitales" description="Tratamiento y eliminación de verrugas genitales. Crioterapia, electrofulguración y láser para resultados efectivos." href="/verrugas-genitales" />
               <ServiceCard icon={<Zap size={48} className="text-quirurgico" strokeWidth={2} />} title="Infección Urinaria" description="Diagnóstico y tratamiento de infecciones urinarias agudas y recurrentes. Evaluación completa y plan de prevención personalizado." href="/infeccion-urinaria" />
-              <ServiceCard icon={<Hexagon size={48} className="text-quirurgico" strokeWidth={2} />} title="Cálculos Renales" description="Diagnóstico y tratamiento de piedras en riñón. Manejo del cólico renal y prevención de recurrencias." href="/calculos-renales" />
-              <ServiceCard icon={<Droplets size={48} className="text-quirurgico" strokeWidth={2} />} title="Sangre en la Orina (Hematuria)" description="Causas de la sangre en la orina, de infección o cálculos a tumores urológicos. Cuándo es una señal de alarma y cómo se evalúa." href="/hematuria" />
+            </div>
+          </div>
+
+          {/* CATEGORÍA 4 — Riñón y Vías Urinarias */}
+          <div>
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-1 w-8 bg-quirurgico flex-shrink-0"></span>
+              <h3 className="font-sans font-bold text-sm text-petroleo uppercase tracking-widest">
+                Riñón y Vías Urinarias
+              </h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <ServiceCard icon={<BookOpen size={48} className="text-quirurgico" strokeWidth={2} />} title="¿Qué es el Riñón?" description="Guía básica: qué es, cómo funciona, para qué sirve y sus problemas más frecuentes. El punto de partida para entender tu salud renal." href="/que-es-el-rinon" />
               <ServiceCard icon={<MapPin size={48} className="text-quirurgico" strokeWidth={2} />} title="Dolor de Riñón" description="Dónde se ubica el dolor de riñón, cómo distinguirlo del dolor de espalda, sus causas y cuándo es urgente. Incluye dolor de riñón en mujeres." href="/dolor-de-rinon" />
+              <ServiceCard icon={<Hexagon size={48} className="text-quirurgico" strokeWidth={2} />} title="Cálculos Renales" description="Diagnóstico y tratamiento de piedras en riñón. Manejo del cólico renal y prevención de recurrencias." href="/calculos-renales" />
+              <ServiceCard icon={<Droplets size={48} className="text-quirurgico" strokeWidth={2} />} title="Sangre en la Orina (Hematuria)" description="Causas de la sangre en la orina, de infección o cálculos a tumores urológicos. Cuándo es una señal de alarma y cómo se evalúa." href="/hematuria" />
             </div>
           </div>
 
