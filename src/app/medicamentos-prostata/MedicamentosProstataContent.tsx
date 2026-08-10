@@ -537,6 +537,11 @@ export default function MedicamentosProstataContent() {
                   Agenda tu uroflujometría con el Dr. Quiroz
                 </WASelectorLink>
                 <p className="text-violet-300 text-sm mt-2">Hospital Ángeles León · Hospital Christus Muguerza Altagracia</p>
+                <p className="mt-4">
+                  <Link href="/uroflujometria-leon" className="text-violet-200 text-sm underline hover:text-white transition">
+                    ¿Qué es la uroflujometría y cómo se hace? Conoce el estudio en detalle →
+                  </Link>
+                </p>
               </div>
             </motion.div>
           </div>

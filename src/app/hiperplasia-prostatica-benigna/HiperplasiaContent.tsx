@@ -544,6 +544,19 @@ export default function HiperplasiaContent() {
                 </Card>
               ))}
             </div>
+            <div className="mt-8 max-w-2xl rounded-xl border-l-4 border-teal-500 bg-teal-50 p-5">
+              <p className="text-sm text-slate-700 leading-relaxed">
+                La <strong>uroflujometría</strong> es un estudio sencillo, sin sondas ni
+                dolor, y muchas veces el primer paso para saber si tus síntomas se deben a
+                obstrucción prostática.{" "}
+                <Link
+                  href="/uroflujometria-leon"
+                  className="text-acero font-medium hover:underline"
+                >
+                  Conoce qué es y cómo se realiza la uroflujometría →
+                </Link>
+              </p>
+            </div>
           </div>
         </section>
 

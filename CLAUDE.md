@@ -152,6 +152,7 @@ npx lighthouse https://urologiaroboticaleon.com/ --output=json \
 | `/pet-psma-leon` | `app/pet-psma-leon/` |
 | `/resonancia-magnetica-prostata` | `app/resonancia-magnetica-prostata/` |
 | `/hematuria` | `app/hematuria/` |
+| `/uroflujometria-leon` | `app/uroflujometria-leon/` (estudio — sub-página, sin card en home) |
 | `/agendar` | `app/agendar/` |
 | `/gracias` | `app/gracias/` (noindex — post-conversión, NO va en sitemap) |
 | `/aviso-de-privacidad` | `app/aviso-de-privacidad/` |
@@ -174,12 +175,17 @@ oncológica (ej. biopsia de fusión). La página /segunda-opinion-oncologica
 recibe tratamiento especial como banda destacada dentro de esta categoría, no
 como card individual más.
 
-**Excepción documentada (Jul 2026):** /pet-psma-leon y
-/resonancia-magnetica-prostata son **sub-páginas del hub /cancer-prostata**, no
-condiciones: NO llevan card en el home. Se acceden desde secciones y links dentro
-de /cancer-prostata (PET-PSMA desde su sección y FAQ; la RM desde la sección de
-diagnóstico). Este es el patrón para futuras páginas de estudios/técnicas que
-pertenecen a un hub (ver checklist).
+**Excepción documentada (Jul 2026):** las páginas de **estudios/técnicas** son
+sub-páginas de su hub, NO condiciones: no llevan card en el home, se acceden desde
+links dentro de las páginas clínicas relacionadas.
+- /pet-psma-leon y /resonancia-magnetica-prostata → hub /cancer-prostata (PET-PSMA
+  desde su sección y FAQ; la RM desde la sección de diagnóstico).
+- /uroflujometria-leon → hub de próstata benigna: enlazada desde
+  /hiperplasia-prostatica-benigna (sección de diagnóstico) y /medicamentos-prostata
+  (sección de uroflujometría). Enlaza a HPB, HoLEP, cáncer de próstata y cálculos.
+
+Este es el patrón para futuras páginas de estudios/técnicas que pertenecen a un hub
+(ver checklist).
 
 **Categoría 2 — Próstata (no oncológica)** ← acento quirurgico
 HPB, HoLEP, medicamentos para próstata, y futuras páginas relacionadas con
