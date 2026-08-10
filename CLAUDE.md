@@ -155,8 +155,9 @@ npx lighthouse https://urologiaroboticaleon.com/ --output=json \
 | `/uroflujometria-leon` | `app/uroflujometria-leon/` (estudio — sub-página, sin card en home) |
 | `/que-es-la-prostata` | `app/que-es-la-prostata/` (pilar informativo — card en home Cat. 2) |
 | `/prostatitis` | `app/prostatitis/` |
-| `/que-es-el-rinon` | `app/que-es-el-rinon/` (pilar informativo renal — card en home Cat. 3) |
-| `/dolor-de-rinon` | `app/dolor-de-rinon/` (síntoma — card en home Cat. 3) |
+| `/que-es-el-rinon` | `app/que-es-el-rinon/` (pilar informativo renal — card en home Cat. 4) |
+| `/dolor-de-rinon` | `app/dolor-de-rinon/` (síntoma — card en home Cat. 4) |
+| `/vasectomia` | `app/vasectomia/` (procedimiento — card en home Cat. 3) |
 | `/agendar` | `app/agendar/` |
 | `/gracias` | `app/gracias/` (noindex — post-conversión, NO va en sitemap) |
 | `/aviso-de-privacidad` | `app/aviso-de-privacidad/` |
@@ -196,8 +197,8 @@ HPB, HoLEP, medicamentos para próstata, y futuras páginas relacionadas con
 próstata benigna.
 
 **Categoría 3 — Salud Sexual y Urológica General** ← acento quirurgico
-Disfunción eréctil, VPH, verrugas genitales, infección urinaria, y futuras
-condiciones de salud sexual o urológica general.
+Disfunción eréctil, VPH, verrugas genitales, infección urinaria, vasectomía, y
+futuras condiciones de salud sexual o urológica general.
 
 **Categoría 4 — Riñón y Vías Urinarias** ← acento quirurgico (implementada Jul 2026)
 Pilar /que-es-el-rinon, dolor de riñón, cálculos renales, hematuria, y futuras

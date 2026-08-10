@@ -19,6 +19,7 @@ import {
   BookOpen,
   Flame,
   MapPin,
+  Scissors,
 } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
 import WAButton from "@/components/WAButton";
@@ -227,6 +228,7 @@ export default function HomeContent() {
               <ServiceCard icon={<Shield size={48} className="text-quirurgico" strokeWidth={2} />} title="VPH en Hombres" description="Diagnóstico, tratamiento y prevención del virus del papiloma humano en hombres. Evaluación de verrugas genitales y asesoría sobre vacunación." href="/vph-en-hombres" />
               <ServiceCard icon={<Stethoscope size={48} className="text-quirurgico" strokeWidth={2} />} title="Verrugas Genitales" description="Tratamiento y eliminación de verrugas genitales. Crioterapia, electrofulguración y láser para resultados efectivos." href="/verrugas-genitales" />
               <ServiceCard icon={<Zap size={48} className="text-quirurgico" strokeWidth={2} />} title="Infección Urinaria" description="Diagnóstico y tratamiento de infecciones urinarias agudas y recurrentes. Evaluación completa y plan de prevención personalizado." href="/infeccion-urinaria" />
+              <ServiceCard icon={<Scissors size={48} className="text-quirurgico" strokeWidth={2} />} title="Vasectomía sin Bisturí" description="Método anticonceptivo definitivo, ambulatorio y con anestesia local. Qué es, cómo se hace, recuperación y reversión. Sin corte ni puntos." href="/vasectomia" />
             </div>
           </div>
 

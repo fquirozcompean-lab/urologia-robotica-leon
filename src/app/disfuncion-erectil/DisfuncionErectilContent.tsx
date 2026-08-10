@@ -968,6 +968,7 @@ export default function DisfuncionErectilContent() {
                     <Link href="/cancer-prostata" className="text-blue-600 hover:underline">Cáncer de próstata →</Link>
                     <Link href="/hiperplasia-prostatica-benigna" className="text-blue-600 hover:underline">HPB →</Link>
                     <Link href="/medicamentos-prostata" className="text-blue-600 hover:underline">Medicamentos próstata →</Link>
+                    <Link href="/vasectomia" className="text-blue-600 hover:underline">Vasectomía →</Link>
                   </div>
                 </div>
               </div>
