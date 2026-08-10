@@ -153,6 +153,8 @@ npx lighthouse https://urologiaroboticaleon.com/ --output=json \
 | `/resonancia-magnetica-prostata` | `app/resonancia-magnetica-prostata/` |
 | `/hematuria` | `app/hematuria/` |
 | `/uroflujometria-leon` | `app/uroflujometria-leon/` (estudio — sub-página, sin card en home) |
+| `/que-es-la-prostata` | `app/que-es-la-prostata/` (pilar informativo — card en home Cat. 2) |
+| `/prostatitis` | `app/prostatitis/` |
 | `/agendar` | `app/agendar/` |
 | `/gracias` | `app/gracias/` (noindex — post-conversión, NO va en sitemap) |
 | `/aviso-de-privacidad` | `app/aviso-de-privacidad/` |
@@ -249,6 +251,12 @@ médica (ej. NO linkear cáncer renal → PET-PSMA: el PSMA es específico de pr
   visible: metadata (title, description, keywords), OG/Twitter cards y schemas
   JSON-LD. (Caso corregido Jul 2026: keyword "mejor cirugia prostata grande" en
   metadata de /holep.)
+- **Búsquedas de "remedios naturales / suplementos / ajo para X":** son de alto
+  volumen pero NO se atienden promoviendo remedios sin evidencia (choca con COFEPRIS
+  y con la credibilidad del médico). Se capturan con **marco de evidencia**: una
+  sección tipo "mitos vs. evidencia" que responde con honestidad (qué no funciona y
+  qué sí) y redirige a evaluación real. (Aplicado Jul 2026 en /que-es-la-prostata,
+  sección "¿Qué es bueno para la próstata? Evidencia y mitos".)
 
 ## Jerarquía de especialidades para SEO
 1. Cáncer de próstata (hub principal)

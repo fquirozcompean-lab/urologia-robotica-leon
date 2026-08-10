@@ -16,6 +16,8 @@ import {
   Microscope,
   Pill,
   Droplets,
+  BookOpen,
+  Flame,
 } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
 import WAButton from "@/components/WAButton";
@@ -203,7 +205,9 @@ export default function HomeContent() {
               </h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <ServiceCard icon={<BookOpen size={48} className="text-quirurgico" strokeWidth={2} />} title="¿Qué es la Próstata?" description="Guía básica: qué es, para qué sirve, cómo cambia con la edad y sus problemas más frecuentes. El punto de partida para entender tu salud prostática." href="/que-es-la-prostata" />
               <ServiceCard icon={<AlertCircle size={48} className="text-quirurgico" strokeWidth={2} />} title="Crecimiento de Próstata / HPB" description="Tratamiento médico y quirúrgico del crecimiento prostático benigno. Opciones de cirugía con láser y mínimamente invasiva para recuperación rápida." href="/hiperplasia-prostatica-benigna" />
+              <ServiceCard icon={<Flame size={48} className="text-quirurgico" strokeWidth={2} />} title="Prostatitis (Próstata Inflamada)" description="Por qué se inflama la próstata, dónde duele, tipos y tratamiento. Una de las causas más frecuentes de dolor pélvico y molestias urinarias en el hombre." href="/prostatitis" />
               <ServiceCard icon={<Crosshair size={48} className="text-quirurgico" strokeWidth={2} />} title="HoLEP: Cirugía Láser de Próstata" description="Cirugía láser HoLEP para próstata grande. Recuperación en 24–48 h, mínimo sangrado y sin límite de tamaño prostático. Técnica gold standard mundial." href="/holep-cirugia-laser" />
               <ServiceCard icon={<Pill size={48} className="text-quirurgico" strokeWidth={2} />} title="Medicamentos para Próstata" description="Guía de medicamentos para síntomas urinarios y crecimiento prostático. Opciones de tratamiento médico antes de considerar cirugía." href="/medicamentos-prostata" />
             </div>

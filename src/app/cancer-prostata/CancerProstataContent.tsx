@@ -186,6 +186,15 @@ export default function CancerProstataContent() {
                 height={1080}
                 className="mt-8 rounded-2xl border border-slate-200 shadow-sm w-full max-w-xl mx-auto h-auto"
               />
+              <p className="mt-6 text-sm text-slate-600">
+                ¿No tienes claro qué es la próstata o cómo distinguir un problema de otro?{" "}
+                <Link
+                  href="/que-es-la-prostata"
+                  className="text-acero font-medium hover:underline"
+                >
+                  Empieza por lo básico: ¿qué es la próstata? →
+                </Link>
+              </p>
             </motion.div>
 
             <div className="grid sm:grid-cols-3 gap-5">

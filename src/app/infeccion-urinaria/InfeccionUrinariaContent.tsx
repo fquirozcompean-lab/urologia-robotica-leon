@@ -424,9 +424,12 @@ export default function InfeccionUrinariaContent() {
                   </div>
                 ))}
               </div>
-              <div className="mt-3">
-                <Link href="/hiperplasia-prostatica-benigna" className="text-sm text-blue-700 hover:text-blue-900 font-medium underline">
+              <div className="mt-3 space-y-1.5">
+                <Link href="/hiperplasia-prostatica-benigna" className="block text-sm text-blue-700 hover:text-blue-900 font-medium underline">
                   Ver guía de HPB como causa de infecciones en hombres →
+                </Link>
+                <Link href="/prostatitis" className="block text-sm text-blue-700 hover:text-blue-900 font-medium underline">
+                  Ver prostatitis (próstata inflamada) →
                 </Link>
               </div>
             </motion.div>
