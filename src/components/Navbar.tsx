@@ -31,6 +31,9 @@ export default function Navbar() {
           <Link href="/segunda-opinion-oncologica" className="text-dorado font-semibold hover:text-dorado/80 transition-colors">
             Segunda Opinión
           </Link>
+          <Link href="/agendar" className="hover:text-editorial transition-colors">
+            Agendar en línea
+          </Link>
           <WAButtonConSelector
             mensaje={WA_MENSAJE}
             motivo="navbar-agendar"

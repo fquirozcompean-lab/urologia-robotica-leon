@@ -962,6 +962,12 @@ export default function CancerProstataContent() {
                   Agendar por WhatsApp
                 </Button>
               </WASelectorLink>
+              <Link
+                href="/agendar"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white/60 text-white font-semibold px-8 py-3 rounded-2xl hover:bg-white/10 transition-colors text-base"
+              >
+                Agendar cita en línea
+              </Link>
             </motion.div>
             <motion.div
               variants={fadeUp}

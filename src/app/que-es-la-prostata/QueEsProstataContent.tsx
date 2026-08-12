@@ -329,6 +329,11 @@ export default function QueEsProstataContent() {
           >
             Agendar una valoración
           </WAButtonConSelector>
+          <p className="mt-4">
+            <Link href="/agendar" className="text-acero underline hover:text-petroleo text-sm font-medium">
+              o agenda tu cita en línea →
+            </Link>
+          </p>
         </section>
       </article>
     </main>

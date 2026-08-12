@@ -72,6 +72,12 @@ export default function HomeContent() {
                   {WA_ICON}
                   Agendar valoración
                 </WAButtonConSelector>
+                <Link
+                  href="/agendar"
+                  className="inline-flex items-center justify-center gap-2 border border-editorial/40 text-editorial font-sans font-semibold px-6 py-4 rounded-lg hover:border-editorial hover:bg-editorial/10 transition-colors"
+                >
+                  Agendar cita en línea
+                </Link>
               </div>
 
               <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-editorial/70 justify-center lg:justify-start font-sans">

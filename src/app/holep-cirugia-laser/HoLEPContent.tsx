@@ -901,6 +901,12 @@ export default function HoLEPContent() {
                   Agendar Evaluación HoLEP
                 </motion.div>
               </WASelectorLink>
+              <Link
+                href="/agendar"
+                className="inline-flex items-center justify-center gap-2 border-2 border-editorial/50 text-editorial font-bold font-sans px-8 py-5 rounded-lg hover:bg-editorial/10 transition-colors text-lg"
+              >
+                Agendar cita en línea
+              </Link>
             </motion.div>
             <motion.div
               variants={fadeUp}

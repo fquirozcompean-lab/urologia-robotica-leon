@@ -325,6 +325,11 @@ export default function VasectomiaContent() {
           >
             Agendar por WhatsApp
           </WAButtonConSelector>
+          <p className="mt-4">
+            <Link href="/agendar" className="text-editorial/80 underline hover:text-editorial text-sm">
+              o agenda tu cita en línea →
+            </Link>
+          </p>
         </section>
       </article>
     </main>
