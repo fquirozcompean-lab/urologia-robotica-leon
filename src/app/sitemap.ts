@@ -147,6 +147,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: 'https://urologiaroboticaleon.com/balanitis',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: 'https://urologiaroboticaleon.com/granitos-en-el-pene',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: 'https://urologiaroboticaleon.com/en/international-patients',
       lastModified: new Date(),
       changeFrequency: 'monthly',

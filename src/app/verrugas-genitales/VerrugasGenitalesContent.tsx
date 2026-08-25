@@ -330,7 +330,13 @@ export default function VerrugasGenitalesContent() {
         <section className="mx-auto max-w-5xl px-4 py-16">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <h2 className="text-3xl font-bold mb-2">¿Qué son las Verrugas Genitales?</h2>
-            <p className="text-slate-600 mb-8">Crecimientos en piel del área genital causados por el Virus del Papiloma Humano (VPH)</p>
+            <p className="text-slate-600 mb-4">Crecimientos en piel del área genital causados por el Virus del Papiloma Humano (VPH)</p>
+            <p className="text-sm text-slate-500 mb-8">
+              ¿No sabes si lo tuyo son verrugas o granitos benignos?{" "}
+              <Link href="/granitos-en-el-pene" className="text-acero font-medium hover:underline">
+                Guía: granitos, bolitas o manchas en el pene →
+              </Link>
+            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-6">

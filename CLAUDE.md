@@ -158,6 +158,8 @@ npx lighthouse https://urologiaroboticaleon.com/ --output=json \
 | `/que-es-el-rinon` | `app/que-es-el-rinon/` (pilar informativo renal — card en home Cat. 4) |
 | `/dolor-de-rinon` | `app/dolor-de-rinon/` (síntoma — card en home Cat. 4) |
 | `/vasectomia` | `app/vasectomia/` (procedimiento — card en home Cat. 3) |
+| `/balanitis` | `app/balanitis/` (pilar salud del pene — card en home Cat. 3) |
+| `/granitos-en-el-pene` | `app/granitos-en-el-pene/` (satélite de /balanitis — sin card, enlaza a VPH/verrugas) |
 | `/agendar` | `app/agendar/` |
 | `/gracias` | `app/gracias/` (noindex — post-conversión, NO va en sitemap) |
 | `/aviso-de-privacidad` | `app/aviso-de-privacidad/` |
@@ -197,8 +199,10 @@ HPB, HoLEP, medicamentos para próstata, y futuras páginas relacionadas con
 próstata benigna.
 
 **Categoría 3 — Salud Sexual y Urológica General** ← acento quirurgico
-Disfunción eréctil, VPH, verrugas genitales, infección urinaria, vasectomía, y
-futuras condiciones de salud sexual o urológica general.
+Disfunción eréctil, VPH, verrugas genitales, infección urinaria, vasectomía,
+balanitis, y futuras condiciones de salud sexual o urológica general. Mini-clúster
+de "salud del pene": balanitis (pilar, con card) + granitos-en-el-pene (satélite,
+sin card) enlazan entre sí y con VPH/verrugas.
 
 **Categoría 4 — Riñón y Vías Urinarias** ← acento quirurgico (implementada Jul 2026)
 Pilar /que-es-el-rinon, dolor de riñón, cálculos renales, hematuria, y futuras

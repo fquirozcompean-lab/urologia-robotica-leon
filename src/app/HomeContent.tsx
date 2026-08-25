@@ -20,6 +20,7 @@ import {
   Flame,
   MapPin,
   Scissors,
+  Bandage,
 } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
 import WAButton from "@/components/WAButton";
@@ -235,6 +236,7 @@ export default function HomeContent() {
               <ServiceCard icon={<Stethoscope size={48} className="text-quirurgico" strokeWidth={2} />} title="Verrugas Genitales" description="Tratamiento y eliminación de verrugas genitales. Crioterapia, electrofulguración y láser para resultados efectivos." href="/verrugas-genitales" />
               <ServiceCard icon={<Zap size={48} className="text-quirurgico" strokeWidth={2} />} title="Infección Urinaria" description="Diagnóstico y tratamiento de infecciones urinarias agudas y recurrentes. Evaluación completa y plan de prevención personalizado." href="/infeccion-urinaria" />
               <ServiceCard icon={<Scissors size={48} className="text-quirurgico" strokeWidth={2} />} title="Vasectomía sin Bisturí" description="Método anticonceptivo definitivo, ambulatorio y con anestesia local. Qué es, cómo se hace, recuperación y reversión. Sin corte ni puntos." href="/vasectomia" />
+              <ServiceCard icon={<Bandage size={48} className="text-quirurgico" strokeWidth={2} />} title="Balanitis (Inflamación del Glande)" description="Enrojecimiento, comezón o irritación en la punta del pene: causas, síntomas y tratamiento. Por qué no toda balanitis es por hongos y cuándo consultar." href="/balanitis" />
             </div>
           </div>
 
