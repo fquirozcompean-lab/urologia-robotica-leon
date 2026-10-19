@@ -279,6 +279,12 @@ export default function CancerProstataContent() {
               height={1080}
               className="mt-10 rounded-2xl border border-slate-200 shadow-sm w-full max-w-xl mx-auto h-auto"
             />
+            <p className="mt-6 text-sm text-slate-600 max-w-3xl">
+              ¿Se puede reducir el riesgo o prevenirlo?{" "}
+              <Link href="/prevencion-cancer-prostata" className="text-acero font-medium hover:underline">
+                Prevención del cáncer de próstata: qué funciona y qué es mito →
+              </Link>
+            </p>
           </div>
         </section>
 

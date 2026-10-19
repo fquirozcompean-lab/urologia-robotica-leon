@@ -154,6 +154,7 @@ npx lighthouse https://urologiaroboticaleon.com/ --output=json \
 | `/hematuria` | `app/hematuria/` |
 | `/uroflujometria-leon` | `app/uroflujometria-leon/` (estudio — sub-página, sin card en home) |
 | `/que-es-la-prostata` | `app/que-es-la-prostata/` (pilar informativo — card en home Cat. 2) |
+| `/prevencion-cancer-prostata` | `app/prevencion-cancer-prostata/` (sub-página de /cancer-prostata — sin card, marco de detección/evidencia) |
 | `/prostatitis` | `app/prostatitis/` |
 | `/que-es-el-rinon` | `app/que-es-el-rinon/` (pilar informativo renal — card en home Cat. 4) |
 | `/dolor-de-rinon` | `app/dolor-de-rinon/` (síntoma — card en home Cat. 4) |
