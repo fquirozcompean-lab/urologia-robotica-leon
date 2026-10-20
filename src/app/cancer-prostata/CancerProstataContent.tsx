@@ -524,7 +524,7 @@ export default function CancerProstataContent() {
                   tag: "Riesgo intermedio / alto · Localizado",
                   tagColor: "bg-blue-100 text-blue-700",
                   title: "Prostatectomía Robótica (Da Vinci)",
-                  body: "Cuando la cirugía es la mejor opción para tu caso, la vía robótica ofrece el mejor perfil quirúrgico: visión 3D magnificada, precisión milimétrica, preservación de nervios, mínimo sangrado y hospitalización de 1–2 días. El Dr. Quiroz realizó su formación en cirugía robótica en el Hospital Albert Einstein (Brasil) y el INCan.",
+                  body: "Cuando la cirugía es la mejor opción para tu caso, la vía robótica ofrece ventajas quirúrgicas importantes: visión 3D magnificada, precisión milimétrica, preservación de nervios, mínimo sangrado y hospitalización de 1–2 días. El Dr. Quiroz realizó su formación en cirugía robótica en el Hospital Albert Einstein (Brasil) y el INCan.",
                   note: "Ventaja clave: el PSA cae a cero días después de la cirugía, lo que permite detectar recurrencia de forma temprana y precisa.",
                 },
                 {
@@ -885,6 +885,33 @@ export default function CancerProstataContent() {
                 antes de la biopsia), biopsia de fusión dirigida a zonas sospechosas y
                 seguimiento estrecho del PSA. Lo importante es <strong>no abandonar el
                 seguimiento</strong> mientras el PSA permanezca elevado.
+              </FAQItem>
+
+              <FAQItem q="¿El cáncer de próstata es mortal?">
+                El cáncer de próstata <strong>no es una sentencia de muerte</strong>. En
+                etapa localizada la supervivencia a 5 años <strong>supera el 98%</strong> y
+                la mayoría de los hombres vive una vida plena. Puede ser mortal cuando se
+                detecta tarde, ya avanzado o con metástasis — por eso la detección temprana
+                con PSA es tan importante: encontrarlo a tiempo cambia por completo el
+                pronóstico.
+              </FAQItem>
+
+              <FAQItem q="¿La masturbación causa cáncer de próstata?">
+                No. <strong>No hay evidencia científica de que la masturbación cause cáncer
+                de próstata</strong>; es un mito. De hecho, algunos estudios sugieren que la
+                eyaculación frecuente no aumenta el riesgo. Los factores que sí importan son
+                la edad, los antecedentes familiares y la genética.
+              </FAQItem>
+
+              <FAQItem q="¿Cuánto cuesta una biopsia de próstata y en qué consiste?">
+                La biopsia obtiene pequeñas muestras de tejido prostático para confirmar o
+                descartar el cáncer. Puede realizarse por vía transrectal o, de forma más
+                precisa, por{" "}
+                <Link href="/resonancia-magnetica-prostata" className="text-acero font-medium hover:underline">
+                  fusión con la resonancia magnética
+                </Link>
+                , que dirige las muestras a las zonas sospechosas. El costo se informa en la
+                consulta e incluye el procedimiento y el análisis patológico.
               </FAQItem>
 
               <FAQItem q="¿Los seguros médicos cubren el tratamiento del cáncer de próstata?">

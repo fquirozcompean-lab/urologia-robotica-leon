@@ -148,7 +148,7 @@ const treatments = [
       "Estadio II con marcadores elevados, estadio III (metástasis), no seminoma de alto riesgo",
     hospitalization: "Ambulatorio con ciclos periódicos",
     description:
-      "El esquema BEP (bleomicina, etopósido, cisplatino) es uno de los tratamientos oncológicos más exitosos en medicina. Ha transformado el cáncer testicular diseminado de una enfermedad casi uniformemente fatal a una altamente curable. Se administra en ciclos de 21 días (generalmente 3 o 4 ciclos según el estadio y el grupo pronóstico de la clasificación IGCCCG). El Dr. Quiroz coordina el tratamiento con oncología médica para garantizar el mejor plan terapéutico integrado.",
+      "El esquema BEP (bleomicina, etopósido, cisplatino) es uno de los tratamientos oncológicos más exitosos en medicina. Ha transformado el cáncer testicular diseminado de una enfermedad casi uniformemente fatal a una altamente curable. Se administra en ciclos de 21 días (generalmente 3 o 4 ciclos según el estadio y el grupo pronóstico de la clasificación IGCCCG). El Dr. Quiroz coordina el tratamiento con oncología médica para ofrecer un plan terapéutico integrado.",
     pros: [
       "Tasa de curación >90% en estadio II y >70% incluso en estadio III de buen pronóstico",
       "Estándar de oro internacional con décadas de evidencia",
@@ -1253,6 +1253,23 @@ export default function CancerTesticularContent() {
                 tumorales, TAC de control y exploración física en intervalos definidos durante
                 5 años. La mayoría de las recaídas detectadas en el seguimiento son tratables
                 con quimioterapia de rescate u otras intervenciones.
+              </FAQItem>
+
+              <FAQItem q="¿El cáncer testicular es mortal?">
+                Rara vez. El cáncer testicular es <strong>uno de los cánceres más
+                curables</strong> que existen: incluso cuando se ha diseminado, las tasas de
+                curación son muy altas gracias a la quimioterapia. La clave es{" "}
+                <strong>no demorar la consulta</strong> ante cualquier bulto o cambio en el
+                testículo — detectarlo pronto hace el tratamiento más sencillo.
+              </FAQItem>
+
+              <FAQItem q="¿Cómo se hace la autoexploración testicular?">
+                Es sencilla y conviene hacerla <strong>una vez al mes</strong>, de
+                preferencia después de una ducha tibia (la piel está relajada). Sostén cada
+                testículo entre los dedos y rueda suavemente su superficie buscando bultos,
+                durezas o cambios de tamaño. El epidídimo —un cordón blando en la parte de
+                atrás— es normal. Ante cualquier bulto, dureza o cambio, acude a valoración
+                sin esperar.
               </FAQItem>
             </div>
           </div>

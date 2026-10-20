@@ -137,6 +137,22 @@ const faqSchema = {
         text: "La recaída es posible, especialmente en los primeros 2 años tras el tratamiento. Por eso el seguimiento oncológico es fundamental: incluye exploración física, marcadores tumorales (AFP, β-HCG, LDH) y estudios de imagen de forma periódica. La mayoría de las recaídas se detectan en el seguimiento rutinario y son tratables con quimioterapia de rescate u otras intervenciones. El seguimiento estricto a 5 años es parte integral del tratamiento.",
       },
     },
+    {
+      "@type": "Question",
+      name: "¿El cáncer testicular es mortal?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Rara vez. El cáncer testicular es uno de los cánceres más curables que existen: incluso cuando se ha diseminado, las tasas de curación son muy altas gracias a la quimioterapia. La clave es no demorar la consulta ante cualquier bulto o cambio en el testículo — detectarlo pronto hace el tratamiento más sencillo.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cómo se hace la autoexploración testicular?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Es sencilla y conviene hacerla una vez al mes, de preferencia después de una ducha tibia (la piel está relajada). Sostén cada testículo entre los dedos y rueda suavemente su superficie buscando bultos, durezas o cambios de tamaño. El epidídimo —un cordón blando en la parte de atrás— es normal. Ante cualquier bulto, dureza o cambio, acude a valoración sin esperar.",
+      },
+    },
   ],
 };
 

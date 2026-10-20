@@ -150,6 +150,30 @@ const faqSchema = {
     },
     {
       "@type": "Question",
+      name: "¿El cáncer de próstata es mortal?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El cáncer de próstata no es una sentencia de muerte. En etapa localizada la supervivencia a 5 años supera el 98% y la mayoría de los hombres vive una vida plena. Puede ser mortal cuando se detecta tarde, ya avanzado o con metástasis — por eso la detección temprana con PSA es tan importante: encontrarlo a tiempo cambia por completo el pronóstico.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿La masturbación causa cáncer de próstata?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. No hay evidencia científica de que la masturbación cause cáncer de próstata; es un mito. De hecho, algunos estudios sugieren que la eyaculación frecuente no aumenta el riesgo. Los factores que sí importan son la edad, los antecedentes familiares y la genética.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuánto cuesta una biopsia de próstata y en qué consiste?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La biopsia obtiene pequeñas muestras de tejido prostático para confirmar o descartar el cáncer. Puede realizarse por vía transrectal o, de forma más precisa, por fusión con la resonancia magnética, que dirige las muestras a las zonas sospechosas. El costo se informa en la consulta e incluye el procedimiento y el análisis patológico.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "¿Los seguros médicos cubren el tratamiento del cáncer de próstata?",
       acceptedAnswer: {
         "@type": "Answer",
