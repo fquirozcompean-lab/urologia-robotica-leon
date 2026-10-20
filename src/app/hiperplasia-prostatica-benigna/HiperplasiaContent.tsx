@@ -857,6 +857,14 @@ export default function HiperplasiaContent() {
                               Ver guía completa de HoLEP →
                             </Link>
                           )}
+                          {t.id === "rezum" && (
+                            <Link
+                              href="/rezum-prostata"
+                              className="text-sm font-medium text-teal-700 hover:underline"
+                            >
+                              Ver guía completa de Rezum →
+                            </Link>
+                          )}
                         </div>
                       </motion.div>
                     )}

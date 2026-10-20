@@ -784,6 +784,12 @@ export default function MedicamentosProstataContent() {
                 Conoce HoLEP: cirugía láser de próstata →
               </Link>
               <Link
+                href="/rezum-prostata"
+                className="inline-block border border-slate-500 text-slate-200 font-semibold px-6 py-3 rounded-xl hover:bg-slate-700 transition"
+              >
+                Rezum: vapor de agua (preserva eyaculación) →
+              </Link>
+              <Link
                 href="/hiperplasia-prostatica-benigna"
                 className="inline-block border border-slate-500 text-slate-200 font-semibold px-6 py-3 rounded-xl hover:bg-slate-700 transition"
               >

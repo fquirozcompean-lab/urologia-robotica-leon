@@ -154,6 +154,7 @@ npx lighthouse https://urologiaroboticaleon.com/ --output=json \
 | `/hematuria` | `app/hematuria/` |
 | `/uroflujometria-leon` | `app/uroflujometria-leon/` (estudio — sub-página, sin card en home) |
 | `/que-es-la-prostata` | `app/que-es-la-prostata/` (pilar informativo — card en home Cat. 2) |
+| `/rezum-prostata` | `app/rezum-prostata/` (tratamiento HPB — card en home Cat. 2; Rezum para próstatas chicas-medianas, HoLEP para grandes) |
 | `/prevencion-cancer-prostata` | `app/prevencion-cancer-prostata/` (sub-página de /cancer-prostata — sin card, marco de detección/evidencia) |
 | `/prostatitis` | `app/prostatitis/` |
 | `/que-es-el-rinon` | `app/que-es-el-rinon/` (pilar informativo renal — card en home Cat. 4) |
@@ -196,8 +197,11 @@ Este es el patrón para futuras páginas de estudios/técnicas que pertenecen a 
 (ver checklist).
 
 **Categoría 2 — Próstata (no oncológica)** ← acento quirurgico
-HPB, HoLEP, medicamentos para próstata, y futuras páginas relacionadas con
-próstata benigna.
+¿Qué es la próstata? (pilar), HPB, prostatitis, HoLEP, Rezum, medicamentos para
+próstata, y futuras páginas de próstata benigna. Escalera de tratamiento del
+crecimiento: medicamentos → Rezum (chicas-medianas, preserva eyaculación) → HoLEP
+(grandes, definitivo). **Cat. 2 llegó a 6 cards (Oct 2026) — junto con Cat. 3 (6),
+el dropdown del navbar por categoría ya es el siguiente paso recomendado.**
 
 **Categoría 3 — Salud Sexual y Urológica General** ← acento quirurgico
 Disfunción eréctil, VPH, verrugas genitales, infección urinaria, vasectomía,
