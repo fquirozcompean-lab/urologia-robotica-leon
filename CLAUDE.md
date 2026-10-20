@@ -56,7 +56,12 @@ Clases: `bg-petroleo`, `text-editorial`, `bg-acero`, `text-quirurgico`, `text-do
 ```
 src/
 ├── components/
-│   ├── Navbar.tsx          ← navbar global fija (bg-petroleo), WA verde + link Segunda Opinión (dorado)
+│   ├── Navbar.tsx          ← navbar global fija (bg-petroleo), client component. Desktop:
+│   │                          mega-menú "Especialidades" (dropdown con las 4 categorías del
+│   │                          home) + Hospitales + Sobre el Dr. + Segunda Opinión (dorado) +
+│   │                          Agendar en línea + botón WA. Móvil: botón WA + hamburguesa que
+│   │                          abre panel con las 4 categorías. El dropdown lista SOLO las
+│   │                          páginas con card (satélites se acceden desde su hub).
 │   ├── Footer.tsx          ← footer global (bg-petroleo, 5 cols + COFEPRIS)
 │   │                          Col. "Especialidades": links sitewide a las 4 páginas
 │   │                          prioritarias (próstata, HoLEP, renal, segunda opinión)
@@ -200,8 +205,7 @@ Este es el patrón para futuras páginas de estudios/técnicas que pertenecen a 
 ¿Qué es la próstata? (pilar), HPB, prostatitis, HoLEP, Rezum, medicamentos para
 próstata, y futuras páginas de próstata benigna. Escalera de tratamiento del
 crecimiento: medicamentos → Rezum (chicas-medianas, preserva eyaculación) → HoLEP
-(grandes, definitivo). **Cat. 2 llegó a 6 cards (Oct 2026) — junto con Cat. 3 (6),
-el dropdown del navbar por categoría ya es el siguiente paso recomendado.**
+(grandes, definitivo). Cat. 2 en 6 cards (Oct 2026).
 
 **Categoría 3 — Salud Sexual y Urológica General** ← acento quirurgico
 Disfunción eréctil, VPH, verrugas genitales, infección urinaria, vasectomía,
@@ -259,9 +263,11 @@ médica (ej. NO linkear cáncer renal → PET-PSMA: el PSMA es específico de pr
   Vías Urinarias" moviendo cálculos, hematuria, ¿qué es el riñón? y dolor de riñón;
   Cat. 3 quedó con disfunción, VPH, verrugas e infección (4 cards). El home ahora
   tiene 4 categorías clínicas de ~4 cards cada una.
-- Cuando se agregue contenido de medicamentos urológicos generales o el blog,
-  reevaluar el navbar "Especialidades" como menú desplegable (hoy son 4 categorías;
-  un dropdown por categoría sería el siguiente paso natural si crecen).
+- **Dropdown del navbar → implementado (Oct 2026):** al llegar Cat. 2 y Cat. 3 a 6
+  cards cada una, "Especialidades" pasó de anchor simple a mega-menú (dropdown desktop
+  con las 4 categorías + menú hamburguesa en móvil). Al agregar/quitar una página CON
+  card, actualizar también el arreglo `ESPECIALIDADES` en `Navbar.tsx` (es la misma
+  lista que los cards del home — mantener en sincronía).
 
 ## Reglas editoriales / médico-legales
 - ❌ NO usar: "el mejor", "garantizado", "100% seguro", "cura definitiva"
