@@ -154,6 +154,22 @@ const faqSchema = {
         text: "La nefrectomía radical laparoscópica dura 2-3 horas. La nefrectomía parcial robótica o laparoscópica de 2-4 horas según la complejidad. La nefrectomía con trombo tumoral o cirugía abierta en tumores muy grandes puede durar 4-6 horas.",
       },
     },
+    {
+      "@type": "Question",
+      name: "¿Qué síntomas da el cáncer de riñón en las mujeres?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El cáncer renal produce los mismos síntomas en mujeres y en hombres, porque no depende de órganos sexuales: sangre en la orina (hematuria), dolor persistente en el costado o la espalda baja, masa palpable en el abdomen, fatiga, pérdida de peso sin explicación y anemia. En mujeres, el sangrado urinario a veces se confunde con sangrado ginecológico o infección, lo que puede retrasar el diagnóstico. Muchos tumores se detectan por casualidad en estudios de imagen antes de dar síntomas. Ante sangre en la orina o dolor lumbar persistente conviene una valoración urológica.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué síntomas da el cáncer de riñón avanzado?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Cuando el cáncer renal está avanzado o se ha diseminado pueden aparecer síntomas según los órganos afectados: tos persistente o falta de aire (pulmón), dolor óseo, pérdida de peso importante, fatiga marcada, fiebre sin causa aparente y anemia; también hipertensión o elevación del calcio. Incluso en etapas avanzadas, el cáncer renal cuenta hoy con tratamientos que han transformado el pronóstico: la inmunoterapia y las terapias dirigidas permiten controlar la enfermedad durante periodos prolongados en muchos pacientes. Un diagnóstico avanzado no significa que no haya opciones, sino que el manejo debe ser multidisciplinario y personalizado.",
+      },
+    },
   ],
 };
 

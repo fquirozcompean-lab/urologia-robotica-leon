@@ -1236,6 +1236,31 @@ export default function CancerRenalContent() {
                 especializado y asesoría genética. Si tienes antecedentes familiares de cáncer
                 renal, menciónalo en la consulta.
               </FAQItem>
+
+              <FAQItem q="¿Qué síntomas da el cáncer de riñón en las mujeres?">
+                El cáncer renal produce los mismos síntomas en mujeres y en hombres, porque
+                no depende de órganos sexuales. Los más frecuentes son: sangre en la orina
+                (hematuria), dolor persistente en el costado o la espalda baja, una masa
+                palpable en el abdomen, fatiga, pérdida de peso sin explicación y anemia. En
+                mujeres, el sangrado urinario a veces se confunde con sangrado ginecológico o
+                con una infección, lo que puede retrasar el diagnóstico. Hoy muchos tumores
+                renales se detectan por casualidad en ecografías o tomografías hechas por otra
+                causa, antes de dar síntomas. Ante sangre en la orina o dolor lumbar
+                persistente, conviene una valoración urológica.
+              </FAQItem>
+
+              <FAQItem q="¿Qué síntomas da el cáncer de riñón avanzado?">
+                Cuando el cáncer renal está avanzado o se ha diseminado, pueden aparecer
+                síntomas fuera del riñón según los órganos afectados: tos persistente o falta
+                de aire (pulmón), dolor óseo (hueso), pérdida de peso importante, fatiga
+                marcada, fiebre sin causa aparente y anemia. También puede haber hipertensión
+                o elevación del calcio en sangre. Es importante saber que, incluso en etapas
+                avanzadas, el cáncer renal cuenta hoy con tratamientos que han transformado el
+                pronóstico: la inmunoterapia y las terapias dirigidas permiten controlar la
+                enfermedad durante periodos prolongados en muchos pacientes. Un diagnóstico
+                avanzado no significa que no haya opciones, sino que el manejo debe ser
+                multidisciplinario y personalizado.
+              </FAQItem>
             </div>
           </div>
         </section>

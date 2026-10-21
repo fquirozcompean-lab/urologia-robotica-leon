@@ -277,6 +277,17 @@ export default function PetPsmaContent() {
               lo más importante — <strong>interpreta el resultado</strong> dentro de su
               plan de tratamiento completo.
             </FAQItem>
+            <FAQItem q="¿Cuánto cuesta el PET-PSMA y dónde se realiza en León?">
+              El costo varía según la unidad de medicina nuclear y lo que incluya el estudio
+              (radiotrazador, equipo <strong>PET/CT</strong> e interpretación). El{" "}
+              <strong>PSMA PET</strong> no se realiza en todos los hospitales: requiere una
+              unidad con tecnología PET CT, de las cuales existen opciones privadas en León y
+              el Bajío. Lo más útil es que la indicación y la lectura las haga un urólogo
+              oncólogo: un estudio mal indicado o interpretado fuera de contexto representa un
+              gasto sin aportar valor. En la valoración, el Dr. Quiroz confirma si está
+              indicado en tu caso, coordina la unidad y te orienta sobre el costo aproximado
+              antes de realizarlo.
+            </FAQItem>
           </div>
         </div>
       </section>

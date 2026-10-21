@@ -1450,6 +1450,25 @@ export default function CancerVejigaContent() {
                 que, una vez adaptados, la urostomía tiene poco impacto en su calidad de vida
                 cotidiana.
               </FAQItem>
+
+              <FAQItem q="¿Qué síntomas da el cáncer de vejiga en las mujeres?">
+                Los síntomas son los mismos en mujeres y en hombres: el más frecuente es
+                sangre en la orina (hematuria), muchas veces sin dolor. También puede haber
+                necesidad urgente y frecuente de orinar, ardor al orinar y molestia en la
+                parte baja del abdomen. En las mujeres, estos síntomas suelen atribuirse a una
+                infección urinaria o a causas ginecológicas, lo que puede retrasar el
+                diagnóstico; por eso, una hematuria que no se explica claramente o que
+                reaparece debe estudiarse con cistoscopia, aunque los cultivos de orina salgan
+                negativos. Si notas sangre en la orina, no la atribuyas de entrada a una
+                infección: una valoración urológica lo aclara.{" "}
+                <Link
+                  href="/hematuria"
+                  className="text-acero font-semibold underline underline-offset-2 hover:text-petroleo"
+                >
+                  Conoce más sobre la sangre en la orina
+                </Link>
+                .
+              </FAQItem>
             </div>
           </div>
         </section>

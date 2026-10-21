@@ -140,6 +140,14 @@ const faqSchema = {
         text: "En la mayoría de los casos no es hereditario — es multifactorial. Sin embargo, tener un familiar de primer grado con cáncer de vejiga aumenta el riesgo moderadamente. Existen síndromes genéticos raros como el síndrome de Lynch que aumentan el riesgo de cáncer urotelial.",
       },
     },
+    {
+      "@type": "Question",
+      name: "¿Qué síntomas da el cáncer de vejiga en las mujeres?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Los síntomas son los mismos en mujeres y en hombres: el más frecuente es sangre en la orina (hematuria), muchas veces sin dolor. También puede haber urgencia y frecuencia urinaria, ardor al orinar y molestia en la parte baja del abdomen. En las mujeres estos síntomas suelen atribuirse a una infección urinaria o a causas ginecológicas, lo que puede retrasar el diagnóstico; por eso una hematuria no explicada o recurrente debe estudiarse con cistoscopia, aunque los cultivos de orina salgan negativos.",
+      },
+    },
   ],
 };
 

@@ -947,7 +947,7 @@ export default function DisfuncionErectilContent() {
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Por qué elegir al Dr. Quiroz</h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {[
-                  { icon: "🔒", titulo: "Consulta 100% confidencial", detalle: "Ambiente de confianza, sin juicios, privacidad garantizada" },
+                  { icon: "🔒", titulo: "Consulta confidencial", detalle: "Ambiente de confianza y respeto, sin juicios, con total discreción" },
                   { icon: "🔬", titulo: "Evaluación completa", detalle: "Física, hormonal, vascular y psicológica — diagnóstico preciso" },
                   { icon: "💊", titulo: "Todas las opciones", detalle: "Desde medicamentos orales hasta implante de prótesis — sin excluir ninguna" },
                   { icon: "⚕️", titulo: "Casos complejos", detalle: "Experiencia en post-cirugía prostática, diabetes avanzada, daño neurológico" },

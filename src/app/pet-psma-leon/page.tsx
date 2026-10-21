@@ -18,6 +18,11 @@ export const metadata: Metadata = {
     "dónde hacer PET PSMA León",
     "urólogo oncólogo PET PSMA",
     "metástasis cáncer de próstata diagnóstico",
+    "PET CT próstata",
+    "PSMA PET CT",
+    "PET con PSMA",
+    "PSMA PET scan",
+    "costo PET PSMA León",
   ],
   openGraph: {
     title: "PET-PSMA en León | Dr. Quiroz Compeán",
@@ -54,42 +59,42 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "¿Qué es el PET-PSMA?",
+      name: "¿El estudio duele o tiene efectos secundarios?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Es un estudio de imagen molecular que utiliza un radiotrazador dirigido al antígeno prostático específico de membrana (PSMA), una proteína presente en la superficie de las células de cáncer de próstata. Permite visualizar con gran precisión dónde hay células tumorales en todo el cuerpo, incluso en lesiones pequeñas que otros estudios no detectan.",
+        text: "No. Es un estudio ambulatorio y bien tolerado: se aplica el radiotrazador por vía intravenosa, se espera aproximadamente una hora y se adquieren las imágenes. La dosis de radiación es comparable a la de otros estudios de medicina nuclear.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Cuándo está indicado el PET-PSMA?",
+      name: "¿Sustituye a la biopsia de próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Las guías internacionales (NCCN, EAU) lo recomiendan principalmente en dos escenarios: estadificación inicial de cáncer de próstata de riesgo alto o desfavorable, y recurrencia bioquímica (PSA en ascenso después de cirugía o radioterapia) para localizar dónde está la enfermedad y dirigir el tratamiento.",
+        text: "No. El diagnóstico de cáncer de próstata se confirma con biopsia. El PET-PSMA responde otra pregunta: hasta dónde llega la enfermedad. Son estudios complementarios dentro de una evaluación integral.",
       },
     },
     {
       "@type": "Question",
-      name: "¿El PET-PSMA está disponible en León, Guanajuato?",
+      name: "¿Todos los pacientes con cáncer de próstata lo necesitan?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí. León cuenta con acceso a PET-PSMA, algo poco común fuera de las grandes capitales. El Dr. Quiroz Compeán lo integra en la evaluación de sus pacientes cuando está indicado, sin necesidad de trasladarse a Ciudad de México o Guadalajara.",
+        text: "No. En cáncer de bajo riesgo generalmente no está indicado. Su mayor utilidad es en riesgo alto y en recurrencia bioquímica. El Dr. Quiroz valora cada caso conforme a las guías NCCN y EAU.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Qué ventajas tiene sobre la tomografía y el gammagrama óseo?",
+      name: "¿Qué necesito para realizarlo?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El PET-PSMA detecta enfermedad en ganglios linfáticos y hueso con mayor sensibilidad y especificidad que la tomografía computarizada y el gammagrama óseo combinados, especialmente con valores bajos de PSA. Esto permite tomar decisiones de tratamiento más certeras: evitar cirugías que no beneficiarían al paciente o confirmar que un tratamiento curativo sí es viable.",
+        text: "Una valoración previa con su expediente (PSA, biopsia, estudios previos). Si está indicado, el Dr. Quiroz coordina el estudio y —lo más importante— interpreta el resultado dentro de su plan de tratamiento completo.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Cómo me preparo para un PET-PSMA?",
+      name: "¿Cuánto cuesta el PET-PSMA y dónde se realiza en León?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La preparación es sencilla y el estudio es ambulatorio. Se aplica el radiotrazador por vía intravenosa, se espera aproximadamente una hora y se realiza la adquisición de imágenes. El Dr. Quiroz le indicará los detalles específicos y coordinará el estudio como parte de su plan de evaluación.",
+        text: "El costo varía según la unidad de medicina nuclear y lo que incluya el estudio (radiotrazador, equipo PET/CT e interpretación). El PSMA PET no se realiza en todos los hospitales: requiere una unidad con tecnología PET CT, de las cuales existen opciones privadas en León y el Bajío. Lo más útil es que la indicación y la lectura las haga un urólogo oncólogo: un estudio mal indicado o interpretado fuera de contexto representa un gasto sin aportar valor. En la valoración, el Dr. Quiroz confirma si está indicado en tu caso, coordina la unidad y te orienta sobre el costo aproximado antes de realizarlo.",
       },
     },
   ],

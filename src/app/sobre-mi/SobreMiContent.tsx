@@ -379,7 +379,7 @@ export default function SobreMiContent() {
               <p className="text-sm text-gris-profundo font-serif leading-relaxed">
                 Certificación que acredita el dominio técnico, ético y
                 académico en urología. Renovable periódicamente para
-                garantizar actualización continua en los estándares más
+                mantener la actualización continua en los estándares más
                 recientes.
               </p>
             </motion.div>
