@@ -86,7 +86,7 @@ const faqSchema = {
       name: "¿Rezum o HoLEP: cuál me conviene?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Depende sobre todo del tamaño de la próstata y de tus prioridades. El Rezum es ideal para próstatas chicas a medianas y para quien quiere preservar la eyaculación evitando una cirugía mayor. El HoLEP es la mejor opción para próstatas grandes y ofrece un resultado más definitivo e inmediato. En la consulta, con una uroflujometría y la medición del volumen prostático, se define cuál se adapta a tu caso.",
+        text: "Depende sobre todo del tamaño de la próstata y de tus prioridades. El Rezum es ideal para próstatas chicas a medianas y para quien quiere preservar la eyaculación evitando una cirugía mayor. El HoLEP es más adecuado para próstatas grandes y ofrece un resultado más definitivo e inmediato. En la consulta, con una uroflujometría y la medición del volumen prostático, se define cuál se adapta a tu caso.",
       },
     },
     {
@@ -94,7 +94,7 @@ const faqSchema = {
       name: "¿El Rezum es permanente? ¿Podré dejar el medicamento?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Los estudios muestran mejoría sostenida de los síntomas a varios años, con una tasa baja de necesidad de re-tratamiento. Muchos pacientes logran dejar o reducir el medicamento para la próstata tras el Rezum. El resultado se valora de forma individual según tu respuesta.",
+        text: "Los estudios muestran mejoría sostenida de los síntomas a varios años. Como toda técnica que conserva tejido prostático, una proporción de pacientes puede requerir tratamiento adicional con el tiempo —algo más probable en próstatas grandes, por lo que el Rezum se reserva para próstatas chicas a medianas. Muchos pacientes logran dejar o reducir el medicamento para la próstata tras el Rezum. El resultado se valora de forma individual según tu respuesta.",
       },
     },
   ],
