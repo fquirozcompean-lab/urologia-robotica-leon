@@ -9,10 +9,17 @@
 - Aviso de Publicidad COFEPRIS: **2611072002A00152** (ya actualizado en todas las páginas)
 
 ## Consultorios
-| Hospital | Consultorio | Días |
-|---|---|---|
-| Hospital Ángeles León | 615, Torre II | Lun / Mar / Jue |
-| Hospital Christus Muguerza Altagracia | 724 | Mié / Vie |
+| Hospital | Consultorio | Días | Dirección (tal cual en Google Business) |
+|---|---|---|---|
+| Hospital Ángeles León | 615, Torre II | Lun / Mar / Jue | Av. Cerro Gordo 311, Consultorio 615, Torre II, Predio Cerro Gordo, 37150 León de los Aldama, Gto. |
+| Hospital Christus Muguerza Altagracia | 724 | Mié / Vie | Blvd. Jorge Vértiz Campero 761, Consultorio 724, 37238 León de los Aldama, Gto. |
+
+Ambos perfiles de Google Business usan el teléfono 477 633 0492. El schema
+`MedicalClinic` de `layout.tsx` tiene un bloque por perfil y debe coincidir **exactamente**
+con ellos (nombre, dirección, teléfono): la consistencia NAP pesa para aparecer en el
+mapa de "urólogo León". Al cambiar algo en un perfil de Business, actualizar aquí y en
+`layout.tsx`. (Jul–Oct 2026 el schema tenía solo Ángeles, con CP 37160 erróneo y con los
+días de Muguerza asignados a Ángeles — corregido Oct 2026.)
 
 ## Contacto y links clave
 - **WhatsApp:** `5214776330492` → `https://wa.me/5214776330492`

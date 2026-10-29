@@ -111,15 +111,16 @@ export default function RootLayout({
                 "https://www.researchgate.net/profile/Alejandro-Quiroz-Compean",
                 "https://www.linkedin.com/in/alejandro-quiroz-compean-9955ba61",
               ],
+              // Dirección principal = perfil de Google Business de Ángeles. Los dos
+              // consultorios van como MedicalClinic abajo (uno por perfil de Business).
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Av. Cerro Gordo 311, Consultorio 615, Torre II",
-                addressLocality: "León",
+                streetAddress: "Av. Cerro Gordo 311, Consultorio 615, Torre II, Predio Cerro Gordo",
+                addressLocality: "León de los Aldama",
                 addressRegion: "Guanajuato",
-                postalCode: "37160",
+                postalCode: "37150",
                 addressCountry: "MX",
               },
-              openingHours: "Mo-Fr 09:00-20:00",
               telephone: "+52-477-633-0492",
             }),
           }}
@@ -127,65 +128,81 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MedicalClinic",
-              name: "Dr. Alejandro Quiroz Compeán — Urología Oncológica y Cirugía Robótica",
-              image: "https://urologiaroboticaleon.com/og-image.jpg",
-              description:
-                "Consulta de urología oncológica y cirugía robótica en León, Guanajuato. Especialista en cáncer de próstata, hiperplasia prostática, HoLEP, cáncer renal y vejiga.",
-              url: "https://urologiaroboticaleon.com",
-              telephone: "+52-477-633-0492",
-              priceRange: "$$",
-              currenciesAccepted: "MXN",
-              paymentAccepted: "Efectivo, Tarjeta de crédito, Seguros médicos",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "Av. Cerro Gordo 311, Consultorio 615, Torre II",
-                addressLocality: "León",
-                addressRegion: "Guanajuato",
-                postalCode: "37160",
-                addressCountry: "MX",
-              },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: 21.1272,
-                longitude: -101.6840,
-              },
-              openingHoursSpecification: [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: ["Monday", "Tuesday", "Thursday"],
-                  opens: "09:00",
-                  closes: "20:00",
+            // Un MedicalClinic por perfil de Google Business. Dirección y teléfono
+            // copiados tal cual de cada perfil (consistencia NAP para el mapa).
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "MedicalClinic",
+                name: "Dr. Alejandro Quiroz Compean, Urólogo — Hospital Ángeles León",
+                image: "https://urologiaroboticaleon.com/og-image.jpg",
+                description:
+                  "Consulta de urología oncológica y cirugía robótica en Hospital Ángeles León (lunes, martes y jueves). Cáncer de próstata, hiperplasia prostática, HoLEP, cáncer renal y vejiga.",
+                url: "https://urologiaroboticaleon.com",
+                telephone: "+52-477-633-0492",
+                priceRange: "$$",
+                currenciesAccepted: "MXN",
+                paymentAccepted: "Efectivo, Tarjeta de crédito, Seguros médicos",
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: "Av. Cerro Gordo 311, Consultorio 615, Torre II, Predio Cerro Gordo",
+                  addressLocality: "León de los Aldama",
+                  addressRegion: "Guanajuato",
+                  postalCode: "37150",
+                  addressCountry: "MX",
                 },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: ["Wednesday", "Friday"],
-                  opens: "09:00",
-                  closes: "20:00",
+                geo: {
+                  "@type": "GeoCoordinates",
+                  latitude: 21.1272,
+                  longitude: -101.6840,
                 },
-              ],
-              sameAs: [
-                "https://www.instagram.com/urologo.alejandroquiroz/",
-                "https://www.facebook.com/DrQuirozUrologoLeon",
-                "https://www.doctoralia.com.mx/z/oFar6h",
-              ],
-              medicalSpecialty: [
-                "Urology",
-                "Oncology",
-                "Robotic Surgery",
-              ],
-              hasMap: "https://www.google.com/maps/search/?api=1&query=Hospital+Ángeles+León",
-              areaServed: {
-                "@type": "City",
-                name: "León",
-                containedInPlace: {
-                  "@type": "State",
-                  name: "Guanajuato",
+                sameAs: [
+                  "https://www.instagram.com/urologo.alejandroquiroz/",
+                  "https://www.facebook.com/DrQuirozUrologoLeon",
+                  "https://www.doctoralia.com.mx/z/oFar6h",
+                ],
+                medicalSpecialty: ["Urology", "Oncology", "Robotic Surgery"],
+                hasMap: "https://www.google.com/maps/search/?api=1&query=Hospital+Ángeles+León",
+                areaServed: {
+                  "@type": "City",
+                  name: "León",
+                  containedInPlace: { "@type": "State", name: "Guanajuato" },
                 },
               },
-            }),
+              {
+                "@context": "https://schema.org",
+                "@type": "MedicalClinic",
+                name: "Dr. Alejandro Quiroz Compeán - Urólogo Oncólogo (Christus Muguerza)",
+                image: "https://urologiaroboticaleon.com/og-image.jpg",
+                description:
+                  "Consulta de urología oncológica y cirugía robótica en Hospital Christus Muguerza Altagracia (miércoles y viernes). Cáncer de próstata, hiperplasia prostática, HoLEP, cáncer renal y vejiga.",
+                url: "https://urologiaroboticaleon.com",
+                telephone: "+52-477-633-0492",
+                priceRange: "$$",
+                currenciesAccepted: "MXN",
+                paymentAccepted: "Efectivo, Tarjeta de crédito, Seguros médicos",
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: "Blvd. Jorge Vértiz Campero 761, Consultorio 724",
+                  addressLocality: "León de los Aldama",
+                  addressRegion: "Guanajuato",
+                  postalCode: "37238",
+                  addressCountry: "MX",
+                },
+                sameAs: [
+                  "https://www.instagram.com/urologo.alejandroquiroz/",
+                  "https://www.facebook.com/DrQuirozUrologoLeon",
+                  "https://www.doctoralia.com.mx/z/oFar6h",
+                ],
+                medicalSpecialty: ["Urology", "Oncology", "Robotic Surgery"],
+                hasMap: "https://www.google.com/maps/search/?api=1&query=Hospital+Christus+Muguerza+Altagracia+León",
+                areaServed: {
+                  "@type": "City",
+                  name: "León",
+                  containedInPlace: { "@type": "State", name: "Guanajuato" },
+                },
+              },
+            ]),
           }}
         />
         <Script
