@@ -301,6 +301,9 @@ médica (ej. NO linkear cáncer renal → PET-PSMA: el PSMA es específico de pr
 - `dr-quiroz-profesional.jpg` — foto profesional alternativa
 - `foto con davinci.jpg` — con consola robótica Da Vinci
 - `Foto atras davinci.jpg` — atrás del sistema Da Vinci
+- `rezum-mecanismo-3-pasos.webp` — ilustración original (no es asset de Boston
+  Scientific) del mecanismo del Rezum en 3 pasos; usada en /rezum-prostata,
+  sección "¿Cómo funciona?"
 
 ## Estado de seguridad (npm audit)
 

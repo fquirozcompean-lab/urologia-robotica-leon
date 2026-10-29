@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Droplet, HeartPulse, Clock, CheckCircle } from "lucide-react";
 import WAButtonConSelector from "@/components/WAButtonConSelector";
@@ -10,89 +11,6 @@ const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 },
 };
-
-// Esquema original del mecanismo (SVG propio — sin assets de terceros).
-// Corte esquemático simplificado: vejiga arriba, próstata rodeando la uretra.
-function PasoRezum({
-  n,
-  titulo,
-  texto,
-  children,
-}: {
-  n: number;
-  titulo: string;
-  texto: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <motion.figure
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
-    >
-      <div className="flex justify-center">
-        <svg
-          viewBox="0 0 240 270"
-          className="w-full max-w-[200px] h-auto"
-          role="img"
-          aria-label={`Paso ${n}: ${titulo}. ${texto}`}
-        >
-          {children}
-        </svg>
-      </div>
-      <figcaption className="mt-3">
-        <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-quirurgico text-white text-xs font-bold mr-2 align-middle">
-          {n}
-        </span>
-        <span className="font-semibold text-slate-800">{titulo}</span>
-        <p className="text-sm text-slate-700 leading-relaxed mt-1">{texto}</p>
-      </figcaption>
-    </motion.figure>
-  );
-}
-
-// Anatomía base compartida por los 3 pasos (vejiga + próstata + uretra).
-function AnatomiaBase({
-  prostataRx,
-  prostataRy,
-  uretraW,
-}: {
-  prostataRx: number;
-  prostataRy: number;
-  uretraW: number;
-}) {
-  return (
-    <>
-      {/* Vejiga */}
-      <ellipse cx="120" cy="42" rx="46" ry="27" fill="#F1F5F9" stroke="#94A3B8" strokeWidth="2" />
-      <text x="120" y="46" textAnchor="middle" fontSize="11" fill="#64748B">vejiga</text>
-      {/* Próstata */}
-      <ellipse
-        cx="120"
-        cy="155"
-        rx={prostataRx}
-        ry={prostataRy}
-        fill="#E2ECF0"
-        stroke="#4A90A4"
-        strokeWidth="2.5"
-      />
-      {/* Uretra (canal) */}
-      <rect
-        x={120 - uretraW / 2}
-        y="66"
-        width={uretraW}
-        height="190"
-        rx={uretraW / 2}
-        fill="#FFFFFF"
-        stroke="#CBD5E1"
-        strokeWidth="1.5"
-      />
-    </>
-  );
-}
 
 function FAQItem({ q, children }: { q: string; children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
@@ -211,52 +129,20 @@ export default function RezumContent() {
             </p>
           </div>
 
-          {/* Esquema del mecanismo — ilustración original */}
-          <div className="mt-8 grid sm:grid-cols-3 gap-5">
-            <PasoRezum
-              n={1}
-              titulo="Se aplica el vapor"
-              texto="A través de la uretra, sin incisiones, se inyecta vapor de agua en el tejido prostático que obstruye."
-            >
-              <AnatomiaBase prostataRx={55} prostataRy={58} uretraW={8} />
-              {/* Aguja aplicando vapor hacia el tejido */}
-              <line x1="124" y1="150" x2="152" y2="132" stroke="#334155" strokeWidth="2.5" strokeLinecap="round" />
-              <circle cx="156" cy="129" r="4" fill="#4A90A4" />
-              <circle cx="150" cy="120" r="3" fill="#4A90A4" opacity="0.8" />
-              <circle cx="162" cy="136" r="2.6" fill="#4A90A4" opacity="0.7" />
-              <circle cx="158" cy="118" r="2.2" fill="#4A90A4" opacity="0.6" />
-            </PasoRezum>
-
-            <PasoRezum
-              n={2}
-              titulo="Trata el tejido sobrante"
-              texto="El vapor libera su energía térmica en una zona delimitada; esas células dejan de funcionar."
-            >
-              <AnatomiaBase prostataRx={55} prostataRy={58} uretraW={8} />
-              {/* Zona tratada delimitada */}
-              <ellipse cx="150" cy="130" rx="20" ry="16" fill="#B8A36A" opacity="0.18" stroke="#B8A36A" strokeWidth="1.8" strokeDasharray="5 3" />
-              <ellipse cx="90" cy="130" rx="20" ry="16" fill="#B8A36A" opacity="0.18" stroke="#B8A36A" strokeWidth="1.8" strokeDasharray="5 3" />
-              <circle cx="150" cy="130" r="2" fill="#B8A36A" />
-              <circle cx="90" cy="130" r="2" fill="#B8A36A" />
-            </PasoRezum>
-
-            <PasoRezum
-              n={3}
-              titulo="Se reabsorbe y el flujo mejora"
-              texto="Con las semanas el cuerpo reabsorbe el tejido tratado; la próstata reduce su volumen y la uretra se abre."
-            >
-              {/* Contorno previo (tamaño mayor) como referencia */}
-              <ellipse cx="120" cy="155" rx="55" ry="58" fill="none" stroke="#CBD5E1" strokeWidth="1.5" strokeDasharray="4 4" />
-              <AnatomiaBase prostataRx={40} prostataRy={50} uretraW={20} />
-              {/* Flujo urinario libre */}
-              <path d="M120 150 l-6 -9 h12 z" fill="#4A90A4" />
-              <path d="M120 170 l-6 -9 h12 z" fill="#4A90A4" opacity="0.8" />
-              <path d="M120 190 l-6 -9 h12 z" fill="#4A90A4" opacity="0.6" />
-            </PasoRezum>
-          </div>
-          <p className="mt-3 text-xs text-slate-500 italic text-center">
-            Ilustración esquemática con fines educativos. Cada caso se valora de forma individual.
-          </p>
+          {/* Esquema del mecanismo — ilustración original, 3 pasos */}
+          <figure className="mt-8">
+            <Image
+              src="/images/rezum-mecanismo-3-pasos.webp"
+              alt="Esquema del mecanismo del Rezum en 3 pasos: 1) se aplica el vapor de agua a través de la uretra, sin incisiones, en el tejido prostático que obstruye; 2) el vapor trata el tejido sobrante liberando energía térmica en una zona delimitada; 3) con las semanas el cuerpo reabsorbe el tejido tratado, la próstata reduce su volumen y el flujo urinario mejora."
+              width={2528}
+              height={1696}
+              sizes="(max-width: 1024px) 90vw, 70vw"
+              className="w-full h-auto rounded-2xl border border-slate-200 shadow-sm"
+            />
+            <figcaption className="mt-3 text-xs text-slate-500 italic text-center">
+              Ilustración esquemática con fines educativos. Cada caso se valora de forma individual.
+            </figcaption>
+          </figure>
         </section>
 
         {/* VENTAJAS */}
