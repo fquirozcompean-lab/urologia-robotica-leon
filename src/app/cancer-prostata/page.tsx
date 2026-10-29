@@ -73,7 +73,7 @@ const faqSchema = {
       name: "¿Qué significa tener el PSA elevado?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Un PSA elevado no siempre indica cáncer; puede deberse a hiperplasia prostática benigna (HBP), prostatitis o infección. Sin embargo, sí es una señal de alerta que requiere evaluación urológica completa, que puede incluir tacto rectal, resonancia magnética multiparamétrica y posiblemente biopsia de próstata.",
+        text: "Un PSA elevado no siempre indica cáncer; puede deberse a hiperplasia prostática benigna (HBP), prostatitis o infección. Por eso el primer paso es repetir el PSA para confirmar la elevación. Si persiste elevado, se complementa con tacto rectal y resonancia magnética multiparamétrica, que ayudan a decidir si es necesaria una biopsia de próstata.",
       },
     },
     {

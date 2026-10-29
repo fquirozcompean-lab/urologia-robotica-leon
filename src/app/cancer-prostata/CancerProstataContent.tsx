@@ -398,12 +398,81 @@ export default function CancerProstataContent() {
               Un diagnóstico preciso determina el tipo de tratamiento más adecuado. El proceso
               es sistemático y personalizado:
             </motion.p>
+
+            {/* PSA ELEVADO: ANTES DE LA BIOPSIA */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="mb-10 rounded-2xl border border-slate-200 bg-white p-6 md:p-8 shadow-sm"
+            >
+              <h3 className="text-xl md:text-2xl font-bold text-slate-900">
+                ¿Te salió el PSA elevado? Antes de una biopsia, estos son los pasos
+              </h3>
+              <p className="mt-2 text-slate-700 leading-relaxed max-w-3xl">
+                Un solo resultado de PSA alto <strong>no es motivo para hacer una biopsia de
+                inmediato</strong>. Seguir un orden evita biopsias innecesarias y, cuando sí se
+                necesita, permite hacerla de forma más precisa.
+              </p>
+              <ol className="mt-6 grid md:grid-cols-3 gap-5">
+                <li className="rounded-xl bg-slate-50 p-5">
+                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-acero text-white font-bold text-sm">
+                    1
+                  </span>
+                  <h4 className="mt-3 font-semibold text-slate-900">Confirmar la elevación</h4>
+                  <p className="mt-1 text-sm text-slate-700 leading-relaxed">
+                    Se repite el PSA unas semanas después, en condiciones adecuadas. Puede
+                    subir de forma pasajera por una infección urinaria o prostatitis, una
+                    eyaculación reciente, ejercicio intenso como andar en bicicleta, o una
+                    sonda o estudio urológico reciente. Si había una infección, se trata
+                    primero y luego se repite.
+                  </p>
+                </li>
+                <li className="rounded-xl bg-slate-50 p-5">
+                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-acero text-white font-bold text-sm">
+                    2
+                  </span>
+                  <h4 className="mt-3 font-semibold text-slate-900">
+                    Si persiste elevado: resonancia magnética
+                  </h4>
+                  <p className="mt-1 text-sm text-slate-700 leading-relaxed">
+                    La resonancia multiparamétrica de próstata da más información: muestra si
+                    hay zonas sospechosas y las clasifica con la escala PI-RADS. Junto con la
+                    densidad del PSA y el tacto rectal, ayuda a decidir si la biopsia es
+                    necesaria.{" "}
+                    <Link
+                      href="/resonancia-magnetica-prostata"
+                      className="text-acero font-medium hover:underline"
+                    >
+                      Conoce la resonancia de próstata →
+                    </Link>
+                  </p>
+                </li>
+                <li className="rounded-xl bg-slate-50 p-5">
+                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-acero text-white font-bold text-sm">
+                    3
+                  </span>
+                  <h4 className="mt-3 font-semibold text-slate-900">
+                    Biopsia solo si está indicada
+                  </h4>
+                  <p className="mt-1 text-sm text-slate-700 leading-relaxed">
+                    Si la resonancia o el contexto clínico lo justifican, la biopsia se dirige
+                    a las zonas sospechosas (fusión resonancia-ultrasonido). En algunos
+                    pacientes con resonancia sin hallazgos relevantes, se puede continuar con
+                    vigilancia del PSA en lugar de biopsiar.
+                  </p>
+                </li>
+              </ol>
+            </motion.div>
+
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {[
                 {
                   step: "01",
                   title: "PSA (Antígeno Prostático Específico)",
-                  desc: "Análisis de sangre que mide los niveles de PSA. Valores elevados (> 4 ng/mL, aunque depende de la edad y volumen prostático) pueden indicar cáncer, HBP o prostatitis.",
+                  desc: "Análisis de sangre que mide los niveles de PSA. Valores elevados (> 4 ng/mL, aunque depende de la edad y volumen prostático) pueden indicar cáncer, HBP o prostatitis. Un valor alto aislado se confirma con una segunda medición.",
                 },
                 {
                   step: "02",
@@ -445,19 +514,6 @@ export default function CancerProstataContent() {
               height={840}
               className="mt-10 rounded-2xl border border-slate-200 shadow-sm w-full max-w-2xl mx-auto h-auto"
             />
-            <div className="mt-8 max-w-2xl mx-auto rounded-xl border-l-4 border-teal-500 bg-teal-50 p-5">
-              <p className="text-sm text-slate-700 leading-relaxed">
-                <strong>La resonancia multiparamétrica (mpRM)</strong> guía hoy buena parte
-                de estas decisiones: puede evitar biopsias innecesarias y dirigir las
-                necesarias al punto exacto.{" "}
-                <Link
-                  href="/resonancia-magnetica-prostata"
-                  className="text-acero font-medium hover:underline"
-                >
-                  Conoce la resonancia de próstata y la escala PI-RADS →
-                </Link>
-              </p>
-            </div>
           </div>
         </section>
 
@@ -807,9 +863,10 @@ export default function CancerProstataContent() {
 
               <FAQItem q="¿Qué significa tener el PSA elevado?">
                 Un PSA elevado <strong>no siempre indica cáncer</strong>; puede deberse a
-                hiperplasia prostática benigna (HBP), prostatitis o infección. Sin embargo,
-                es una señal de alerta que requiere evaluación urológica completa: tacto
-                rectal, resonancia magnética multiparamétrica y posiblemente biopsia de próstata.
+                hiperplasia prostática benigna (HBP), prostatitis o infección. Por eso el
+                primer paso es <strong>repetir el PSA</strong> para confirmar la elevación. Si
+                persiste elevado, se complementa con tacto rectal y resonancia magnética
+                multiparamétrica, que ayudan a decidir si es necesaria una biopsia de próstata.
               </FAQItem>
 
               <FAQItem q="¿El cáncer de próstata siempre requiere operación inmediata?">
