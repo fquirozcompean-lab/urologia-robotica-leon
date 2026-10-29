@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "resonancia próstata antes de biopsia",
     "PI-RADS próstata",
     "biopsia de fusión próstata León",
+    "resonancia próstata antígeno prostático elevado",
     "resonancia próstata PSA elevado",
     "resonancia magnética próstata Guanajuato",
     "estudio de imagen próstata León",

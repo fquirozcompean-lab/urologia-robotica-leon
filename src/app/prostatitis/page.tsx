@@ -94,7 +94,7 @@ const faqSchema = {
       name: "¿La prostatitis aumenta el riesgo de cáncer de próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No se ha demostrado que la prostatitis cause cáncer de próstata. Sin embargo, la inflamación puede elevar temporalmente el PSA, lo que a veces genera confusión. Por eso, ante un PSA elevado, el urólogo considera el contexto completo antes de tomar decisiones.",
+        text: "No se ha demostrado que la prostatitis cause cáncer de próstata. Sin embargo, la inflamación puede elevar temporalmente el antígeno prostático (PSA), lo que a veces genera confusión. Por eso, ante un antígeno prostático elevado, el urólogo considera el contexto completo antes de tomar decisiones.",
       },
     },
   ],

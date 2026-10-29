@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "PSMA cáncer de próstata",
     "estadificación cáncer próstata León",
     "recurrencia bioquímica próstata",
+    "antígeno prostático elevado después de cirugía",
     "PSA elevado después de cirugía",
     "PSA en ascenso tras radioterapia",
     "gammagrama óseo vs PET PSMA",

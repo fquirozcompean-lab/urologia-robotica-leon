@@ -68,7 +68,7 @@ const pirads = [
 const indicaciones = [
   {
     title: "Antes de la primera biopsia",
-    body: "Con PSA elevado o tacto rectal sospechoso, la resonancia previa a la biopsia mejora la detección de tumores significativos y reduce el hallazgo de cánceres de muy bajo riesgo. Es la recomendación de las guías EAU y AUA en la mayoría de los casos.",
+    body: "Con antígeno prostático (PSA) elevado o tacto rectal sospechoso, la resonancia previa a la biopsia mejora la detección de tumores significativos y reduce el hallazgo de cánceres de muy bajo riesgo. Es la recomendación de las guías EAU y AUA en la mayoría de los casos.",
   },
   {
     title: "Biopsia previa negativa con PSA persistente",
@@ -374,7 +374,7 @@ export default function ResonanciaProstataContent() {
             viewport={{ once: true }}
             className="text-3xl font-bold"
           >
-            Un PSA elevado no siempre significa cáncer
+            Un antígeno prostático (PSA) elevado no siempre significa cáncer
           </motion.h2>
           <motion.p
             variants={fadeUp}

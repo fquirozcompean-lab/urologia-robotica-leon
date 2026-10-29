@@ -296,6 +296,20 @@ médica (ej. NO linkear cáncer renal → PET-PSMA: el PSMA es específico de pr
 7. Cálculos renales
 8. Cirugía robótica — NO usar como keyword principal (volumen bajo, -10% decreciente). Mencionar únicamente dentro de las páginas anteriores como técnica, nunca como página o keyword objetivo propia.
 
+### Terminología: antígeno prostático vs PSA vs APE (Oct 2026)
+Google Trends México (12 meses, con contexto médico): "antígeno prostático" 77 ·
+"antígeno prostático específico" 15 · "psa próstata" ~0 · "ape próstata" ~0. ("PSA"
+solo se infla por calificación de cartas Pokémon; "APE" por búsquedas en inglés.)
+- **Término principal:** "antígeno prostático" en encabezados, preguntas de FAQ,
+  keywords y ficha de Google Business.
+- **Secundario:** "(PSA)" entre paréntesis en la primera mención/encabezado, porque
+  es lo que viene impreso en el resultado de laboratorio. En el cuerpo del texto,
+  después de esa primera mención, se puede seguir usando "PSA".
+- **APE:** jerga de laboratorio, no posicionar.
+- Oportunidades de contenido en ascenso (pendientes): "valores de antígeno
+  prostático según edad" (+130%), "antígeno prostático específico total y libre",
+  "qué es el antígeno prostático específico".
+
 ## Imágenes disponibles en /public/images/
 - `foto-para-web.png` — foto principal del Dr. (hero home)
 - `dr-quiroz-profesional.jpg` — foto profesional alternativa

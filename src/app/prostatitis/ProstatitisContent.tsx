@@ -323,8 +323,9 @@ export default function ProstatitisContent() {
             </FAQItem>
             <FAQItem q="¿La prostatitis aumenta el riesgo de cáncer de próstata?">
               No se ha demostrado que cause cáncer. Sin embargo, la inflamación puede{" "}
-              <strong>elevar temporalmente el PSA</strong>, lo que a veces genera confusión;
-              por eso, ante un PSA elevado, el urólogo valora el contexto completo.
+              <strong>elevar temporalmente el antígeno prostático (PSA)</strong>, lo que a
+              veces genera confusión. Por eso, ante un antígeno prostático elevado, el urólogo
+              considera el contexto completo antes de tomar decisiones.
             </FAQItem>
           </div>
         </section>

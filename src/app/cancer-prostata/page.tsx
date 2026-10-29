@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     "cáncer de próstata Guanajuato",
     "prostatectomía robótica León",
     "tratamiento cáncer próstata León",
+    "antígeno prostático elevado León",
+    "antígeno prostático específico",
     "PSA elevado León",
     "biopsia de próstata León",
     "urólogo oncólogo próstata León",
@@ -70,10 +72,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "¿Qué significa tener el PSA elevado?",
+      name: "¿Qué significa tener el antígeno prostático (PSA) elevado?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Un PSA elevado no siempre indica cáncer; puede deberse a hiperplasia prostática benigna (HBP), prostatitis o infección. Por eso el primer paso es repetir el PSA para confirmar la elevación. Si persiste elevado, se complementa con tacto rectal y resonancia magnética multiparamétrica, que ayudan a decidir si es necesaria una biopsia de próstata.",
+        text: "Un antígeno prostático elevado no siempre indica cáncer; puede deberse a hiperplasia prostática benigna (HBP), prostatitis o infección. Por eso el primer paso es repetir el análisis para confirmar la elevación. Si persiste elevado, se complementa con tacto rectal y resonancia magnética multiparamétrica, que ayudan a decidir si es necesaria una biopsia de próstata.",
       },
     },
     {

@@ -399,7 +399,7 @@ export default function CancerProstataContent() {
               es sistemático y personalizado:
             </motion.p>
 
-            {/* PSA ELEVADO: ANTES DE LA BIOPSIA */}
+            {/* ANTÍGENO PROSTÁTICO (PSA) ELEVADO: ANTES DE LA BIOPSIA */}
             <motion.div
               variants={fadeUp}
               initial="hidden"
@@ -409,10 +409,11 @@ export default function CancerProstataContent() {
               className="mb-10 rounded-2xl border border-slate-200 bg-white p-6 md:p-8 shadow-sm"
             >
               <h3 className="text-xl md:text-2xl font-bold text-slate-900">
-                ¿Te salió el PSA elevado? Antes de una biopsia, estos son los pasos
+                ¿Te salió el antígeno prostático (PSA) elevado? Antes de una biopsia, estos
+                son los pasos
               </h3>
               <p className="mt-2 text-slate-700 leading-relaxed max-w-3xl">
-                Un solo resultado de PSA alto <strong>no es motivo para hacer una biopsia de
+                Un solo resultado de antígeno prostático alto <strong>no es motivo para hacer una biopsia de
                 inmediato</strong>. Seguir un orden evita biopsias innecesarias y, cuando sí se
                 necesita, permite hacerla de forma más precisa.
               </p>
@@ -471,7 +472,7 @@ export default function CancerProstataContent() {
               {[
                 {
                   step: "01",
-                  title: "PSA (Antígeno Prostático Específico)",
+                  title: "Antígeno prostático específico (PSA)",
                   desc: "Análisis de sangre que mide los niveles de PSA. Valores elevados (> 4 ng/mL, aunque depende de la edad y volumen prostático) pueden indicar cáncer, HBP o prostatitis. Un valor alto aislado se confirma con una segunda medición.",
                 },
                 {
@@ -861,10 +862,11 @@ export default function CancerProstataContent() {
                 evaluación personalizada.
               </FAQItem>
 
-              <FAQItem q="¿Qué significa tener el PSA elevado?">
-                Un PSA elevado <strong>no siempre indica cáncer</strong>; puede deberse a
-                hiperplasia prostática benigna (HBP), prostatitis o infección. Por eso el
-                primer paso es <strong>repetir el PSA</strong> para confirmar la elevación. Si
+              <FAQItem q="¿Qué significa tener el antígeno prostático (PSA) elevado?">
+                Un antígeno prostático elevado <strong>no siempre indica cáncer</strong>; puede
+                deberse a hiperplasia prostática benigna (HBP), prostatitis o infección. Por eso
+                el primer paso es <strong>repetir el análisis</strong> para confirmar la
+                elevación. Si
                 persiste elevado, se complementa con tacto rectal y resonancia magnética
                 multiparamétrica, que ayudan a decidir si es necesaria una biopsia de próstata.
               </FAQItem>

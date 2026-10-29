@@ -518,8 +518,8 @@ export default function HiperplasiaContent() {
                 },
                 {
                   step: "03",
-                  title: "PSA (Antígeno Prostático Específico)",
-                  desc: "Análisis de sangre fundamental para descartar cáncer de próstata. Un PSA elevado puede deberse a HPB, prostatitis o cáncer, y orienta los estudios adicionales.",
+                  title: "Antígeno prostático específico (PSA)",
+                  desc: "Análisis de sangre fundamental para descartar cáncer de próstata. Un antígeno prostático elevado puede deberse a HPB, prostatitis o cáncer, y orienta los estudios adicionales.",
                 },
                 {
                   step: "04",
