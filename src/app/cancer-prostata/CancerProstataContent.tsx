@@ -428,7 +428,13 @@ export default function CancerProstataContent() {
                     subir de forma pasajera por una infección urinaria o prostatitis, una
                     eyaculación reciente, ejercicio intenso como andar en bicicleta, o una
                     sonda o estudio urológico reciente. Si había una infección, se trata
-                    primero y luego se repite.
+                    primero y luego se repite.{" "}
+                    <Link
+                      href="/valores-antigeno-prostatico-edad"
+                      className="text-acero font-medium hover:underline"
+                    >
+                      Valores de antígeno prostático según la edad →
+                    </Link>
                   </p>
                 </li>
                 <li className="rounded-xl bg-slate-50 p-5">

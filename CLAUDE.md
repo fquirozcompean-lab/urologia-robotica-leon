@@ -161,6 +161,7 @@ npx lighthouse https://urologiaroboticaleon.com/ --output=json \
 | `/que-es-la-prostata` | `app/que-es-la-prostata/` (pilar informativo — card en home Cat. 2) |
 | `/rezum-prostata` | `app/rezum-prostata/` (tratamiento HPB — card en home Cat. 2; Rezum para próstatas chicas-medianas, HoLEP para grandes) |
 | `/prevencion-cancer-prostata` | `app/prevencion-cancer-prostata/` (sub-página de /cancer-prostata — sin card, marco de detección/evidencia) |
+| `/valores-antigeno-prostatico-edad` | `app/valores-antigeno-prostatico-edad/` (sub-página de /cancer-prostata — sin card; tabla por edad, total/libre, densidad; enlazada desde el bloque "antes de la biopsia" de /cancer-prostata y desde /prevencion-cancer-prostata) |
 | `/prostatitis` | `app/prostatitis/` |
 | `/que-es-el-rinon` | `app/que-es-el-rinon/` (pilar informativo renal — card en home Cat. 4) |
 | `/dolor-de-rinon` | `app/dolor-de-rinon/` (síntoma — card en home Cat. 4) |
@@ -194,6 +195,9 @@ sub-páginas de su hub, NO condiciones: no llevan card en el home, se acceden de
 links dentro de las páginas clínicas relacionadas.
 - /pet-psma-leon y /resonancia-magnetica-prostata → hub /cancer-prostata (PET-PSMA
   desde su sección y FAQ; la RM desde la sección de diagnóstico).
+- /valores-antigeno-prostatico-edad → hub /cancer-prostata (paso 1 del bloque
+  "¿Te salió el antígeno prostático (PSA) elevado?" en Diagnóstico) y
+  /prevencion-cancer-prostata.
 - /uroflujometria-leon → hub de próstata benigna: enlazada desde
   /hiperplasia-prostatica-benigna (sección de diagnóstico) y /medicamentos-prostata
   (sección de uroflujometría). Enlaza a HPB, HoLEP, cáncer de próstata y cálculos.
@@ -306,9 +310,10 @@ solo se infla por calificación de cartas Pokémon; "APE" por búsquedas en ingl
   es lo que viene impreso en el resultado de laboratorio. En el cuerpo del texto,
   después de esa primera mención, se puede seguir usando "PSA".
 - **APE:** jerga de laboratorio, no posicionar.
-- Oportunidades de contenido en ascenso (pendientes): "valores de antígeno
-  prostático según edad" (+130%), "antígeno prostático específico total y libre",
-  "qué es el antígeno prostático específico".
+- Oportunidades de contenido en ascenso: "valores de antígeno prostático según
+  edad" (+130%), "antígeno prostático específico total y libre" y "qué es el
+  antígeno prostático específico" → cubiertas en /valores-antigeno-prostatico-edad
+  (Oct 2026), con una sección y una FAQ para cada una.
 
 ## Imágenes disponibles en /public/images/
 - `foto-para-web.png` — foto principal del Dr. (hero home)

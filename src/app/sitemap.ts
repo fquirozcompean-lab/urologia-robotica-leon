@@ -153,6 +153,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: 'https://urologiaroboticaleon.com/valores-antigeno-prostatico-edad',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
       url: 'https://urologiaroboticaleon.com/rezum-prostata',
       lastModified: new Date(),
       changeFrequency: 'monthly',

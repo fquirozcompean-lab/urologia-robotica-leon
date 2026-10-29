@@ -126,11 +126,17 @@ export default function PrevencionContent() {
                 La detección temprana es tu mejor herramienta
               </h2>
               <p className="text-gris-profundo leading-relaxed">
-                La prueba del <strong>PSA</strong> (o APE, antígeno prostático específico)
-                permite encontrar el cáncer cuando aún no da síntomas y es curable. Si solo
-                vas a hacer una cosa por tu próstata, que sea revisarte a la edad adecuada.{" "}
+                La prueba del <strong>antígeno prostático específico (PSA)</strong> permite
+                encontrar el cáncer cuando aún no da síntomas y es curable. Si solo vas a
+                hacer una cosa por tu próstata, que sea revisarte a la edad adecuada.{" "}
                 <Link href="/cancer-prostata" className="text-acero font-medium hover:underline">
-                  Conoce más sobre el cáncer de próstata y el PSA →
+                  Conoce más sobre el cáncer de próstata →
+                </Link>{" "}
+                <Link
+                  href="/valores-antigeno-prostatico-edad"
+                  className="text-acero font-medium hover:underline"
+                >
+                  Valores de antígeno prostático según la edad →
                 </Link>
               </p>
             </div>
