@@ -986,6 +986,34 @@ export default function CancerProstataContent() {
                 aseguradora. Te recomendamos verificar tu cobertura específica antes de
                 iniciar el proceso.
               </FAQItem>
+
+              <FAQItem q="¿Cómo comienza el cáncer de próstata?">
+                Comienza cuando algunas células de la glándula prostática empiezan a crecer de
+                forma desordenada, casi siempre en la parte externa de la próstata. En la
+                mayoría de los casos crece lentamente y durante años no produce ninguna
+                molestia, porque no presiona la uretra. Por eso suele descubrirse por un
+                antígeno prostático elevado o un tacto rectal anormal, y no por síntomas.
+              </FAQItem>
+
+              <FAQItem q="¿Cuántos años vive un hombre con cáncer de próstata?">
+                Depende sobre todo de la etapa en que se detecta. Cuando el cáncer está
+                localizado en la próstata, la supervivencia a 5 años supera el 98% y la mayoría
+                de los hombres vive muchos años; muchos cánceres de bajo riesgo nunca llegan a
+                poner en peligro la vida. Cuando ya hay metástasis, la supervivencia a 5 años
+                ronda un tercio de los pacientes, aunque los tratamientos actuales han
+                prolongado de forma importante la vida de muchos de ellos. Cada caso tiene un
+                pronóstico distinto que el urólogo oncólogo define con el grado, la etapa y el
+                estado de salud del paciente.
+              </FAQItem>
+
+              <FAQItem q="¿Cuánto cuesta operarse de cáncer de próstata en León?">
+                El costo depende de la técnica (cirugía robótica o laparoscópica), del
+                hospital, de los días de estancia y de los estudios necesarios antes de la
+                cirugía, como la resonancia magnética o el PET-PSMA. En la consulta en León se
+                revisa tu caso y se entrega un presupuesto detallado. Si tienes seguro de
+                gastos médicos mayores, muchas pólizas cubren la cirugía y se te entrega la
+                carta médica para el trámite.
+              </FAQItem>
             </div>
           </div>
         </section>

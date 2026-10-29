@@ -334,6 +334,21 @@ export default function ValoresAntigenoContent() {
               varios meses de tratamiento. Si los tomas, avísale a tu urólogo: el resultado
               se interpreta ajustando ese efecto.
             </FAQItem>
+            <FAQItem q="¿Qué nivel de antígeno prostático es preocupante?">
+              No hay un número único que indique cáncer. Un valor por encima de la referencia
+              para tu edad, o por encima de 4 ng/mL, amerita valoración urológica; por encima
+              de 10 ng/mL la probabilidad de cáncer es claramente mayor. También es
+              preocupante que el antígeno suba de forma sostenida de un año a otro, aunque
+              siga dentro del rango normal. En todos los casos, el primer paso es confirmar
+              el resultado.
+            </FAQItem>
+            <FAQItem q="¿Cuánto cuesta el análisis de antígeno prostático en León?">
+              Es un análisis de sangre sencillo y accesible que se realiza en la mayoría de
+              los laboratorios clínicos de León. El precio varía según el laboratorio y si
+              incluye solo el antígeno total o también el libre. Lo más importante no es
+              dónde se haga, sino que un urólogo lo interprete con tu edad, el tamaño de tu
+              próstata y tus resultados anteriores.
+            </FAQItem>
           </div>
         </section>
 
@@ -344,7 +359,8 @@ export default function ValoresAntigenoContent() {
           </h2>
           <p className="font-serif text-editorial/85 mb-6 max-w-xl mx-auto">
             Agenda una valoración con el Dr. Quiroz para interpretarlo en el contexto de tu
-            edad, tu próstata y tus antecedentes.
+            edad, tu próstata y tus antecedentes. Consulta en Hospital Ángeles León y
+            Christus Muguerza Altagracia.
           </p>
           <WAButtonConSelector
             mensaje="Hola Dr. Quiroz, tengo mi resultado de antígeno prostático y quisiera agendar una valoración para interpretarlo."

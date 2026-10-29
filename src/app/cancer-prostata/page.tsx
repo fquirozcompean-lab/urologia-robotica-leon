@@ -96,7 +96,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "¿La prostatectomía robótica afecta la continencia urinaria y la función sexual?",
+      name: "¿La prostatectomía robótica afecta la continencia y la función sexual?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "La cirugía robótica, con su visión 3D de alta definición, permite mayor precisión en la preservación de los nervios responsables de la erección y de los esfínteres urinarios. La mayoría de los pacientes recupera la continencia en semanas a meses. La recuperación de la función eréctil depende de la preservación nerviosa y de la edad y salud preoperatoria del paciente.",
@@ -180,6 +180,30 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Muchos seguros de gastos médicos mayores cubren el diagnóstico y el tratamiento, incluida la cirugía robótica según la póliza. Se entrega una carta médica detallando la indicación para el trámite con la aseguradora. Se recomienda verificar la cobertura específica antes de iniciar el proceso.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cómo comienza el cáncer de próstata?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Comienza cuando algunas células de la glándula prostática empiezan a crecer de forma desordenada, casi siempre en la parte externa de la próstata. En la mayoría de los casos crece lentamente y durante años no produce ninguna molestia, porque no presiona la uretra. Por eso suele descubrirse por un antígeno prostático elevado o un tacto rectal anormal, y no por síntomas.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuántos años vive un hombre con cáncer de próstata?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Depende sobre todo de la etapa en que se detecta. Cuando el cáncer está localizado en la próstata, la supervivencia a 5 años supera el 98% y la mayoría de los hombres vive muchos años; muchos cánceres de bajo riesgo nunca llegan a poner en peligro la vida. Cuando ya hay metástasis, la supervivencia a 5 años ronda un tercio de los pacientes, aunque los tratamientos actuales han prolongado de forma importante la vida de muchos de ellos. Cada caso tiene un pronóstico distinto que el urólogo oncólogo define con el grado, la etapa y el estado de salud del paciente.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuánto cuesta operarse de cáncer de próstata en León?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El costo depende de la técnica (cirugía robótica o laparoscópica), del hospital, de los días de estancia y de los estudios necesarios antes de la cirugía, como la resonancia magnética o el PET-PSMA. En la consulta en León se revisa tu caso y se entrega un presupuesto detallado. Si tienes seguro de gastos médicos mayores, muchas pólizas cubren la cirugía y se te entrega la carta médica para el trámite.",
       },
     },
   ],

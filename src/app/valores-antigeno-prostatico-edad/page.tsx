@@ -2,10 +2,15 @@ import type { Metadata } from "next";
 import ValoresAntigenoContent from "./ValoresAntigenoContent";
 
 export const metadata: Metadata = {
-  title: "Valores de Antígeno Prostático (PSA) según la Edad | Dr. Quiroz — León",
+  title: "Antígeno Prostático Alto en León: Valores por Edad y Qué Hacer | Dr. Quiroz",
   description:
-    "Tabla de valores de referencia del antígeno prostático (PSA) por edad, qué significa el antígeno total y libre, qué puede elevarlo sin ser cáncer y qué hacer si sale alto. Dr. Quiroz, urólogo oncólogo en León, Gto.",
+    "Valores del antígeno prostático (PSA) por edad, total y libre, cuándo es preocupante y qué hacer si sale alto. Valoración con el Dr. Quiroz, urólogo oncólogo en Hospital Ángeles León y Christus Muguerza Altagracia.",
   keywords: [
+    "antígeno prostático León",
+    "antígeno prostático alto León",
+    "qué nivel de antígeno prostático indica cáncer",
+    "cuándo es preocupante el antígeno prostático",
+    "precio antígeno prostático León",
     "valores de antígeno prostático según edad",
     "antígeno prostático valores normales",
     "antígeno prostático específico total y libre",
@@ -16,7 +21,7 @@ export const metadata: Metadata = {
     "antígeno prostático León",
   ],
   openGraph: {
-    title: "Valores de Antígeno Prostático (PSA) según la Edad | Dr. Alejandro Quiroz",
+    title: "Antígeno Prostático Alto en León: Valores por Edad | Dr. Alejandro Quiroz",
     description:
       "Tabla de referencia por edad, antígeno total y libre, causas de elevación sin cáncer y qué hacer si tu resultado salió alto. León, Guanajuato.",
     url: "https://urologiaroboticaleon.com/valores-antigeno-prostatico-edad",
@@ -34,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Valores de Antígeno Prostático (PSA) según la Edad | Dr. Quiroz",
+    title: "Antígeno Prostático Alto en León: Valores por Edad | Dr. Quiroz",
     description:
       "Tabla de referencia por edad, antígeno total y libre y qué hacer si tu resultado salió alto. León, Guanajuato.",
     images: ["/og-image.jpg"],
@@ -102,6 +107,22 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Sí. La finasterida y la dutasterida, que se usan para el crecimiento de la próstata, reducen el antígeno prostático aproximadamente a la mitad después de varios meses de tratamiento. Si los tomas, avísale a tu urólogo: el resultado se interpreta ajustando ese efecto.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué nivel de antígeno prostático es preocupante?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No hay un número único que indique cáncer. Un valor por encima de la referencia para tu edad, o por encima de 4 ng/mL, amerita valoración urológica; por encima de 10 ng/mL la probabilidad de cáncer es claramente mayor. También es preocupante que el antígeno suba de forma sostenida de un año a otro, aunque siga dentro del rango normal. En todos los casos, el primer paso es confirmar el resultado.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuánto cuesta el análisis de antígeno prostático en León?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Es un análisis de sangre sencillo y accesible que se realiza en la mayoría de los laboratorios clínicos de León. El precio varía según el laboratorio y si incluye solo el antígeno total o también el libre. Lo más importante no es dónde se haga, sino que un urólogo lo interprete con tu edad, el tamaño de tu próstata y tus resultados anteriores.",
       },
     },
   ],
