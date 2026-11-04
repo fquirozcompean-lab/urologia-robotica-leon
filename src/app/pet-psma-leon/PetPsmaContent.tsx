@@ -129,7 +129,7 @@ export default function PetPsmaContent() {
                 body: "Antes de decidir entre cirugía, radioterapia u otro tratamiento, el PET-PSMA confirma si el cáncer está confinado a la próstata o ya se extendió. Esto evita cirugías que no beneficiarían al paciente — y confirma cuándo un tratamiento curativo sí es viable.",
               },
               {
-                title: "Recurrencia bioquímica (PSA en ascenso)",
+                title: "Recurrencia bioquímica (antígeno prostático en ascenso)",
                 body: "Si el PSA sube después de una cirugía o radioterapia, la pregunta clave es: ¿dónde está la enfermedad? El PET-PSMA la localiza con mayor sensibilidad que cualquier otro estudio, permitiendo dirigir el tratamiento de rescate al sitio exacto.",
               },
             ].map((c) => (

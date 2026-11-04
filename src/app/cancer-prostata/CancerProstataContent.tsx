@@ -171,8 +171,8 @@ export default function CancerProstataContent() {
                 <strong>más frecuente en hombres mexicanos</strong> —después del cáncer de piel— y
                 la segunda causa de muerte por cáncer en varones. Se origina en las células de la
                 glándula prostática y en sus etapas tempranas generalmente{" "}
-                <strong>no produce síntomas</strong>, por eso la detección oportuna mediante el PSA
-                es fundamental. El PSA —o APE, <strong>antígeno prostático específico</strong>— es
+                <strong>no produce síntomas</strong>, por eso la detección oportuna es
+                fundamental. El <strong>antígeno prostático específico (PSA)</strong> es
                 una proteína producida por la próstata que se mide con un sencillo análisis de
                 sangre; cuando sus niveles se elevan puede ser una señal temprana que amerita
                 evaluación.
@@ -352,24 +352,24 @@ export default function CancerProstataContent() {
                 className="rounded-2xl bg-amber-50 border border-amber-200 p-6 shadow-sm"
               >
                 <h3 className="font-bold text-amber-800 text-lg mb-3">
-                  ¿Por qué es importante el PSA?
+                  ¿Por qué es importante el antígeno prostático (PSA)?
                 </h3>
                 <p className="text-sm text-amber-900 leading-relaxed">
                   Muchos síntomas urinarios como los listados también pueden deberse a{" "}
                   <strong>hiperplasia prostática benigna (HBP)</strong>, que no es cáncer.
-                  Por eso, <strong>no espere a tener síntomas</strong>: la prueba del PSA
-                  (antígeno prostático específico o APE) en sangre, junto con la exploración
+                  Por eso, <strong>no espere a tener síntomas</strong>: la prueba de antígeno
+                  prostático en sangre, junto con la exploración
                   física, permite detectar el cáncer de próstata en etapas donde es
                   curable.
                 </p>
                 <p className="mt-4 text-sm text-amber-900 leading-relaxed">
-                  <strong>Recomendación:</strong> solicite su PSA anual a partir de los{" "}
+                  <strong>Recomendación:</strong> solicite su antígeno prostático anual a partir de los{" "}
                   <strong>50 años</strong> (o 40-45 si tiene factores de riesgo).
                 </p>
                 <div className="mt-5">
-                  <WASelectorLink mensaje={"Hola Dr. Quiroz, quiero solicitar una prueba de PSA."} motivo="psa">
+                  <WASelectorLink mensaje={"Hola Dr. Quiroz, quiero solicitar una prueba de antígeno prostático."} motivo="psa">
                     <Button className="bg-amber-600 text-white hover:bg-amber-700 text-sm">
-                      Solicitar prueba de PSA
+                      Solicitar prueba de antígeno prostático
                     </Button>
                   </WASelectorLink>
                 </div>
@@ -519,7 +519,7 @@ export default function CancerProstataContent() {
             </div>
             <Image
               src="/images/cancer-prostata/como-se-detecta-cancer-prostata.webp"
-              alt="Infografía: cómo se detecta el cáncer de próstata — prueba de PSA en sangre, examen rectal y biopsia de próstata"
+              alt="Infografía: cómo se detecta el cáncer de próstata — prueba de antígeno prostático (PSA) en sangre, examen rectal y biopsia de próstata"
               width={1072}
               height={840}
               className="mt-10 rounded-2xl border border-slate-200 shadow-sm w-full max-w-2xl mx-auto h-auto"
@@ -861,7 +861,7 @@ export default function CancerProstataContent() {
             </motion.h2>
             <div className="grid md:grid-cols-2 gap-5">
               <FAQItem
-                q="¿A qué edad debo empezar a hacerme la prueba del PSA?"
+                q="¿A qué edad debo empezar a hacerme la prueba de antígeno prostático (PSA)?"
                 highlight
               >
                 Se recomienda iniciar la detección con PSA a partir de los{" "}
@@ -947,7 +947,7 @@ export default function CancerProstataContent() {
                 semen— que se resuelven en días.
               </FAQItem>
 
-              <FAQItem q="¿Qué pasa si mi biopsia salió negativa pero el PSA sigue elevado?">
+              <FAQItem q="¿Qué pasa si mi biopsia salió negativa pero el antígeno prostático (PSA) sigue elevado?">
                 Una biopsia negativa <strong>no descarta el cáncer al 100%</strong>. En ese
                 escenario se evalúa con resonancia magnética multiparamétrica (si no se hizo
                 antes de la biopsia), biopsia de fusión dirigida a zonas sospechosas y

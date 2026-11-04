@@ -116,7 +116,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "¿El finasteride afecta mi PSA?",
+      name: "¿El finasteride afecta mi antígeno prostático (PSA)?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Sí, de forma predecible y conocida. Finasteride y dutasteride reducen el PSA aproximadamente a la mitad. Esto es importante: si lo tomas y tu PSA mide 2.0 ng/mL, el valor real equivalente sería 4.0 ng/mL. Tu urólogo debe saberlo para interpretar correctamente el PSA y no dejar pasar un cáncer de próstata.",

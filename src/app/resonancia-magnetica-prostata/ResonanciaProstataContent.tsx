@@ -71,7 +71,7 @@ const indicaciones = [
     body: "Con antígeno prostático (PSA) elevado o tacto rectal sospechoso, la resonancia previa a la biopsia mejora la detección de tumores significativos y reduce el hallazgo de cánceres de muy bajo riesgo. Es la recomendación de las guías EAU y AUA en la mayoría de los casos.",
   },
   {
-    title: "Biopsia previa negativa con PSA persistente",
+    title: "Biopsia previa negativa con antígeno prostático persistente",
     body: "Si una biopsia salió negativa pero el PSA sigue elevado, la resonancia puede localizar zonas que el muestreo al azar no alcanzó, dirigiendo una nueva biopsia al punto exacto.",
   },
   {

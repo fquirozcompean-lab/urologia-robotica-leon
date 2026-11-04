@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     q: "¿Necesito traer todos mis estudios?",
-    a: "Es lo ideal. Mientras más información tengas disponible — APE/PSA, biopsia, estudios de imagen — más completa y precisa será la opinión. Si te falta algún estudio, durante la consulta se definirá qué información adicional se necesita.",
+    a: "Es lo ideal. Mientras más información tengas disponible — antígeno prostático, biopsia, estudios de imagen — más completa y precisa será la opinión. Si te falta algún estudio, durante la consulta se definirá qué información adicional se necesita.",
   },
   {
     q: "¿Una segunda opinión puede cambiar mi diagnóstico o tratamiento?",
@@ -435,7 +435,7 @@ export default function SegundaOpinionContent() {
             {[
               {
                 Icon: Activity,
-                text: "Antígeno Prostático Específico (APE / PSA) — todos los resultados que tengas, no solo el último",
+                text: "Antígeno prostático específico (PSA) — todos los resultados que tengas, no solo el último",
               },
               {
                 Icon: Microscope,

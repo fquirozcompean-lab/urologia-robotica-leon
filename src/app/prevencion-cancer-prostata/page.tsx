@@ -4,7 +4,7 @@ import PrevencionContent from "./PrevencionContent";
 export const metadata: Metadata = {
   title: "Prevención del Cáncer de Próstata: Qué Funciona | Dr. Quiroz — León",
   description:
-    "Cómo reducir el riesgo de cáncer de próstata y por qué la detección temprana con PSA es la clave. Hábitos con respaldo, mitos sobre suplementos y a qué edad revisarte. Dr. Quiroz, urólogo en León, Gto.",
+    "Cómo reducir el riesgo de cáncer de próstata y por qué la detección temprana con antígeno prostático es la clave. Hábitos con respaldo, mitos sobre suplementos y a qué edad revisarte. Dr. Quiroz, urólogo en León, Gto.",
   keywords: [
     "prevención cáncer de próstata",
     "cómo prevenir el cáncer de próstata",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Prevención del Cáncer de Próstata: Qué Funciona | Dr. Alejandro Quiroz",
     description:
-      "Cómo reducir el riesgo, qué hábitos tienen respaldo, mitos sobre suplementos y por qué la detección temprana con PSA es lo más importante. León, Guanajuato.",
+      "Cómo reducir el riesgo, qué hábitos tienen respaldo, mitos sobre suplementos y por qué la detección temprana con antígeno prostático es lo más importante. León, Guanajuato.",
     url: "https://urologiaroboticaleon.com/prevencion-cancer-prostata",
     siteName: "Urología Robótica León",
     images: [
@@ -129,7 +129,7 @@ const medicalWebPageSchema = {
   "@type": "MedicalWebPage",
   name: "Prevención del cáncer de próstata: qué funciona",
   description:
-    "Guía sobre cómo reducir el riesgo de cáncer de próstata, qué hábitos tienen respaldo científico, los mitos sobre suplementos y la importancia de la detección temprana con PSA. Dr. Alejandro Quiroz Compeán, urólogo en León, Guanajuato.",
+    "Guía sobre cómo reducir el riesgo de cáncer de próstata, qué hábitos tienen respaldo científico, los mitos sobre suplementos y la importancia de la detección temprana con antígeno prostático. Dr. Alejandro Quiroz Compeán, urólogo en León, Guanajuato.",
   url: "https://urologiaroboticaleon.com/prevencion-cancer-prostata",
   about: {
     "@type": "MedicalCondition",

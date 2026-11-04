@@ -88,7 +88,7 @@ const faqSchema = {
       name: "¿Necesito traer todos mis estudios?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Es lo ideal. Mientras más información tengas disponible (APE/PSA, biopsia, estudios de imagen), más completa y precisa será la opinión. Si te falta algún estudio, durante la consulta se definirá qué información adicional se necesita.",
+        text: "Es lo ideal. Mientras más información tengas disponible (antígeno prostático, biopsia, estudios de imagen), más completa y precisa será la opinión. Si te falta algún estudio, durante la consulta se definirá qué información adicional se necesita.",
       },
     },
     {

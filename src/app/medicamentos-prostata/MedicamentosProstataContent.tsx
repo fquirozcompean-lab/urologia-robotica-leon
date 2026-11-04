@@ -240,7 +240,7 @@ const faqs: FAQ[] = [
     a: "Porque los síntomas por sí solos no distinguen entre obstrucción prostática, vejiga hiperactiva, o vejiga con contracción débil. La uroflujometría mide el flujo real de orina y el residuo posmiccional, orientando si el problema es la salida (próstata) o la vejiga en sí. Las guías europeas de urología recomiendan realizarla antes de cualquier tratamiento para síntomas urinarios.",
   },
   {
-    q: "¿El finasteride afecta mi PSA?",
+    q: "¿El finasteride afecta mi antígeno prostático (PSA)?",
     a: "Sí, de forma predecible y conocida. Finasteride y dutasteride reducen el PSA aproximadamente a la mitad. Esto es importante: si lo tomas y tu PSA mide 2.0 ng/mL, el valor real equivalente sería 4.0 ng/mL. Tu urólogo debe saberlo para interpretar correctamente el PSA y no dejar pasar un cáncer de próstata.",
   },
   {

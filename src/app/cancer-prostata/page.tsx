@@ -64,7 +64,7 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "¿A qué edad debo empezar a hacerme la prueba del PSA?",
+      name: "¿A qué edad debo empezar a hacerme la prueba de antígeno prostático (PSA)?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Se recomienda iniciar la detección con PSA a partir de los 50 años en hombres de riesgo promedio. Si tiene antecedentes familiares de primer grado o es de ascendencia afroamericana, se recomienda desde los 40-45 años. Consulte con el Dr. Quiroz para una evaluación personalizada.",
@@ -144,7 +144,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "¿Qué pasa si mi biopsia salió negativa pero el PSA sigue elevado?",
+      name: "¿Qué pasa si mi biopsia salió negativa pero el antígeno prostático (PSA) sigue elevado?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Una biopsia negativa no descarta el cáncer al 100%. En ese escenario se evalúa con resonancia magnética multiparamétrica (si no se hizo antes de la biopsia), biopsia de fusión dirigida a zonas sospechosas y seguimiento estrecho del PSA. Lo importante es no abandonar el seguimiento mientras el PSA permanezca elevado.",
@@ -269,7 +269,7 @@ const medicalWebPageSchema = {
   "@type": "MedicalWebPage",
   name: "Cáncer de Próstata en León, Guanajuato — Diagnóstico y Tratamiento Especializado",
   description:
-    "Información completa sobre detección con PSA/APE, diagnóstico, estadificación con PET-PSMA y tratamiento del cáncer de próstata en León, Guanajuato. Dr. Alejandro Quiroz Compeán, urólogo oncólogo certificado.",
+    "Información completa sobre detección con antígeno prostático (PSA), diagnóstico, estadificación con PET-PSMA y tratamiento del cáncer de próstata en León, Guanajuato. Dr. Alejandro Quiroz Compeán, urólogo oncólogo certificado.",
   url: "https://urologiaroboticaleon.com/cancer-prostata",
   author: {
     "@type": "Physician",
