@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import BannerNoviembre from "@/components/BannerNoviembre";
 import WAButton from "@/components/WAButton";
 import { WA_DR } from "@/lib/contactos";
 import { motion } from "framer-motion";
@@ -148,6 +149,8 @@ export default function CancerProstataContent() {
             </div>
           </motion.div>
         </section>
+
+        <BannerNoviembre motivo="cancer-prostata-noviembre" />
 
         {/* DATOS CLAVE */}
         <section className="bg-white py-14">

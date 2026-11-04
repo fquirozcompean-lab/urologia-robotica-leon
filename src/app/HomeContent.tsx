@@ -22,6 +22,7 @@ import {
   Scissors,
   Bandage,
 } from "lucide-react";
+import BannerNoviembre from "@/components/BannerNoviembre";
 import ServiceCard from "@/components/ServiceCard";
 import WAButton from "@/components/WAButton";
 import WAButtonConSelector from "@/components/WAButtonConSelector";
@@ -107,6 +108,8 @@ export default function HomeContent() {
         </div>
       </section>
 
+      <BannerNoviembre motivo="home-noviembre" />
+
       {/* ===== ACCESOS RÁPIDOS ===== */}
       <section className="py-10 px-4 bg-white border-b border-gris-premium/10">
         <div className="max-w-7xl mx-auto">
@@ -117,7 +120,7 @@ export default function HomeContent() {
 
             <Link href="/cancer-prostata" className="group block bg-editorial rounded-xl p-5 border-2 border-gris-premium/15 hover:border-acero hover:shadow-lg transition-all duration-300">
               <h2 className="font-bold text-petroleo font-sans text-[15px] mb-1">Cáncer de próstata</h2>
-              <p className="text-xs text-gris-profundo font-serif leading-relaxed">Diagnóstico, PSA y prostatectomía robótica.</p>
+              <p className="text-xs text-gris-profundo font-serif leading-relaxed">Diagnóstico, antígeno prostático y prostatectomía robótica.</p>
               <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Ver información →</span>
             </Link>
 
@@ -158,6 +161,15 @@ export default function HomeContent() {
             </WAButtonConSelector>
 
           </div>
+          <p className="mt-6 text-center font-serif text-gris-profundo">
+            ¿Te salió alto el antígeno prostático (PSA)?{" "}
+            <Link
+              href="/valores-antigeno-prostatico-edad"
+              className="text-acero font-medium font-sans hover:underline"
+            >
+              Consulta los valores según tu edad y qué hacer →
+            </Link>
+          </p>
         </div>
       </section>
 

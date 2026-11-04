@@ -73,6 +73,10 @@ src/
 │   ├── Footer.tsx          ← footer global (bg-petroleo, 5 cols + COFEPRIS)
 │   │                          Col. "Especialidades": links sitewide a las 4 páginas
 │   │                          prioritarias (próstata, HoLEP, renal, segunda opinión)
+│   ├── BannerNoviembre.tsx ← campaña temporal en home y /cancer-prostata. Se oculta sola el
+│   │                          1 dic 2026 (FIN_CAMPANA). Eliminar el componente y sus 2 usos
+│   │                          en el primer cambio de diciembre, o actualizar la fecha para
+│   │                          la campaña del año siguiente.
 │   ├── ServiceCard.tsx     ← tarjeta de especialidad con link
 │   ├── WAButton.tsx        ← botón WA directo con tracking GA4 (prop telefono obligatoria de facto)
 │   ├── WAButtonConSelector.tsx ← botón idéntico a WAButton pero abre SedeSelector (CTAs genéricos)
@@ -205,7 +209,8 @@ links dentro de las páginas clínicas relacionadas.
   desde su sección y FAQ; la RM desde la sección de diagnóstico).
 - /valores-antigeno-prostatico-edad → hub /cancer-prostata (paso 1 del bloque
   "¿Te salió el antígeno prostático (PSA) elevado?" en Diagnóstico) y
-  /prevencion-cancer-prostata.
+  /prevencion-cancer-prostata. Por su intención de búsqueda también lleva un link de
+  texto permanente en el home, debajo de "Consultas frecuentes" (sigue sin card).
 - /uroflujometria-leon → hub de próstata benigna: enlazada desde
   /hiperplasia-prostatica-benigna (sección de diagnóstico) y /medicamentos-prostata
   (sección de uroflujometría). Enlaza a HPB, HoLEP, cáncer de próstata y cálculos.
@@ -334,36 +339,29 @@ solo se infla por calificación de cartas Pokémon; "APE" por búsquedas en ingl
 
 ## Estado de seguridad (npm audit)
 
-Última revisión: **Julio 2026**.
+Última revisión: **4 noviembre 2026**.
 
 | Fecha | Antes | Después | Acción |
 |---|---|---|---|
 | Jul 2026 | 6 (5 high, 1 critical) | 17 high, **0 critical** | `npm audit fix` (no-breaking, solo `package-lock.json`) |
+| 4 nov 2026 | 23 (1 critical, 6 high, 16 moderate) | 14 moderate, **0 high, 0 critical** | `npm audit fix` + piso de `next` a `^16.4.5` en package.json |
 
-**Resuelto por el fix no-breaking** (dentro de rangos semver, package.json intacto):
-- `tar` 7.5.16 → 7.5.22 — **critical eliminada** (node-tar DoS/crash)
-- `js-yaml` 4.2.0 → 4.3.0
-- `postcss` (de Tailwind) 8.5.15 → 8.5.23
-- `next` 16.2.9 → **16.2.12** (patch, es el `latest` estable)
+**Resuelto en nov 2026:** `next` 16.2.12 → **16.4.5**. La versión anterior tenía
+avisos críticos de ejecución remota de código, entre ellos en el optimizador de
+imágenes (SVG/AVIF), que corrigen 16.3.x y 16.4.1+. Con esto salieron también los
+`postcss` y `sharp` embebidos. Se subió el piso del rango en package.json para que
+un lockfile regenerado no pueda volver a una versión vulnerable.
 
-**Pendiente — sin fix no-breaking disponible.** Las 17 high restantes NO son
-regresión: el número subió de 6 a 17 porque, al quitar tar/js-yaml, npm re-expande
-la cadena transitiva de eslint. Son dos raíces, ambas solo corregibles con cambios
-breaking (por eso `npm audit fix` se detuvo aquí):
+**Pendiente — cadena de eslint** (14 moderate: minimatch → eslint → @typescript-eslint
+→ eslint-plugin-*, `eslint-config-next` sigue en 15.5.2). El fix que ofrece npm es un
+downgrade absurdo (`eslint@4`, `eslint-config-next@12`) — **NO aplicar `--force`**. Es
+**tooling de desarrollo**, nunca se envía al navegador → riesgo real ~nulo. La salida
+correcta es subir `eslint-config-next` a 16.x como cambio aparte.
 
-1. **Next.js + postcss/sharp embebidos.** `next@16.2.12` es el último estable; el
-   parche de estos avisos está en **16.3.0** (aún en preview/canary, sin release
-   estable). El `postcss@8.4.31` y `sharp@0.34.5` viven dentro de `node_modules/next/`
-   y solo se mueven cuando Next.js los sube. El único fix que ofrece npm es
-   `next@9.3.3` (downgrade catastrófico) — **NO aplicar `--force`**. Acción: esperar
-   Next.js 16.3.0 estable y volver a correr `npm audit fix`.
-2. **Cadena de eslint** (`brace-expansion` → minimatch → eslint → @typescript-eslint
-   → eslint-plugin-*). Fix requiere `eslint@10` (major) + downgrade de
-   `eslint-config-next`. Es **tooling de desarrollo**, nunca se envía al navegador →
-   riesgo real ~nulo para un sitio estático. Aplazado como decisión breaking aparte.
-
-Regla: en la auditoría semanal, correr `npm audit fix` (sin `--force`) y actualizar
-esta tabla. `--force` está prohibido salvo decisión explícita — degradaría Next.js.
+Regla: en la auditoría semanal, correr `npm audit fix` (sin `--force`), probar con
+build + recorrido de las rutas del sitemap, y actualizar esta tabla. `--force` está
+prohibido salvo decisión explícita — degradaría Next.js. No dejar pasar meses: entre
+julio y noviembre 2026 el aviso de Next pasó de high a critical sin que se revisara.
 
 ## Enrutamiento de WhatsApp y Sistema de Agendamiento (Julio 2026)
 
