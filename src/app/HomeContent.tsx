@@ -380,7 +380,7 @@ export default function HomeContent() {
             <div className="bg-editorial p-8 rounded-xl shadow-lg border-2 border-gris-premium/20">
               <h3 className="text-2xl font-bold mb-4 text-acero font-sans">Hospital Ángeles León</h3>
               <p className="text-gris-profundo mb-2 font-serif"><strong className="font-sans">Consultorio 615, Torre II</strong></p>
-              <p className="text-gris-profundo mb-4 font-serif text-[15px]">Av. Cerro Gordo 311, Lomas del Campestre</p>
+              <p className="text-gris-profundo mb-4 font-serif text-[15px]">Av. Cerro Gordo 311, Predio Cerro Gordo, 37150 León, Gto.</p>
               <p className="text-gris-profundo mb-6 font-serif"><strong className="font-sans">Días de consulta:</strong> Lun / Mar / Jue</p>
               <div className="space-y-3">
                 <WAButton

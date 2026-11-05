@@ -276,7 +276,7 @@ export default function InternationalPatientsContent() {
                 <li>
                   <strong>Hospital Ángeles León</strong>
                   <br />
-                  Office 615, Tower II · Lomas del Campestre
+                  Office 615, Tower II · Av. Cerro Gordo 311
                 </li>
                 <li>
                   <strong>Hospital Christus Muguerza Altagracia</strong>

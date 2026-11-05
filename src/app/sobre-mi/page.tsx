@@ -85,8 +85,9 @@ const physicianSchema = {
       name: "Hospital Ángeles León",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Av. Cerro Gordo 311",
-        addressLocality: "León",
+        streetAddress: "Av. Cerro Gordo 311, Consultorio 615, Torre II, Predio Cerro Gordo",
+        addressLocality: "León de los Aldama",
+        postalCode: "37150",
         addressRegion: "Guanajuato",
         addressCountry: "MX",
       },

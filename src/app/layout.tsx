@@ -153,8 +153,8 @@ export default function RootLayout({
                 },
                 geo: {
                   "@type": "GeoCoordinates",
-                  latitude: 21.1272,
-                  longitude: -101.6840,
+                  latitude: 21.1567369,
+                  longitude: -101.7001176,
                 },
                 sameAs: [
                   "https://www.instagram.com/urologo.alejandroquiroz/",

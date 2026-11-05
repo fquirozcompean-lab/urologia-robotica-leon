@@ -581,7 +581,7 @@ export default function SobreMiContent() {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 text-quirurgico flex-shrink-0 mt-0.5" />
                   <p className="text-sm text-gris-profundo font-serif">
-                    Av. Cerro Gordo 311, Lomas del Campestre
+                    Av. Cerro Gordo 311, Predio Cerro Gordo, 37150 León, Gto.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">

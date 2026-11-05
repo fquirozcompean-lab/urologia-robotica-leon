@@ -16,7 +16,7 @@ export const SEDES = {
     id: "angeles",
     nombre: "Hospital Ángeles León",
     dias: "Lun / Mar / Jue",
-    zona: "Lomas del Campestre",
+    zona: "Predio Cerro Gordo",
     whatsapp: WA_ANGELES,
   },
   muguerza: {

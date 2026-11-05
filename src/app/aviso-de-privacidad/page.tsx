@@ -39,7 +39,7 @@ export default function AvisoPrivacidadPage() {
             </p>
             <p className="mt-2">
               Domicilios: Hospital Ángeles León, Consultorio 615, Torre II, Av.
-              Cerro Gordo 311, Lomas del Campestre, León, Gto. / Hospital
+              Cerro Gordo 311, Predio Cerro Gordo, 37150 León, Gto. / Hospital
               Christus Muguerza Altagracia, Consultorio 724, Blvd. Jorge Vértiz
               Campero 761, 37238 León, Gto.
             </p>
