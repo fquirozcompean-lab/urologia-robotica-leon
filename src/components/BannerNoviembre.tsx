@@ -1,21 +1,23 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import Link from "next/link";
 import WAButtonConSelector from "@/components/WAButtonConSelector";
 
 // 1 dic 2026, 00:00 en León (UTC-6).
 const FIN_CAMPANA = Date.parse("2026-12-01T06:00:00Z");
 
+const sinSuscripcion = () => () => {};
+
 /** Campaña de noviembre (mes de la salud del hombre). Se apaga sola en diciembre. */
 export default function BannerNoviembre({ motivo }: { motivo: string }) {
-  // Arranca visible y se revisa tras hidratar: el HTML es estático, así que evaluar
-  // la fecha en el primer render causaría un error de hidratación en diciembre.
-  const [vigente, setVigente] = useState(true);
-
-  useEffect(() => {
-    if (Date.now() >= FIN_CAMPANA) setVigente(false);
-  }, []);
+  // El HTML es estático: durante la hidratación se usa el valor de servidor (true) y
+  // después React revisa la fecha real, sin error de hidratación en diciembre.
+  const vigente = useSyncExternalStore(
+    sinSuscripcion,
+    () => Date.now() < FIN_CAMPANA,
+    () => true
+  );
 
   if (!vigente) return null;
 

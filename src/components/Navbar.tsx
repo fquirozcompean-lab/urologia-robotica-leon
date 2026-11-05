@@ -66,10 +66,12 @@ export default function Navbar() {
   const espRef = useRef<HTMLDivElement>(null);
 
   // Cerrar menús al cambiar de ruta
-  useEffect(() => {
+  const [rutaAnterior, setRutaAnterior] = useState(pathname);
+  if (pathname !== rutaAnterior) {
+    setRutaAnterior(pathname);
     setEspOpen(false);
     setMobileOpen(false);
-  }, [pathname]);
+  }
 
   // Dropdown desktop: cerrar con clic fuera o Escape
   useEffect(() => {
