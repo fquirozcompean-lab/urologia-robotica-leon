@@ -417,7 +417,7 @@ export default function HomeContent() {
             <div className="bg-editorial p-8 rounded-xl shadow-lg border-2 border-gris-premium/20">
               <h3 className="text-2xl font-bold mb-4 text-acero font-sans">Hospital Christus Muguerza Altagracia</h3>
               <p className="text-gris-profundo mb-2 font-serif"><strong className="font-sans">Consultorio 724</strong></p>
-              <p className="text-gris-profundo mb-4 font-serif text-[15px]">Blvd. Juan Alonso de Torres 2002, Valle del Campestre</p>
+              <p className="text-gris-profundo mb-4 font-serif text-[15px]">Blvd. Jorge Vértiz Campero 761, 37238 León, Gto.</p>
               <p className="text-gris-profundo mb-6 font-serif"><strong className="font-sans">Días de consulta:</strong> Mié / Vie</p>
               <div className="space-y-3">
                 <WAButton

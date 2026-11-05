@@ -23,7 +23,7 @@ export const SEDES = {
     id: "muguerza",
     nombre: "Hospital Christus Muguerza Altagracia",
     dias: "Mié / Vie",
-    zona: "Valle del Campestre",
+    zona: "Blvd. Jorge Vértiz Campero 761",
     whatsapp: WA_MUGUERZA,
   },
 } as const;

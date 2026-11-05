@@ -97,8 +97,9 @@ const physicianSchema = {
       name: "Hospital Christus Muguerza Altagracia",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Blvd. Juan Alonso de Torres 2002",
-        addressLocality: "León",
+        streetAddress: "Blvd. Jorge Vértiz Campero 761, Consultorio 724",
+        addressLocality: "León de los Aldama",
+        postalCode: "37238",
         addressRegion: "Guanajuato",
         addressCountry: "MX",
       },

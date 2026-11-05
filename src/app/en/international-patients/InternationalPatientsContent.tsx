@@ -281,7 +281,7 @@ export default function InternationalPatientsContent() {
                 <li>
                   <strong>Hospital Christus Muguerza Altagracia</strong>
                   <br />
-                  Office 724 · Valle del Campestre
+                  Office 724 · Blvd. Jorge Vértiz Campero 761
                 </li>
                 <li className="text-slate-500">León, Guanajuato, México</li>
               </ul>

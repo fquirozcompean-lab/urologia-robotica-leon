@@ -640,7 +640,7 @@ export default function SobreMiContent() {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 text-quirurgico flex-shrink-0 mt-0.5" />
                   <p className="text-sm text-gris-profundo font-serif">
-                    Blvd. Juan Alonso de Torres 2002, Valle del Campestre
+                    Blvd. Jorge Vértiz Campero 761, 37238 León, Gto.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
