@@ -381,8 +381,7 @@ export default function HomeContent() {
               <h3 className="text-2xl font-bold mb-4 text-acero font-sans">Hospital Ángeles León</h3>
               <p className="text-gris-profundo mb-2 font-serif"><strong className="font-sans">Consultorio 615, Torre II</strong></p>
               <p className="text-gris-profundo mb-4 font-serif text-[15px]">Av. Cerro Gordo 311, Lomas del Campestre</p>
-              <p className="text-gris-profundo mb-2 font-serif"><strong className="font-sans">Horarios:</strong> Lun / Mar / Jue</p>
-              <p className="text-gris-profundo mb-6 font-serif text-[15px]">9:00 AM - 8:00 PM</p>
+              <p className="text-gris-profundo mb-6 font-serif"><strong className="font-sans">Días de consulta:</strong> Lun / Mar / Jue</p>
               <div className="space-y-3">
                 <WAButton
                   mensaje="Hola Dr. Quiroz, quiero agendar una consulta en Hospital Ángeles León."
@@ -419,8 +418,7 @@ export default function HomeContent() {
               <h3 className="text-2xl font-bold mb-4 text-acero font-sans">Hospital Christus Muguerza Altagracia</h3>
               <p className="text-gris-profundo mb-2 font-serif"><strong className="font-sans">Consultorio 724</strong></p>
               <p className="text-gris-profundo mb-4 font-serif text-[15px]">Blvd. Juan Alonso de Torres 2002, Valle del Campestre</p>
-              <p className="text-gris-profundo mb-2 font-serif"><strong className="font-sans">Horarios:</strong> Mié / Vie</p>
-              <p className="text-gris-profundo mb-6 font-serif text-[15px]">9:00 AM - 8:00 PM</p>
+              <p className="text-gris-profundo mb-6 font-serif"><strong className="font-sans">Días de consulta:</strong> Mié / Vie</p>
               <div className="space-y-3">
                 <WAButton
                   mensaje="Hola Dr. Quiroz, quiero agendar una consulta en Hospital Muguerza Altagracia."

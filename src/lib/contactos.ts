@@ -15,14 +15,14 @@ export const SEDES = {
   angeles: {
     id: "angeles",
     nombre: "Hospital Ángeles León",
-    dias: "Lun / Mar / Jue · 9:00 AM – 8:00 PM",
+    dias: "Lun / Mar / Jue",
     zona: "Lomas del Campestre",
     whatsapp: WA_ANGELES,
   },
   muguerza: {
     id: "muguerza",
     nombre: "Hospital Christus Muguerza Altagracia",
-    dias: "Mié / Vie · 9:00 AM – 8:00 PM",
+    dias: "Mié / Vie",
     zona: "Valle del Campestre",
     whatsapp: WA_MUGUERZA,
   },

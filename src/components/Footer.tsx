@@ -77,7 +77,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-editorial font-bold text-lg mb-4 font-sans">Horarios</h3>
+            <h3 className="text-editorial font-bold text-lg mb-4 font-sans">Días de consulta</h3>
             <p className="text-sm mb-2 font-serif">
               <strong className="text-editorial/90 font-sans">Lun / Mar / Jue:</strong><br />
               Hospital Ángeles León

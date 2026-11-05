@@ -29,8 +29,7 @@ export default function GraciasPage() {
 
           <p className="font-serif text-lg text-gris-profundo leading-relaxed max-w-xl mx-auto">
             El equipo del Dr. Quiroz revisará tu solicitud y te contactará por
-            teléfono o WhatsApp en un plazo de 2 a 4 horas en días hábiles
-            (lunes a viernes, 9:00 AM a 8:00 PM).
+            teléfono o WhatsApp en un plazo de 2 a 4 horas en días hábiles.
           </p>
 
           {/* CONTACTO INMEDIATO */}

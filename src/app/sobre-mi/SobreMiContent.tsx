@@ -587,7 +587,7 @@ export default function SobreMiContent() {
                 <div className="flex items-start gap-3">
                   <Clock className="w-4 h-4 text-quirurgico flex-shrink-0 mt-0.5" />
                   <p className="text-sm text-gris-profundo font-serif">
-                    Lunes, Martes, Jueves — 9:00 AM a 8:00 PM
+                    Lunes, Martes, Jueves
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
@@ -646,7 +646,7 @@ export default function SobreMiContent() {
                 <div className="flex items-start gap-3">
                   <Clock className="w-4 h-4 text-quirurgico flex-shrink-0 mt-0.5" />
                   <p className="text-sm text-gris-profundo font-serif">
-                    Miércoles, Viernes — 9:00 AM a 8:00 PM
+                    Miércoles, Viernes
                   </p>
                 </div>
                 <div className="flex items-start gap-3">

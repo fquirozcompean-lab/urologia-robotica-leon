@@ -18,8 +18,8 @@ Ambos perfiles de Google Business usan el teléfono 477 633 0492. El schema
 `MedicalClinic` de `layout.tsx` tiene un bloque por perfil y debe coincidir **exactamente**
 con ellos (nombre, dirección, teléfono): la consistencia NAP pesa para aparecer en el
 mapa de "urólogo León". Al cambiar algo en un perfil de Business, actualizar aquí y en
-`layout.tsx`. **Decisión (Oct 2026): no publicar horarios** (`openingHours` /
-`openingHoursSpecification`) en el schema ni en el sitio. (Jul–Oct 2026 el schema tenía solo Ángeles, con CP 37160 erróneo y con los
+`layout.tsx`. **Decisión del Dr. (Oct–Nov 2026): no publicar horas de atención** en el schema
+(`openingHours`) ni en el sitio; solo los días de consulta de cada sede, para que el paciente agende. (Jul–Oct 2026 el schema tenía solo Ángeles, con CP 37160 erróneo y con los
 días de Muguerza asignados a Ángeles — corregido Oct 2026.)
 
 ## Contacto y links clave
