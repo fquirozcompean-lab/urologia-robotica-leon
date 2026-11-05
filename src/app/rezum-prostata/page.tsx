@@ -54,7 +54,7 @@ const faqSchema = {
       name: "¿El Rezum duele o requiere anestesia general?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No requiere anestesia general. El Rezum se realiza de forma ambulatoria con anestesia local y, en muchos casos, sedación ligera. El procedimiento dura pocos minutos y la molestia suele ser leve y manejable con medidas sencillas.",
+        text: "No requiere anestesia general. Es ambulatorio, con anestesia local y, en muchos casos, sedación ligera. Dura pocos minutos y la molestia suele ser leve.",
       },
     },
     {
@@ -62,7 +62,7 @@ const faqSchema = {
       name: "¿El Rezum preserva la eyaculación?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Esta es su principal ventaja: en la mayoría de los pacientes el Rezum preserva la eyaculación y la función eréctil, a diferencia de técnicas como la RTUP o el HoLEP, en las que la eyaculación retrógrada es común. Por eso es una opción atractiva para hombres que quieren mejorar sus síntomas urinarios sin afectar la función sexual.",
+        text: "Sí, es su principal ventaja: en la mayoría de los pacientes preserva la eyaculación y la función eréctil, a diferencia de la RTUP o el HoLEP, donde la eyaculación retrógrada es común.",
       },
     },
     {
@@ -70,7 +70,7 @@ const faqSchema = {
       name: "¿En cuánto tiempo se ven los resultados del Rezum?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Los resultados son graduales. El vapor de agua hace que el tejido sobrante se reabsorba poco a poco, por lo que la mejoría de los síntomas suele notarse a lo largo de las primeras semanas y se consolida hacia los 2-3 meses. No es un alivio inmediato como el de una resección, pero es duradero.",
+        text: "Son graduales: el tejido se reabsorbe poco a poco, así que la mejoría se nota en las primeras semanas y se consolida hacia los 2-3 meses. No es inmediato como una resección, pero es duradero.",
       },
     },
     {
@@ -78,7 +78,7 @@ const faqSchema = {
       name: "¿Necesito catéter después del Rezum?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí, habitualmente se coloca una sonda urinaria temporal durante unos días (en promedio de 3 a 7), mientras cede la inflamación inicial. Es una molestia pasajera y forma parte normal de la recuperación.",
+        text: "Sí, una sonda urinaria temporal unos días (en promedio 3 a 7) mientras cede la inflamación inicial. Es una molestia pasajera y parte normal de la recuperación.",
       },
     },
     {
@@ -86,7 +86,7 @@ const faqSchema = {
       name: "¿Rezum o HoLEP: cuál me conviene?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Depende sobre todo del tamaño de la próstata y de tus prioridades. El Rezum es ideal para próstatas chicas a medianas y para quien quiere preservar la eyaculación evitando una cirugía mayor. El HoLEP es más adecuado para próstatas grandes y ofrece un resultado más definitivo e inmediato. En la consulta, con una uroflujometría y la medición del volumen prostático, se define cuál se adapta a tu caso.",
+        text: "Depende del tamaño de la próstata y tus prioridades. El Rezum es ideal para próstatas chicas-medianas y para preservar la eyaculación; el HoLEP es más adecuado para próstatas grandes y ofrece un resultado más definitivo. Una uroflujometría y la medición del volumen ayudan a decidir.",
       },
     },
     {
@@ -94,7 +94,7 @@ const faqSchema = {
       name: "¿El Rezum es permanente? ¿Podré dejar el medicamento?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Los estudios muestran mejoría sostenida de los síntomas a varios años. Como toda técnica que conserva tejido prostático, una proporción de pacientes puede requerir tratamiento adicional con el tiempo —algo más probable en próstatas grandes, por lo que el Rezum se reserva para próstatas chicas a medianas. Muchos pacientes logran dejar o reducir el medicamento para la próstata tras el Rezum. El resultado se valora de forma individual según tu respuesta.",
+        text: "Los estudios muestran mejoría sostenida a varios años. Como toda técnica que conserva tejido prostático, una proporción de pacientes puede requerir tratamiento adicional con el tiempo —algo más probable en próstatas grandes, por lo que el Rezum se reserva para próstatas chicas a medianas. Muchos pacientes logran dejar o reducir el medicamento. El resultado se valora de forma individual.",
       },
     },
   ],

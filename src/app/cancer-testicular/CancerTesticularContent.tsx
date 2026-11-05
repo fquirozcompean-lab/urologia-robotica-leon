@@ -76,16 +76,9 @@ function FAQItem({
           {open ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
         </span>
       </button>
-      {open && (
-        <motion.div
-          initial={{ opacity: 0, y: -6 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.25 }}
-          className="mt-3 font-serif text-sm text-gris-profundo leading-relaxed"
-        >
+      <div hidden={!open} className="mt-3 font-serif text-sm text-gris-profundo leading-relaxed">
           {children}
-        </motion.div>
-      )}
+        </div>
     </motion.div>
   );
 }
@@ -235,7 +228,7 @@ export default function CancerTesticularContent() {
         <section className="relative bg-petroleo text-editorial py-24 px-4">
           <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-quirurgico to-acero" />
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"
@@ -844,12 +837,7 @@ export default function CancerTesticularContent() {
                         </span>
                       </div>
                     </button>
-                    {isOpen && (
-                      <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        className="px-5 pb-6 bg-white border-t border-slate-100"
-                      >
+                    <div hidden={!isOpen} className="px-5 pb-6 bg-white border-t border-slate-100">
                         <p className="font-serif text-sm text-gris-profundo leading-relaxed mt-4 max-w-3xl">
                           {t.description}
                         </p>
@@ -900,8 +888,7 @@ export default function CancerTesticularContent() {
                             Consultar sobre este tratamiento →
                           </WAButtonConSelector>
                         </div>
-                      </motion.div>
-                    )}
+                      </div>
                   </motion.div>
                 );
               })}

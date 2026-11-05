@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import PetPsmaContent from "./PetPsmaContent";
 
 export const metadata: Metadata = {
-  title: "PET-PSMA en León, Gto | Estadificación de Cáncer de Próstata",
+  title: "PET-PSMA en León, Gto | Cuándo Está Indicado y Cómo se Interpreta",
   description:
-    "PET-PSMA disponible en León, Guanajuato. El estudio más preciso para estadificar el cáncer de próstata. Dr. Quiroz Compeán, urólogo oncólogo certificado.",
+    "Qué es el PET-PSMA, cuándo está indicado en cáncer de próstata y qué significa su resultado. No lo realizamos: lo solicitamos, interpretamos y normamos el manejo. Dr. Quiroz, urólogo oncólogo en León.",
   keywords: [
     "PET PSMA León",
     "PET PSMA Guanajuato",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "PET-PSMA en León | Dr. Quiroz Compeán",
     description:
-      "El estudio de imagen más preciso para el cáncer de próstata, disponible en León, Gto. Estadificación y detección de recurrencia con precisión molecular.",
+      "Cuándo está indicado el PET-PSMA en cáncer de próstata y cómo se interpreta. Valoración con el Dr. Quiroz, urólogo oncólogo en León, Gto.",
     url: "https://urologiaroboticaleon.com/pet-psma-leon",
     siteName: "Urología Robótica León",
     images: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "PET-PSMA en León | Dr. Quiroz Compeán",
     description:
-      "Estadificación de precisión del cáncer de próstata con PET-PSMA en León, Guanajuato.",
+      "Cuándo está indicado el PET-PSMA en cáncer de próstata y cómo se interpreta. León, Guanajuato.",
     images: ["/og-image.jpg"],
   },
   alternates: {
@@ -87,15 +87,47 @@ const faqSchema = {
       name: "¿Qué necesito para realizarlo?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Una valoración previa con su expediente (PSA, biopsia, estudios previos). Si está indicado, el Dr. Quiroz coordina el estudio y —lo más importante— interpreta el resultado dentro de su plan de tratamiento completo.",
+        text: "Una valoración previa con su expediente (antígeno prostático, biopsia, estudios previos). Si está indicado, el Dr. Quiroz lo solicita, y después interpreta el resultado y norma el manejo dentro de su plan de tratamiento completo.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Cuánto cuesta el PET-PSMA y dónde se realiza en León?",
+      name: "¿El Dr. Quiroz realiza el PET-PSMA?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El costo varía según la unidad de medicina nuclear y lo que incluya el estudio (radiotrazador, equipo PET/CT e interpretación). El PSMA PET no se realiza en todos los hospitales: requiere una unidad con tecnología PET CT, de las cuales existen opciones privadas en León y el Bajío. Lo más útil es que la indicación y la lectura las haga un urólogo oncólogo: un estudio mal indicado o interpretado fuera de contexto representa un gasto sin aportar valor. En la valoración, el Dr. Quiroz confirma si está indicado en tu caso, coordina la unidad y te orienta sobre el costo aproximado antes de realizarlo.",
+        text: "No. El estudio se realiza en unidades de medicina nuclear externas a nuestro consultorio. Nosotros lo solicitamos cuando está indicado, interpretamos los resultados y normamos el manejo de cada paciente.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuánto cuesta el PET-PSMA y dónde se realiza?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El PSMA PET requiere una unidad de medicina nuclear con equipo PET/CT (o PET CT) y el radiotrazador, por lo que no está en todos los hospitales. El costo lo define cada unidad y varía según lo que incluya. Nosotros no realizamos el estudio: en la valoración confirmamos si está indicado en tu caso y te orientamos sobre dónde realizarlo.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Un PET-PSMA negativo descarta el cáncer de próstata?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No por completo. Lesiones muy pequeñas, un antígeno muy bajo o tumores con poca expresión de PSMA pueden no verse. Por eso el resultado se interpreta junto con el antígeno prostático, la biopsia y los demás estudios.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Todo lo que capta el PET-PSMA es cáncer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Algunas lesiones benignas, cambios en el hueso o estructuras normales como ciertos ganglios nerviosos también pueden captar el radiotrazador. Por eso la lectura debe hacerse en contexto, y a veces se necesita confirmar un hallazgo con otro estudio.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Puedo hacerme un PET-PSMA sin que me lo indiquen?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No es lo recomendable. No sirve para detectar cáncer de próstata en hombres sin diagnóstico ni sustituye a la biopsia, y un estudio sin una pregunta clínica clara puede generar gastos y confusión. Primero conviene una valoración para saber si te aporta información útil.",
       },
     },
   ],
@@ -131,7 +163,7 @@ const medicalTestSchema = {
   "@type": "MedicalTest",
   name: "PET-PSMA (Tomografía por Emisión de Positrones con PSMA)",
   description:
-    "Estudio de imagen molecular de alta precisión para la estadificación y detección de recurrencia del cáncer de próstata. Disponible en León, Guanajuato.",
+    "Estudio de imagen molecular de alta precisión para la estadificación y detección de recurrencia del cáncer de próstata. Se realiza en unidades de medicina nuclear; el Dr. Quiroz lo solicita cuando está indicado, interpreta los resultados y norma el manejo.",
   usedToDiagnose: {
     "@type": "MedicalCondition",
     name: "Cáncer de Próstata",

@@ -292,12 +292,7 @@ function DrugAccordion({ drug, colorBg, border }: DrugAccordionProps) {
         </div>
         <span className="text-slate-400 text-lg leading-none mt-0.5 shrink-0">{open ? "−" : "+"}</span>
       </button>
-      {open && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="px-4 pb-4 space-y-3"
-        >
+      <div hidden={!open} className="px-4 pb-4 space-y-3">
           <ul className="space-y-1.5">
             {drug.highlights.map((h, i) => (
               <li key={i} className="flex gap-2 text-sm text-slate-700">
@@ -311,8 +306,7 @@ function DrugAccordion({ drug, colorBg, border }: DrugAccordionProps) {
               {drug.warning}
             </div>
           )}
-        </motion.div>
-      )}
+        </div>
     </div>
   );
 }
@@ -336,15 +330,9 @@ function FAQItem({ q, a }: FAQItemProps) {
         <span>{q}</span>
         <span className="text-slate-400 text-lg leading-none shrink-0">{open ? "−" : "+"}</span>
       </button>
-      {open && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="mt-3 text-sm text-slate-700 leading-relaxed"
-        >
+      <div hidden={!open} className="mt-3 text-sm text-slate-700 leading-relaxed">
           {a}
-        </motion.div>
-      )}
+        </div>
     </motion.div>
   );
 }
@@ -367,7 +355,7 @@ export default function MedicamentosProstataContent() {
         <section className="relative bg-petroleo text-editorial py-24 px-4">
           <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-quirurgico to-acero" />
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"
@@ -414,7 +402,10 @@ export default function MedicamentosProstataContent() {
               ¿Qué tan graves son tus síntomas? El IPSS
             </h2>
             <p className="text-slate-600 mb-6 max-w-2xl">
-              El IPSS (International Prostate Symptom Score) es el cuestionario validado internacionalmente para cuantificar los síntomas prostáticos. Son 7 preguntas, cada una puntúa de 0 a 5. El total orienta el tratamiento.
+              El IPSS (International Prostate Symptom Score) es el cuestionario validado internacionalmente para cuantificar los síntomas prostáticos. Son 7 preguntas, cada una puntúa de 0 a 5. El total orienta el tratamiento.{" "}
+              <Link href="/cuestionario-ipss-prostata" className="text-acero font-medium hover:underline">
+                  Calcula tu puntaje en línea →
+                </Link>
             </p>
           </motion.div>
 

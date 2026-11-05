@@ -35,11 +35,9 @@ function FAQItem({
         <span className="font-semibold text-slate-800">{q}</span>
         <span className="text-teal-600 text-xl shrink-0">{open ? "−" : "+"}</span>
       </button>
-      {open && (
-        <div className="px-5 pb-5 text-slate-700 text-sm leading-relaxed">
+      <div hidden={!open} className="px-5 pb-5 text-slate-700 text-sm leading-relaxed">
           {children}
         </div>
-      )}
     </motion.div>
   );
 }
@@ -197,7 +195,9 @@ export default function UroflujometriaContent() {
           <ul className="space-y-2 text-slate-700 leading-relaxed mb-4">
             {[
               "Un flujo máximo por arriba de 15 mL/segundo suele considerarse normal.",
-              "Un flujo máximo por debajo de ese valor puede sugerir obstrucción en la salida de la vejiga o debilidad en la contracción vesical.",
+              "Entre 10 y 15 mL/segundo es una zona intermedia que se interpreta junto con los síntomas.",
+              "Por debajo de 10 mL/segundo es más probable que exista obstrucción en la salida de la vejiga o debilidad en la contracción vesical.",
+              "El resultado es más confiable cuando se orinan al menos 150 mL: con poco volumen, el flujo puede salir falsamente bajo.",
               "El volumen total, el tiempo de vaciamiento y la forma de la gráfica también aportan información relevante para el diagnóstico.",
             ].map((s) => (
               <li key={s} className="flex items-start gap-3">
@@ -252,6 +252,62 @@ export default function UroflujometriaContent() {
           </div>
         </section>
 
+        {/* LA GRÁFICA */}
+        <section>
+          <H2>Cómo se lee la gráfica</H2>
+          <p className="text-slate-700 leading-relaxed mb-5">
+            Además del número, la <strong>forma de la curva</strong> da mucha información. Estos
+            son los patrones más comunes:
+          </p>
+          <div className="grid sm:grid-cols-3 gap-5">
+            {[
+              { t: "En forma de campana", d: "Sube rápido y baja de forma suave. Es el patrón habitual de un vaciado normal." },
+              { t: "Aplanada y prolongada", d: "Flujo bajo y sostenido, con un vaciado largo. Se asocia con obstrucción, por ejemplo por crecimiento prostático o estrechez de la uretra." },
+              { t: "Intermitente", d: "Varios picos separados. Puede indicar que se usa la fuerza del abdomen para orinar o que la vejiga se contrae con poca fuerza." },
+            ].map((c) => (
+              <div key={c.t} className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h3 className="font-semibold text-slate-800 mb-2">{c.t}</h3>
+                <p className="text-sm text-slate-700 leading-relaxed">{c.d}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* QUÉ SIGUE */}
+        <section>
+          <H2>Qué sigue después del estudio</H2>
+          <div className="space-y-4 text-slate-700 leading-relaxed">
+            <p>
+              La uroflujometría muestra <strong>cómo</strong> orinas, pero no siempre el{" "}
+              <strong>porqué</strong>: un flujo bajo puede deberse a obstrucción o a una vejiga
+              débil. Por eso suele complementarse con la medición de la orina que queda en la
+              vejiga (residuo posmiccional), un ultrasonido y, en casos seleccionados, un estudio
+              urodinámico.
+            </p>
+            <p>
+              Con esa información se decide si conviene vigilar, usar{" "}
+              <Link href="/medicamentos-prostata" className="text-acero font-medium hover:underline">
+                medicamentos
+              </Link>{" "}
+              o un procedimiento como{" "}
+              <Link href="/rezum-prostata" className="text-acero font-medium hover:underline">
+                Rezum
+              </Link>{" "}
+              o{" "}
+              <Link href="/holep-cirugia-laser" className="text-acero font-medium hover:underline">
+                HoLEP
+              </Link>
+              . También sirve para comparar antes y después del tratamiento.
+            </p>
+            <p>
+              ¿Quieres medir qué tan intensos son tus síntomas antes de la consulta?{" "}
+              <Link href="/cuestionario-ipss-prostata" className="text-acero font-medium hover:underline">
+                Contesta el cuestionario IPSS →
+              </Link>
+            </p>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section id="faq">
           <H2>Preguntas frecuentes</H2>
@@ -276,6 +332,21 @@ export default function UroflujometriaContent() {
             <FAQItem q="¿Puedo hacerme el estudio si tengo una infección urinaria activa?">
               Generalmente se recomienda posponerlo hasta resolver la infección, ya que
               puede alterar los resultados. Coméntalo con tu urólogo antes de la cita.
+            </FAQItem>
+            <FAQItem q="¿Cuál es el flujo máximo normal en una uroflujometría?">
+              Como referencia general, por arriba de 15 mL/segundo suele considerarse normal, entre
+              10 y 15 es una zona intermedia y por debajo de 10 es más probable que haya un problema
+              para vaciar. El valor se interpreta con el volumen orinado, la edad y los síntomas.
+            </FAQItem>
+            <FAQItem q="¿Por qué puede salir alterada si no tengo nada grave?">
+              Porque el resultado depende de las condiciones del momento: orinar muy poco, tener la
+              vejiga demasiado llena, los nervios o una postura incómoda pueden alterar la gráfica.
+              Por eso a veces se repite antes de sacar conclusiones.
+            </FAQItem>
+            <FAQItem q="¿La uroflujometría también sirve en mujeres?">
+              Sí. Aunque se asocia con la próstata, también se usa en mujeres con dificultad para
+              vaciar la vejiga o chorro débil. Los valores de referencia se interpretan de forma
+              distinta que en los hombres.
             </FAQItem>
           </div>
         </section>

@@ -81,7 +81,7 @@ const faqSchema = {
       name: "¿Puedo tomar tadalafil todos los días?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Existe una presentación de tadalafil específicamente diseñada y aprobada para uso diario. Es diferente a la presentación de uso ocasional. Esta modalidad permite actividad sexual espontánea sin necesidad de planear. Tu urólogo determinará si esta opción es apropiada para ti según tu frecuencia de actividad sexual, salud general y otros medicamentos.",
+        text: "Existe una presentación de tadalafil específicamente diseñada y aprobada para uso diario. Es diferente a la presentación de uso ocasional. Esta modalidad permite actividad sexual espontánea sin necesidad de planear. Tu urólogo determinará si esta opción es apropiada para ti según tu frecuencia de actividad sexual, salud general y otros medicamentos. No decidas esto por cuenta propia.",
       },
     },
     {
@@ -129,7 +129,7 @@ const faqSchema = {
       name: "¿La pornografía causa disfunción eréctil?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El uso excesivo de pornografía puede contribuir a la disfunción eréctil, especialmente en hombres jóvenes, a través de un proceso de condicionamiento. El cerebro se acostumbra a niveles muy altos de estimulación visual, haciendo que la estimulación normal con una pareja real parezca insuficiente. La solución principal es un periodo de abstinencia de pornografía, usualmente con apoyo psicológico.",
+        text: "El uso excesivo de pornografía puede contribuir a la disfunción eréctil, especialmente en hombres jóvenes, a través de un proceso de condicionamiento. El cerebro se acostumbra a niveles muy altos de estimulación visual, haciendo que la estimulación 'normal' con una pareja real parezca insuficiente. Esto se llama 'disfunción eréctil inducida por pornografía'. La solución principal es un periodo de abstinencia de pornografía, usualmente con apoyo psicológico.",
       },
     },
     {
@@ -137,7 +137,7 @@ const faqSchema = {
       name: "¿Puedo combinar tadalafil o sildenafil con alcohol?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El alcohol moderado (1–2 bebidas) generalmente no tiene interacción grave con estos medicamentos. Sin embargo, el alcohol por sí mismo inhibe la erección. Además, ambas sustancias bajan la presión arterial, lo que en combinación puede causar mareo o desmayo. Tu urólogo te indicará las recomendaciones específicas según tu caso.",
+        text: "El alcohol moderado (1–2 bebidas) generalmente no tiene interacción grave con estos medicamentos. Sin embargo, el alcohol por sí mismo inhibe la erección — muchos hombres lo experimentan. Además, ambas sustancias bajan la presión arterial, lo que en combinación puede causar mareo o desmayo. Tu urólogo te indicará las recomendaciones específicas según tu caso.",
       },
     },
     {
@@ -145,7 +145,7 @@ const faqSchema = {
       name: "¿El ciclismo causa disfunción eréctil?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El ciclismo intenso y prolongado puede ejercer presión sobre el perineo, comprimiendo nervios y vasos que irrigan el pene. Ciclistas que pedalean varias horas diarias durante años tienen mayor riesgo. El riesgo se reduce significativamente con asientos ergonómicos con canal central, ajuste correcto de la bicicleta y pausas frecuentes. El ciclismo recreativo moderado no supone riesgo relevante.",
+        text: "El ciclismo intenso y prolongado puede ejercer presión sobre el perineo (zona entre escroto y ano), comprimiendo nervios y vasos que irrigan el pene. Ciclistas que pedalean varias horas diarias durante años tienen mayor riesgo. El riesgo se reduce significativamente con asientos ergonómicos con canal central (nariz corta o ranura), ajuste correcto de la bicicleta y pausas frecuentes. El ciclismo recreativo moderado no supone riesgo relevante.",
       },
     },
     {
@@ -153,7 +153,7 @@ const faqSchema = {
       name: "¿La vasectomía causa disfunción eréctil?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. La vasectomía no afecta la función eréctil. El procedimiento interrumpe los conductos deferentes pero no afecta los vasos sanguíneos, nervios ni la producción de testosterona necesarios para la erección. La función eréctil y el orgasmo son completamente normales después de una vasectomía.",
+        text: "No. La vasectomía no afecta la función eréctil. El procedimiento interrumpe los conductos deferentes (que transportan esperma) pero no afecta los vasos sanguíneos, nervios ni la producción de testosterona que son necesarios para la erección. El volumen de eyaculación puede disminuir mínimamente (el esperma representa solo el 2–5% del volumen total del semen), pero la función eréctil y el orgasmo son completamente normales.",
       },
     },
     {
@@ -161,7 +161,7 @@ const faqSchema = {
       name: "¿El finasteride (para la próstata) causa disfunción eréctil?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Puede causarla en un pequeño porcentaje de pacientes (aproximadamente 5–8%). Si tomas finasteride y notas cambios en tu función eréctil o libido, coméntalo con tu urólogo — puede ajustar el tratamiento o explorar alternativas. En la mayoría de casos los efectos se revierten al suspender el medicamento.",
+        text: "Puede causarla en un pequeño porcentaje de pacientes (aproximadamente 5–8%). Si tomás finasteride y notás cambios en tu función eréctil o libido, coméntalo con tu urólogo — puede ajustar el tratamiento o explorar alternativas. En la mayoría de casos los efectos se revierten al suspender el medicamento, aunque existe un grupo pequeño de pacientes donde persisten.",
       },
     },
     {
@@ -169,7 +169,7 @@ const faqSchema = {
       name: "¿La disfunción eréctil puede ser señal de problemas cardiacos?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí, y es muy importante saberlo. Las arterias del pene son pequeñas — cuando hay aterosclerosis, las arterias pequeñas se obstruyen primero, antes de que las arterias coronarias muestren síntomas. La disfunción eréctil de causa vascular en un hombre de 40–60 años puede preceder 3–5 años a un evento cardiovascular. Por eso la evaluación siempre incluye perfil cardiovascular. Es una oportunidad de prevención.",
+        text: "Sí, y es muy importante saberlo. Las arterias del pene son pequeñas — cuando hay aterosclerosis (obstrucción por colesterol), las arterias pequeñas se obstruyen primero, antes de que las arterias coronarias muestren síntomas. La disfunción eréctil de causa vascular en un hombre de 40–60 años puede preceder 3–5 años a un evento cardiovascular. Por eso la evaluación siempre incluye perfil cardiovascular. Es una oportunidad de prevención.",
       },
     },
     {
@@ -177,7 +177,7 @@ const faqSchema = {
       name: "¿Los ejercicios de Kegel ayudan con la disfunción eréctil?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí, tienen beneficio comprobado, especialmente para la disfunción eréctil por fuga venosa. Los ejercicios de Kegel fortalecen el músculo isquiocavernoso, que ayuda a comprimir las venas y mantener la erección. Estudios muestran mejoría en un porcentaje importante de pacientes con disfunción eréctil leve-moderada. Son parte del tratamiento integral, no un sustituto de la evaluación médica.",
+        text: "Sí, tienen beneficio comprobado, especialmente para la disfunción eréctil por fuga venosa (cuando el pene no retiene sangre correctamente). Los ejercicios de Kegel fortalecen el músculo isquiocavernoso, que ayuda a comprimir las venas y mantener la erección. Estudios muestran mejoría en un porcentaje importante de pacientes con disfunción eréctil leve-moderada. Son parte del tratamiento integral, no un sustituto de la evaluación médica.",
       },
     },
     {
@@ -185,7 +185,7 @@ const faqSchema = {
       name: "¿Cuánto cuesta el tratamiento para la disfunción eréctil?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El costo varía ampliamente según el tratamiento. Los medicamentos orales genéricos son los más económicos. El tadalafil de uso diario tiene costo mayor. Las inyecciones intracavernosas son opciones de costo medio. El implante de prótesis peneana es la opción más costosa pero es definitiva. En la consulta, el Dr. Quiroz puede orientarte sobre opciones según tu situación específica y la más costo-efectiva para tu caso.",
+        text: "El costo varía ampliamente según el tratamiento. Los medicamentos orales genéricos (sildenafil genérico) son los más económicos. El tadalafil de uso diario tiene costo mayor. Las inyecciones intracavernosas son opciones de costo medio. El implante de prótesis peneana es la opción más costosa pero es definitiva. En la consulta, el Dr. Quiroz puede orientarte sobre opciones según tu situación específica y la más costo-efectiva para tu caso.",
       },
     },
   ],

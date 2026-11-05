@@ -54,7 +54,7 @@ const faqSchema = {
       name: "¿Qué diferencia hay entre prostatitis, próstata agrandada y cáncer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Son tres condiciones distintas. La prostatitis es una inflamación de la próstata, muchas veces asociada a infección, y suele causar dolor. La próstata agrandada (hiperplasia prostática benigna) es un crecimiento benigno por la edad que estrecha la salida de la orina. El cáncer de próstata es un tumor maligno que en etapas tempranas no da síntomas. Pueden compartir molestias urinarias, por eso la evaluación urológica es la que las distingue.",
+        text: "La prostatitis es una inflamación, muchas veces por infección, y suele doler. La próstata agrandada (HPB) es un crecimiento benigno por la edad. El cáncer es un tumor maligno que en etapas tempranas no da síntomas. La evaluación urológica es la que las distingue.",
       },
     },
     {
@@ -62,7 +62,7 @@ const faqSchema = {
       name: "¿Por qué se inflama la próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La causa más clara son las infecciones bacterianas, que suelen llegar desde las vías urinarias. Sin embargo, la forma más frecuente es el síndrome de dolor pélvico crónico, en el que no siempre se identifica una bacteria y participan factores como tensión muscular del piso pélvico, estrés e inflamación. Por eso el tratamiento se individualiza según el tipo.",
+        text: "La causa más clara son las infecciones bacterianas desde las vías urinarias. Pero la forma más frecuente es el síndrome de dolor pélvico crónico, donde no siempre hay bacteria y participan tensión del piso pélvico, estrés e inflamación.",
       },
     },
     {
@@ -70,7 +70,7 @@ const faqSchema = {
       name: "¿La prostatitis se cura?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La prostatitis bacteriana aguda suele resolverse con el antibiótico adecuado. La prostatitis crónica y el síndrome de dolor pélvico crónico pueden requerir un manejo más prolongado y combinado; en la mayoría de los pacientes los síntomas mejoran de forma importante, aunque pueden reaparecer. El objetivo es controlar los síntomas y recuperar la calidad de vida.",
+        text: "La bacteriana aguda suele resolverse con el antibiótico adecuado. La crónica y el síndrome de dolor pélvico pueden requerir manejo más prolongado; en la mayoría de los pacientes los síntomas mejoran de forma importante, aunque pueden reaparecer.",
       },
     },
     {
@@ -78,7 +78,7 @@ const faqSchema = {
       name: "¿Dónde duele con la prostatitis?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El dolor o la molestia suele sentirse en el perineo (entre los testículos y el ano), la parte baja del abdomen, la ingle, los testículos, la punta del pene o la espalda baja. También puede haber ardor al orinar y dolor al eyacular. La localización varía de un paciente a otro.",
+        text: "En el perineo (entre testículos y ano), la parte baja del abdomen, la ingle, los testículos, la punta del pene o la espalda baja. También puede haber ardor al orinar y dolor al eyacular.",
       },
     },
     {
@@ -86,7 +86,7 @@ const faqSchema = {
       name: "¿La prostatitis es contagiosa o se transmite sexualmente?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "En general la prostatitis no es contagiosa. En algunos casos se relaciona con infecciones de transmisión sexual, que sí requieren tratamiento específico y valorar a la pareja. Tu urólogo determinará si ese es tu caso.",
+        text: "En general no es contagiosa. En algunos casos se relaciona con infecciones de transmisión sexual, que sí requieren tratamiento específico y valorar a la pareja. Tu urólogo determinará si es tu caso.",
       },
     },
     {
@@ -94,7 +94,7 @@ const faqSchema = {
       name: "¿La prostatitis aumenta el riesgo de cáncer de próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No se ha demostrado que la prostatitis cause cáncer de próstata. Sin embargo, la inflamación puede elevar temporalmente el antígeno prostático (PSA), lo que a veces genera confusión. Por eso, ante un antígeno prostático elevado, el urólogo considera el contexto completo antes de tomar decisiones.",
+        text: "No se ha demostrado que cause cáncer. Sin embargo, la inflamación puede elevar temporalmente el antígeno prostático (PSA), lo que a veces genera confusión. Por eso, ante un antígeno prostático elevado, el urólogo considera el contexto completo antes de tomar decisiones.",
       },
     },
   ],

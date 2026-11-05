@@ -31,11 +31,9 @@ function FAQItem({ q, children }: { q: string; children: React.ReactNode }) {
         <span className="font-semibold text-slate-800">{q}</span>
         <span className="text-teal-600 text-xl shrink-0">{open ? "−" : "+"}</span>
       </button>
-      {open && (
-        <div className="px-5 pb-5 text-slate-700 text-sm leading-relaxed">
+      <div hidden={!open} className="px-5 pb-5 text-slate-700 text-sm leading-relaxed">
           {children}
         </div>
-      )}
     </motion.div>
   );
 }
@@ -172,6 +170,12 @@ export default function RezumContent() {
         {/* PARA QUIÉN */}
         <section>
           <H2>¿Para quién es el Rezum?</H2>
+          <p className="text-slate-700 leading-relaxed mb-4">
+            Un primer paso es medir tus síntomas:{" "}
+            <Link href="/cuestionario-ipss-prostata" className="text-acero font-medium hover:underline">
+                  contesta el cuestionario IPSS en línea →
+                </Link>
+          </p>
           <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
             <ul className="space-y-3 text-slate-700 leading-relaxed">
               {[

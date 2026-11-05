@@ -29,11 +29,9 @@ function FAQItem({ q, children }: { q: string; children: React.ReactNode }) {
         <span className="font-semibold text-slate-800">{q}</span>
         <span className="text-teal-600 text-xl shrink-0">{open ? "−" : "+"}</span>
       </button>
-      {open && (
-        <div className="px-5 pb-5 text-slate-700 text-sm leading-relaxed">
+      <div hidden={!open} className="px-5 pb-5 text-slate-700 text-sm leading-relaxed">
           {children}
         </div>
-      )}
     </motion.div>
   );
 }
@@ -247,6 +245,54 @@ export default function QueEsRinonContent() {
           </div>
         </section>
 
+        {/* ESTUDIOS */}
+        <section>
+          <H2>Cómo saber si tus riñones funcionan bien</H2>
+          <p className="text-slate-700 leading-relaxed mb-5">
+            La enfermedad renal suele avanzar <strong>sin dolor ni síntomas</strong> durante años.
+            Si tienes diabetes, hipertensión o antecedentes familiares, estos estudios sencillos
+            ayudan a detectarla:
+          </p>
+          <div className="grid sm:grid-cols-2 gap-5">
+            {[
+              { t: "Creatinina en sangre", d: "Es un desecho que el riñón debe eliminar. Si sube, puede indicar que el riñón filtra menos." },
+              { t: "Tasa de filtración glomerular", d: "Se calcula con la creatinina, la edad y el sexo. Estima cuánta sangre filtran los riñones." },
+              { t: "Examen general de orina", d: "Puede mostrar sangre, proteínas o datos de infección." },
+              { t: "Ultrasonido renal", d: "Muestra el tamaño y la forma de los riñones, cálculos, quistes o dilatación." },
+            ].map((c) => (
+              <div key={c.t} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <h3 className="font-semibold text-slate-800 mb-1">{c.t}</h3>
+                <p className="text-sm text-slate-700 leading-relaxed">{c.d}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* URÓLOGO O NEFRÓLOGO */}
+        <section>
+          <H2>¿Urólogo o nefrólogo? Quién atiende qué</H2>
+          <div className="grid sm:grid-cols-2 gap-5">
+            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <h3 className="font-semibold text-slate-800 mb-3">El urólogo</h3>
+              <p className="text-sm text-slate-700 leading-relaxed">
+                Es el especialista quirúrgico de las vías urinarias: atiende cálculos, obstrucciones,
+                sangre en la orina, infecciones complicadas y tumores del riñón, entre otros.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <h3 className="font-semibold text-slate-800 mb-3">El nefrólogo</h3>
+              <p className="text-sm text-slate-700 leading-relaxed">
+                Es el especialista médico de la función del riñón: atiende la enfermedad renal
+                crónica, sus complicaciones y la diálisis.
+              </p>
+            </div>
+          </div>
+          <p className="mt-4 text-slate-700 leading-relaxed">
+            Con frecuencia trabajan en equipo. Si no sabes con cuál empezar, el tipo de síntoma
+            suele orientar: dolor, cálculos o sangre en la orina, al urólogo.
+          </p>
+        </section>
+
         {/* FAQ */}
         <section id="faq">
           <H2>Preguntas frecuentes</H2>
@@ -285,6 +331,27 @@ export default function QueEsRinonContent() {
               Las más frecuentes son los cálculos (piedras), las infecciones que ascienden
               al riñón (pielonefritis) y los tumores renales, además de la enfermedad renal
               crónica ligada a la diabetes y la hipertensión.
+            </FAQItem>
+            <FAQItem q="¿Qué significa tener la creatinina alta?">
+              Puede indicar que los riñones están filtrando menos, aunque también influyen la masa
+              muscular, la deshidratación y algunos medicamentos. Un solo valor no hace el diagnóstico:
+              se interpreta junto con la tasa de filtración, el examen de orina y tu historia clínica.
+            </FAQItem>
+            <FAQItem q="¿Los riñones duelen cuando empiezan a fallar?">
+              Por lo general, no. La enfermedad renal crónica suele avanzar sin dolor, y los síntomas
+              como cansancio o hinchazón aparecen en etapas tardías. Por eso, quienes tienen diabetes
+              o hipertensión deben revisarse aunque se sientan bien.
+            </FAQItem>
+            <FAQItem q="¿Cuánta agua debo tomar para cuidar mis riñones?">
+              No hay una cantidad única: depende de tu peso, tu actividad, el clima y tu salud. Una
+              guía práctica es que la orina se vea clara. Si has tenido cálculos, suele recomendarse
+              tomar líquidos suficientes para orinar unos 2.5 litros al día. Si tienes insuficiencia
+              renal o del corazón, sigue la indicación de tu médico.
+            </FAQItem>
+            <FAQItem q="¿Qué médico trata los riñones: urólogo o nefrólogo?">
+              Depende del problema. El urólogo atiende los cálculos, las obstrucciones, la sangre en
+              la orina y los tumores del riñón. El nefrólogo atiende la enfermedad renal crónica y la
+              diálisis. Muchas veces trabajan en equipo.
             </FAQItem>
           </div>
         </section>

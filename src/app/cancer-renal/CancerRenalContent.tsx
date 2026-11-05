@@ -85,15 +85,9 @@ function FAQItem({
         <span>{q}</span>
         <span className="text-slate-500 ml-4 flex-shrink-0">{open ? "−" : "+"}</span>
       </button>
-      {open && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="mt-3 text-sm text-slate-700 leading-relaxed"
-        >
+      <div hidden={!open} className="mt-3 text-sm text-slate-700 leading-relaxed">
           {children}
-        </motion.div>
-      )}
+        </div>
     </motion.div>
   );
 }
@@ -387,7 +381,7 @@ export default function CancerRenalContent() {
         <section className="relative bg-petroleo text-editorial py-24 px-4">
           <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-quirurgico to-acero" />
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"
@@ -881,12 +875,7 @@ export default function CancerRenalContent() {
                               <span className="text-slate-400 flex-shrink-0 text-lg">{isOpen ? "−" : "+"}</span>
                             </div>
                           </button>
-                          {isOpen && (
-                            <motion.div
-                              initial={{ opacity: 0 }}
-                              animate={{ opacity: 1 }}
-                              className="px-5 pb-6 bg-white border-t border-slate-100"
-                            >
+                          <div hidden={!isOpen} className="px-5 pb-6 bg-white border-t border-slate-100">
                               <p className="text-sm text-slate-700 leading-relaxed mt-4 max-w-3xl">{t.description}</p>
                               <div className="grid sm:grid-cols-2 gap-5 mt-5">
                                 <div>
@@ -917,8 +906,7 @@ export default function CancerRenalContent() {
                                   </Button>
                                 </WASelectorLink>
                               </div>
-                            </motion.div>
-                          )}
+                            </div>
                         </motion.div>
                       );
                     })}

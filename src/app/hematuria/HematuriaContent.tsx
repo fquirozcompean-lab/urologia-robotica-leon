@@ -36,11 +36,9 @@ function FAQItem({
         <span className="font-semibold text-slate-800">{q}</span>
         <span className="text-teal-600 text-xl shrink-0">{open ? "−" : "+"}</span>
       </button>
-      {open && (
-        <div className="px-5 pb-5 text-slate-700 text-sm leading-relaxed">
+      <div hidden={!open} className="px-5 pb-5 text-slate-700 text-sm leading-relaxed">
           {children}
         </div>
-      )}
     </motion.div>
   );
 }

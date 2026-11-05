@@ -72,15 +72,9 @@ function FAQItem({ q, children }: { q: string; children: React.ReactNode }) {
           ▼
         </span>
       </button>
-      {open && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="px-6 pb-6 font-serif text-gris-profundo leading-relaxed"
-        >
+      <div hidden={!open} className="px-6 pb-6 font-serif text-gris-profundo leading-relaxed">
           {children}
-        </motion.div>
-      )}
+        </div>
     </motion.div>
   );
 }
@@ -106,7 +100,7 @@ export default function HoLEPContent() {
         <section className="relative bg-petroleo text-editorial py-24 px-4">
           <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-quirurgico to-acero" />
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"

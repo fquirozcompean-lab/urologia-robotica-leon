@@ -87,15 +87,9 @@ function FAQItem({
         <span>{q}</span>
         <span className="text-slate-500 ml-4 flex-shrink-0">{open ? "−" : "+"}</span>
       </button>
-      {open && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="mt-3 text-sm text-slate-700 leading-relaxed"
-        >
+      <div hidden={!open} className="mt-3 text-sm text-slate-700 leading-relaxed">
           {children}
-        </motion.div>
-      )}
+        </div>
     </motion.div>
   );
 }
@@ -119,7 +113,7 @@ export default function CancerProstataContent() {
         <section className="relative bg-petroleo text-editorial py-24 px-4">
           <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-quirurgico to-acero" />
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"
@@ -809,7 +803,7 @@ export default function CancerProstataContent() {
               viewport={{ once: true }}
               className="text-3xl font-bold mb-3"
             >
-              Estadificación de precisión con PET-PSMA en León
+              Estadificación de precisión con PET-PSMA
             </motion.h2>
             <motion.div
               variants={fadeUp}
@@ -822,7 +816,7 @@ export default function CancerProstataContent() {
               <p className="mt-4 text-slate-700 leading-relaxed">
                 Antes de decidir un tratamiento, es fundamental saber con exactitud{" "}
                 <strong>dónde está el cáncer y hasta dónde llega</strong>. El{" "}
-                <strong>PET-PSMA</strong> es hoy el estudio de imagen más preciso para
+                <strong>PET-PSMA</strong> es hoy uno de los estudios de imagen más precisos para
                 estadificar el cáncer de próstata: detecta enfermedad en ganglios y hueso
                 que la tomografía y el gammagrama óseo convencionales pueden pasar por
                 alto.
@@ -831,10 +825,10 @@ export default function CancerProstataContent() {
                 Las guías internacionales (NCCN, EAU) lo recomiendan en{" "}
                 <strong>cáncer de riesgo alto</strong> y en{" "}
                 <strong>recurrencia bioquímica</strong> (PSA en ascenso tras tratamiento).
-                Pocos centros en el Bajío cuentan con acceso a esta tecnología —{" "}
-                <strong>en León está disponible</strong> y el Dr. Quiroz la integra en la
-                evaluación de sus pacientes cuando está indicada, evitando tanto
-                tratamientos insuficientes como cirugías innecesarias.
+                <strong>Nosotros no realizamos el estudio:</strong> se hace en unidades de medicina
+                nuclear. El Dr. Quiroz lo solicita cuando está indicado, interpreta los resultados
+                y norma el manejo, para evitar tanto tratamientos insuficientes como cirugías
+                innecesarias.
               </p>
               <div className="mt-6">
                 <Link href="/pet-psma-leon">
@@ -902,13 +896,14 @@ export default function CancerProstataContent() {
                 eréctil depende de la preservación nerviosa, la edad y la salud preoperatoria.
               </FAQItem>
 
-              <FAQItem q="¿Qué es el PET-PSMA y está disponible en León?">
-                Es el estudio de imagen <strong>más preciso</strong> para conocer la
+              <FAQItem q="¿Qué es el PET-PSMA y quién lo realiza?">
+                Es uno de los estudios de imagen <strong>más precisos</strong> para conocer la
                 extensión del cáncer de próstata: detecta metástasis que la tomografía y
                 el gammagrama óseo pueden pasar por alto. Las guías NCCN y EAU lo
                 recomiendan en riesgo alto y en recurrencia bioquímica.{" "}
-                <strong>Sí está disponible en León</strong> y el Dr. Quiroz lo integra en
-                la evaluación cuando está indicado.{" "}
+                Se realiza en unidades de medicina nuclear: <strong>nosotros no lo
+                realizamos</strong>, lo solicitamos cuando está indicado, interpretamos los
+                resultados y normamos el manejo.{" "}
                 <Link href="/pet-psma-leon" className="text-teal-700 font-medium hover:underline">
                   Más sobre el PET-PSMA →
                 </Link>

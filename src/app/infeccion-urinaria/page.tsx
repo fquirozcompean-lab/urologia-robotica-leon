@@ -78,10 +78,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "¿Cuánto tiempo tarda en curarse la infección urinaria?",
+      name: "¿Cuánto tiempo tarda en curarse?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Con el antibiótico correcto, los síntomas mejoran en 24–48 horas. Es fundamental completar el ciclo completo: 3–7 días para cistitis, 7–14 días para pielonefritis. No completar el tratamiento aunque te sientas bien es una de las principales causas de recurrencia y resistencia antibiótica.",
+        text: "Con el antibiótico correcto, los síntomas mejoran en 24–48 horas. Sin embargo, debes completar el ciclo completo: 3–7 días para cistitis, 7–14 días para pielonefritis. No completar el tratamiento aunque te sientas bien es una de las principales causas de recurrencia y resistencia antibiótica.",
       },
     },
     {
@@ -89,23 +89,23 @@ const faqSchema = {
       name: "¿Puedo tomar el antibiótico que me sobró de otra infección?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. La bacteria actual puede ser diferente o resistente al antibiótico anterior. Usar el medicamento incorrecto no cura la infección, sino que selecciona bacterias más resistentes que serán mucho más difíciles de tratar después. Siempre requiere prescripción médica basada en el cuadro actual.",
+        text: "No. Esta es una de las causas más frecuentes de infecciones recurrentes y resistencia antibiótica. La bacteria actual puede ser diferente o resistente al antibiótico anterior. Usar el medicamento incorrecto no cura — selecciona bacterias más resistentes que serán mucho más difíciles de tratar después.",
       },
     },
     {
       "@type": "Question",
-      name: "¿El jugo de arándano funciona para la infección urinaria?",
+      name: "¿El jugo de arándano realmente funciona?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El arándano no cura una infección activa, pero puede ayudar a prevenirlas. Sus proantocianidinas dificultan que la bacteria E. coli se adhiera a la vejiga. Para efecto preventivo se necesitan dosis concentradas (36 mg de proantocianidinas diarias) — las cápsulas de extracto concentrado son más efectivas que el jugo diluido.",
+        text: "El arándano no cura una infección activa, pero puede ayudar a prevenirlas. Sus proantocianidinas dificultan que la bacteria E. coli se adhiera a la pared de la vejiga. Para efecto preventivo se necesitan dosis concentradas (36 mg de proantocianidinas diarias) — el jugo diluido de supermercado no alcanza esa concentración. Las cápsulas de extracto concentrado son más efectivas.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Por qué me dan infecciones urinarias después de tener relaciones sexuales?",
+      name: "¿Por qué me dan infecciones después de tener relaciones sexuales?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Es la cistitis post-coital o 'de luna de miel'. Durante las relaciones, la fricción puede transportar bacterias hacia la uretra. La medida más efectiva: orinar dentro de los 30 minutos después del coito. En casos recurrentes, la profilaxis post-coital con una dosis de antibiótico bajo prescripción es muy efectiva.",
+        text: "Es la llamada cistitis post-coital o 'de luna de miel'. Durante las relaciones, la fricción puede transportar bacterias de la zona vaginal o anal hacia la uretra. Las medidas más efectivas: orinar dentro de los 30 minutos después del coito, y en casos recurrentes, profilaxis post-coital con una dosis de antibiótico bajo prescripción médica.",
       },
     },
     {
@@ -113,7 +113,15 @@ const faqSchema = {
       name: "¿Las infecciones urinarias causan infertilidad?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Las infecciones de vejiga (cistitis) no afectan la fertilidad. Si la infección afecta estructuras del tracto genital sin tratamiento adecuado (como en prostatitis o epididimitis en hombres), podría tener implicaciones reproductivas. En mujeres embarazadas, las ITU no tratadas aumentan el riesgo de complicaciones obstétricas.",
+        text: "Las infecciones de vejiga (cistitis) no afectan la fertilidad. Sin embargo, si la infección asciende a riñones o afecta estructuras del tracto genital sin tratamiento adecuado (como en prostatitis o epididimitis en hombres), podría tener implicaciones reproductivas. En mujeres embarazadas, las ITU no tratadas aumentan el riesgo de complicaciones obstétricas.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Puedo hacer ejercicio con infección urinaria?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El ejercicio ligero (caminar) es generalmente tolerable. El ejercicio intenso puede ser incómodo por el malestar pélvico y la urgencia urinaria. Lo prioritario es completar el antibiótico, hidratarte bien y descansar.",
       },
     },
     {
@@ -121,7 +129,7 @@ const faqSchema = {
       name: "¿Es normal tener sangre en la orina con infección urinaria?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí, es relativamente común. La cistitis hemorrágica ocurre cuando la inflamación irrita el revestimiento de la vejiga. Con el tratamiento correcto desaparece en 2–3 días. Si persiste después del tratamiento o es abundante, necesita evaluación para descartar otras causas.",
+        text: "Sí, es relativamente común. La cistitis hemorrágica ocurre cuando la inflamación irrita el revestimiento de la vejiga causando pequeños sangrados. Con el tratamiento correcto desaparece en 2–3 días. Si la hematuria persiste después del tratamiento, es abundante, o aparece sin síntomas de infección, necesita evaluación adicional para descartar otras causas.",
       },
     },
     {
@@ -137,7 +145,7 @@ const faqSchema = {
       name: "¿Por qué siempre me dan infecciones urinarias?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Las infecciones recurrentes tienen causas identificables: actividad sexual sin profilaxis post-coital, espermicidas, menopausia con atrofia vaginal, diabetes no controlada, residuo post-miccional elevado, anomalías anatómicas. Una evaluación completa permite encontrar la causa y diseñar un plan personalizado. No es mala suerte — tiene solución.",
+        text: "Las infecciones recurrentes tienen causas específicas identificables: actividad sexual sin profilaxis post-coital, espermicidas, menopausia con atrofia vaginal, diabetes no controlada, residuo post-miccional elevado, anomalías anatómicas. Una evaluación completa (urocultivos seriados, ultrasonido, cistoscopia en casos seleccionados) permite encontrar la causa y diseñar un plan personalizado. No es mala suerte — tiene solución.",
       },
     },
     {
@@ -145,7 +153,7 @@ const faqSchema = {
       name: "¿Puedo prevenir las infecciones urinarias de forma natural?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí. Con evidencia científica: orinar después de relaciones sexuales, hidratación adecuada (2–3 litros diarios), no aguantarse las ganas, higiene de adelante hacia atrás, cápsulas de arándano concentrado, D-manosa 2 g al día, probióticos con Lactobacillus. En mujeres postmenopáusicas los estrógenos vaginales son altamente efectivos.",
+        text: "Sí. Con evidencia científica: orinar después de relaciones sexuales, hidratación adecuada, no aguantarse las ganas, higiene de adelante hacia atrás, cápsulas de arándano concentrado (36 mg PAC), D-manosa 2 g al día, probióticos con Lactobacillus. En mujeres postmenopáusicas, los estrógenos vaginales son altamente efectivos. Estas medidas reducen significativamente la frecuencia.",
       },
     },
     {
@@ -153,15 +161,15 @@ const faqSchema = {
       name: "¿Los hombres también tienen infecciones urinarias?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí, pero son mucho menos comunes. Cuando ocurren en hombres menores de 50 años siempre requieren investigación: hiperplasia prostática, prostatitis, cálculos, anomalías anatómicas. El tratamiento es más prolongado (7–14 días) y siempre debe basarse en un urocultivo.",
+        text: "Sí, pero son mucho menos comunes. Cuando ocurren en hombres menores de 50 años siempre requieren investigación para descartar: hiperplasia prostática, prostatitis, cálculos, anomalías anatómicas. El tratamiento en hombres es más prolongado (7–14 días) y siempre debe basarse en un urocultivo.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Qué es la bacteriuria asintomática? ¿Necesito antibiótico?",
+      name: "¿Qué es la bacteriuria asintomática? ¿Necesito antibiótico si tengo bacterias en la orina sin síntomas?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La bacteriuria asintomática es presencia de bacterias en orina sin síntomas. En la mayoría de personas NO requiere antibiótico: no previene infecciones futuras pero sí aumenta la resistencia bacteriana. Solo se trata de forma obligatoria en mujeres embarazadas y antes de procedimientos urológicos invasivos.",
+        text: "La bacteriuria asintomática es la presencia de bacterias en la orina sin síntomas de infección. En la mayoría de personas NO requiere antibiótico: tratarla no previene infecciones futuras, pero sí aumenta la resistencia bacteriana. Solo se trata de forma obligatoria en mujeres embarazadas y antes de procedimientos urológicos invasivos. Si te recetaron antibiótico solo porque el análisis de orina mostró bacteria, pero no tienes síntomas, consulta si el tratamiento es realmente necesario.",
       },
     },
   ],

@@ -4,7 +4,7 @@ import CancerProstataContent from "./CancerProstataContent";
 export const metadata: Metadata = {
   title: "Cáncer de Próstata en León | Cirugía Robótica — Dr. Quiroz",
   description:
-    "Urólogo oncólogo en León, Gto. Diagnóstico con PET-PSMA y prostatectomía robótica de mínima invasión. Agende su valoración con el Dr. Quiroz Compeán.",
+    "Urólogo oncólogo en León, Gto. Diagnóstico, estadificación y prostatectomía robótica de mínima invasión. Agende su valoración con el Dr. Quiroz Compeán.",
   keywords: [
     "cáncer de próstata León",
     "cáncer de próstata Guanajuato",
@@ -83,7 +83,7 @@ const faqSchema = {
       name: "¿El cáncer de próstata siempre requiere operación inmediata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. Los cánceres de bajo riesgo pueden manejarse con vigilancia activa (seguimiento cercano sin tratamiento inmediato). Los de riesgo intermedio o alto, o con enfermedad localizada candidata a curación, se benefician de prostatectomía robótica o radioterapia. El tratamiento se individualiza según el grado Gleason, PSA, estadio clínico y la salud general del paciente.",
+        text: "No. Los cánceres de bajo riesgo pueden manejarse con vigilancia activa (seguimiento cercano sin tratamiento inmediato). Los de riesgo intermedio o alto se benefician de prostatectomía robótica o radioterapia. El tratamiento se individualiza según Gleason, PSA, estadio y estado de salud del paciente.",
       },
     },
     {
@@ -91,7 +91,7 @@ const faqSchema = {
       name: "¿Cuánto tiempo dura la recuperación tras una prostatectomía robótica?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La hospitalización típica es de 1-2 días. El catéter urinario se retira generalmente entre 7-14 días después. La mayoría de los pacientes retoman actividades ligeras en 2-3 semanas y actividades completas en 4-6 semanas. La cirugía robótica implica menos dolor, menor pérdida de sangre y recuperación más rápida que la cirugía abierta.",
+        text: "La hospitalización es de 1-2 días. El catéter urinario se retira entre 7-14 días. La mayoría retoma actividades ligeras en 2-3 semanas y actividades completas en 4-6 semanas. La cirugía robótica implica menos dolor y menor pérdida de sangre que la cirugía abierta.",
       },
     },
     {
@@ -99,15 +99,15 @@ const faqSchema = {
       name: "¿La prostatectomía robótica afecta la continencia y la función sexual?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La cirugía robótica, con su visión 3D de alta definición, permite mayor precisión en la preservación de los nervios responsables de la erección y de los esfínteres urinarios. La mayoría de los pacientes recupera la continencia en semanas a meses. La recuperación de la función eréctil depende de la preservación nerviosa y de la edad y salud preoperatoria del paciente.",
+        text: "La cirugía robótica, con visión 3D de alta definición, permite mayor precisión en la preservación de los nervios responsables de la erección y del esfínter urinario. La mayoría de los pacientes recupera la continencia en semanas a meses. La recuperación de la función eréctil depende de la preservación nerviosa, la edad y la salud preoperatoria.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Qué es el PET-PSMA y está disponible en León?",
+      name: "¿Qué es el PET-PSMA y quién lo realiza?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El PET-PSMA es el estudio de imagen más preciso disponible para detectar la extensión del cáncer de próstata: identifica metástasis que la tomografía y el gammagrama óseo pueden pasar por alto. Está recomendado por las guías internacionales (NCCN, EAU) para estadificación de riesgo alto y para detectar recurrencia con PSA en ascenso. Sí está disponible en León, Guanajuato, y el Dr. Quiroz lo integra rutinariamente en la evaluación de sus pacientes cuando está indicado.",
+        text: "Es uno de los estudios de imagen más precisos para conocer la extensión del cáncer de próstata: detecta metástasis que la tomografía y el gammagrama óseo pueden pasar por alto. Las guías NCCN y EAU lo recomiendan en riesgo alto y en recurrencia bioquímica. Se realiza en unidades de medicina nuclear: nosotros no lo realizamos, lo solicitamos cuando está indicado, interpretamos los resultados y normamos el manejo. Más sobre el PET-PSMA →",
       },
     },
     {
@@ -115,7 +115,7 @@ const faqSchema = {
       name: "¿Puedo curarme del cáncer de próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí. Cuando se detecta en etapa localizada, la tasa de supervivencia a 5 años supera el 98%. La clave es la detección temprana mediante PSA y una evaluación urológica oportuna. Con el tratamiento adecuado — ya sea cirugía robótica, radioterapia o vigilancia activa — la mayoría de los hombres viven una vida plena y sin recurrencia.",
+        text: "Sí. Cuando se detecta en etapa localizada, la tasa de supervivencia a 5 años supera el 98%. Con el tratamiento adecuado —cirugía robótica, radioterapia o vigilancia activa— la mayoría de los hombres viven una vida plena. La clave es la detección temprana mediante PSA y una evaluación urológica oportuna.",
       },
     },
     {
@@ -139,7 +139,7 @@ const faqSchema = {
       name: "¿La biopsia de próstata es dolorosa?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Se realiza con anestesia local o sedación y la molestia es tolerable para la gran mayoría de los pacientes. Dura 15-20 minutos y se guía por ultrasonido o fusión con resonancia magnética para mayor precisión. Puede haber molestias leves posteriores — pequeñas cantidades de sangre en orina o semen — que se resuelven en días.",
+        text: "Se realiza con anestesia local o sedación y la molestia es tolerable para la gran mayoría de los pacientes. Dura 15-20 minutos y se guía por ultrasonido o fusión con resonancia magnética para mayor precisión. Puede haber molestias leves posteriores —pequeñas cantidades de sangre en orina o semen— que se resuelven en días.",
       },
     },
     {
@@ -179,7 +179,7 @@ const faqSchema = {
       name: "¿Los seguros médicos cubren el tratamiento del cáncer de próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Muchos seguros de gastos médicos mayores cubren el diagnóstico y el tratamiento, incluida la cirugía robótica según la póliza. Se entrega una carta médica detallando la indicación para el trámite con la aseguradora. Se recomienda verificar la cobertura específica antes de iniciar el proceso.",
+        text: "Muchos seguros de gastos médicos mayores cubren el diagnóstico y el tratamiento, incluida la cirugía robótica según la póliza. Se te entrega una carta médica detallando la indicación para el trámite con tu aseguradora. Te recomendamos verificar tu cobertura específica antes de iniciar el proceso.",
       },
     },
     {

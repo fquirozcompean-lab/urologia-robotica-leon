@@ -85,15 +85,9 @@ function FAQItem({ q, a }: FAQ) {
         <span>{q}</span>
         <span className="text-slate-400 text-lg shrink-0">{open ? "−" : "+"}</span>
       </button>
-      {open && (
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="mt-3 text-sm text-slate-700 leading-relaxed"
-        >
+      <p hidden={!open} className="mt-3 text-sm text-slate-700 leading-relaxed">
           {a}
-        </motion.p>
-      )}
+        </p>
     </motion.div>
   );
 }
@@ -216,12 +210,7 @@ function TratamientoCard({ t, index }: { t: TratamientoInfo; index: number }) {
         </div>
         <span className="text-slate-400 text-xl shrink-0">{open ? "−" : "+"}</span>
       </button>
-      {open && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="px-5 pb-5 border-t border-slate-100"
-        >
+      <div hidden={!open} className="px-5 pb-5 border-t border-slate-100">
           <div className="pt-4 grid md:grid-cols-2 gap-4">
             <div>
               <p className="text-xs font-semibold text-slate-500 uppercase mb-2">¿Qué es?</p>
@@ -254,8 +243,7 @@ function TratamientoCard({ t, index }: { t: TratamientoInfo; index: number }) {
               </div>
             </div>
           </div>
-        </motion.div>
-      )}
+        </div>
     </motion.div>
   );
 }
@@ -268,7 +256,7 @@ export default function VerrugasGenitalesContent() {
         <section className="relative bg-petroleo text-editorial py-24 px-4">
           <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-quirurgico to-acero" />
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"

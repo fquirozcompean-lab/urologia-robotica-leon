@@ -64,7 +64,7 @@ const faqSchema = {
       name: "¿Cómo sé si tengo piedras en el riñón?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El síntoma más característico es el cólico renal: dolor muy intenso en el flanco (espalda baja lateral) que puede irradiar a la ingle y los genitales, acompañado de sangre en la orina, náuseas y vómito. Muchos cálculos son asintomáticos y se descubren en estudios de imagen. El diagnóstico se confirma con ultrasonido o tomografía computada.",
+        text: "El síntoma más característico es el cólico renal: dolor muy intenso en el flanco (espalda baja lateral) que puede irradiar a la ingle y los genitales. Puede acompañarse de sangre en la orina, náuseas y vómito. Sin embargo, muchos cálculos no causan síntomas y se descubren en estudios de imagen por otras razones. El diagnóstico se confirma con ultrasonido o tomografía computada.",
       },
     },
     {
@@ -72,15 +72,7 @@ const faqSchema = {
       name: "¿Todos los cálculos renales requieren cirugía?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. Los cálculos menores de 5 mm tienen una tasa de expulsión espontánea del 70–80% con hidratación y medicamentos. Los mayores de 10 mm rara vez pasan solos. La ureteroscopía con láser no es cirugía abierta — es un procedimiento endoscópico sin incisiones en la piel con anestesia.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Qué es la ureteroscopía con láser y duele?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "La ureteroscopía flexible es un procedimiento endoscópico: se introduce un tubo delgado por la uretra hasta llegar al cálculo. El láser de Holmio pulveriza el cálculo. Se realiza bajo anestesia general o raquídea, por lo que no se siente dolor durante el procedimiento. Después puede haber molestias leves por 1–2 días.",
+        text: "No. Los cálculos menores de 5 mm tienen una tasa de expulsión espontánea del 70–80% con hidratación y medicamentos. Entre 5–10 mm la tasa baja al 50%. Los mayores de 10 mm rara vez pasan solos y generalmente requieren algún procedimiento. La ureteroscopía con láser no es cirugía abierta — es un procedimiento endoscópico que no requiere incisiones en la piel.",
       },
     },
     {
@@ -88,7 +80,7 @@ const faqSchema = {
       name: "¿Cuánto tiempo tarda en pasar un cálculo solo?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Los cálculos pequeños (<5 mm) pueden pasar en días a 4 semanas. Si no hay expulsión en 4 semanas, o antes si hay infección, fiebre o dolor incontrolable, se procede con tratamiento activo. El Dr. Quiroz define el plazo de espera apropiado según cada caso.",
+        text: "Depende del tamaño y la localización. Los cálculos pequeños (<5 mm) en el uréter distal pueden pasar en días a 4 semanas. Si no hay expulsión en 4 semanas, o antes si hay infección, fiebre, dolor incontrolable o daño renal, se procede con tratamiento activo. El Dr. Quiroz define el plazo de espera apropiado según tu caso específico.",
       },
     },
     {
@@ -96,7 +88,23 @@ const faqSchema = {
       name: "¿Cómo se expulsan las piedras del riñón?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Los cálculos pequeños (menores de 5 mm) suelen expulsarse solos con hidratación abundante y manejo del dolor; a veces se indica un medicamento (como la tamsulosina) que relaja el uréter y facilita el paso. No existen remedios que disuelvan de forma fiable un cálculo ya formado. Cuando la piedra es grande, se atora o hay infección, se retira con procedimientos sin incisiones (ureteroscopía con láser o litotricia). El plan depende del tamaño, la localización y los síntomas, por lo que conviene una valoración.",
+        text: "Los cálculos pequeños (<5 mm) suelen expulsarse solos con hidratación abundante y manejo del dolor; a veces se indica un medicamento (como la tamsulosina) que relaja el uréter y facilita el paso. No existen \"remedios\" que disuelvan de forma fiable un cálculo ya formado. Cuando la piedra es grande, se atora o hay infección, se retira con procedimientos sin incisiones (ureteroscopía con láser o litotricia). Nunca conviene forzar la situación sin valoración: el plan depende del tamaño, la localización y tus síntomas.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué es la ureteroscopía con láser y duele?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La ureteroscopía flexible es un procedimiento endoscópico: se introduce un tubo delgado y flexible por la uretra hasta llegar al cálculo. El láser de Holmio pulveriza el cálculo en polvo o fragmentos pequeños que se eliminan solos. Se realiza bajo anestesia (general o raquídea), por lo que no se siente dolor durante el procedimiento. Después puede haber molestias leves por 1–2 días.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿El cálculo puede dañar el riñón de forma permanente?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, si hay obstrucción prolongada sin tratamiento. Una obstrucción completa puede causar daño renal irreversible en semanas. Por eso es importante no ignorar los síntomas ni esperar demasiado. Especialmente si hay fiebre con dolor de flanco — eso puede indicar infección del riñón obstruido (pionefrosis), que es una emergencia.",
       },
     },
     {
@@ -112,15 +120,7 @@ const faqSchema = {
       name: "¿Qué hago durante un cólico renal?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Tome un analgésico (ibuprofeno o naproxeno son los más efectivos), beba agua y busque atención médica. Vaya a urgencias si tiene fiebre, dolor insoportable que no cede o no puede orinar. Guarde la orina en un colador para recuperar el cálculo si se expulsa — el análisis es muy valioso para planificar la prevención.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿El cálculo puede dañar el riñón de forma permanente?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Sí, si hay obstrucción prolongada sin tratamiento. Una obstrucción completa puede causar daño renal irreversible en semanas. Si hay fiebre con dolor de flanco puede indicar pionefrosis (infección del riñón obstruido), que es una emergencia urológica.",
+        text: "Inmediatamente: toma un analgésico disponible (ibuprofeno o naproxeno son los más efectivos para el cólico renal), bebe agua, y busca atención médica. Ve a urgencias si tienes fiebre, si el dolor es insoportable y no cede, o si no puedes orinar. Guarda la orina en un colador para recuperar el cálculo si se expulsa — el análisis del cálculo es muy valioso para planificar la prevención.",
       },
     },
     {
@@ -128,7 +128,7 @@ const faqSchema = {
       name: "¿Puedo tener cálculos en los dos riñones al mismo tiempo?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí, la litiasis bilateral ocurre en aproximadamente el 15–20% de los pacientes. El tratamiento se prioriza según cuál cálculo cause más síntomas, obstrucción o riesgo de complicaciones. En casos seleccionados se pueden tratar ambos riñones en la misma sesión.",
+        text: "Sí, la litiasis bilateral ocurre en aproximadamente el 15–20% de los pacientes. El tratamiento se prioriza según cuál cálculo cause más síntomas, obstrucción o riesgo de complicaciones. En casos seleccionados se pueden tratar ambos riñones en la misma sesión o en sesiones consecutivas.",
       },
     },
   ],

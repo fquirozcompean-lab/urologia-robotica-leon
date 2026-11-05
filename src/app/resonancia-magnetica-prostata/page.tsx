@@ -56,7 +56,7 @@ const faqSchema = {
       name: "¿Qué es una resonancia magnética multiparamétrica de próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Es un estudio de imagen que combina varias secuencias de resonancia (anatómica en T2, difusión y contraste dinámico) para evaluar la próstata con gran detalle. Permite identificar zonas sospechosas de cáncer clínicamente significativo antes de una biopsia, sin radiación. Se conoce como mpRM (resonancia multiparamétrica).",
+        text: "Es un estudio de imagen que combina varias secuencias de resonancia (anatómica en T2, difusión y contraste dinámico) para evaluar la próstata con gran detalle. Permite identificar zonas sospechosas de cáncer clínicamente significativo antes de una biopsia, sin radiación. Se conoce como mpRM.",
       },
     },
     {
@@ -64,7 +64,7 @@ const faqSchema = {
       name: "¿Qué significa mi resultado PI-RADS?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "PI-RADS es una escala del 1 al 5 que estima la probabilidad de que una lesión en la próstata sea un cáncer clínicamente significativo. PI-RADS 1 y 2 indican probabilidad baja; PI-RADS 3 es intermedia; PI-RADS 4 y 5 indican probabilidad alta y suelen requerir biopsia dirigida. El resultado siempre se interpreta junto con el PSA, el tacto rectal y el contexto clínico de cada paciente.",
+        text: "PI-RADS es una escala del 1 al 5 que estima la probabilidad de que una lesión sea un cáncer clínicamente significativo. PI-RADS 1 y 2 indican probabilidad baja; el 3 es intermedio; el 4 y 5 indican probabilidad alta y suelen requerir biopsia dirigida. Siempre se interpreta junto con el PSA, el tacto rectal y el contexto clínico.",
       },
     },
     {
@@ -72,7 +72,7 @@ const faqSchema = {
       name: "¿La resonancia sustituye a la biopsia de próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. La resonancia identifica y localiza zonas sospechosas, pero el diagnóstico de cáncer solo se confirma con biopsia (análisis del tejido). Su valor es doble: puede evitar biopsias innecesarias cuando el estudio es tranquilizador y, cuando hay una lesión sospechosa, permite dirigir la biopsia al punto exacto mediante fusión.",
+        text: "No. La resonancia localiza zonas sospechosas, pero el diagnóstico de cáncer solo se confirma con biopsia. Su valor es doble: puede evitar biopsias innecesarias cuando el estudio es tranquilizador, y dirigir la biopsia al punto exacto cuando hay una lesión sospechosa.",
       },
     },
     {
@@ -80,7 +80,7 @@ const faqSchema = {
       name: "¿Necesito una resonancia antes de la biopsia?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Las guías internacionales (EAU y AUA) recomiendan realizar la resonancia multiparamétrica antes de la primera biopsia en la mayoría de los hombres con sospecha de cáncer de próstata. Mejora la detección de tumores significativos y reduce el hallazgo de cánceres de muy bajo riesgo que no requieren tratamiento. La indicación se valora de forma individual.",
+        text: "Las guías internacionales (EAU y AUA) recomiendan la resonancia antes de la primera biopsia en la mayoría de los hombres con sospecha de cáncer de próstata. Mejora la detección de tumores significativos y reduce el hallazgo de cánceres de muy bajo riesgo. La indicación se valora individualmente.",
       },
     },
     {
@@ -88,7 +88,7 @@ const faqSchema = {
       name: "¿Qué es una biopsia de fusión?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Es una biopsia que superpone (fusiona) las imágenes de la resonancia con el ultrasonido en tiempo real, de modo que las muestras se toman exactamente de la zona sospechosa identificada en la resonancia. Es más precisa que la biopsia tradicional por muestreo al azar, especialmente en lesiones pequeñas o de difícil acceso.",
+        text: "Es una biopsia que fusiona las imágenes de la resonancia con el ultrasonido en tiempo real, de modo que las muestras se toman exactamente de la zona sospechosa. Es más precisa que la biopsia por muestreo al azar, especialmente en lesiones pequeñas.",
       },
     },
     {
@@ -96,7 +96,7 @@ const faqSchema = {
       name: "¿La resonancia de próstata usa contraste o radiación?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La resonancia magnética no utiliza radiación. La resonancia multiparamétrica generalmente incluye una fase con contraste intravenoso (gadolinio), aunque en casos seleccionados puede realizarse un protocolo abreviado sin contraste. El estudio es ambulatorio y bien tolerado.",
+        text: "La resonancia no utiliza radiación. La mpRM generalmente incluye una fase con contraste intravenoso (gadolinio), aunque en casos seleccionados puede usarse un protocolo abreviado sin contraste. Es un estudio ambulatorio y bien tolerado.",
       },
     },
   ],

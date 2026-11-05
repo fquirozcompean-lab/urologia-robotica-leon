@@ -59,10 +59,10 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "¿La hiperplasia prostática benigna se convierte en cáncer?",
+      name: "¿La HPB se convierte en cáncer de próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. La HPB y el cáncer de próstata son enfermedades completamente diferentes. Tener HPB no aumenta el riesgo de desarrollar cáncer de próstata. Sin embargo, ambas pueden coexistir, por lo que el Dr. Quiroz siempre descarta el cáncer durante la valoración inicial con PSA y tacto rectal.",
+        text: "No. La hiperplasia prostática benigna y el cáncer de próstata son enfermedades completamente distintas. La HPB no aumenta el riesgo de cáncer ni se transforma en él. Sin embargo, ambas pueden coexistir, por eso siempre se descarta el cáncer con PSA y tacto rectal en la valoración.",
       },
     },
     {
@@ -70,39 +70,39 @@ const faqSchema = {
       name: "¿Puedo evitar la cirugía de próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "En muchos casos, sí. Los síntomas leves o moderados se pueden controlar con medicamentos (alfabloqueadores e inhibidores de 5-alfa reductasa). La cirugía se recomienda cuando los síntomas afectan significativamente la calidad de vida, cuando hay complicaciones como retención urinaria, infecciones repetidas o daño renal, o cuando el paciente prefiere una solución definitiva.",
+        text: "En muchos casos sí. Los síntomas leves o moderados se controlan con medicamentos (alfabloqueadores e inhibidores de 5-alfa reductasa). La cirugía se recomienda cuando los síntomas afectan significativamente la calidad de vida, hay complicaciones como retención urinaria o infecciones repetidas, o cuando el paciente prefiere una solución definitiva.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Voy a quedar incontinente después de la cirugía de próstata?",
+      name: "¿Voy a quedar incontinente después de la cirugía?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La incontinencia urinaria permanente es muy rara en la cirugía de HPB. A diferencia de la cirugía por cáncer de próstata, los procedimientos para HPB (RTUP, HoLEP, láser verde) no afectan el esfínter urinario externo, por lo que la continencia se preserva en la gran mayoría de los pacientes.",
+        text: "La incontinencia permanente es muy rara en la cirugía de HPB. A diferencia de la cirugía por cáncer, los procedimientos para HPB (RTUP, HoLEP, láser verde) no afectan el esfínter urinario externo, por lo que la continencia se preserva en la gran mayoría de los pacientes.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Qué pasa con mi vida sexual después del tratamiento de HPB?",
+      name: "¿Qué pasa con mi vida sexual después del tratamiento?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Depende del tratamiento elegido. La resección transuretral (RTUP) y los procedimientos con láser (HoLEP, láser verde) pueden causar eyaculación retrógrada (el semen va hacia la vejiga en lugar de salir), lo cual no afecta el placer sexual ni la erección, pero sí la fertilidad. Existen procedimientos alternativos que preservan la eyaculación anterógrada, como el Rezum. El Dr. Quiroz discute todas estas opciones con cada paciente.",
+        text: "Depende del tratamiento. La RTUP y los láseres pueden causar eyaculación retrógrada (el semen va hacia la vejiga, no hacia fuera), lo que no afecta el placer ni la erección pero sí la fertilidad. Existen procedimientos como Rezum diseñados para preservar la eyaculación anterógrada. El Dr. Quiroz discute todas estas opciones con cada paciente.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Cuánto tiempo dura la recuperación después de la cirugía de próstata por HPB?",
+      name: "¿Cuánto tiempo dura la recuperación?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Varía según el procedimiento. El láser verde y Rezum permiten regreso rápido a actividades en días. La RTUP implica hospitalización de 1-2 días y recuperación de 1-2 semanas. El HoLEP requiere 1-3 días de hospitalización con recuperación de 2-3 semanas. La cirugía abierta tiene la recuperación más larga, de 3-6 semanas.",
+        text: "Varía según el procedimiento: láser verde y Rezum permiten retomar actividades en días. RTUP: 1–2 días de hospitalización y 1–2 semanas de recuperación. HoLEP: 1–3 días de hospitalización y 2–3 semanas. La cirugía abierta tiene la recuperación más larga (3–6 semanas).",
       },
     },
     {
       "@type": "Question",
-      name: "¿Los síntomas pueden volver después de la cirugía de próstata?",
+      name: "¿Los síntomas pueden volver después de la cirugía?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Los procedimientos como HoLEP y RTUP tienen excelentes resultados a largo plazo con bajas tasas de recurrencia. La próstata puede seguir creciendo con el tiempo, pero la tasa de retreatamiento es baja (menos del 5-10% a 10 años). Los procedimientos más conservadores pueden tener mayor tasa de recurrencia a largo plazo.",
+        text: "Los procedimientos como HoLEP y RTUP tienen excelentes resultados a largo plazo con bajas tasas de recurrencia (menos del 5–10% a 10 años). La próstata puede seguir creciendo con el tiempo, pero la mejoría es duradera. Los procedimientos más conservadores pueden tener mayor tasa de retreatamiento.",
       },
     },
     {
@@ -110,7 +110,7 @@ const faqSchema = {
       name: "¿Cuál es la mejor cirugía para próstata grande?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Para próstatas muy grandes (más de 80-100 gramos), el HoLEP (enucleación con láser de Holmio) o la prostatectomía simple robótica son las mejores opciones. El HoLEP permite tratar próstatas de cualquier tamaño con mínimo sangrado y recuperación rápida. La elección depende también de la experiencia del cirujano y los recursos disponibles.",
+        text: "Para próstatas muy grandes (más de 80–100 g), el HoLEP (láser de Holmio) o la prostatectomía simple robótica son las mejores opciones. El HoLEP puede tratar próstatas de cualquier tamaño con mínimo sangrado y recuperación más rápida que la cirugía abierta. La elección depende también de la experiencia del cirujano y los recursos disponibles.",
       },
     },
     {

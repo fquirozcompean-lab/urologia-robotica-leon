@@ -97,15 +97,9 @@ function FAQItem({ q, a }: FAQ) {
         <span>{q}</span>
         <span className="text-slate-400 text-lg shrink-0">{open ? "−" : "+"}</span>
       </button>
-      {open && (
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="mt-3 text-sm text-slate-700 leading-relaxed"
-        >
+      <p hidden={!open} className="mt-3 text-sm text-slate-700 leading-relaxed">
           {a}
-        </motion.p>
-      )}
+        </p>
     </motion.div>
   );
 }
@@ -118,7 +112,7 @@ export default function VphEnHombresContent() {
         <section className="relative bg-petroleo text-editorial py-24 px-4">
           <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-quirurgico to-acero" />
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"

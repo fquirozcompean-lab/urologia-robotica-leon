@@ -73,7 +73,7 @@ const faqSchema = {
       name: "¿Puedo tener hijos si tengo verrugas genitales?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí, las verrugas genitales no afectan la fertilidad. En mujeres embarazadas pueden crecer más rápido por cambios hormonales. El obstetra evalúa la vía de nacimiento para prevenir transmisión al recién nacido.",
+        text: "Sí, las verrugas genitales no afectan la fertilidad. En mujeres embarazadas pueden crecer más rápido por cambios hormonales. En el parto puede haber riesgo de transmisión al recién nacido (papilomatosis laríngea neonatal), por lo que el obstetra evalúa la vía de nacimiento.",
       },
     },
     {
@@ -81,7 +81,7 @@ const faqSchema = {
       name: "¿Las verrugas genitales duelen?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "En la mayoría de casos NO duelen. Pueden causar picazón leve. Si duelen, es señal de irritación, infección sobreagregada, o que no son verrugas sino otra lesión que requiere evaluación.",
+        text: "En la mayoría de casos NO duelen. Pueden causar picazón leve. Si duelen, es señal de irritación, infección sobreagregada, o que no son verrugas sino otra lesión que requiere evaluación urgente.",
       },
     },
     {
@@ -89,7 +89,7 @@ const faqSchema = {
       name: "¿Cuánto cuesta quitar verrugas genitales?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El costo varía según el tratamiento y el número de verrugas. La crioterapia es la más accesible. La electrofulguración y el láser CO₂ tienen costo mayor pero pueden resolver el problema en una sola sesión. En la consulta el Dr. Quiroz orientará sobre el tratamiento más adecuado y su costo.",
+        text: "El costo varía según el tratamiento y el número de verrugas. La crioterapia es la más accesible. La electrofulguración y el láser CO₂ tienen costo mayor pero pueden resolver el problema en una sola sesión. En la consulta, el Dr. Quiroz te orientará sobre el tratamiento más adecuado y su costo según tu caso específico.",
       },
     },
     {
@@ -97,23 +97,23 @@ const faqSchema = {
       name: "¿Cuántas sesiones de crioterapia necesito?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Depende del número, tamaño y distribución de las verrugas. En general se requieren 2-3 sesiones con intervalos de 1-2 semanas. Algunas verrugas pequeñas responden con 1 sesión; otras más grandes pueden requerir más.",
+        text: "Depende del número, tamaño y distribución de las verrugas. En general se requieren 2-3 sesiones con intervalos de 1-2 semanas. Algunas verrugas pequeñas responden con 1 sesión; otras más grandes o múltiples pueden requerir más.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Los tratamientos para verrugas genitales dejan cicatriz?",
+      name: "¿Los tratamientos dejan cicatriz?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La crioterapia normalmente no deja cicatriz. La electrofulguración y el láser pueden dejar una cicatriz muy discreta o pigmentación temporal. La cirugía puede dejar cicatriz pequeña. En todos los casos, las cicatrices son mínimas y en área no visible.",
+        text: "La crioterapia normalmente no deja cicatriz. La electrofulguración y el láser pueden dejar una cicatriz muy discreta o pigmentación temporal. La cirugía puede dejar cicatriz pequeña según la extensión. En todos los casos, las cicatrices son mínimas y en área no visible.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Puedo usar cremas para verrugas de farmacia en verrugas genitales?",
+      name: "¿Puedo usar cremas para verrugas de farmacia (las de manos y pies)?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "NUNCA. Los tratamientos para verrugas comunes (ácido salicílico, etc.) son para la piel gruesa de manos y pies. La piel genital es mucho más sensible — pueden causar quemaduras químicas graves. Los tratamientos genitales son completamente diferentes y deben prescribirse por médico.",
+        text: "NUNCA. Los tratamientos para verrugas comunes (ácido salicílico, etc.) son para la piel gruesa de manos y pies. La piel genital es mucho más sensible y delicada — puedes causar quemaduras químicas severas. Los tratamientos para verrugas genitales son completamente diferentes y deben ser prescritos por médico.",
       },
     },
     {
@@ -134,10 +134,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "¿Puedo rascarme las verrugas genitales?",
+      name: "¿Puedo rascarme las verrugas?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No se recomienda. Rascarse puede irritar, sangrar, e incluso diseminar el virus a otras áreas de piel cercana. Si pican mucho, consulta para recibir tratamiento.",
+        text: "No se recomienda. Rascarse puede irritar, sangrar, e incluso diseminar el virus a otras áreas de piel cercana. Si pican mucho, consulta — puede indicar irritación que se puede tratar.",
       },
     },
     {
@@ -145,15 +145,47 @@ const faqSchema = {
       name: "¿Las verrugas genitales sangran?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Ocasionalmente pueden sangrar si se irritan, rozan con ropa o se rascan. El sangrado leve es posible. Si sangran frecuentemente o abundantemente, consulta de inmediato — puede indicar que la lesión no es una verruga sino algo que requiere evaluación urgente.",
+        text: "Ocasionalmente pueden sangrar si se irritan, rozan con ropa, o se rascan. El sangrado leve es posible. Si sangran frecuentemente o abundantemente, consulta de inmediato — puede indicar irritación severa o que la lesión no es una verruga sino algo que requiere evaluación urgente.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Cuánto tiempo después del contagio aparecen las verrugas genitales?",
+      name: "¿Cuánto tiempo después del contagio aparecen las verrugas?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El período de incubación es muy variable: de 3 semanas a varios meses (hasta 2 años en casos extremos). Por esto es imposible determinar cuándo ni de quién se adquirió el virus. Algunas personas nunca desarrollan verrugas visibles a pesar de tener VPH.",
+        text: "El período de incubación es muy variable: de 3 semanas a varios meses (hasta 2 años en casos extremos). Por esto es imposible determinar exactamente cuándo ni de quién se adquirió el virus. Algunas personas nunca desarrollan verrugas visibles a pesar de tener VPH.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Puedo tener relaciones sexuales con verrugas?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No se recomienda mientras haya verrugas visibles. El riesgo de transmisión es alto. Espera hasta después del tratamiento y curación completa — usualmente 1-3 semanas.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Debo decirle a mi pareja?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, absolutamente. Tu pareja debe evaluarse — puede tener VPH sin saberlo. En mujeres, el VPH puede causar cáncer cervical. La comunicación honesta es fundamental.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuándo puedo volver a tener sexo?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Después del tratamiento y curación completa. Siempre con condón. Informa a tu pareja para que pueda evaluarse y vacunarse.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Puedo transmitir VPH si ya no tengo verrugas?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, el virus puede permanecer en el cuerpo. El riesgo es menor que con verrugas visibles, pero existe. El uso de condón siempre es recomendado.",
       },
     },
   ],

@@ -55,7 +55,7 @@ const faqSchema = {
       name: "¿La balanitis es una infección de transmisión sexual?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No necesariamente. La balanitis es una inflamación del glande que puede tener muchas causas: hongos (Candida), bacterias, irritación por jabones o higiene inadecuada, dermatitis, psoriasis o enfermedades de la piel, entre otras. Algunas infecciones de transmisión sexual pueden causarla, pero la mayoría de los casos no son por una ITS. La evaluación urológica define la causa real.",
+        text: "No necesariamente. Puede deberse a hongos, bacterias, irritación, higiene, dermatitis o enfermedades de la piel. Algunas ITS pueden causarla, pero la mayoría de los casos no son por una ITS. La evaluación define la causa real.",
       },
     },
     {
@@ -63,7 +63,7 @@ const faqSchema = {
       name: "¿Sirve una crema antimicótica (antihongos) para la balanitis?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Los antimicóticos tópicos (por ejemplo, clotrimazol) ayudan cuando la balanitis es por hongos, que es una causa frecuente, sobre todo en personas con diabetes. Pero no toda balanitis es por hongos: si te automedicas a ciegas y la causa es otra (dermatitis, psoriasis, liquen escleroso, una ITS u otra), el problema no mejora y puede retrasarse un diagnóstico importante. Si no cede en pocos días o reaparece, conviene una valoración.",
+        text: "Los antimicóticos tópicos (por ejemplo, clotrimazol) ayudan cuando es por hongos —causa frecuente, sobre todo en diabéticos—. Pero no toda balanitis es por hongos: automedicarte a ciegas puede no mejorar el problema y retrasar el diagnóstico si la causa es otra. Si no cede en pocos días o reaparece, valórate.",
       },
     },
     {
@@ -71,7 +71,7 @@ const faqSchema = {
       name: "¿La balanitis se quita sola?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Algunos casos leves por irritación mejoran con higiene suave y evitando el agente irritante. Sin embargo, cuando hay infección o una causa de piel de fondo, suele requerir tratamiento dirigido. La balanitis que no mejora, que reaparece o que se acompaña de lesiones que no curan debe evaluarse.",
+        text: "Algunos casos leves por irritación mejoran con higiene suave. Pero cuando hay infección o una causa de piel de fondo, suele necesitar tratamiento dirigido. La que no mejora, reaparece o deja lesiones que no curan debe evaluarse.",
       },
     },
     {
@@ -79,7 +79,7 @@ const faqSchema = {
       name: "¿La diabetes causa balanitis?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La diabetes, sobre todo si el azúcar está mal controlado, favorece la balanitis por hongos y las recaídas. De hecho, una balanitis candidiásica de repetición puede ser la primera señal de una diabetes no diagnosticada, por lo que a veces se recomienda revisar la glucosa.",
+        text: "La diabetes, sobre todo mal controlada, favorece la balanitis por hongos y las recaídas. Una balanitis candidiásica de repetición puede ser la primera señal de una diabetes no diagnosticada, por lo que a veces se revisa la glucosa.",
       },
     },
     {
@@ -87,7 +87,7 @@ const faqSchema = {
       name: "¿La circuncisión previene la balanitis?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La balanitis es más frecuente en hombres no circuncidados, porque la humedad y los restos bajo el prepucio favorecen la irritación e infección. En casos de balanitis muy recurrente o de fimosis asociada, la circuncisión puede ser una opción de tratamiento, que se valora de forma individual.",
+        text: "Es más frecuente en hombres no circuncidados. En casos muy recurrentes o con fimosis, la circuncisión puede ser una opción de tratamiento, que se valora de forma individual.",
       },
     },
     {
@@ -95,7 +95,7 @@ const faqSchema = {
       name: "¿Cuándo debo preocuparme por una balanitis?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Conviene acudir con el urólogo si la balanitis no mejora con el tratamiento, si reaparece con frecuencia, o si aparecen placas blancas, endurecimiento, una lesión que no cura, sangrado o cambios en la piel del glande. Estos signos ayudan a descartar causas como el liquen escleroso u otras condiciones que requieren un manejo específico.",
+        text: "Si no mejora con tratamiento, si reaparece, o si hay placas blancas, endurecimiento, una lesión que no cura, sangrado o cambios en la piel del glande. Esos signos ayudan a descartar liquen escleroso u otras causas.",
       },
     },
   ],

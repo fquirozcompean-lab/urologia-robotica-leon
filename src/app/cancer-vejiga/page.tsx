@@ -65,7 +65,7 @@ const faqSchema = {
       name: "¿Toda sangre en la orina es cáncer de vejiga?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. La hematuria tiene muchas causas: infecciones urinarias, cálculos renales, hiperplasia prostática, entre otras. Sin embargo, nunca debe ignorarse. El cáncer de vejiga se presenta con hematuria en el 80–90% de los casos, y solo una evaluación urológica completa con cistoscopia puede descartar o confirmar el diagnóstico.",
+        text: "No. La hematuria tiene muchas causas: infecciones urinarias, cálculos renales, hiperplasia prostática, entre otras. Sin embargo, nunca debe ignorarse. El cáncer de vejiga se presenta con hematuria en el 80–90% de los casos, y solo una evaluación urológica completa — con cistoscopia — puede descartar o confirmar el diagnóstico. No asumas que es \"solo una infección\" sin una evaluación adecuada.",
       },
     },
     {
@@ -73,39 +73,7 @@ const faqSchema = {
       name: "¿El cáncer de vejiga se puede curar?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí, especialmente cuando se detecta en etapas tempranas. El cáncer no músculo invasivo (el 70–80% de los casos al diagnóstico) tiene una tasa de supervivencia a 5 años mayor al 90% con tratamiento adecuado. El pronóstico depende directamente de la etapa al momento del diagnóstico.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Puedo vivir sin vejiga después de una cistectomía?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Sí, con muy buena calidad de vida. La neovejiga ortotópica construida con intestino permite orinar de forma natural. El conducto ileal (Bricker) drena la orina hacia una bolsa externa. Muchos pacientes con urostomía llevan una vida completamente normal, incluyendo trabajo, deporte y vida social.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Qué es la cistoscopia?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "La cistoscopia consiste en introducir un delgado tubo con cámara a través de la uretra hasta la vejiga bajo anestesia local. Permite visualizar directamente la mucosa vesical, detectar lesiones sospechosas y tomar biopsia. Es el estándar de oro para el diagnóstico del cáncer de vejiga.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Fumar poco también aumenta el riesgo de cáncer de vejiga?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Sí. No hay un umbral seguro de tabaquismo. Incluso los fumadores ligeros tienen riesgo elevado. El riesgo es proporcional a la cantidad de cigarrillos y los años de tabaquismo. Si fumas y has tenido hematuria, la evaluación urológica es urgente.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Qué es el BCG intravesical?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "El BCG es una bacteria atenuada que, instilada directamente dentro de la vejiga, activa el sistema inmune local para destruir células cancerosas residuales. Es la inmunoterapia intravesical más efectiva para el cáncer de vejiga de alto riesgo no músculo invasivo, administrada durante 6 semanas y luego en mantenimiento hasta 3 años.",
+        text: "Sí, especialmente cuando se detecta en etapas tempranas. El cáncer no músculo invasivo (el 70–80% de los casos al diagnóstico) tiene una tasa de supervivencia a 5 años mayor al 90% con tratamiento adecuado. El cáncer músculo invasivo localizado tiene tasas de curación del 50–70%. El pronóstico depende directamente de la etapa al momento del diagnóstico — por eso la detección temprana es fundamental.",
       },
     },
     {
@@ -113,7 +81,15 @@ const faqSchema = {
       name: "¿Con qué frecuencia debo hacerme cistoscopias de seguimiento?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Para tumores de bajo riesgo: cistoscopia a los 3 meses y luego cada año. Para tumores de alto riesgo: cada 3 meses el primer año, cada 6 meses el segundo, y anualmente después. El seguimiento de por vida es esencial — el cáncer de vejiga no músculo invasivo puede recurrir en el 70% de los casos sin vigilancia.",
+        text: "El protocolo de seguimiento depende del riesgo del tumor. Para tumores de bajo riesgo: cistoscopia a los 3 meses y luego cada año. Para tumores de alto riesgo: cistoscopia cada 3 meses el primer año, cada 6 meses el segundo, y anualmente después. El carcinoma in situ (Tis) requiere seguimiento muy frecuente. El seguimiento de por vida es esencial — el cáncer de vejiga no músculo invasivo recurrirá hasta en el 70% de los casos sin vigilancia.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Puedo vivir sin vejiga después de una cistectomía?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, con muy buena calidad de vida. Existen varias opciones de derivación urinaria. La más avanzada es la neovejiga ortotópica: se construye una nueva vejiga con intestino y el paciente orina de forma natural a través de la uretra. Otra opción es el conducto ileal: la orina drena hacia una bolsa externa. Muchos pacientes con urostomía llevan una vida completamente normal, incluyendo trabajo, deporte y vida social activa.",
       },
     },
     {
@@ -121,15 +97,15 @@ const faqSchema = {
       name: "¿La cistectomía afecta la función sexual?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Puede afectarla. En hombres, la cistectomía radical puede causar disfunción eréctil y eyaculación ausente. Existen técnicas de preservación nerviosa en casos seleccionados. En mujeres puede afectar la sensibilidad vaginal y la lubricación. El Dr. Quiroz analiza las opciones de preservación funcional caso por caso.",
+        text: "Puede afectarla, dependiendo del caso. En hombres, la cistectomía radical convencional puede causar disfunción eréctil y eyaculación ausente. Existen técnicas de preservación nerviosa en casos seleccionados que buscan minimizar este impacto. En mujeres puede afectar la sensibilidad vaginal y la lubricación. El Dr. Quiroz analiza las opciones de preservación funcional caso por caso y las discute abiertamente antes de la cirugía.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Cuánto tiempo dura la recuperación después de una cistectomía?",
+      name: "¿Fumar poco también aumenta el riesgo de cáncer de vejiga?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Con cistectomía robótica o laparoscópica: hospitalización de 3–5 días y retorno a actividades en 4–6 semanas. Con cistectomía abierta: hospitalización de 5–7 días y recuperación de 6–8 semanas.",
+        text: "Sí. No hay un umbral \"seguro\" de tabaquismo para el cáncer de vejiga. Incluso los fumadores \"ligeros\" tienen riesgo elevado. El riesgo es proporcional a la cantidad de cigarrillos y los años de tabaquismo (paquetes-año). Los fumadores de cigarrillos tienen mayor riesgo que los de pipa o puro, pero todos tienen riesgo aumentado. Si fumas y has tenido hematuria, la evaluación es urgente.",
       },
     },
     {
@@ -137,7 +113,31 @@ const faqSchema = {
       name: "¿El cáncer de vejiga es hereditario?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "En la mayoría de los casos no es hereditario — es multifactorial. Sin embargo, tener un familiar de primer grado con cáncer de vejiga aumenta el riesgo moderadamente. Existen síndromes genéticos raros como el síndrome de Lynch que aumentan el riesgo de cáncer urotelial.",
+        text: "En la mayoría de los casos no es hereditario — es multifactorial. Sin embargo, tener un familiar de primer grado (padre, madre, hermano) con cáncer de vejiga aumenta el riesgo moderadamente. Existen síndromes genéticos raros (como el síndrome de Lynch) que aumentan el riesgo de cáncer urotelial. Si tienes antecedentes familiares, menciónalo en la consulta para una evaluación apropiada.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuánto tiempo dura la recuperación después de una cistectomía?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Depende del abordaje. La cistectomía robótica o laparoscópica: hospitalización de 3–5 días, retorno a actividades normales en 4–6 semanas. La cistectomía abierta: hospitalización de 5–7 días, recuperación de 6–8 semanas. La elección entre robótica y abierta se basa en las características del paciente y la complejidad del caso, no solo en la preferencia — el objetivo oncológico es siempre prioritario.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué es el BCG y cómo funciona?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El BCG (bacilo de Calmette-Guérin) es una bacteria atenuada — la misma usada en la vacuna de la tuberculosis — que, instilada directamente dentro de la vejiga, activa el sistema inmune local para destruir células cancerosas residuales. Es la inmunoterapia intravesical más efectiva para el cáncer de vejiga de alto riesgo no músculo invasivo. Se administra semanalmente durante 6 semanas (inducción) y luego en ciclos de mantenimiento hasta 3 años.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Puedo tener vida normal con una urostomía?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí. La mayoría de los pacientes con urostomía (conducto ileal) retoman su vida normal — trabajo, ejercicio, vida social, viajes y relaciones. Las bolsas modernas son discretas, seguras y cómodas. El equipo de enfermería especializado en ostomías ayuda durante el período de adaptación. Muchos pacientes reportan que, una vez adaptados, la urostomía tiene poco impacto en su calidad de vida cotidiana.",
       },
     },
     {
@@ -145,7 +145,7 @@ const faqSchema = {
       name: "¿Qué síntomas da el cáncer de vejiga en las mujeres?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Los síntomas son los mismos en mujeres y en hombres: el más frecuente es sangre en la orina (hematuria), muchas veces sin dolor. También puede haber urgencia y frecuencia urinaria, ardor al orinar y molestia en la parte baja del abdomen. En las mujeres estos síntomas suelen atribuirse a una infección urinaria o a causas ginecológicas, lo que puede retrasar el diagnóstico; por eso una hematuria no explicada o recurrente debe estudiarse con cistoscopia, aunque los cultivos de orina salgan negativos.",
+        text: "Los síntomas son los mismos en mujeres y en hombres: el más frecuente es sangre en la orina (hematuria), muchas veces sin dolor. También puede haber necesidad urgente y frecuente de orinar, ardor al orinar y molestia en la parte baja del abdomen. En las mujeres, estos síntomas suelen atribuirse a una infección urinaria o a causas ginecológicas, lo que puede retrasar el diagnóstico; por eso, una hematuria que no se explica claramente o que reaparece debe estudiarse con cistoscopia, aunque los cultivos de orina salgan negativos. Si notas sangre en la orina, no la atribuyas de entrada a una infección: una valoración urológica lo aclara. Conoce más sobre la sangre en la orina.",
       },
     },
   ],

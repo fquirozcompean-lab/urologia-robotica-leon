@@ -88,6 +88,30 @@ const faqSchema = {
         text: "Generalmente se recomienda posponerlo hasta resolver la infección, ya que puede alterar los resultados. Coméntalo con tu urólogo antes de la cita.",
       },
     },
+    {
+      "@type": "Question",
+      name: "¿Cuál es el flujo máximo normal en una uroflujometría?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Como referencia general, por arriba de 15 mL/segundo suele considerarse normal, entre 10 y 15 es una zona intermedia y por debajo de 10 es más probable que haya un problema para vaciar. El valor se interpreta con el volumen orinado, la edad y los síntomas.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Por qué puede salir alterada si no tengo nada grave?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Porque el resultado depende de las condiciones del momento: orinar muy poco, tener la vejiga demasiado llena, los nervios o una postura incómoda pueden alterar la gráfica. Por eso a veces se repite antes de sacar conclusiones.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿La uroflujometría también sirve en mujeres?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí. Aunque se asocia con la próstata, también se usa en mujeres con dificultad para vaciar la vejiga o chorro débil. Los valores de referencia se interpretan de forma distinta que en los hombres.",
+      },
+    },
   ],
 };
 

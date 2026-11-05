@@ -30,11 +30,9 @@ function FAQItem({ q, children }: { q: string; children: React.ReactNode }) {
         <span className="font-semibold text-slate-800">{q}</span>
         <span className="text-teal-600 text-xl shrink-0">{open ? "−" : "+"}</span>
       </button>
-      {open && (
-        <div className="px-5 pb-5 text-slate-700 text-sm leading-relaxed">
+      <div hidden={!open} className="px-5 pb-5 text-slate-700 text-sm leading-relaxed">
           {children}
         </div>
-      )}
     </motion.div>
   );
 }
@@ -202,6 +200,81 @@ export default function GranitosContent() {
           </div>
         </section>
 
+        {/* TABLA COMPARATIVA */}
+        <section>
+          <H2>Cómo se distinguen: comparación rápida</H2>
+          <p className="text-slate-700 leading-relaxed mb-5">
+            Esta tabla orienta, pero no sustituye una revisión: varias lesiones se parecen a
+            simple vista.
+          </p>
+          <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
+            <table className="w-full min-w-[34rem] text-left text-sm">
+              <caption className="sr-only">Comparación de granitos y lesiones frecuentes en el pene</caption>
+              <thead className="bg-slate-50">
+                <tr>
+                  <th scope="col" className="px-4 py-3 font-semibold text-slate-800">Lesión</th>
+                  <th scope="col" className="px-4 py-3 font-semibold text-slate-800">Cómo suele verse</th>
+                  <th scope="col" className="px-4 py-3 font-semibold text-slate-800">¿Se contagia?</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200 text-slate-700">
+                {[
+                  ["Pápulas perladas", "Filas regulares alrededor del borde del glande, color piel", "No"],
+                  ["Puntos de Fordyce", "Puntos blancos o amarillentos, planos y pequeños", "No"],
+                  ["Foliculitis o quiste", "Bolita aislada, a veces enrojecida, en zona con vello", "No suele"],
+                  ["Verrugas (VPH)", "Irregulares, como coliflor; pueden crecer o multiplicarse", "Sí"],
+                  ["Molusco contagioso", "Granito liso con un hoyito en el centro", "Sí"],
+                  ["Herpes genital", "Ampollitas agrupadas y dolorosas que se rompen y dejan llagas", "Sí"],
+                  ["Sífilis (chancro)", "Llaga firme, habitualmente sin dolor", "Sí"],
+                ].map(([lesion, aspecto, contagio]) => (
+                  <tr key={lesion}>
+                    <th scope="row" className="px-4 py-3 font-semibold text-petroleo">{lesion}</th>
+                    <td className="px-4 py-3">{aspecto}</td>
+                    <td className="px-4 py-3">{contagio}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* QUÉ NO HACER */}
+        <section>
+          <H2>Qué no hacer mientras te revisan</H2>
+          <ul className="space-y-2 text-slate-700 leading-relaxed">
+            {[
+              "No reventar ni rascar los granitos: puede causar infección, cicatriz o extender algunas lesiones.",
+              "No usar cremas para verrugas de manos y pies: pueden quemar la piel del pene.",
+              "No aplicar remedios caseros, vinagre, ajo o limón: irritan y dificultan el diagnóstico.",
+              "Evitar relaciones sexuales sin protección si la lesión es nueva, hasta saber qué es.",
+            ].map((s) => (
+              <li key={s} className="flex items-start gap-3">
+                <span className="text-quirurgico font-bold mt-0.5 flex-shrink-0">✕</span>
+                {s}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* LA CONSULTA */}
+        <section>
+          <H2>Cómo es la revisión</H2>
+          <div className="space-y-4 text-slate-700 leading-relaxed">
+            <p>
+              En la mayoría de los casos basta con una <strong>exploración breve y
+              respetuosa</strong> y unas preguntas: cuándo apareció la lesión, si ha cambiado y
+              si hubo contacto sexual de riesgo. Muchas veces el diagnóstico se aclara en esa
+              misma consulta.
+            </p>
+            <p>
+              Si la lesión no es clara o no sana, pueden indicarse análisis o una{" "}
+              <strong>biopsia</strong> pequeña. Una llaga o bolita que persiste durante semanas
+              siempre merece valoración: el cáncer de pene es poco frecuente, pero se trata mejor
+              cuando se detecta a tiempo.
+            </p>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section id="faq">
           <H2>Preguntas frecuentes</H2>
@@ -241,6 +314,27 @@ export default function GranitosContent() {
               Si aparecieron hace poco, crecen o se multiplican, cambian de color, sangran,
               dan comezón o dolor, o si hubo contacto sexual de riesgo. Una revisión rápida
               distingue lo benigno y te da tranquilidad.
+            </FAQItem>
+            <FAQItem q="¿Por qué me salieron granitos en el pene si no he tenido relaciones?">
+              Porque muchos no tienen relación con el sexo: las pápulas perladas y los puntos de
+              Fordyce son variantes normales que pueden notarse desde la adolescencia, y la
+              foliculitis se relaciona con el vello o el rasurado. Aun así, si la lesión es nueva
+              o cambia, conviene revisarla.
+            </FAQItem>
+            <FAQItem q="¿Los granitos en el pene pueden ser cáncer?">
+              Es poco frecuente. La gran mayoría de los granitos son benignos. Lo que sí debe
+              valorarse es una llaga, mancha o bolita que no sana en unas semanas, crece o sangra,
+              porque en esos casos puede ser necesario tomar una biopsia.
+            </FAQItem>
+            <FAQItem q="¿Qué pasa si me reviento un granito del pene?">
+              Puede infectarse, dejar cicatriz y, si es una lesión viral como el molusco, extenderse
+              a la piel cercana. Lava la zona con agua y jabón neutro, no apliques productos y
+              revísate si aparece dolor, enrojecimiento o secreción.
+            </FAQItem>
+            <FAQItem q="¿Qué significa tener granitos con comezón en el pene?">
+              La comezón orienta más a irritación, infección por hongos (balanitis) o foliculitis
+              que a variantes normales, que no suelen dar molestias. Como puede tener varias causas,
+              lo mejor es revisarlo antes de aplicar cremas.
             </FAQItem>
           </div>
         </section>

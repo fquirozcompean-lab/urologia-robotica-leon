@@ -159,6 +159,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: 'https://urologiaroboticaleon.com/cuestionario-ipss-prostata',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
       url: 'https://urologiaroboticaleon.com/rezum-prostata',
       lastModified: new Date(),
       changeFrequency: 'monthly',

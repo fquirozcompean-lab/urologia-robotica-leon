@@ -128,7 +128,13 @@ antes del primer h2 de sección, por lo que deben ser h2 aunque sean visualmente
 - **FAQ schema SIEMPRE sincronizado con las FAQs visibles del Content**: mismas preguntas,
   mismos textos (requisito de Google para rich results). Al agregar/editar una FAQ en el
   Content, actualizar el faqSchema del page.tsx en la misma tarea. (En /holep el schema
-  exponía 5 de 17 FAQs ya escritas — corregido Jul 2026.)
+  exponía 5 de 17 FAQs ya escritas — corregido Jul 2026; en nov 2026 otras 24 páginas seguían
+  distintas — corregidas.) **Verificar con `node scripts/check-faq-sync.mjs`** (preguntas y
+  respuestas; `--fix` reescribe el schema desde el texto visible). Correrlo antes de cada commit
+  que toque FAQs y en la auditoría semanal.
+- **Las respuestas de FAQ deben estar en el HTML:** usar `<div hidden={!open}>`, nunca
+  `{open && ...}`, que deja la respuesta fuera del HTML hasta el clic y Google no la lee.
+  Aplica también a otros acordeones con contenido clínico.
 
 ### Imágenes
 - ✅ Siempre usar `<Image>` de `next/image` (genera WebP/AVIF, srcset, lazy automático)
@@ -138,15 +144,24 @@ antes del primer h2 de sección, por lo que deben ser h2 aunque sean visualmente
 - Imágenes >500 KB deben re-exportarse en WebP antes de subir a `/public`
 
 ### Lighthouse — cómo correr sin falsos positivos
-Siempre correr con extensiones deshabilitadas. Kaspersky y ad-blockers inyectan JS/CSS propios
-que Lighthouse reporta como "unused" del sitio (251 KB CSS y 162 KB JS eran 100% de Kaspersky/uBlock).
+Kaspersky inyecta JS/CSS **a nivel de red**, así que deshabilitar extensiones no basta: hay que
+bloquear su dominio. Sin eso, Lighthouse reporta 251 KB de CSS "sin usar", 2.4 s de render-blocking
+y Best Practices 81 que no son del sitio (Nov 2026: home 76 contaminado → 96 limpio).
 Comando correcto:
 ```
 npx lighthouse https://urologiaroboticaleon.com/ --output=json \
   --output-path="C:\Users\aqc_a\lh-report.json" \
   --chrome-flags="--headless --no-sandbox --disable-extensions --disable-gpu" \
-  --only-categories=performance,accessibility,best-practices,seo
+  --only-categories=performance,accessibility,best-practices,seo   --blocked-url-patterns="*kaspersky-labs.com*"
 ```
+Línea base de producción, móvil y sin Kaspersky (5 nov 2026, antes de corregir el H1): home 96 ·
+/valores-antigeno 97 · /holep 89 · /cancer-prostata 73 (LCP 8 s). Accesibilidad 96-97, Best Practices
+100, SEO 100.
+
+### LCP — el H1 no puede depender de una animación
+En las páginas interiores el LCP es el H1. Si está dentro de un `motion.*` con `initial` en opacidad
+0, no aparece hasta que carga el JS (caso: LCP de 8 s en /cancer-prostata, 14 páginas afectadas,
+corregido Nov 2026). El contenedor del hero usa `initial={false}`.
 
 ## Páginas existentes
 | Ruta | Archivo |
@@ -174,6 +189,7 @@ npx lighthouse https://urologiaroboticaleon.com/ --output=json \
 | `/rezum-prostata` | `app/rezum-prostata/` (tratamiento HPB — card en home Cat. 2; Rezum para próstatas chicas-medianas, HoLEP para grandes) |
 | `/prevencion-cancer-prostata` | `app/prevencion-cancer-prostata/` (sub-página de /cancer-prostata — sin card, marco de detección/evidencia) |
 | `/valores-antigeno-prostatico-edad` | `app/valores-antigeno-prostatico-edad/` (sub-página de /cancer-prostata — sin card; tabla por edad, total/libre, densidad; enlazada desde el bloque "antes de la biopsia" de /cancer-prostata y desde /prevencion-cancer-prostata) |
+| `/cuestionario-ipss-prostata` | `app/cuestionario-ipss-prostata/` (herramienta — sub-página del hub HPB, sin card; enlazada desde HPB, medicamentos, Rezum y uroflujometría) |
 | `/prostatitis` | `app/prostatitis/` |
 | `/que-es-el-rinon` | `app/que-es-el-rinon/` (pilar informativo renal — card en home Cat. 4) |
 | `/dolor-de-rinon` | `app/dolor-de-rinon/` (síntoma — card en home Cat. 4) |
@@ -211,6 +227,7 @@ links dentro de las páginas clínicas relacionadas.
   "¿Te salió el antígeno prostático (PSA) elevado?" en Diagnóstico) y
   /prevencion-cancer-prostata. Por su intención de búsqueda también lleva un link de
   texto permanente en el home, debajo de "Consultas frecuentes" (sigue sin card).
+- /cuestionario-ipss-prostata → hub de próstata benigna (herramienta interactiva, misma regla).
 - /uroflujometria-leon → hub de próstata benigna: enlazada desde
   /hiperplasia-prostatica-benigna (sección de diagnóstico) y /medicamentos-prostata
   (sección de uroflujometría). Enlaza a HPB, HoLEP, cáncer de próstata y cálculos.
@@ -303,6 +320,12 @@ médica (ej. NO linkear cáncer renal → PET-PSMA: el PSMA es específico de pr
   qué sí) y redirige a evaluación real. (Aplicado Jul 2026 en /que-es-la-prostata,
   sección "¿Qué es bueno para la próstata? Evidencia y mitos".)
 
+- **PET-PSMA (Nov 2026):** el Dr. **no realiza** el estudio. Toda mención debe dejar claro que se
+  hace en unidades de medicina nuclear externas y que nosotros "lo solicitamos cuando está indicado,
+  interpretamos los resultados y normamos el manejo". No usar "disponible en León", "contamos con" ni
+  "coordina". Tampoco "el estudio más preciso": usar "uno de los más precisos" o citar datos
+  (proPSMA, Lancet 2020: exactitud 92% vs 65%).
+
 ## Jerarquía de especialidades para SEO
 1. Cáncer de próstata (hub principal)
 2. HoLEP / crecimiento prostático (+750% búsquedas — máxima prioridad de crecimiento)
@@ -339,12 +362,13 @@ solo se infla por calificación de cartas Pokémon; "APE" por búsquedas en ingl
 
 ## Estado de seguridad (npm audit)
 
-Última revisión: **4 noviembre 2026**.
+Última revisión: **5 noviembre 2026**.
 
 | Fecha | Antes | Después | Acción |
 |---|---|---|---|
 | Jul 2026 | 6 (5 high, 1 critical) | 17 high, **0 critical** | `npm audit fix` (no-breaking, solo `package-lock.json`) |
 | 4 nov 2026 | 23 (1 critical, 6 high, 16 moderate) | 14 moderate, **0 high, 0 critical** | `npm audit fix` + piso de `next` a `^16.4.5` en package.json |
+| 5 nov 2026 | 14 moderate | 8 moderate | `eslint-config-next` 15.5.2 → 16.4.5 + `eslint.config.mjs` a formato flat nativo |
 
 **Resuelto en nov 2026:** `next` 16.2.12 → **16.4.5**. La versión anterior tenía
 avisos críticos de ejecución remota de código, entre ellos en el optimizador de
@@ -352,11 +376,12 @@ imágenes (SVG/AVIF), que corrigen 16.3.x y 16.4.1+. Con esto salieron también 
 `postcss` y `sharp` embebidos. Se subió el piso del rango en package.json para que
 un lockfile regenerado no pueda volver a una versión vulnerable.
 
-**Pendiente — cadena de eslint** (14 moderate: minimatch → eslint → @typescript-eslint
-→ eslint-plugin-*, `eslint-config-next` sigue en 15.5.2). El fix que ofrece npm es un
-downgrade absurdo (`eslint@4`, `eslint-config-next@12`) — **NO aplicar `--force`**. Es
-**tooling de desarrollo**, nunca se envía al navegador → riesgo real ~nulo. La salida
-correcta es subir `eslint-config-next` a 16.x como cambio aparte.
+**Pendiente — cadena de eslint** (8 moderate: minimatch → @typescript-eslint →
+`eslint-config-next`, ya en su última versión). El fix que ofrece npm es bajar de versión
+(`eslint-config-next@15`) — **NO aplicar `--force`**. Es **tooling de desarrollo**, nunca se
+envía al navegador → riesgo real ~nulo. Se resuelve cuando salga una versión nueva.
+`npm run lint` reporta 82 errores de `react/no-unescaped-entities` (comillas en texto): solo estilo,
+no afectan el build.
 
 Regla: en la auditoría semanal, correr `npm audit fix` (sin `--force`), probar con
 build + recorrido de las rutas del sitemap, y actualizar esta tabla. `--force` está
@@ -371,6 +396,10 @@ Los CTAs de WhatsApp del sitio se enrutan según destino:
   (Ángeles: 52 479 103 7564 · Muguerza: 52 477 235 1442)
 - CTAs de segunda opinión oncológica → WhatsApp personal del Dr. Quiroz
   (52 477 633 0492) — paciente de mayor valor, respuesta personal del Dr.
+- CTA del resultado de /cuestionario-ipss-prostata → WhatsApp del Dr. Quiroz (52 477 633 0492,
+  decisión del Dr.), con mensaje precargado que incluye puntaje y calidad de vida. El evento GA4 usa
+  `motivo="ipss-resultado"` sin puntaje: no se envían datos de salud a Analytics, y las respuestas no
+  se guardan
 - CTAs genéricos → modal SedeSelector → asistente de la sede elegida
 
 Los números viven en `src/lib/contactos.ts`. NUNCA hardcodear números en

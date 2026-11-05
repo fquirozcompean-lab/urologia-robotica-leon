@@ -290,12 +290,7 @@ function CausaAccordion({ grupo }: { grupo: CausaGroup }) {
         </div>
         <span className="text-slate-400 text-lg shrink-0">{open ? "−" : "+"}</span>
       </button>
-      {open && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="p-5 space-y-4 bg-white"
-        >
+      <div hidden={!open} className="p-5 space-y-4 bg-white">
           {grupo.items.map((item, i) => (
             <div key={i}>
               <div className="flex gap-2 items-start">
@@ -312,8 +307,7 @@ function CausaAccordion({ grupo }: { grupo: CausaGroup }) {
               </div>
             </div>
           ))}
-        </motion.div>
-      )}
+        </div>
     </div>
   );
 }
@@ -339,12 +333,7 @@ function TratamientoAccordion({ item }: { item: TratamientoItem }) {
         </div>
         <span className="text-slate-400 text-lg shrink-0 mt-0.5">{open ? "−" : "+"}</span>
       </button>
-      {open && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="px-4 pb-4 bg-white space-y-3"
-        >
+      <div hidden={!open} className="px-4 pb-4 bg-white space-y-3">
           <p className="text-sm text-slate-700">{item.desc}</p>
           <div className="grid sm:grid-cols-2 gap-3">
             <div>
@@ -377,8 +366,7 @@ function TratamientoAccordion({ item }: { item: TratamientoItem }) {
               📋 {item.nota}
             </div>
           )}
-        </motion.div>
-      )}
+        </div>
     </div>
   );
 }
@@ -401,15 +389,9 @@ function FAQItem({ q, a }: FAQ) {
         <span>{q}</span>
         <span className="text-slate-400 text-lg leading-none shrink-0">{open ? "−" : "+"}</span>
       </button>
-      {open && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="mt-3 text-sm text-slate-700 leading-relaxed"
-        >
+      <div hidden={!open} className="mt-3 text-sm text-slate-700 leading-relaxed">
           {a}
-        </motion.div>
-      )}
+        </div>
     </motion.div>
   );
 }
@@ -422,7 +404,7 @@ export default function DisfuncionErectilContent() {
         <section className="relative bg-petroleo text-editorial py-24 px-4">
           <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-quirurgico to-acero" />
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"

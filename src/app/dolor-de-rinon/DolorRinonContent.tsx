@@ -30,11 +30,9 @@ function FAQItem({ q, children }: { q: string; children: React.ReactNode }) {
         <span className="font-semibold text-slate-800">{q}</span>
         <span className="text-teal-600 text-xl shrink-0">{open ? "−" : "+"}</span>
       </button>
-      {open && (
-        <div className="px-5 pb-5 text-slate-700 text-sm leading-relaxed">
+      <div hidden={!open} className="px-5 pb-5 text-slate-700 text-sm leading-relaxed">
           {children}
         </div>
-      )}
     </motion.div>
   );
 }
@@ -238,6 +236,50 @@ export default function DolorRinonContent() {
           </div>
         </section>
 
+        {/* OTRAS CAUSAS */}
+        <section>
+          <H2>Otros dolores que se confunden con el riñón</H2>
+          <p className="text-slate-700 leading-relaxed mb-4">
+            No todo dolor en el costado viene de la vía urinaria. También pueden parecerlo:
+          </p>
+          <ul className="space-y-2 text-slate-700 leading-relaxed">
+            {[
+              "Contractura muscular o problemas de la columna.",
+              "Apendicitis o problemas del intestino, sobre todo del lado derecho.",
+              "Problemas de vesícula o de páncreas.",
+              "En mujeres, causas ginecológicas como quistes de ovario o un embarazo fuera del útero.",
+              "Herpes zóster (culebrilla): dolor o ardor en una franja de piel, antes de que salgan las ampollas.",
+            ].map((s) => (
+              <li key={s} className="flex items-start gap-3">
+                <span className="text-quirurgico font-bold mt-0.5 flex-shrink-0">•</span>
+                {s}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* ESTUDIOS */}
+        <section>
+          <H2>Cómo se encuentra la causa</H2>
+          <p className="text-slate-700 leading-relaxed mb-5">
+            Con la historia clínica y la exploración, el urólogo decide qué estudios necesitas.
+            Los más comunes son:
+          </p>
+          <div className="grid sm:grid-cols-2 gap-5">
+            {[
+              { t: "Examen general de orina", d: "Busca sangre, bacterias o cristales. Suele ser el primer estudio." },
+              { t: "Análisis de sangre", d: "Valora la función del riñón (creatinina) y si hay datos de infección." },
+              { t: "Ultrasonido", d: "No usa radiación. Muestra cálculos grandes, dilatación del riñón o quistes." },
+              { t: "Tomografía", d: "Es el estudio más exacto para localizar cálculos y estudiar otras causas." },
+            ].map((c) => (
+              <div key={c.t} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <h3 className="font-semibold text-slate-800 mb-1">{c.t}</h3>
+                <p className="text-sm text-slate-700 leading-relaxed">{c.d}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* FAQ */}
         <section id="faq">
           <H2>Preguntas frecuentes</H2>
@@ -275,6 +317,28 @@ export default function DolorRinonContent() {
               infección urinaria que asciende al riñón (pielonefritis), porque las
               infecciones urinarias son más comunes en ellas. El embarazo también aumenta el
               riesgo.
+            </FAQItem>
+            <FAQItem q="¿Importa si me duele el riñón derecho o el izquierdo?">
+              Las causas renales, como cálculos e infecciones, pueden darse de cualquier lado. El
+              lado ayuda a pensar en otras causas: del derecho pueden confundirse la vesícula o el
+              apéndice, y del izquierdo, problemas del intestino. Lo que más orienta son los síntomas
+              que acompañan al dolor.
+            </FAQItem>
+            <FAQItem q="¿Cuánto dura un cólico renal?">
+              Varía. El dolor suele venir en oleadas que pueden durar de minutos a horas, y puede
+              repetirse durante días o semanas hasta que el cálculo sale o se trata. Si el dolor no
+              cede, o hay fiebre o vómito, acude a urgencias.
+            </FAQItem>
+            <FAQItem q="¿Tomar mucha agua quita el dolor de riñón?">
+              Mantenerte hidratado es útil, sobre todo para prevenir cálculos, pero no quita el dolor
+              ni cura una infección. Durante un cólico, tomar grandes cantidades de agua de golpe no
+              ayuda a expulsar el cálculo más rápido. Lo recomendable es tomar líquidos con
+              normalidad y acudir a valoración.
+            </FAQItem>
+            <FAQItem q="¿Qué especialista atiende el dolor de riñón?">
+              El urólogo atiende los cálculos, las obstrucciones, las infecciones complicadas y los
+              tumores del riñón. El nefrólogo trata enfermedades que afectan la función del riñón,
+              como la enfermedad renal crónica. Ante un dolor intenso con fiebre, acude a urgencias.
             </FAQItem>
           </div>
         </section>

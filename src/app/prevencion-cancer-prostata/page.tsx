@@ -53,7 +53,7 @@ const faqSchema = {
       name: "¿Se puede prevenir el cáncer de próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No existe una forma garantizada de prevenir el cáncer de próstata, porque los factores de mayor peso —la edad y los antecedentes familiares— no se pueden cambiar. Sin embargo, sí puedes reducir el riesgo con hábitos saludables y, sobre todo, detectarlo a tiempo con el PSA, cuando es más fácil de curar. La detección temprana es la herramienta más poderosa que tienes.",
+        text: "No de forma garantizada —la edad y los antecedentes familiares no se pueden cambiar—, pero sí puedes reducir el riesgo con hábitos saludables y, sobre todo, detectarlo a tiempo con el PSA, cuando es más fácil de curar.",
       },
     },
     {
@@ -61,15 +61,15 @@ const faqSchema = {
       name: "¿Qué alimentos ayudan a cuidar la próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La evidencia es modesta, pero una alimentación con más verduras y frutas, menos carne roja y procesada, y menos grasas saturadas se asocia con un perfil más saludable. No hay un 'alimento milagro' que prevenga el cáncer de próstata; lo que ayuda es el patrón general de alimentación, junto con el peso adecuado y la actividad física.",
+        text: "La evidencia es modesta: más verduras y frutas, menos carne roja y procesada y menos grasas saturadas. No hay un \"alimento milagro\"; lo que ayuda es el patrón general de alimentación junto con el peso adecuado y el ejercicio.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Los suplementos como vitamina E, selenio o licopeno previenen el cáncer de próstata?",
+      name: "¿Los suplementos (vitamina E, selenio, licopeno) previenen el cáncer de próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. Un estudio grande (SELECT) demostró que la vitamina E y el selenio no previenen el cáncer de próstata, e incluso la vitamina E se asoció con un ligero aumento del riesgo. El licopeno (del tomate) tiene evidencia débil e inconsistente. No se recomienda tomar suplementos para prevenir el cáncer de próstata; pueden dar una falsa sensación de protección.",
+        text: "No. El estudio SELECT mostró que la vitamina E y el selenio no lo previenen, y la vitamina E se asoció con un ligero aumento del riesgo. El licopeno tiene evidencia débil. No se recomiendan suplementos para prevenir el cáncer de próstata.",
       },
     },
     {
@@ -77,7 +77,7 @@ const faqSchema = {
       name: "¿A qué edad debo empezar a revisarme la próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "En hombres de riesgo promedio, la revisión con PSA suele iniciar a los 50 años. Si tienes antecedentes familiares de cáncer de próstata o factores de riesgo, se recomienda desde los 40-45 años. La revisión es sencilla e indolora y permite detectar el cáncer en etapas tempranas.",
+        text: "A los 50 años en riesgo promedio, y desde los 40-45 si hay antecedentes familiares o factores de riesgo. La revisión con PSA es sencilla e indolora.",
       },
     },
     {
@@ -85,15 +85,15 @@ const faqSchema = {
       name: "¿El ejercicio reduce el riesgo de cáncer de próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La actividad física regular y mantener un peso saludable se asocian con un menor riesgo de cáncer de próstata agresivo y, en general, con mejor salud. No es una garantía, pero es uno de los hábitos con mejor respaldo y aporta beneficios para todo el cuerpo.",
+        text: "La actividad física regular y un peso saludable se asocian con menor riesgo de cáncer de próstata agresivo y con mejor salud general. No es garantía, pero es uno de los hábitos con mejor respaldo.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Puedo hacer algo si tengo antecedentes familiares de cáncer de próstata?",
+      name: "¿Puedo hacer algo si tengo antecedentes familiares?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí: lo más importante es adelantar la detección. Con antecedentes familiares de primer grado o mutaciones como BRCA, la revisión con PSA suele comenzar antes (40-45 años) y con seguimiento más cercano. No puedes cambiar tu genética, pero sí encontrar el cáncer a tiempo, que es lo que cambia el pronóstico.",
+        text: "Sí: adelantar la detección. Con antecedentes de primer grado o mutaciones BRCA, la revisión con PSA suele empezar antes (40-45 años) y con seguimiento más cercano. No cambias tu genética, pero sí encuentras el cáncer a tiempo.",
       },
     },
   ],

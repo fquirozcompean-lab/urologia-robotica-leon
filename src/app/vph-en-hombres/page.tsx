@@ -81,7 +81,7 @@ const faqSchema = {
       name: "¿Puedo tener hijos si tengo VPH?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí, el VPH generalmente no afecta la fertilidad masculina. La producción de espermatozoides es independiente de la infección por VPH. Si estás buscando un embarazo y tienes VPH, coméntalo con tu urólogo.",
+        text: "Sí, el VPH generalmente no afecta la fertilidad masculina. La producción de espermatozoides es independiente de la infección por VPH. Algunos estudios sugieren que el VPH podría afectar la movilidad espermática en ciertos casos, pero no es una causa establecida de infertilidad. Si estás buscando un embarazo y tienes VPH, coméntalo con tu urólogo.",
       },
     },
     {
@@ -89,7 +89,7 @@ const faqSchema = {
       name: "¿El VPH causa infertilidad en hombres?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No de forma directa. El VPH no está establecido como causa de infertilidad masculina. Existen estudios que sugieren que el VPH podría afectar la movilidad espermática en algunos casos, pero esto no significa infertilidad en la práctica clínica habitual.",
+        text: "No de forma directa. El VPH no está establecido como causa de infertilidad masculina. Existen estudios que sugieren que el VPH podría unirse a los espermatozoides y afectar su capacidad de fertilización en algunos casos, pero esto no significa infertilidad en la práctica clínica habitual.",
       },
     },
     {
@@ -97,7 +97,7 @@ const faqSchema = {
       name: "¿Puedo donar sangre si tengo VPH?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El VPH no se transmite por transfusión de sangre — es una infección que se transmite por contacto piel con piel y sexual. No existe prueba de VPH en el tamizaje estándar de donadores de sangre.",
+        text: "El VPH no se transmite por transfusión de sangre — es una infección que se transmite por contacto piel con piel y sexual. No existe prueba de VPH en el tamizaje estándar de donadores de sangre. Si tienes dudas específicas, consulta directamente con el banco de sangre.",
       },
     },
     {
@@ -105,7 +105,7 @@ const faqSchema = {
       name: "¿Debo vacunarme si ya tuve VPH?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí, vale la pena. La vacuna Gardasil 9 protege contra 9 tipos de VPH. Aunque hayas tenido VPH, probablemente no hayas sido infectado por todos los tipos incluidos en la vacuna. Vacunarte protege contra los tipos que aún no has contraído.",
+        text: "Sí, vale la pena. La vacuna Gardasil 9 protege contra 9 tipos de VPH. Aunque hayas tenido VPH, probablemente no hayas sido infectado por todos los tipos incluidos en la vacuna. Vacunarte protege contra los tipos que aún no has contraído. Tu urólogo puede orientarte sobre si la vacuna es adecuada en tu caso.",
       },
     },
     {
@@ -121,7 +121,7 @@ const faqSchema = {
       name: "¿Puedo transmitir VPH aunque no tenga verrugas?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí. Puedes transmitir el VPH aunque no tengas ningún síntoma visible. El virus puede estar presente en la piel sin causar verrugas — y en ese estado igualmente puede transmitirse por contacto sexual. Esto explica por qué el VPH es tan común.",
+        text: "Sí. Esta es una de las características más importantes del VPH: puedes transmitirlo aunque no tengas ningún síntoma visible. El virus puede estar presente en la piel sin causar verrugas — y en ese estado igualmente puede transmitirse por contacto sexual. Esto explica por qué el VPH es tan común.",
       },
     },
     {
@@ -129,7 +129,7 @@ const faqSchema = {
       name: "¿Cuánto tiempo tarda en aparecer el VPH después del contagio?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Las verrugas genitales pueden aparecer entre 3 semanas y varios meses después del contacto. El VPH de alto riesgo puede permanecer latente por años. Por esto es imposible determinar con certeza cuándo ni de quién se adquirió la infección.",
+        text: "El tiempo entre la exposición y la aparición de síntomas puede variar enormemente. Las verrugas genitales pueden aparecer entre 3 semanas y varios meses después del contacto. El VPH de alto riesgo puede permanecer latente por años. Por esto es imposible determinar con certeza cuándo ni de quién se adquirió la infección.",
       },
     },
     {
@@ -145,7 +145,7 @@ const faqSchema = {
       name: "¿Puedo tener VPH y VIH al mismo tiempo?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí, ambas infecciones pueden coexistir. El VIH debilita el sistema inmune, lo que dificulta que el cuerpo elimine el VPH naturalmente. Las personas con VIH tienen mayor riesgo de infección persistente por VPH y mayor riesgo de desarrollar cánceres relacionados.",
+        text: "Sí, ambas infecciones pueden coexistir. El VIH debilita el sistema inmune, lo que dificulta que el cuerpo elimine el VPH naturalmente. Las personas con VIH tienen mayor riesgo de infección persistente por VPH y mayor riesgo de desarrollar cánceres relacionados. El control efectivo del VIH con tratamiento antirretroviral mejora la respuesta frente al VPH.",
       },
     },
     {
@@ -153,7 +153,7 @@ const faqSchema = {
       name: "¿El VPH oral es igual que el genital?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El VPH oral es causado por los mismos tipos de virus pero afecta la mucosa de la boca y garganta. Se transmite principalmente por sexo oral. El VPH oral de alto riesgo está relacionado con el aumento en cánceres de orofaringe en las últimas décadas.",
+        text: "El VPH oral es causado por los mismos tipos de virus (incluyendo 16 y 18) pero afecta la mucosa de la boca y garganta. Se transmite principalmente por sexo oral. No causa síntomas visibles en la mayoría de casos. El VPH oral de alto riesgo está relacionado con el aumento en cánceres de orofaringe en las últimas décadas.",
       },
     },
     {
@@ -169,7 +169,7 @@ const faqSchema = {
       name: "¿Mi novia tiene VPH, significa que me fue infiel?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. El VPH puede estar latente por años o décadas antes de causar síntomas. Una persona puede haber adquirido el virus en una relación anterior sin saberlo. El diagnóstico de VPH no es evidencia de infidelidad — es evidencia de actividad sexual en algún momento de la vida, como le ocurre a la mayoría de las personas.",
+        text: "No. El VPH puede estar latente por años o décadas antes de causar síntomas. Una persona puede haber adquirido el virus en una relación anterior sin saberlo, y el virus puede activarse o hacerse detectable mucho tiempo después. El diagnóstico de VPH no es evidencia de infidelidad — es evidencia de actividad sexual en algún momento de la vida, como le ocurre a la mayoría de las personas.",
       },
     },
     {
@@ -178,6 +178,38 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "El VPH por sí mismo no causa disfunción eréctil directamente. Sin embargo, la ansiedad y el estrés psicológico asociados al diagnóstico de VPH pueden afectar temporalmente la función eréctil. Si experimentas disfunción eréctil, esta tiene causas vasculares, hormonales o psicológicas que vale la pena evaluar por separado con tu urólogo.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Si tengo VPH, significa que mi pareja me fue infiel?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "NO necesariamente. El VPH puede estar latente por años antes de causar síntomas. Es imposible saber cuándo ni de quién se adquirió. Tener VPH no es evidencia de infidelidad — es evidencia de contacto sexual en algún momento de la vida.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Debo decirle a mi pareja que tengo VPH?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, es importante informarle. Tu pareja debe evaluarse — en mujeres el VPH puede causar cáncer cervical. La comunicación abierta protege a ambos y permite tomar decisiones informadas sobre protección y vacunación.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Podemos tener relaciones sexuales si uno de los dos tiene VPH?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, pero con información y protección. Si hay verrugas activas, esperar hasta después del tratamiento reduce la transmisión. Tu pareja debería evaluarse y considerar la vacuna.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Debo informar a parejas futuras?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Es una decisión ética. Si tienes verrugas activas o VPH persistente, informar a la pareja le permite tomar decisiones informadas. Si el virus ya fue eliminado por tu sistema inmune, el riesgo es mínimo.",
       },
     },
   ],

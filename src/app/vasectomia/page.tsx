@@ -55,7 +55,7 @@ const faqSchema = {
       name: "¿La vasectomía duele?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Se realiza con anestesia local, por lo que durante el procedimiento no hay dolor, solo la molestia inicial de la anestesia. En la técnica sin bisturí no hay corte ni puntos, así que el malestar posterior suele ser leve y se controla con hielo, reposo y analgésicos comunes durante uno o dos días.",
+        text: "Se realiza con anestesia local, así que durante el procedimiento no hay dolor. En la técnica sin bisturí no hay corte ni puntos, por lo que la molestia posterior suele ser leve y se controla con hielo, reposo y analgésicos comunes durante uno o dos días.",
       },
     },
     {
@@ -63,7 +63,7 @@ const faqSchema = {
       name: "¿La vasectomía afecta la erección, el deseo sexual o el orgasmo?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. La vasectomía no afecta la testosterona, la erección, el deseo sexual ni el orgasmo. Tampoco cambia la cantidad ni el aspecto del semen de forma perceptible, porque los espermatozoides son una fracción mínima del volumen. Lo único que cambia es que el semen ya no contiene espermatozoides.",
+        text: "No. No afecta la testosterona, la erección, el deseo ni el orgasmo. Tampoco cambia de forma perceptible la cantidad ni el aspecto del semen. Lo único que cambia es que el semen ya no contiene espermatozoides.",
       },
     },
     {
@@ -71,7 +71,7 @@ const faqSchema = {
       name: "¿Cuándo es efectiva la vasectomía?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No es efectiva de inmediato. Quedan espermatozoides en la vía durante algunas semanas, por lo que es indispensable usar otro método anticonceptivo hasta confirmar la ausencia de espermatozoides con un análisis de semen (espermatobioscopia), habitualmente alrededor de los 3 meses o tras unas 20 eyaculaciones. Solo entonces se considera efectiva.",
+        text: "No es efectiva de inmediato. Debes usar otro método anticonceptivo hasta confirmar la ausencia de espermatozoides con un análisis de semen, habitualmente alrededor de los 3 meses o tras unas 20 eyaculaciones. Solo entonces se considera efectiva.",
       },
     },
     {
@@ -79,7 +79,7 @@ const faqSchema = {
       name: "¿La vasectomía es reversible?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La vasectomía debe considerarse un método permanente. Existe la reversión (vasovasostomía), una microcirugía que el Dr. Quiroz realiza, pero no garantiza recuperar la fertilidad: las probabilidades de embarazo disminuyen conforme pasa más tiempo desde la vasectomía. Por eso la decisión debe tomarse pensando en que es definitiva.",
+        text: "Debe considerarse permanente. Existe la reversión (vasovasostomía), que el Dr. Quiroz realiza, pero no garantiza recuperar la fertilidad y las probabilidades disminuyen con el tiempo transcurrido. Decide pensando en que es definitiva.",
       },
     },
     {
@@ -87,7 +87,7 @@ const faqSchema = {
       name: "¿La vasectomía sin bisturí es diferente de la convencional?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "En lugar de un corte con bisturí, se accede al conducto (conducto deferente) a través de una pequeña punción, sin necesidad de puntos. Esto se asocia con menos sangrado, menos molestia y una recuperación más rápida que la técnica convencional, con la misma eficacia anticonceptiva.",
+        text: "En lugar de un corte con bisturí, se accede al conducto por una pequeña punción, sin puntos. Esto se asocia con menos sangrado, menos molestia y recuperación más rápida, con la misma eficacia anticonceptiva.",
       },
     },
     {
@@ -95,7 +95,7 @@ const faqSchema = {
       name: "¿Cuánto cuesta la vasectomía en León?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El costo se informa en la consulta e incluye la valoración, el procedimiento y el seguimiento con el análisis de semen de control. Se realiza en Hospital Ángeles León y Hospital Christus Muguerza Altagracia. Escríbenos por WhatsApp para conocer disponibilidad y detalles.",
+        text: "El costo se informa en la consulta e incluye la valoración, el procedimiento y el análisis de semen de control. Se realiza en Hospital Ángeles León y Hospital Christus Muguerza Altagracia. Escríbenos por WhatsApp para conocer disponibilidad y detalles.",
       },
     },
     {
@@ -103,7 +103,7 @@ const faqSchema = {
       name: "¿La vasectomía protege contra infecciones de transmisión sexual?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. La vasectomía es un método anticonceptivo, no protege contra infecciones de transmisión sexual. Para eso sigue siendo necesario el uso de preservativo cuando corresponde.",
+        text: "No. Es un método anticonceptivo, no protege contra infecciones de transmisión sexual. Para eso sigue siendo necesario el preservativo cuando corresponde.",
       },
     },
   ],

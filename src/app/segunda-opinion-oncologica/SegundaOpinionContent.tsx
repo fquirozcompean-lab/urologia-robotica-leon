@@ -117,20 +117,11 @@ function FaqItem({
         </motion.div>
       </button>
       <AnimatePresence initial={false}>
-        {isOpen && (
-          <motion.div
-            key="answer"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="overflow-hidden"
-          >
+        <div hidden={!isOpen} key="answer" className="overflow-hidden">
             <p className="font-serif text-gris-profundo/80 text-base leading-relaxed pb-5 px-1">
               {a}
             </p>
-          </motion.div>
-        )}
+          </div>
       </AnimatePresence>
     </div>
   );
@@ -158,7 +149,7 @@ export default function SegundaOpinionContent() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="relative max-w-5xl mx-auto text-center"

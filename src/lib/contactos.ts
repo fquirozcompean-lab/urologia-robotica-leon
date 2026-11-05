@@ -3,10 +3,10 @@
 //
 // Enrutamiento oficial (Julio 2026):
 // - CTAs de sede específica → WhatsApp de la asistente de cada sede
-// - CTAs de segunda opinión oncológica → WhatsApp personal del Dr. Quiroz
+// - CTAs de segunda opinión oncológica y resultado del cuestionario IPSS → WhatsApp del Dr. Quiroz
 // - CTAs genéricos → modal SedeSelector → asistente de la sede elegida
 
-export const WA_DR = "5214776330492"; // Dr. Quiroz — SOLO segunda opinión
+export const WA_DR = "5214776330492"; // Dr. Quiroz — segunda opinión, inglés y resultado del IPSS
 export const WA_ANGELES = "5214791037564"; // Asistente Hospital Ángeles León
 export const WA_MUGUERZA = "5214772351442"; // Asistente Hospital Christus Muguerza
 export const EMAIL_CONTACTO = "urologoquiroz@gmail.com";

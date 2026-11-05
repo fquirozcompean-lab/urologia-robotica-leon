@@ -55,7 +55,7 @@ const faqSchema = {
       name: "¿Es grave ver sangre en la orina?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Cualquier episodio de sangre visible en la orina debe evaluarse, incluso si ocurre una sola vez y desaparece. Muchas causas son benignas —como una infección o un cálculo— pero la sangre en la orina también puede ser el primer y único signo de un tumor de vejiga o de riñón. La única forma de saberlo es con una evaluación urológica.",
+        text: "Cualquier episodio de sangre visible debe evaluarse, incluso si ocurre una sola vez y desaparece. Muchas causas son benignas —una infección o un cálculo— pero la sangre también puede ser el primer y único signo de un tumor de vejiga o riñón. La única forma de saberlo es con una evaluación urológica.",
       },
     },
     {
@@ -63,7 +63,7 @@ const faqSchema = {
       name: "Orino con sangre pero no me duele, ¿debo preocuparme?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí. La hematuria sin dolor (indolora) es precisamente la forma en que suelen manifestarse los tumores de vejiga y riñón, por lo que no debe ignorarse. La ausencia de dolor no significa que sea inofensiva; al contrario, es un motivo importante para acudir pronto con el urólogo.",
+        text: "Sí. La hematuria sin dolor es precisamente la forma en que suelen manifestarse los tumores de vejiga y riñón, por lo que no debe ignorarse. La ausencia de dolor no significa que sea inofensiva.",
       },
     },
     {
@@ -71,7 +71,7 @@ const faqSchema = {
       name: "¿Qué enfermedades causan sangre en la orina?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Las causas más frecuentes son las infecciones urinarias, los cálculos renales o ureterales y el crecimiento benigno de la próstata (HPB). Otras causas incluyen el cáncer de vejiga, el cáncer de riñón, el cáncer de próstata, enfermedades del riñón, el ejercicio intenso y algunos medicamentos anticoagulantes. La evaluación busca distinguir las causas benignas de las que requieren tratamiento urgente.",
+        text: "Las más frecuentes son las infecciones urinarias, los cálculos y el crecimiento benigno de la próstata. Otras incluyen el cáncer de vejiga, de riñón y de próstata, enfermedades del riñón, el ejercicio intenso y algunos anticoagulantes.",
       },
     },
     {
@@ -79,15 +79,15 @@ const faqSchema = {
       name: "¿Qué estudios se hacen para encontrar la causa?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La evaluación suele incluir un análisis de orina y urocultivo, estudios de imagen del aparato urinario (ultrasonido o tomografía uro-TC), y en muchos casos una cistoscopia, que permite revisar el interior de la vejiga con una cámara. En algunos casos se añade citología urinaria. El plan se ajusta a la edad, los factores de riesgo y el tipo de sangrado.",
+        text: "Habitualmente un análisis de orina y urocultivo, estudios de imagen (ultrasonido o tomografía uro-TC) y, en muchos casos, una cistoscopia para revisar el interior de la vejiga. A veces se añade citología urinaria. El plan se ajusta a cada paciente.",
       },
     },
     {
       "@type": "Question",
-      name: "Vi sangre en la orina una sola vez y ya no volvió, ¿debo revisarme?",
+      name: "Vi sangre una sola vez y ya no volvió, ¿debo revisarme?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí. Un solo episodio de sangre visible es suficiente para justificar una evaluación, aunque la orina vuelva a verse normal. Los tumores urológicos pueden sangrar de forma intermitente, por lo que esperar a que 'vuelva a pasar' puede retrasar un diagnóstico importante.",
+        text: "Sí. Un solo episodio de sangre visible es suficiente para justificar una evaluación, aunque la orina vuelva a verse normal. Los tumores pueden sangrar de forma intermitente, y esperar puede retrasar un diagnóstico importante.",
       },
     },
     {
@@ -95,7 +95,7 @@ const faqSchema = {
       name: "¿La sangre en la orina siempre es cáncer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. La mayoría de los casos se deben a causas benignas como infecciones, cálculos o crecimiento de la próstata. Sin embargo, como la hematuria puede ser el único signo temprano de un tumor, el objetivo de la evaluación es descartar las causas graves y tratar la que corresponda. Detectar un problema a tiempo mejora mucho el pronóstico.",
+        text: "No. La mayoría de los casos se deben a causas benignas. Pero como la hematuria puede ser el único signo temprano de un tumor, el objetivo de la evaluación es descartar lo grave y tratar lo que corresponda. Detectar un problema a tiempo mejora mucho el pronóstico.",
       },
     },
   ],

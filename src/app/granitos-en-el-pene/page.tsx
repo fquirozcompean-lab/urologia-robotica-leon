@@ -54,7 +54,7 @@ const faqSchema = {
       name: "¿Los granitos en el pene son normales?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Muchos sí. Las pápulas perladas del pene (pequeños granitos en fila alrededor del borde del glande) y los puntos de Fordyce (glándulas sebáceas visibles como puntos blancos o amarillentos) son variantes anatómicas normales, no son una infección ni se transmiten sexualmente, y no requieren tratamiento. Sin embargo, no todos los granitos son de este tipo, por lo que ante la duda conviene una revisión.",
+        text: "Muchos sí. Las pápulas perladas (granitos en fila alrededor del glande) y los puntos de Fordyce (glándulas sebáceas) son variantes normales, no se transmiten y no requieren tratamiento. Pero no todos son de este tipo, así que ante la duda conviene revisarse.",
       },
     },
     {
@@ -62,7 +62,7 @@ const faqSchema = {
       name: "¿Qué son los granitos blancos en el pene?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Los granitos blancos suelen corresponder a puntos de Fordyce (glándulas sebáceas), pápulas perladas o pequeños quistes, todos benignos. En algunos casos, unos granitos blancos con un hoyito central pueden ser molusco contagioso, de origen viral. La forma más segura de distinguirlos es una valoración urológica.",
+        text: "Suelen ser puntos de Fordyce, pápulas perladas o pequeños quistes, todos benignos. En algunos casos, unos granitos blancos con un hoyito central pueden ser molusco contagioso, de origen viral. Una valoración lo distingue con seguridad.",
       },
     },
     {
@@ -70,7 +70,7 @@ const faqSchema = {
       name: "¿Cómo sé si son verrugas (VPH) o algo benigno?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No siempre es fácil a simple vista. Las pápulas perladas se distribuyen de forma muy regular alrededor del glande, mientras que las verrugas genitales (por VPH) suelen ser irregulares, pueden crecer o multiplicarse y se relacionan con contacto sexual. Ante la duda, o si una lesión cambia, crece o sangra, la evaluación con el urólogo es lo indicado.",
+        text: "No siempre es fácil a simple vista. Las pápulas perladas son muy regulares alrededor del glande; las verrugas genitales (VPH) suelen ser irregulares, pueden crecer y se relacionan con contacto sexual. Ante la duda, o si algo cambia, revísate.",
       },
     },
     {
@@ -78,7 +78,7 @@ const faqSchema = {
       name: "¿Los granitos en el pene son contagiosos?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Depende de qué sean. Las pápulas perladas y los puntos de Fordyce no son contagiosos. En cambio, las verrugas genitales (VPH), el molusco contagioso y algunas infecciones sí pueden transmitirse. Por eso importa distinguir el tipo de lesión.",
+        text: "Depende de qué sean. Las pápulas perladas y los puntos de Fordyce no se contagian. Las verrugas (VPH), el molusco y algunas infecciones sí pueden transmitirse. Por eso importa distinguir el tipo de lesión.",
       },
     },
     {
@@ -86,7 +86,7 @@ const faqSchema = {
       name: "¿Se deben quitar los granitos del pene?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Las lesiones benignas como las pápulas perladas o los puntos de Fordyce no necesitan tratamiento; solo se retiran por motivos estéticos si el paciente lo desea. Las verrugas, el molusco u otras lesiones sí tienen tratamiento indicado. Nunca conviene intentar quitarlas por cuenta propia.",
+        text: "Las lesiones benignas no necesitan tratamiento; solo se retiran por estética si el paciente lo desea. Las verrugas o el molusco sí tienen tratamiento indicado. Nunca intentes quitarlas por cuenta propia.",
       },
     },
     {
@@ -94,7 +94,39 @@ const faqSchema = {
       name: "¿Cuándo consultar por granitos en el pene?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Conviene revisarse si las lesiones aparecieron recientemente, crecen o se multiplican, cambian de color, sangran, dan comezón o dolor, o si hubo contacto sexual de riesgo. Una revisión rápida distingue lo benigno de lo que sí requiere tratamiento y te da tranquilidad.",
+        text: "Si aparecieron hace poco, crecen o se multiplican, cambian de color, sangran, dan comezón o dolor, o si hubo contacto sexual de riesgo. Una revisión rápida distingue lo benigno y te da tranquilidad.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Por qué me salieron granitos en el pene si no he tenido relaciones?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Porque muchos no tienen relación con el sexo: las pápulas perladas y los puntos de Fordyce son variantes normales que pueden notarse desde la adolescencia, y la foliculitis se relaciona con el vello o el rasurado. Aun así, si la lesión es nueva o cambia, conviene revisarla.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Los granitos en el pene pueden ser cáncer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Es poco frecuente. La gran mayoría de los granitos son benignos. Lo que sí debe valorarse es una llaga, mancha o bolita que no sana en unas semanas, crece o sangra, porque en esos casos puede ser necesario tomar una biopsia.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué pasa si me reviento un granito del pene?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Puede infectarse, dejar cicatriz y, si es una lesión viral como el molusco, extenderse a la piel cercana. Lava la zona con agua y jabón neutro, no apliques productos y revísate si aparece dolor, enrojecimiento o secreción.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué significa tener granitos con comezón en el pene?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La comezón orienta más a irritación, infección por hongos (balanitis) o foliculitis que a variantes normales, que no suelen dar molestias. Como puede tener varias causas, lo mejor es revisarlo antes de aplicar cremas.",
       },
     },
   ],

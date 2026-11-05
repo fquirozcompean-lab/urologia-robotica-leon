@@ -54,7 +54,7 @@ const faqSchema = {
       name: "¿Dónde está la próstata y qué tamaño tiene?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La próstata es una glándula que solo tienen los hombres. Está debajo de la vejiga y rodea la uretra, el conducto por el que sale la orina. En un adulto joven tiene el tamaño aproximado de una nuez y tiende a crecer con la edad.",
+        text: "Está debajo de la vejiga y rodea la uretra (el conducto por el que sale la orina). En un adulto joven tiene el tamaño aproximado de una nuez y tiende a crecer con la edad.",
       },
     },
     {
@@ -62,7 +62,7 @@ const faqSchema = {
       name: "¿Para qué sirve la próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Su función principal es producir parte del líquido que forma el semen, el cual nutre y transporta a los espermatozoides. También participa en la eyaculación y produce el PSA, una proteína que se mide en sangre para evaluar la salud prostática.",
+        text: "Produce parte del líquido que forma el semen, participa en la eyaculación y genera el PSA, una proteína que se mide en sangre para evaluar la salud prostática.",
       },
     },
     {
@@ -70,7 +70,7 @@ const faqSchema = {
       name: "¿Dónde duele cuando hay un problema de próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Muchos problemas de próstata no duelen y se manifiestan con síntomas urinarios (chorro débil, orinar de noche, urgencia). Cuando hay dolor, suele sentirse en la zona baja del abdomen, entre los testículos y el ano (perineo), la espalda baja o al orinar y eyacular. El dolor es más típico de la prostatitis que del crecimiento benigno o del cáncer en etapas tempranas.",
+        text: "Muchos problemas no duelen y se notan al orinar. Cuando hay dolor, suele sentirse en la parte baja del abdomen, el perineo (entre testículos y ano), la espalda baja o al orinar y eyacular. El dolor es más típico de la prostatitis.",
       },
     },
     {
@@ -78,7 +78,7 @@ const faqSchema = {
       name: "¿El ajo o los suplementos sirven para la próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No existe evidencia científica sólida de que el ajo, ni la mayoría de los suplementos 'para la próstata', traten o prevengan las enfermedades prostáticas. Algunos, como el saw palmetto, han sido estudiados y no superaron al placebo en ensayos grandes. Lo que sí ayuda es la detección temprana con PSA, hábitos saludables y una evaluación urológica oportuna. Ningún suplemento sustituye el diagnóstico médico.",
+        text: "No hay evidencia científica sólida de que el ajo ni la mayoría de los suplementos \"para la próstata\" traten o prevengan las enfermedades prostáticas. Lo que sí ayuda es la detección temprana con PSA, los hábitos saludables y la evaluación urológica oportuna.",
       },
     },
     {
@@ -86,7 +86,7 @@ const faqSchema = {
       name: "¿A qué edad debo revisarme la próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "En hombres de riesgo promedio, la revisión con PSA suele iniciar a los 50 años. Si hay antecedentes familiares de cáncer de próstata o factores de riesgo, se recomienda desde los 40-45 años. La revisión es sencilla e indolora y permite detectar problemas en etapas tempranas.",
+        text: "En hombres de riesgo promedio, la revisión con PSA suele iniciar a los 50 años; desde los 40-45 si hay antecedentes familiares. La revisión es sencilla e indolora.",
       },
     },
     {
@@ -94,7 +94,7 @@ const faqSchema = {
       name: "¿Qué problemas puede tener la próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Los tres más frecuentes son: el crecimiento benigno (hiperplasia prostática benigna o HPB), la inflamación (prostatitis) y el cáncer de próstata. Son condiciones distintas, con causas y tratamientos diferentes, aunque pueden compartir algunos síntomas urinarios. Por eso la evaluación debe ser individualizada.",
+        text: "Los tres más frecuentes son el crecimiento benigno (HPB), la inflamación (prostatitis) y el cáncer de próstata. Son condiciones distintas, con causas y tratamientos diferentes.",
       },
     },
   ],

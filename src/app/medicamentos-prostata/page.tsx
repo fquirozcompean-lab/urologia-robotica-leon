@@ -103,7 +103,7 @@ const faqSchema = {
       name: "¿La tamsulosina afecta la erección o el orgasmo?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La tamsulosina generalmente no afecta la erección. Sin embargo, puede causar eyaculación retrógrada en una minoría de pacientes. La silodosina tiene este efecto con mucha mayor frecuencia (~28%). Si la función sexual es prioritaria, existen otras opciones de tratamiento.",
+        text: "La tamsulosina generalmente no afecta la erección. Sin embargo, puede causar eyaculación retrógrada (el semen va hacia la vejiga en lugar de salir) en una minoría de pacientes. La silodosina tiene esta efecto con mucha mayor frecuencia (~28%). Si la función sexual es prioritaria, existe otras opciones de tratamiento.",
       },
     },
     {
@@ -127,7 +127,7 @@ const faqSchema = {
       name: "¿Qué pasa si tengo urgencia urinaria además de flujo débil?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Tener ambos síntomas obstructivos e irritativos es muy común en la HPB. Puede necesitarse un tratamiento que aborde los dos componentes: un alfa-bloqueador para el flujo y un anticolinérgico o beta-3 agonista para la urgencia. Sin embargo, no se deben agregar anticolinérgicos sin confirmar que no hay obstrucción severa. Una uroflujometría es indispensable.",
+        text: "Tener ambos (síntomas obstructivos + irritativos) es muy común en la HPB. En ese caso puede necesitarse un tratamiento que aborde los dos componentes: un alfa-bloqueador para el flujo y un anticolinérgico o beta-3 agonista (mirabegron) para la urgencia. Sin embargo, no se deben agregar anticolinérgicos sin antes confirmar que no hay obstrucción severa. Una uroflujometría es indispensable.",
       },
     },
     {
@@ -143,7 +143,7 @@ const faqSchema = {
       name: "¿Los suplementos de palma enana (saw palmetto) funcionan igual que la tamsulosina?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. Los estudios clínicos de mayor calidad no han demostrado que la palma enana sea superior al placebo para los síntomas urinarios. Las guías europeas y norteamericanas de urología no la recomiendan como tratamiento de la HPB.",
+        text: "No. Los estudios clínicos de mayor calidad (incluyendo el estudio STEP, multicéntrico y aleatorizado) no han demostrado que la palma enana sea superior al placebo para los síntomas urinarios. Las guías europeas y norteamericanas de urología no la recomiendan como tratamiento de la HPB. No es un sustituto de los medicamentos.",
       },
     },
     {
@@ -151,7 +151,7 @@ const faqSchema = {
       name: "¿Cuándo es necesaria la cirugía en vez de medicamento?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Hay indicaciones absolutas que requieren cirugía: retención urinaria recurrente, daño renal por obstrucción, infecciones de repetición, sangrado urinario por próstata, o cálculos vesicales. En síntomas severos sin respuesta al tratamiento médico también se considera cirugía. Los procedimientos actuales como HoLEP con láser tienen excelentes resultados con recuperación rápida.",
+        text: "Hay indicaciones absolutas que requieren cirugía independientemente de los medicamentos: retención urinaria recurrente, daño renal por obstrucción, infecciones de repetición, sangrado urinario por próstata, o cálculos vesicales. En síntomas severos sin respuesta al tratamiento médico también se considera cirugía. Los procedimientos actuales (HoLEP láser, TURP bipolar) tienen excelentes resultados con recuperación rápida.",
       },
     },
     {
@@ -159,7 +159,7 @@ const faqSchema = {
       name: "¿Tengo que tomar el medicamento para siempre?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Depende del objetivo. Si el objetivo es control de síntomas, habitualmente es tratamiento de larga duración. Con los procedimientos mínimamente invasivos actuales es posible resolver el problema de forma definitiva, sin catéter permanente y con hospitalización breve.",
+        text: "Depende del objetivo. Si el objetivo es control de síntomas, sí, habitualmente es tratamiento de larga duración. Pero con los procedimientos mínimamente invasivos actuales es posible resolver el problema de forma definitiva, sin catéter permanente y con hospitalización breve. Muchos pacientes prefieren resolver el problema una vez que conocen todas las opciones.",
       },
     },
   ],
