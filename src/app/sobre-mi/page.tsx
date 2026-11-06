@@ -91,7 +91,7 @@ const physicianSchema = {
         addressRegion: "Guanajuato",
         addressCountry: "MX",
       },
-      telephone: "+524791037564",
+      telephone: "+524776330492",
     },
     {
       "@type": "Hospital",
@@ -104,7 +104,7 @@ const physicianSchema = {
         addressRegion: "Guanajuato",
         addressCountry: "MX",
       },
-      telephone: "+524772351442",
+      telephone: "+524776330492",
     },
   ],
   identifier: [
