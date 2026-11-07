@@ -386,7 +386,7 @@ export default function CancerRenalContent() {
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"
           >
-            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-quirurgico-claro font-sans font-semibold text-sm uppercase tracking-widest mb-4">
               Urología Oncológica · León, Guanajuato
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
@@ -395,7 +395,7 @@ export default function CancerRenalContent() {
             <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
               Nefrectomía parcial robótica y laparoscópica — curamos el cáncer preservando tu función renal cuando es posible.
             </p>
-            <p className="text-quirurgico font-sans font-medium italic mb-10">
+            <p className="text-quirurgico-claro font-sans font-medium italic mb-10">
               "No todos los tumores renales requieren extirpar el riñón completo — preservar tu función renal es tan importante como curar el cáncer."
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -692,7 +692,7 @@ export default function CancerRenalContent() {
                 },
               ].map((d) => (
                 <Card key={d.step}>
-                  <div className="text-3xl font-bold text-blue-200 mb-2">{d.step}</div>
+                  <div className="text-3xl font-bold text-blue-500 mb-2">{d.step}</div>
                   <h3 className="font-semibold text-slate-900">{d.title}</h3>
                   <p className="text-sm text-slate-600 mt-2 leading-relaxed">{d.desc}</p>
                 </Card>
@@ -926,7 +926,7 @@ export default function CancerRenalContent() {
               <table className="w-full text-sm">
                 <thead className="bg-blue-800 text-white">
                   <tr>
-                    <th className="text-left px-4 py-3 font-semibold"></th>
+                    <th scope="col" className="text-left px-4 py-3 font-semibold"><span className="sr-only">Característica</span></th>
                     <th className="text-left px-4 py-3 font-semibold">Cirugía Abierta</th>
                     <th className="text-left px-4 py-3 font-semibold">Laparoscópica</th>
                     <th className="text-left px-4 py-3 font-semibold">Robótica</th>
@@ -943,7 +943,7 @@ export default function CancerRenalContent() {
                     { label: "Costo relativo", open: "Menor", lap: "Intermedio", rob: "Mayor", bg: "bg-white" },
                   ].map((row) => (
                     <tr key={row.label} className={row.bg}>
-                      <td className="px-4 py-3 font-semibold text-slate-700">{row.label}</td>
+                      <th scope="row" className="text-left px-4 py-3 font-semibold text-slate-700">{row.label}</th>
                       <td className="px-4 py-3 text-slate-600">{row.open}</td>
                       <td className="px-4 py-3 text-slate-600">{row.lap}</td>
                       <td className="px-4 py-3 text-slate-600">{row.rob}</td>
@@ -1256,7 +1256,7 @@ export default function CancerRenalContent() {
         {/* SEGUNDA OPINIÓN CROSS-LINK */}
         <section className="bg-editorial border-l-4 border-dorado py-10 px-6 md:px-12 my-12 rounded-r-xl">
           <div className="max-w-3xl">
-            <span className="text-dorado font-sans font-bold text-sm uppercase tracking-wide">
+            <span className="text-dorado-oscuro font-sans font-bold text-sm uppercase tracking-wide">
               ¿Ya tienes este diagnóstico?
             </span>
             <h3 className="font-sans font-bold text-2xl text-petroleo mt-2 mb-3">

@@ -151,13 +151,13 @@ export default function HomeContent() {
             <WAButtonConSelector
               mensaje="Hola Dr. Quiroz, quisiera una valoración oncológica especializada."
               motivo="home-oncologica"
-              variant="ghost"
+              variant="custom"
               as="div"
               className="group block bg-petroleo rounded-xl p-5 border-2 border-petroleo hover:border-acero hover:shadow-lg transition-all duration-300 h-full text-left items-start"
             >
               <h2 className="font-bold text-editorial font-sans text-[15px] mb-1">Valoración oncológica</h2>
               <p className="text-xs text-editorial/60 font-serif leading-relaxed">Diagnóstico y criterio especializado en urología oncológica.</p>
-              <span className="text-xs text-acero font-medium font-sans mt-3 inline-block group-hover:underline">Solicitar valoración →</span>
+              <span className="text-xs text-quirurgico-claro font-medium font-sans mt-3 inline-block group-hover:underline">Solicitar valoración →</span>
             </WAButtonConSelector>
 
           </div>
@@ -168,6 +168,15 @@ export default function HomeContent() {
               className="text-acero font-medium font-sans hover:underline"
             >
               Consulta los valores según tu edad y qué hacer →
+            </Link>
+          </p>
+          <p className="mt-2 text-center font-serif text-gris-profundo">
+            ¿No sabes si necesitas un urólogo?{" "}
+            <Link
+              href="/que-hace-un-urologo"
+              className="text-acero font-medium font-sans hover:underline"
+            >
+              Qué atiende, cuándo ir y qué pasa en la primera consulta →
             </Link>
           </p>
         </div>
@@ -201,7 +210,7 @@ export default function HomeContent() {
             </div>
             <div className="mt-6 bg-editorial border-l-4 border-dorado p-6 rounded-r-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
-                <span className="text-dorado font-sans font-bold text-xs uppercase tracking-wide">
+                <span className="text-dorado-oscuro font-sans font-bold text-xs uppercase tracking-wide">
                   ¿Ya tienes un diagnóstico?
                 </span>
                 <p className="font-serif text-gris-profundo mt-1">

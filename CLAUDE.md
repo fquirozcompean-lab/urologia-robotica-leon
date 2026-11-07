@@ -46,6 +46,8 @@ días de Muguerza asignados a Ángeles — corregido Oct 2026.)
 --color-gris-profundo:#37474F ← textos cuerpo (usar sobre fondos claros — 7.7:1 sobre editorial)
 --color-quirurgico:  #4A90A4  ← acento teal / iconos (solo decorativo, NO para texto sobre fondos claros)
 --color-dorado:      #B8A36A  ← detalles premium / divisores
+--color-quirurgico-claro: #77ACBB ← texto teal sobre fondos OSCUROS (5.77:1 sobre petroleo)
+--color-dorado-oscuro:    #786A45 ← texto dorado sobre fondos CLAROS (4.96:1 sobre editorial)
 
 -- UTILIDAD (no es parte de la paleta de marca médica) --
 --color-whatsapp:    #15803d  ← exclusivo para botones WA (5.01:1 con texto blanco, WCAG AA)
@@ -59,6 +61,16 @@ Clases: `bg-petroleo`, `text-editorial`, `bg-acero`, `text-quirurgico`, `text-do
 - `text-quirurgico` sobre fondos claros: FALLA (3.61:1). Usar `text-acero` para links/texto.
 - `text-quirurgico` es correcto como color de icono (no-texto) o bullet decorativo.
 - Botones WA: usar `bg-whatsapp` (nunca `bg-[#25D366]` que da 1.98:1 con texto blanco).
+- `text-quirurgico` sobre `bg-petroleo` también FALLA (3.99:1): las etiquetas y citas de los
+  encabezados oscuros usan `text-quirurgico-claro`.
+- `text-dorado` sobre fondos claros FALLA (2.3:1): usar `text-dorado-oscuro`. Sobre petroleo sí pasa.
+- Colores de Tailwind con texto blanco (`teal`, `green`, `emerald`, `amber`, `yellow`): usar el tono
+  **700 o más oscuro**; el 500 y el 600 no llegan a 4.5:1. Texto claro encima: tono 50 o `white`.
+- No usar `opacity-*` para aclarar texto; usar un color que cumpla.
+- Cada página debe tener un `<main>`.
+- Verificación (nov 2026, de 127 casos a 0): axe-core con scroll completo de todas las rutas del
+  sitemap, en escritorio y móvil. Lighthouse solo no basta: no evalúa el contenido que todavía
+  está oculto por animaciones.
 
 ## Arquitectura de componentes
 ```
@@ -71,8 +83,9 @@ src/
 │   │                          abre panel con las 4 categorías. El dropdown lista SOLO las
 │   │                          páginas con card (satélites se acceden desde su hub).
 │   ├── Footer.tsx          ← footer global (bg-petroleo, 5 cols + COFEPRIS)
-│   │                          Col. "Especialidades": links sitewide a las 4 páginas
-│   │                          prioritarias (próstata, HoLEP, renal, segunda opinión)
+│   │                          Col. "Especialidades": links sitewide a las páginas
+│   │                          prioritarias (próstata, HoLEP, renal, ¿qué hace un urólogo?,
+│   │                          segunda opinión)
 │   ├── BannerNoviembre.tsx ← campaña temporal en home y /cancer-prostata. Se oculta sola el
 │   │                          1 dic 2026 (FIN_CAMPANA). Eliminar el componente y sus 2 usos
 │   │                          en el primer cambio de diciembre, o actualizar la fecha para
@@ -190,6 +203,8 @@ corregido Nov 2026). El contenedor del hero usa `initial={false}`.
 | `/prevencion-cancer-prostata` | `app/prevencion-cancer-prostata/` (sub-página de /cancer-prostata — sin card, marco de detección/evidencia) |
 | `/valores-antigeno-prostatico-edad` | `app/valores-antigeno-prostatico-edad/` (sub-página de /cancer-prostata — sin card; tabla por edad, total/libre, densidad; enlazada desde el bloque "antes de la biopsia" de /cancer-prostata y desde /prevencion-cancer-prostata) |
 | `/cuestionario-ipss-prostata` | `app/cuestionario-ipss-prostata/` (herramienta — sub-página del hub HPB, sin card; enlazada desde HPB, medicamentos, Rezum y uroflujometría) |
+| `/que-hace-un-urologo` | `app/que-hace-un-urologo/` (pilar general — sin card; prioridad SEO del Dr.; link en footer, home, /agendar y /que-es-el-rinon; menciona consulta desde $1,000 MXN) |
+| `/resena` | `app/resena/` (noindex, NO va en sitemap — destino de los QR para pedir reseñas en Google) |
 | `/prostatitis` | `app/prostatitis/` |
 | `/que-es-el-rinon` | `app/que-es-el-rinon/` (pilar informativo renal — card en home Cat. 4) |
 | `/dolor-de-rinon` | `app/dolor-de-rinon/` (síntoma — card en home Cat. 4) |
@@ -420,6 +435,16 @@ componentes o páginas.
 - /gracias tiene `robots: noindex` y NO va en el sitemap
 - Remitente actual: onboarding@resend.dev (default de Resend) — migrar a dominio
   propio verificado cuando se configure
+
+### Reseñas de Google (Nov 2026)
+Los QR impresos en consultorio apuntan a `/resena/angeles` y `/resena/muguerza`: redirecciones
+en `next.config.ts` hacia los enlaces "Pedir reseñas" de cada perfil de Google Business, que viven
+en `src/lib/contactos.ts` (`RESENA_ANGELES`, `RESENA_MUGUERZA`). Si Google cambia un enlace, se
+actualiza ahí y los QR impresos siguen funcionando. `/resena` es la página para elegir sede.
+
+### Costo de consulta
+Consulta desde **$1,000 MXN** (decisión del Dr., nov 2026). Si cambia, actualizar
+/que-hace-un-urologo (texto visible y FAQ).
 
 ### Regla para futuras páginas
 Todo CTA nuevo de WhatsApp debe clasificarse: ¿sede específica, segunda opinión,

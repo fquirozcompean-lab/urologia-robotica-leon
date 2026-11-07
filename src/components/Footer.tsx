@@ -38,6 +38,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/que-hace-un-urologo" className="text-sm font-serif text-editorial/70 hover:text-quirurgico transition-colors">
+                  ¿Qué Hace un Urólogo?
+                </Link>
+              </li>
+              <li>
                 <Link href="/segunda-opinion-oncologica" className="text-sm font-serif text-dorado/90 hover:text-dorado transition-colors">
                   Segunda Opinión Oncológica
                 </Link>

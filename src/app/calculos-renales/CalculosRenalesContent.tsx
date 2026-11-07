@@ -279,7 +279,7 @@ export default function CalculosRenalesContent() {
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"
           >
-            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-quirurgico-claro font-sans font-semibold text-sm uppercase tracking-widest mb-4">
               Urología · León, Guanajuato
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
@@ -288,7 +288,7 @@ export default function CalculosRenalesContent() {
             <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
               Ureteroscopía con láser, LEOC y nefrolitotomía percutánea — la gran mayoría de los cálculos renales se tratan hoy sin cirugía abierta.
             </p>
-            <p className="text-quirurgico font-sans font-medium italic mb-10">
+            <p className="text-quirurgico-claro font-sans font-medium italic mb-10">
               "El mismo día que eliminamos el cálculo, hablamos de cómo evitar el siguiente."
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -576,7 +576,7 @@ export default function CalculosRenalesContent() {
                 },
               ].map((d) => (
                 <Card key={d.step}>
-                  <div className="text-3xl font-bold text-amber-200 mb-2">{d.step}</div>
+                  <div className="text-3xl font-bold text-amber-600 mb-2">{d.step}</div>
                   <h3 className="font-semibold text-slate-900">{d.title}</h3>
                   <p className="text-sm text-slate-600 mt-2 leading-relaxed">{d.desc}</p>
                 </Card>
@@ -712,7 +712,7 @@ export default function CalculosRenalesContent() {
                               {t.tag}
                             </span>
                             {t.badge && (
-                              <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-600 text-white">
+                              <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-700 text-white">
                                 {t.badge}
                               </span>
                             )}
@@ -760,7 +760,7 @@ export default function CalculosRenalesContent() {
                         </div>
                         <div className="mt-5">
                           <WASelectorLink mensaje={`Hola Dr. Quiroz, quiero información sobre ${t.name} para cálculos renales.`} motivo="calculos-renales">
-                            <Button className="bg-amber-600 text-white hover:bg-amber-700 text-sm">
+                            <Button className="bg-amber-700 text-white hover:bg-amber-800 text-sm">
                               Consultar sobre este tratamiento
                             </Button>
                           </WASelectorLink>
@@ -893,7 +893,7 @@ export default function CalculosRenalesContent() {
                   </p>
                   <div className="mt-3">
                     <WASelectorLink mensaje={"Hola Dr. Quiroz, quiero una consulta para prevenir que me vuelvan los cálculos renales."} motivo="calculos-renales">
-                      <Button className="bg-teal-600 text-white hover:bg-teal-700 text-sm">
+                      <Button className="bg-teal-700 text-white hover:bg-teal-800 text-sm">
                         Consulta de prevención
                       </Button>
                     </WASelectorLink>
@@ -942,7 +942,7 @@ export default function CalculosRenalesContent() {
                 </ul>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <WASelectorLink mensaje={WA_MSG} motivo="calculos-renales">
-                    <Button className="bg-amber-600 text-white hover:bg-amber-700">
+                    <Button className="bg-amber-700 text-white hover:bg-amber-800">
                       Agendar valoración
                     </Button>
                   </WASelectorLink>

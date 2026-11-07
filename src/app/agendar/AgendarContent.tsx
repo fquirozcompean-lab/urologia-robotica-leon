@@ -98,7 +98,7 @@ export default function AgendarContent() {
   }
 
   return (
-    <div className="bg-white">
+    <main className="bg-white">
       {/* HERO COMPACTO */}
       <section className="bg-petroleo text-editorial py-14 px-4">
         <div className="max-w-5xl mx-auto text-center">
@@ -108,6 +108,12 @@ export default function AgendarContent() {
           <p className="font-serif text-editorial/80 text-lg mt-3 max-w-xl mx-auto">
             Déjanos tus datos y el equipo del Dr. Quiroz te contactará para
             confirmar tu cita.
+          </p>
+          <p className="font-serif text-editorial/80 text-sm mt-3">
+            ¿Primera vez con el urólogo?{" "}
+            <Link href="/que-hace-un-urologo" className="text-editorial underline hover:text-quirurgico-claro">
+              Qué esperar de la consulta
+            </Link>
           </p>
         </div>
       </section>
@@ -314,6 +320,6 @@ export default function AgendarContent() {
           </aside>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

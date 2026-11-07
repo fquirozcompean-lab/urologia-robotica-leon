@@ -19,7 +19,7 @@ const variants = {
     "text-acero font-sans font-bold px-8 py-4 rounded-lg hover:bg-acero " +
     "hover:text-editorial transition-colors",
   ghost:
-    "inline-flex items-center gap-2 text-gris-premium font-sans text-sm " +
+    "inline-flex items-center gap-2 text-gris-profundo font-sans text-sm " +
     "hover:text-acero transition-colors",
 };
 

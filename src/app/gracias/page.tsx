@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function GraciasPage() {
   return (
-    <div className="bg-white min-h-[70vh]">
+    <main className="bg-white min-h-[70vh]">
       <ConversionTracker />
 
       <section className="py-20 px-4">
@@ -86,6 +86,6 @@ export default function GraciasPage() {
           </Link>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

@@ -154,7 +154,7 @@ export default function SegundaOpinionContent() {
           transition={{ duration: 0.7 }}
           className="relative max-w-5xl mx-auto text-center"
         >
-          <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+          <p className="text-quirurgico-claro font-sans font-semibold text-sm uppercase tracking-widest mb-4">
             Urología Oncológica · León, Guanajuato
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6 text-editorial">
@@ -273,7 +273,7 @@ export default function SegundaOpinionContent() {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-serif text-gris-profundo/70 text-center max-w-2xl mx-auto mb-14"
+            className="font-serif text-gris-profundo text-center max-w-2xl mx-auto mb-14"
           >
             Cada tipo de cáncer urológico tiene decisiones críticas que dependen del
             estadio, el grado y tu situación personal.
@@ -295,7 +295,7 @@ export default function SegundaOpinionContent() {
               },
               {
                 color: "border-l-quirurgico",
-                badge: "bg-quirurgico/10 text-quirurgico",
+                badge: "bg-quirurgico/10 text-acero",
                 badgeText: "Renal",
                 title: "Cáncer Renal (de riñón)",
                 text: "No todos los tumores renales requieren extirpar el riñón completo. La nefrectomía parcial robótica permite, en muchos casos, eliminar el tumor preservando el riñón sano. Una segunda opinión puede revelar opciones de preservación que no siempre se ofrecen de primera instancia.",
@@ -307,7 +307,7 @@ export default function SegundaOpinionContent() {
               },
               {
                 color: "border-l-dorado",
-                badge: "bg-dorado/10 text-dorado",
+                badge: "bg-dorado/10 text-dorado-oscuro",
                 badgeText: "Vejiga",
                 title: "Cáncer de Vejiga",
                 text: "El cáncer de vejiga requiere una estadificación precisa para definir si es superficial o invasivo — y esa diferencia cambia radicalmente el tratamiento. Una segunda opinión asegura que la profundidad del tumor y el plan terapéutico son los correctos antes de tomar decisiones mayores.",
@@ -415,7 +415,7 @@ export default function SegundaOpinionContent() {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-serif text-gris-premium text-center max-w-2xl mx-auto mb-10"
+            className="font-serif text-editorial/75 text-center max-w-2xl mx-auto mb-10"
           >
             Para darte una opinión completa y útil, es importante revisar toda la
             información de tu caso. Trae contigo todos los estudios que tengas
@@ -472,7 +472,7 @@ export default function SegundaOpinionContent() {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className="font-serif text-gris-premium text-sm text-center max-w-xl mx-auto"
+            className="font-serif text-editorial/75 text-sm text-center max-w-xl mx-auto"
           >
             Si no cuentas con todos los estudios, no te preocupes — durante la consulta
             se definirá qué información adicional se necesita. Lo importante es comenzar.
@@ -571,7 +571,7 @@ export default function SegundaOpinionContent() {
                 </div>
                 <div>
                   <p className="font-sans font-bold text-petroleo text-sm">{label}</p>
-                  <p className="font-serif text-gris-profundo/70 text-xs leading-snug">
+                  <p className="font-serif text-gris-profundo text-xs leading-snug">
                     {sub}
                   </p>
                 </div>
@@ -658,7 +658,7 @@ export default function SegundaOpinionContent() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackDoctoralia("segunda-opinion")}
-              className="text-gris-premium text-sm hover:text-editorial transition-colors"
+              className="text-editorial/75 text-sm hover:text-editorial transition-colors"
             >
               Ver perfil en Doctoralia →
             </a>

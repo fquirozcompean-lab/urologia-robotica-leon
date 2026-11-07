@@ -272,7 +272,7 @@ export default function HiperplasiaContent() {
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"
           >
-            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-quirurgico-claro font-sans font-semibold text-sm uppercase tracking-widest mb-4">
               Urología · León, Guanajuato
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
@@ -281,7 +281,7 @@ export default function HiperplasiaContent() {
             <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
               Tratamiento individualizado adaptado a tu caso — desde láser HoLEP hasta opciones que preservan la eyaculación.
             </p>
-            <p className="text-quirurgico font-sans font-medium italic mb-10">
+            <p className="text-quirurgico-claro font-sans font-medium italic mb-10">
               &ldquo;Cada paciente es único — el tratamiento se adapta a ti.&rdquo;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -466,7 +466,7 @@ export default function HiperplasiaContent() {
               </p>
               <div className="mt-4">
                 <WASelectorLink mensaje={WA_MSG} motivo="hpb">
-                  <Button className="bg-amber-600 text-white hover:bg-amber-700 text-sm">
+                  <Button className="bg-amber-700 text-white hover:bg-amber-800 text-sm">
                     Agenda tu valoración
                   </Button>
                 </WASelectorLink>
@@ -532,7 +532,7 @@ export default function HiperplasiaContent() {
                 },
               ].map((d) => (
                 <Card key={d.step}>
-                  <div className="text-3xl font-bold text-teal-200 mb-2">{d.step}</div>
+                  <div className="text-3xl font-bold text-teal-600 mb-2">{d.step}</div>
                   <h3 className="font-semibold text-slate-900">{d.title}</h3>
                   <p className="text-sm text-slate-600 mt-2 leading-relaxed">{d.desc}</p>
                 </Card>
@@ -840,7 +840,7 @@ export default function HiperplasiaContent() {
                         </div>
                         <div className="mt-5 flex flex-wrap items-center gap-4">
                           <WASelectorLink mensaje={`Hola Dr. Quiroz, quiero información sobre el tratamiento ${t.name} para HPB.`} motivo="hpb-tratamiento">
-                            <Button className="bg-teal-600 text-white hover:bg-teal-700 text-sm">
+                            <Button className="bg-teal-700 text-white hover:bg-teal-800 text-sm">
                               Consultar sobre este tratamiento
                             </Button>
                           </WASelectorLink>
@@ -1012,7 +1012,7 @@ export default function HiperplasiaContent() {
               </p>
               <div className="mt-4">
                 <WASelectorLink mensaje={WA_MSG} motivo="hpb">
-                  <Button className="bg-teal-600 text-white hover:bg-teal-700 text-sm">
+                  <Button className="bg-teal-700 text-white hover:bg-teal-800 text-sm">
                     Agenda tu valoración personalizada
                   </Button>
                 </WASelectorLink>
@@ -1059,7 +1059,7 @@ export default function HiperplasiaContent() {
                 </ul>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <WASelectorLink mensaje={WA_MSG} motivo="hpb">
-                    <Button className="bg-teal-600 text-white hover:bg-teal-700">
+                    <Button className="bg-teal-700 text-white hover:bg-teal-800">
                       Agendar valoración
                     </Button>
                   </WASelectorLink>

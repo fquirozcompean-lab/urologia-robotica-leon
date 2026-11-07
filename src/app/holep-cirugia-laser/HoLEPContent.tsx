@@ -105,7 +105,7 @@ export default function HoLEPContent() {
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"
           >
-            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-quirurgico-claro font-sans font-semibold text-sm uppercase tracking-widest mb-4">
               Urología · León, Guanajuato
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
@@ -115,7 +115,7 @@ export default function HoLEPContent() {
               Tratamiento con láser de holmium para próstatas de cualquier tamaño.
               Recuperación rápida, mínimo sangrado, resultados duraderos.
             </p>
-            <p className="text-quirurgico font-sans font-medium italic mb-10">
+            <p className="text-quirurgico-claro font-sans font-medium italic mb-10">
               "Precisión que inspira confianza"
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -204,7 +204,7 @@ export default function HoLEPContent() {
                       <p className="font-sans font-semibold text-petroleo text-sm">
                         {item.title}
                       </p>
-                      <p className="text-sm text-gris-premium mt-0.5">{item.desc}</p>
+                      <p className="text-sm text-gris-profundo mt-0.5">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -234,7 +234,7 @@ export default function HoLEPContent() {
               className="w-full h-auto"
             />
           </motion.div>
-          <p className="text-center text-gris-premium font-serif mt-6 max-w-3xl mx-auto">
+          <p className="text-center text-gris-profundo font-serif mt-6 max-w-3xl mx-auto">
             HoLEP permite eliminar completamente el adenoma prostático con mínimo trauma,
             sangrado reducido y recuperación acelerada comparado con TURP o cirugía abierta.
           </p>
@@ -256,7 +256,7 @@ export default function HoLEPContent() {
               <source src="/holep/video-holep.mp4" type="video/mp4" />
               Tu navegador no soporta video HTML5.
             </video>
-            <p className="text-center text-gris-premium font-serif mt-4 text-sm">
+            <p className="text-center text-gris-profundo font-serif mt-4 text-sm">
               Dr. Alejandro Quiroz realizando cirugía HoLEP con láser de holmium. Procedimiento
               mínimamente invasivo, alta precisión y excelentes resultados funcionales.
             </p>
@@ -372,7 +372,7 @@ export default function HoLEPContent() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-bold text-petroleo mb-2 font-sans">{v.title}</h3>
-                <p className="text-gris-premium font-serif text-sm leading-relaxed mb-2">
+                <p className="text-gris-profundo font-serif text-sm leading-relaxed mb-2">
                   {v.desc}
                 </p>
                 <p className="text-petroleo font-sans font-medium text-sm">{v.highlight}</p>
@@ -397,7 +397,7 @@ export default function HoLEPContent() {
               <thead>
                 <tr className="bg-acero text-editorial font-sans">
                   <th className="p-4 text-left font-bold">Característica</th>
-                  <th className="p-4 text-center font-bold bg-quirurgico">HoLEP ✓</th>
+                  <th className="p-4 text-center font-bold bg-acero">HoLEP ✓</th>
                   <th className="p-4 text-center font-bold">TURP</th>
                   <th className="p-4 text-center font-bold">Cirugía Abierta</th>
                 </tr>
@@ -428,7 +428,7 @@ export default function HoLEPContent() {
               </tbody>
             </table>
           </motion.div>
-          <p className="text-center text-gris-premium font-serif mt-6 max-w-3xl mx-auto text-sm">
+          <p className="text-center text-gris-profundo font-serif mt-6 max-w-3xl mx-auto text-sm">
             HoLEP combina las ventajas de la cirugía mínimamente invasiva con los resultados
             duraderos de la cirugía abierta, evitando las desventajas de ambas.
           </p>
@@ -474,14 +474,14 @@ export default function HoLEPContent() {
               </h3>
               <ul className="space-y-3 font-serif text-gris-profundo mb-6">
                 <li className="flex items-start gap-3">
-                  <span className="text-gris-premium flex-shrink-0 font-sans font-bold">✗</span>
+                  <span className="text-gris-profundo flex-shrink-0 font-sans font-bold">✗</span>
                   <span>
                     <strong className="font-sans">Cáncer de próstata</strong> — requiere
                     tratamiento oncológico diferente (cirugía robótica, radioterapia)
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-gris-premium flex-shrink-0 font-sans font-bold">✗</span>
+                  <span className="text-gris-profundo flex-shrink-0 font-sans font-bold">✗</span>
                   <span>
                     <strong className="font-sans">Prostatitis activa</strong> — la infección
                     debe tratarse antes de cualquier procedimiento
@@ -659,7 +659,7 @@ export default function HoLEPContent() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-sans font-bold text-gris-premium mb-3 text-sm">
+                <h4 className="font-sans font-bold text-gris-profundo mb-3 text-sm">
                   ✗ NO hacer (4 semanas):
                 </h4>
                 <ul className="space-y-2 text-sm">
@@ -672,7 +672,7 @@ export default function HoLEPContent() {
                     "Conducir vehículos la primera semana",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
-                      <span className="text-gris-premium font-bold">•</span> {item}
+                      <span className="text-gris-profundo font-bold">•</span> {item}
                     </li>
                   ))}
                 </ul>
@@ -839,16 +839,16 @@ export default function HoLEPContent() {
                     Hospital Ángeles León
                   </p>
                   <p>Consultorio 615, Torre II</p>
-                  <p className="text-gris-premium">Lunes, Martes, Jueves</p>
+                  <p className="text-gris-profundo">Lunes, Martes, Jueves</p>
                 </div>
                 <div className="p-4 bg-editorial rounded-xl">
                   <p className="font-sans font-semibold text-petroleo">
                     Hospital Christus Muguerza Altagracia
                   </p>
-                  <p className="text-gris-premium">Miércoles, Viernes</p>
+                  <p className="text-gris-profundo">Miércoles, Viernes</p>
                 </div>
               </div>
-              <div className="mt-4 pt-4 border-t border-gris-premium/20 text-xs text-gris-premium font-sans">
+              <div className="mt-4 pt-4 border-t border-gris-premium/20 text-xs text-gris-profundo font-sans">
                 C.P. 8860892 · C.E. 12465195 · Certificado CONAMEU
               </div>
             </motion.div>
@@ -908,7 +908,7 @@ export default function HoLEPContent() {
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-8 text-editorial/60 font-sans text-sm space-y-1"
+              className="mt-8 text-editorial/85 font-sans text-sm space-y-1"
             >
               <p>Hospital Ángeles León — Consultorio 615, Torre II · Lun, Mar, Jue</p>
               <p>Hospital Christus Muguerza Altagracia · Mié, Vie</p>

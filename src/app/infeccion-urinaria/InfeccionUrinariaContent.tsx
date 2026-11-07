@@ -215,7 +215,7 @@ export default function InfeccionUrinariaContent() {
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"
           >
-            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-quirurgico-claro font-sans font-semibold text-sm uppercase tracking-widest mb-4">
               Infección de Vías Urinarias · Cistitis · León, Guanajuato
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
@@ -224,7 +224,7 @@ export default function InfeccionUrinariaContent() {
             <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
               Alivio rápido de síntomas y plan personalizado para que no regresen. Si tienes ardor al orinar, no esperes.
             </p>
-            <p className="text-quirurgico font-sans font-medium italic mb-10">
+            <p className="text-quirurgico-claro font-sans font-medium italic mb-10">
               "Tratamiento inmediato y plan a largo plazo para no volver a tener infecciones."
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
@@ -259,7 +259,7 @@ export default function InfeccionUrinariaContent() {
                 </div>
               ))}
             </div>
-            <p className="mt-5 text-teal-200 text-sm">
+            <p className="mt-5 text-teal-50 text-sm">
               Dr. Alejandro Quiroz Compeán · Urólogo certificado por CONAMEU · León, Guanajuato
             </p>
           </motion.div>
@@ -351,7 +351,7 @@ export default function InfeccionUrinariaContent() {
                 >
                   <div className="text-2xl mb-2">{s.icon}</div>
                   <div className={`font-semibold text-sm ${s.strong ? "text-teal-800" : "text-slate-800"}`}>{s.label}</div>
-                  <div className="text-xs text-slate-500 mt-1">{s.detail}</div>
+                  <div className="text-xs text-slate-600 mt-1">{s.detail}</div>
                 </motion.div>
               ))}
             </div>
@@ -575,11 +575,11 @@ export default function InfeccionUrinariaContent() {
                   <div className="text-2xl mb-2">{card.icon}</div>
                   <div className="font-semibold mb-1">{card.title}</div>
                   {card.badge && (
-                    <span className="text-xs bg-teal-500 text-white px-2 py-0.5 rounded-full inline-block mb-2">{card.badge}</span>
+                    <span className="text-xs bg-teal-800 text-white px-2 py-0.5 rounded-full inline-block mb-2">{card.badge}</span>
                   )}
                   <ul className="space-y-1.5 mt-2">
                     {card.items.map((item, j) => (
-                      <li key={j} className="text-sm text-slate-200 flex gap-2">
+                      <li key={j} className="text-sm text-white flex gap-2">
                         <span className="text-teal-400 shrink-0">✓</span>
                         <span>{item}</span>
                       </li>
@@ -769,11 +769,11 @@ export default function InfeccionUrinariaContent() {
                 <div className="space-y-3 text-sm">
                   <div className="bg-teal-700 rounded-lg p-3">
                     <div className="font-semibold">80%: Reinfección</div>
-                    <p className="text-teal-200 mt-1">Nueva bacteria que entra de nuevo al tracto urinario. La infección anterior se curó, pero el ambiente favorece que entren otras bacterias.</p>
+                    <p className="text-teal-50 mt-1">Nueva bacteria que entra de nuevo al tracto urinario. La infección anterior se curó, pero el ambiente favorece que entren otras bacterias.</p>
                   </div>
                   <div className="bg-teal-700 rounded-lg p-3">
                     <div className="font-semibold">20%: Recaída</div>
-                    <p className="text-teal-200 mt-1">La misma bacteria que no se eliminó completamente. Ocurre cuando el tratamiento fue incompleto o la bacteria era resistente al antibiótico usado.</p>
+                    <p className="text-teal-50 mt-1">La misma bacteria que no se eliminó completamente. Ocurre cuando el tratamiento fue incompleto o la bacteria era resistente al antibiótico usado.</p>
                   </div>
                 </div>
               </motion.div>
@@ -1096,7 +1096,7 @@ export default function InfeccionUrinariaContent() {
               <p className="text-teal-100 max-w-xl mx-auto mb-4 leading-relaxed">
                 Las infecciones urinarias no tratadas se complican. Una consulta oportuna, el antibiótico correcto y un plan de prevención marcan toda la diferencia.
               </p>
-              <div className="bg-teal-600 border border-teal-400 rounded-xl p-4 max-w-lg mx-auto mb-8">
+              <div className="bg-teal-800 border border-teal-400 rounded-xl p-4 max-w-lg mx-auto mb-8">
                 <p className="font-semibold">¿Te da infección urinaria cada mes?</p>
                 <p className="text-teal-100 text-sm mt-1">No es normal y tiene solución. Un plan personalizado puede eliminar las recurrencias.</p>
               </div>
@@ -1104,14 +1104,14 @@ export default function InfeccionUrinariaContent() {
                 <WASelectorLink mensaje={WA_URGENTE} motivo="infeccion-urinaria" className="bg-white text-teal-900 font-bold px-8 py-3 rounded-xl hover:bg-teal-50 transition shadow-lg text-lg">
                   Agenda consulta urgente
                 </WASelectorLink>
-                <WASelectorLink mensaje={WA_RECURRENTE} motivo="infeccion-urinaria" className="bg-teal-600 text-white font-semibold px-8 py-3 rounded-xl hover:bg-teal-500 transition border border-teal-400 text-lg">
+                <WASelectorLink mensaje={WA_RECURRENTE} motivo="infeccion-urinaria" className="bg-teal-900 text-white font-semibold px-8 py-3 rounded-xl hover:bg-teal-800 transition border border-teal-400 text-lg">
                   Plan para infecciones recurrentes
                 </WASelectorLink>
               </div>
-              <p className="mt-5 text-teal-200 text-sm">
+              <p className="mt-5 text-teal-50 text-sm">
                 Hospital Ángeles León (Cons. 615, Torre II · Lun, Mar, Jue) · Hospital Christus Muguerza Altagracia (Mié, Vie)
               </p>
-              <p className="mt-1 text-teal-300 text-sm font-medium">Atención el mismo día disponible según agenda</p>
+              <p className="mt-1 text-teal-50 text-sm font-medium">Atención el mismo día disponible según agenda</p>
             </motion.div>
           </div>
         </section>

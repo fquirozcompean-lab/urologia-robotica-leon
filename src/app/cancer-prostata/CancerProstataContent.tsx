@@ -118,7 +118,7 @@ export default function CancerProstataContent() {
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"
           >
-            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-quirurgico-claro font-sans font-semibold text-sm uppercase tracking-widest mb-4">
               Urología Oncológica · León, Guanajuato
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
@@ -127,7 +127,7 @@ export default function CancerProstataContent() {
             <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
               Detección temprana y tratamiento de precisión. Urólogo oncólogo certificado y cirujano robótico formado en el INCan y Hospital Albert Einstein (Brasil).
             </p>
-            <p className="text-quirurgico font-sans font-medium italic mb-10">
+            <p className="text-quirurgico-claro font-sans font-medium italic mb-10">
               &ldquo;El diagnóstico temprano transforma el pronóstico del cáncer de próstata.&rdquo;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -362,7 +362,7 @@ export default function CancerProstataContent() {
                 </p>
                 <div className="mt-5">
                   <WASelectorLink mensaje={"Hola Dr. Quiroz, quiero solicitar una prueba de antígeno prostático."} motivo="psa">
-                    <Button className="bg-amber-600 text-white hover:bg-amber-700 text-sm">
+                    <Button className="bg-amber-700 text-white hover:bg-amber-800 text-sm">
                       Solicitar prueba de antígeno prostático
                     </Button>
                   </WASelectorLink>
@@ -505,7 +505,7 @@ export default function CancerProstataContent() {
                 },
               ].map((d) => (
                 <Card key={d.step}>
-                  <div className="text-3xl font-bold text-indigo-200 mb-2">{d.step}</div>
+                  <div className="text-3xl font-bold text-indigo-400 mb-2">{d.step}</div>
                   <h3 className="font-semibold text-slate-900">{d.title}</h3>
                   <p className="text-sm text-slate-600 mt-2 leading-relaxed">{d.desc}</p>
                 </Card>
@@ -742,7 +742,7 @@ export default function CancerProstataContent() {
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <WASelectorLink mensaje={WA_MSG} motivo="cancer-prostata">
-                    <Button className="bg-teal-600 text-white hover:bg-teal-700">
+                    <Button className="bg-teal-700 text-white hover:bg-teal-800">
                       Agendar consulta
                     </Button>
                   </WASelectorLink>
@@ -832,7 +832,7 @@ export default function CancerProstataContent() {
               </p>
               <div className="mt-6">
                 <Link href="/pet-psma-leon">
-                  <Button className="bg-teal-600 text-white hover:bg-teal-700">
+                  <Button className="bg-teal-700 text-white hover:bg-teal-800">
                     Conocer más sobre el PET-PSMA
                   </Button>
                 </Link>
@@ -1019,7 +1019,7 @@ export default function CancerProstataContent() {
         {/* SEGUNDA OPINIÓN CROSS-LINK */}
         <section className="bg-editorial border-l-4 border-dorado py-10 px-6 md:px-12 my-12 rounded-r-xl">
           <div className="max-w-3xl">
-            <span className="text-dorado font-sans font-bold text-sm uppercase tracking-wide">
+            <span className="text-dorado-oscuro font-sans font-bold text-sm uppercase tracking-wide">
               ¿Ya tienes este diagnóstico?
             </span>
             <h3 className="font-sans font-bold text-2xl text-petroleo mt-2 mb-3">

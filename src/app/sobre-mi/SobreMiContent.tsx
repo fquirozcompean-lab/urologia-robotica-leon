@@ -101,7 +101,7 @@ export default function SobreMiContent() {
       {/* HERO */}
       <section className="bg-petroleo py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <nav className="flex items-center gap-2 text-sm text-editorial/50 mb-10 font-sans">
+          <nav className="flex items-center gap-2 text-sm text-editorial/70 mb-10 font-sans">
             <Link href="/" className="hover:text-editorial/80 transition-colors">
               Inicio
             </Link>
@@ -115,7 +115,7 @@ export default function SobreMiContent() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block bg-acero/30 text-quirurgico text-xs font-sans font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6 border border-acero/40">
+              <span className="inline-block bg-acero/30 text-quirurgico-claro text-xs font-sans font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6 border border-acero/40">
                 Urólogo Oncólogo Certificado · León, Guanajuato
               </span>
 
@@ -123,7 +123,7 @@ export default function SobreMiContent() {
                 Dr. Alejandro Quiroz Compeán
               </h1>
 
-              <p className="text-lg text-gris-premium font-serif mb-6 leading-relaxed">
+              <p className="text-lg text-editorial/75 font-serif mb-6 leading-relaxed">
                 Urólogo Oncólogo y Cirujano Robótico especializado en cáncer
                 urológico y técnicas mínimamente invasivas en León, Guanajuato.
               </p>
@@ -154,7 +154,7 @@ export default function SobreMiContent() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackDoctoralia("sobre-mi")}
-                  className="text-gris-premium text-sm hover:text-editorial transition-colors text-center"
+                  className="text-editorial/75 text-sm hover:text-editorial transition-colors text-center"
                 >
                   Ver perfil en Doctoralia →
                 </a>
@@ -211,7 +211,7 @@ export default function SobreMiContent() {
                 <div className="text-base font-bold text-petroleo font-sans mb-1">
                   {item.label}
                 </div>
-                <div className="text-sm text-gris-premium font-serif">
+                <div className="text-sm text-gris-profundo font-serif">
                   {item.desc}
                 </div>
               </motion.div>
@@ -230,7 +230,7 @@ export default function SobreMiContent() {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-center text-gris-premium font-serif text-lg mb-4 max-w-2xl mx-auto"
+            className="text-center text-gris-profundo font-serif text-lg mb-4 max-w-2xl mx-auto"
           >
             Entrenado en los referentes más exigentes de México y
             Latinoamérica en urología oncológica y cirugía robótica.
@@ -260,10 +260,10 @@ export default function SobreMiContent() {
                 Instituto Nacional de Ciencias Médicas y Nutrición Salvador
                 Zubirán
               </h3>
-              <p className="text-xs font-sans text-gris-premium mb-1">
+              <p className="text-xs font-sans text-gris-profundo mb-1">
                 INCMNSZ — UNAM
               </p>
-              <p className="text-sm text-gris-premium font-serif mb-4">
+              <p className="text-sm text-gris-profundo font-serif mb-4">
                 Ciudad de México, México
               </p>
               <div className="w-12 h-0.5 bg-dorado mb-4" />
@@ -298,8 +298,8 @@ export default function SobreMiContent() {
               <h3 className="font-bold font-sans text-petroleo text-lg leading-tight mb-1">
                 Instituto Nacional de Cancerología
               </h3>
-              <p className="text-xs font-sans text-gris-premium mb-1">INCan</p>
-              <p className="text-sm text-gris-premium font-serif mb-4">
+              <p className="text-xs font-sans text-gris-profundo mb-1">INCan</p>
+              <p className="text-sm text-gris-profundo font-serif mb-4">
                 Ciudad de México, México
               </p>
               <div className="w-12 h-0.5 bg-dorado mb-4" />
@@ -334,7 +334,7 @@ export default function SobreMiContent() {
               <h3 className="font-bold font-sans text-petroleo text-lg leading-tight mb-1">
                 Hospital Israelita Albert Einstein
               </h3>
-              <p className="text-sm text-gris-premium font-serif mb-4">
+              <p className="text-sm text-gris-profundo font-serif mb-4">
                 São Paulo, Brasil
               </p>
               <div className="w-12 h-0.5 bg-dorado mb-4" />
@@ -366,10 +366,10 @@ export default function SobreMiContent() {
               <h3 className="font-bold font-sans text-petroleo text-lg leading-tight mb-1">
                 Consejo Nacional Mexicano de Urología
               </h3>
-              <p className="text-xs font-sans text-gris-premium mb-1">
+              <p className="text-xs font-sans text-gris-profundo mb-1">
                 CONAMEU
               </p>
-              <p className="text-sm text-gris-premium font-serif mb-4">
+              <p className="text-sm text-gris-profundo font-serif mb-4">
                 México
               </p>
               <div className="w-12 h-0.5 bg-dorado mb-4" />
@@ -408,7 +408,7 @@ export default function SobreMiContent() {
                 seguir la evidencia más reciente y defender cada decisión
                 clínica ante los estándares más exigentes.&rdquo;
               </p>
-              <p className="text-gris-premium font-serif text-sm">
+              <p className="text-editorial/75 font-serif text-sm">
                 — Dr. Alejandro Quiroz Compeán
               </p>
             </motion.div>
@@ -430,7 +430,7 @@ export default function SobreMiContent() {
                 Hospital General de León
               </p>
               <div className="w-12 h-0.5 bg-dorado mb-4" />
-              <span className="inline-block bg-dorado/20 text-dorado rounded-full px-3 py-1.5 text-xs font-sans font-bold border border-dorado/30">
+              <span className="inline-block bg-dorado/20 text-editorial rounded-full px-3 py-1.5 text-xs font-sans font-bold border border-dorado/30">
                 Programa acreditado por Tec de Monterrey
               </span>
             </motion.div>
@@ -501,7 +501,7 @@ export default function SobreMiContent() {
                   <h3 className="font-bold font-sans text-petroleo text-base mb-2 group-hover:text-acero transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gris-premium font-serif leading-relaxed">
+                  <p className="text-sm text-gris-profundo font-serif leading-relaxed">
                     {item.desc}
                   </p>
                 </Link>
@@ -545,7 +545,7 @@ export default function SobreMiContent() {
                 <h3 className="text-editorial font-bold font-sans text-xl mb-4">
                   {col.title}
                 </h3>
-                <p className="text-gris-premium font-serif text-base leading-relaxed">
+                <p className="text-editorial/75 font-serif text-base leading-relaxed">
                   {col.body}
                 </p>
               </motion.div>
@@ -715,7 +715,7 @@ export default function SobreMiContent() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackDoctoralia("sobre-mi-cta")}
-                className="text-gris-premium text-sm hover:text-editorial transition-colors"
+                className="text-editorial/85 text-sm hover:text-editorial transition-colors"
               >
                 Ver perfil en Doctoralia →
               </a>

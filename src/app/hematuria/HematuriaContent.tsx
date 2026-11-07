@@ -88,7 +88,7 @@ export default function HematuriaContent() {
       {/* HERO */}
       <section className="bg-petroleo text-editorial py-20">
         <div className="mx-auto max-w-6xl px-4 text-center">
-          <p className="text-sm font-sans font-semibold uppercase tracking-widest text-quirurgico mb-4">
+          <p className="text-sm font-sans font-semibold uppercase tracking-widest text-quirurgico-claro mb-4">
             Urología · León, Guanajuato
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">

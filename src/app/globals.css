@@ -14,6 +14,10 @@
   --color-gris-profundo: #37474F;
   --color-quirurgico: #4A90A4;
   --color-dorado: #B8A36A;
+  /* Variantes de texto que cumplen WCAG AA (4.5:1):
+     quirurgico-claro sobre petroleo 5.77:1 · dorado-oscuro sobre editorial 4.96:1 / blanco 5.32:1 */
+  --color-quirurgico-claro: #77ACBB;
+  --color-dorado-oscuro: #786A45;
 
   /* Utility color — NOT part of the medical brand palette.
      Used exclusively for WhatsApp CTA buttons.

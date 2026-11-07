@@ -282,10 +282,10 @@ function DrugAccordion({ drug, colorBg, border }: DrugAccordionProps) {
               <span className="text-xs bg-violet-600 text-white px-2 py-0.5 rounded-full">más usada</span>
             )}
             {drug.brand && (
-              <span className="text-xs text-slate-500">{drug.brand}</span>
+              <span className="text-xs text-slate-600">{drug.brand}</span>
             )}
           </div>
-          <div className="text-xs text-slate-500 mt-0.5">
+          <div className="text-xs text-slate-600 mt-0.5">
             {drug.dose && <span>{drug.dose} · </span>}
             <span>Efecto: {drug.onset}</span>
           </div>
@@ -360,7 +360,7 @@ export default function MedicamentosProstataContent() {
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"
           >
-            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-quirurgico-claro font-sans font-semibold text-sm uppercase tracking-widest mb-4">
               Hiperplasia Prostática Benigna · Tratamiento Médico
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
@@ -369,7 +369,7 @@ export default function MedicamentosProstataContent() {
             <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
               Tamsulosina, finasteride, dutasteride, silodosina — cada uno actúa diferente. La clave está en saber si tu situación es la adecuada para el medicamento o si ya es momento de ir más allá.
             </p>
-            <p className="text-quirurgico font-sans font-medium italic mb-10">
+            <p className="text-quirurgico-claro font-sans font-medium italic mb-10">
               "La uroflujometría determina si los medicamentos son suficientes o si necesitas cirugía."
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
@@ -502,7 +502,7 @@ export default function MedicamentosProstataContent() {
                 <div className="bg-red-800 rounded-2xl p-5">
                   <div className="text-3xl font-bold text-white mb-1">&lt; 10 <span className="text-lg font-normal">mL/s</span></div>
                   <div className="text-red-200 font-medium">Obstrucción significativa</div>
-                  <p className="text-red-300 text-sm mt-2">
+                  <p className="text-red-200 text-sm mt-2">
                     Obstrucción demostrada. El medicamento puede aliviar síntomas, pero el procedimiento definitivo debe considerarse seriamente.
                   </p>
                 </div>
@@ -563,7 +563,7 @@ export default function MedicamentosProstataContent() {
               >
                 <div className={`rounded-2xl border ${dc.border} ${dc.bg} p-6`}>
                   <h3 className={`text-xl font-bold ${dc.color} mb-1`}>{dc.title}</h3>
-                  <p className="text-sm text-slate-500 mb-3">{dc.subtitle}</p>
+                  <p className="text-sm text-slate-600 mb-3">{dc.subtitle}</p>
                   {dc.note && (
                     <p className="text-sm text-slate-700 mb-5 leading-relaxed border-l-4 border-violet-300 pl-3">
                       {dc.note}
@@ -684,7 +684,7 @@ export default function MedicamentosProstataContent() {
                   className={`text-xs font-bold px-2 py-1 rounded shrink-0 mt-0.5 ${
                     ind.absolute
                       ? "bg-red-600 text-white"
-                      : "bg-amber-500 text-white"
+                      : "bg-amber-700 text-white"
                   }`}
                 >
                   {ind.absolute ? "ABSOLUTA" : "RELATIVA"}
@@ -716,7 +716,7 @@ export default function MedicamentosProstataContent() {
                   name: "HoLEP (Láser Holmio)",
                   detail: "Enucleación prostática con láser. Gold standard para próstatas grandes. Resultados definitivos. Sin incisión.",
                   badge: "Gold Standard",
-                  color: "bg-yellow-600",
+                  color: "bg-yellow-700",
                 },
                 {
                   name: "TURP Bipolar",
@@ -728,7 +728,7 @@ export default function MedicamentosProstataContent() {
                   name: "Rezūm (Vapor de agua)",
                   detail: "Inyección de vapor a través de uretra. Ambulatorio. Sin anestesia general. Preserva eyaculación.",
                   badge: "Mínima invasión",
-                  color: "bg-teal-600",
+                  color: "bg-teal-700",
                 },
                 {
                   name: "UroLift",

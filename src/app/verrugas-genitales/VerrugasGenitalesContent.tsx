@@ -261,7 +261,7 @@ export default function VerrugasGenitalesContent() {
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"
           >
-            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-quirurgico-claro font-sans font-semibold text-sm uppercase tracking-widest mb-4">
               Urología · Dermatología Urológica · León, Guanajuato
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
@@ -270,7 +270,7 @@ export default function VerrugasGenitalesContent() {
             <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
               Eliminación con crioterapia, láser y electrofulguración. Las verrugas genitales tienen solución — no necesitas vivir con ellas.
             </p>
-            <p className="text-quirurgico font-sans font-medium italic mb-10">
+            <p className="text-quirurgico-claro font-sans font-medium italic mb-10">
               "Atención confidencial, diagnóstico y tratamiento profesional."
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -517,7 +517,7 @@ export default function VerrugasGenitalesContent() {
         </section>
 
         {/* ¿SON PELIGROSAS? */}
-        <section className="bg-emerald-600 py-16 text-white">
+        <section className="bg-emerald-800 py-16 text-white">
           <div className="mx-auto max-w-5xl px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -851,7 +851,7 @@ export default function VerrugasGenitalesContent() {
                       <p className="text-sm text-white font-medium">{item.mito}</p>
                     </div>
                     <div className="bg-emerald-50 border-l border-emerald-200 p-4 flex gap-3 items-start">
-                      <span className="bg-emerald-500 text-white text-xs font-bold px-2 py-0.5 rounded shrink-0 mt-0.5">REALIDAD</span>
+                      <span className="bg-emerald-700 text-white text-xs font-bold px-2 py-0.5 rounded shrink-0 mt-0.5">REALIDAD</span>
                       <p className="text-sm text-emerald-800">{item.realidad}</p>
                     </div>
                   </div>

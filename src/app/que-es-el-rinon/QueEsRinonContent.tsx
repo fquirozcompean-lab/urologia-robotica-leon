@@ -87,7 +87,7 @@ export default function QueEsRinonContent() {
       {/* HERO */}
       <section className="bg-petroleo text-editorial py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">
-          <p className="text-sm font-sans font-semibold uppercase tracking-widest text-quirurgico mb-4">
+          <p className="text-sm font-sans font-semibold uppercase tracking-widest text-quirurgico-claro mb-4">
             Guía para pacientes · León, Guanajuato
           </p>
           <h1 className="text-4xl md:text-5xl font-bold font-sans leading-tight mb-6">
@@ -289,7 +289,10 @@ export default function QueEsRinonContent() {
           </div>
           <p className="mt-4 text-slate-700 leading-relaxed">
             Con frecuencia trabajan en equipo. Si no sabes con cuál empezar, el tipo de síntoma
-            suele orientar: dolor, cálculos o sangre en la orina, al urólogo.
+            suele orientar: dolor, cálculos o sangre en la orina, al urólogo.{" "}
+            <Link href="/que-hace-un-urologo" className="text-acero font-medium hover:underline">
+              ¿Qué hace un urólogo y cuándo ir? →
+            </Link>
           </p>
         </section>
 

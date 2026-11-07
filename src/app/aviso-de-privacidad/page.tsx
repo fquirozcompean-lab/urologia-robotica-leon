@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function AvisoPrivacidadPage() {
   return (
-    <div className="bg-white">
+    <main className="bg-white">
       <section className="bg-petroleo text-editorial py-12 px-4">
         <div className="max-w-3xl mx-auto">
           <h1 className="font-sans font-bold text-3xl md:text-4xl">
@@ -111,6 +111,6 @@ export default function AvisoPrivacidadPage() {
           </Link>
         </article>
       </section>
-    </div>
+    </main>
   );
 }

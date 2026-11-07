@@ -117,7 +117,7 @@ export default function VphEnHombresContent() {
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"
           >
-            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-quirurgico-claro font-sans font-semibold text-sm uppercase tracking-widest mb-4">
               Urología · Salud Sexual · León, Guanajuato
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
@@ -126,7 +126,7 @@ export default function VphEnHombresContent() {
             <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
               Información clara sobre el virus del papiloma humano en hombres — diagnóstico, tratamiento y prevención. El VPH es más común de lo que piensas.
             </p>
-            <p className="text-quirurgico font-sans font-medium italic mb-10">
+            <p className="text-quirurgico-claro font-sans font-medium italic mb-10">
               "Consulta confidencial, sin juicios, con profesionalismo."
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -237,7 +237,7 @@ export default function VphEnHombresContent() {
                   <span className="text-2xl">✅</span>
                   <div>
                     <h3 className="font-bold text-emerald-800">VPH de Bajo Riesgo</h3>
-                    <p className="text-xs text-emerald-600">No causan cáncer</p>
+                    <p className="text-xs text-emerald-700">No causan cáncer</p>
                   </div>
                 </div>
                 <div className="bg-emerald-100 rounded-xl px-4 py-2 inline-block mb-4">
@@ -260,7 +260,7 @@ export default function VphEnHombresContent() {
                   <span className="text-2xl">⚠️</span>
                   <div>
                     <h3 className="font-bold text-rose-800">VPH de Alto Riesgo</h3>
-                    <p className="text-xs text-rose-600">Pueden causar cáncer — requieren vigilancia</p>
+                    <p className="text-xs text-rose-700">Pueden causar cáncer — requieren vigilancia</p>
                   </div>
                 </div>
                 <div className="bg-rose-100 rounded-xl px-4 py-2 inline-block mb-4">
@@ -291,7 +291,7 @@ export default function VphEnHombresContent() {
                   <div key={item.cancer} className={`rounded-xl border p-4 ${item.color}`}>
                     <h4 className="font-semibold text-sm mb-1">{item.cancer}</h4>
                     <p className="text-xs font-medium mb-2">{item.rate}</p>
-                    <p className="text-xs opacity-80">{item.note}</p>
+                    <p className="text-xs">{item.note}</p>
                   </div>
                 ))}
               </div>
@@ -631,7 +631,7 @@ export default function VphEnHombresContent() {
                 </ul>
                 <div className="mt-4 bg-emerald-50 rounded-xl p-3 text-center">
                   <div className="text-2xl font-bold text-emerald-700">&gt;90%</div>
-                  <div className="text-xs text-emerald-600">efectividad contra tipos incluidos</div>
+                  <div className="text-xs text-emerald-700">efectividad contra tipos incluidos</div>
                 </div>
               </motion.div>
 
@@ -646,9 +646,9 @@ export default function VphEnHombresContent() {
                     { label: "PUEDE APLICARSE HASTA", edad: "45 años", desc: "Beneficio menor pero existe — consulta con tu urólogo", color: "bg-slate-50 border-slate-200 text-slate-800" },
                   ].map((item) => (
                     <div key={item.label} className={`rounded-xl border p-3 ${item.color}`}>
-                      <p className="text-xs font-medium opacity-60 mb-0.5">{item.label}</p>
+                      <p className="text-xs font-medium mb-0.5">{item.label}</p>
                       <p className="font-bold">{item.edad}</p>
-                      <p className="text-xs opacity-70 mt-0.5">{item.desc}</p>
+                      <p className="text-xs mt-0.5">{item.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -677,7 +677,7 @@ export default function VphEnHombresContent() {
 
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
               className="mt-8 text-center">
-              <WASelectorLink mensaje={WA_CONFIDENCIAL} motivo="vph" className="inline-block bg-emerald-600 text-white font-semibold px-8 py-3 rounded-2xl hover:bg-emerald-700 transition shadow-md">
+              <WASelectorLink mensaje={WA_CONFIDENCIAL} motivo="vph" className="inline-block bg-emerald-700 text-white font-semibold px-8 py-3 rounded-2xl hover:bg-emerald-800 transition shadow-md">
                 Consultar sobre vacunación VPH
               </WASelectorLink>
             </motion.div>
@@ -802,7 +802,7 @@ export default function VphEnHombresContent() {
                 <div className={`p-4 ${cancer.headerColor}`}>
                   <h3 className="font-bold text-slate-800">{cancer.titulo}</h3>
                   <p className="text-sm font-medium text-slate-700 mt-1">{cancer.stat}</p>
-                  <p className="text-xs text-slate-500 mt-1">{cancer.prevalencia}</p>
+                  <p className="text-xs text-slate-600 mt-1">{cancer.prevalencia}</p>
                 </div>
                 <div className="p-4">
                   <p className="text-xs font-semibold text-slate-600 mb-2">Señales de alerta:</p>
@@ -813,7 +813,7 @@ export default function VphEnHombresContent() {
                       </li>
                     ))}
                   </ul>
-                  <p className="text-xs text-slate-500 italic">{cancer.nota}</p>
+                  <p className="text-xs text-slate-600 italic">{cancer.nota}</p>
                 </div>
               </motion.div>
             ))}

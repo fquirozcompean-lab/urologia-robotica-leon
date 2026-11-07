@@ -11,6 +11,12 @@ export const WA_ANGELES = "5214791037564"; // Asistente Hospital Ángeles León
 export const WA_MUGUERZA = "5214772351442"; // Asistente Hospital Christus Muguerza
 export const EMAIL_CONTACTO = "urologoquiroz@gmail.com";
 
+// Enlaces "Pedir reseñas" de cada perfil de Google Business. Los QR impresos apuntan a
+// /resena/angeles y /resena/muguerza (redirecciones en next.config.ts): si Google cambia
+// un enlace, se actualiza aquí y los QR siguen funcionando.
+export const RESENA_ANGELES = "https://g.page/r/CZ_5DgwkICgwEBM/review";
+export const RESENA_MUGUERZA = "https://g.page/r/CWyF-9f5xcThEBM/review";
+
 export const SEDES = {
   angeles: {
     id: "angeles",

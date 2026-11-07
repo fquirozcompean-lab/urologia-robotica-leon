@@ -340,7 +340,7 @@ export default function CancerVejigaContent() {
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"
           >
-            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-quirurgico-claro font-sans font-semibold text-sm uppercase tracking-widest mb-4">
               Urología Oncológica · León, Guanajuato
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
@@ -349,7 +349,7 @@ export default function CancerVejigaContent() {
             <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
               La sangre en la orina puede ser señal de cáncer de vejiga — el diagnóstico temprano salva vidas. Cistoscopia, resección transuretral y cistectomía robótica en León.
             </p>
-            <p className="text-quirurgico font-sans font-medium italic mb-10">
+            <p className="text-quirurgico-claro font-sans font-medium italic mb-10">
               "Si ves sangre en tu orina, no esperes — el diagnóstico temprano lo cambia todo."
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -791,7 +791,7 @@ export default function CancerVejigaContent() {
                       </span>
                       <span>
                         {s}
-                        {note && <span className="text-slate-400 ml-1">({note})</span>}
+                        {note && <span className="text-slate-500 ml-1">({note})</span>}
                       </span>
                     </li>
                   ))}
@@ -859,37 +859,37 @@ export default function CancerVejigaContent() {
                   step: "01",
                   title: "Historia clínica y evaluación de riesgos",
                   desc: "Análisis detallado de los síntomas, tiempo de evolución, factores de riesgo (tabaquismo, exposición laboral), medicamentos y antecedentes familiares.",
-                  color: "text-rose-200",
+                  color: "text-rose-500",
                 },
                 {
                   step: "02",
                   title: "Examen físico y análisis de orina",
                   desc: "El examen general de orina detecta sangre (macro o microscópica), leucocitos e infección. La citología urinaria busca células cancerosas exfoliadas en la orina.",
-                  color: "text-rose-200",
+                  color: "text-rose-500",
                 },
                 {
                   step: "03",
                   title: "Citología urinaria",
                   desc: "Análisis microscópico de células presentes en la orina para detectar células cancerosas. Alta especificidad para tumores de alto grado. Se obtiene de 3 muestras de orina matutina.",
-                  color: "text-rose-200",
+                  color: "text-rose-500",
                 },
                 {
                   step: "04",
                   title: "Ultrasonido renal y vesical",
                   desc: "Evalúa el riñón (hidronefrosis, masas renales), la vejiga (masas, grosor de pared) y el residuo postmiccional. No requiere contraste ni radiación. Estudio de primera línea.",
-                  color: "text-rose-200",
+                  color: "text-rose-500",
                 },
                 {
                   step: "05",
                   title: "TAC de abdomen y pelvis con contraste (urografía-TC)",
                   desc: "Permite evaluar el tracto urinario completo (riñones, uréteres, vejiga) y detectar adenopatías o extensión a órganos vecinos. Esencial para la estadificación.",
-                  color: "text-rose-200",
+                  color: "text-rose-500",
                 },
                 {
                   step: "06",
                   title: "Cistoscopia — El estándar de oro",
                   desc: "Visualización directa del interior de la vejiga con una cámara flexible o rígida. Permite ver el tumor, su localización, tamaño y apariencia. Si hay lesión sospechosa, se programa resección transuretral para diagnóstico definitivo y tratamiento.",
-                  color: "text-rose-200",
+                  color: "text-rose-500",
                 },
               ].map((d) => (
                 <Card key={d.step}>
@@ -1464,7 +1464,7 @@ export default function CancerVejigaContent() {
         {/* SEGUNDA OPINIÓN CROSS-LINK */}
         <section className="bg-editorial border-l-4 border-dorado py-10 px-6 md:px-12 my-12 rounded-r-xl">
           <div className="max-w-3xl">
-            <span className="text-dorado font-sans font-bold text-sm uppercase tracking-wide">
+            <span className="text-dorado-oscuro font-sans font-bold text-sm uppercase tracking-wide">
               ¿Ya tienes este diagnóstico?
             </span>
             <h3 className="font-sans font-bold text-2xl text-petroleo mt-2 mb-3">

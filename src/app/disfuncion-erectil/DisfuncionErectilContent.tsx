@@ -329,7 +329,7 @@ function TratamientoAccordion({ item }: { item: TratamientoItem }) {
               </span>
             )}
           </div>
-          <div className="text-xs text-slate-500 mt-0.5 leading-relaxed line-clamp-2">{item.desc}</div>
+          <div className="text-xs text-slate-600 mt-0.5 leading-relaxed line-clamp-2">{item.desc}</div>
         </div>
         <span className="text-slate-400 text-lg shrink-0 mt-0.5">{open ? "−" : "+"}</span>
       </button>
@@ -409,7 +409,7 @@ export default function DisfuncionErectilContent() {
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"
           >
-            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-quirurgico-claro font-sans font-semibold text-sm uppercase tracking-widest mb-4">
               Andrología · Medicina Sexual · León, Guanajuato
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
@@ -418,7 +418,7 @@ export default function DisfuncionErectilContent() {
             <p className="text-xl md:text-2xl font-serif text-editorial/85 leading-relaxed max-w-3xl mx-auto mb-4">
               Consulta confidencial, diagnóstico preciso y tratamiento personalizado. La disfunción eréctil es un problema médico real con soluciones efectivas en más del 90% de los casos.
             </p>
-            <p className="text-quirurgico font-sans font-medium italic mb-10">
+            <p className="text-quirurgico-claro font-sans font-medium italic mb-10">
               "Consulta confidencial, privada y sin juicios."
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
@@ -539,7 +539,7 @@ export default function DisfuncionErectilContent() {
                 >
                   <div className="text-2xl mb-2">{s.icon}</div>
                   <div className={`font-semibold text-sm ${s.strong ? "text-blue-800" : "text-slate-800"}`}>{s.label}</div>
-                  <div className="text-xs text-slate-500 mt-1">{s.detail}</div>
+                  <div className="text-xs text-slate-600 mt-1">{s.detail}</div>
                 </motion.div>
               ))}
             </div>
@@ -584,7 +584,7 @@ export default function DisfuncionErectilContent() {
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-green-600 rounded-2xl p-6">
+              <div className="bg-green-800 rounded-2xl p-6">
                 <h3 className="font-bold mb-4">Cura completa posible cuando...</h3>
                 <ul className="space-y-2 text-sm text-green-100">
                   {[
@@ -601,7 +601,7 @@ export default function DisfuncionErectilContent() {
                   ))}
                 </ul>
               </div>
-              <div className="bg-green-600 rounded-2xl p-6">
+              <div className="bg-green-800 rounded-2xl p-6">
                 <h3 className="font-bold mb-4">Control excelente (aunque no cura)</h3>
                 <ul className="space-y-2 text-sm text-green-100">
                   {[
@@ -616,7 +616,7 @@ export default function DisfuncionErectilContent() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-4 bg-green-500 rounded-lg p-3 text-sm">
+                <div className="mt-4 bg-green-900 rounded-lg p-3 text-sm">
                   No tener cura completa NO significa vivir sin erecciones. Los tratamientos permiten vida sexual activa en más del 90% de los casos.
                 </div>
               </div>

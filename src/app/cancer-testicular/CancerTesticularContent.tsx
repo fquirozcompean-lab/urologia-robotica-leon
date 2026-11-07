@@ -233,7 +233,7 @@ export default function CancerTesticularContent() {
             transition={{ duration: 0.7 }}
             className="relative max-w-5xl mx-auto text-center"
           >
-            <p className="text-quirurgico font-sans font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-quirurgico-claro font-sans font-semibold text-sm uppercase tracking-widest mb-4">
               Urología Oncológica · León, Guanajuato
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
@@ -243,7 +243,7 @@ export default function CancerTesticularContent() {
               El cáncer más frecuente en hombres jóvenes — y uno de los más curables en toda la
               oncología cuando se detecta y trata a tiempo.
             </p>
-            <p className="text-quirurgico font-sans font-medium italic mb-10">
+            <p className="text-quirurgico-claro font-sans font-medium italic mb-10">
               &quot;Ante cualquier bulto o masa en el testículo, no esperes. La evaluación oportuna
               puede ser determinante.&quot;
             </p>
@@ -275,7 +275,7 @@ export default function CancerTesticularContent() {
                 {
                   stat: "99%",
                   label: "supervivencia a 5 años en estadio I seminoma",
-                  color: "text-dorado",
+                  color: "text-editorial",
                 },
                 {
                   stat: "15–35",
@@ -285,7 +285,7 @@ export default function CancerTesticularContent() {
                 {
                   stat: ">95%",
                   label: "curación en estadio I no seminoma",
-                  color: "text-dorado",
+                  color: "text-editorial",
                 },
                 {
                   stat: "1–2%",
@@ -673,7 +673,7 @@ export default function CancerTesticularContent() {
               ].map((d) => (
                 <Card key={d.step}>
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-2xl font-bold font-sans text-teal-200">{d.step}</span>
+                    <span className="text-2xl font-bold font-sans text-teal-600">{d.step}</span>
                     {d.icon}
                   </div>
                   <h3 className="font-semibold font-sans text-gris-profundo">{d.title}</h3>
@@ -1021,7 +1021,7 @@ export default function CancerTesticularContent() {
         {/* SEGUNDA OPINIÓN CROSS-LINK */}
         <section className="bg-editorial border-l-4 border-dorado py-10 px-6 md:px-12 my-12 rounded-r-xl mx-4 md:mx-auto md:max-w-5xl">
           <div className="max-w-3xl">
-            <span className="text-dorado font-sans font-bold text-sm uppercase tracking-wide">
+            <span className="text-dorado-oscuro font-sans font-bold text-sm uppercase tracking-wide">
               ¿Ya tienes este diagnóstico?
             </span>
             <h3 className="font-sans font-bold text-2xl text-petroleo mt-2 mb-3">
@@ -1138,7 +1138,7 @@ export default function CancerTesticularContent() {
                 </ul>
                 <div className="mt-5 border-t border-slate-200 pt-4 text-xs font-sans text-slate-500">
                   C.P. 8860892 · C.E. 12465195 · Certificado CONAMEU ·{" "}
-                  <span className="text-slate-400">Aviso COFEPRIS: 2611072002A00152</span>
+                  <span className="text-slate-500">Aviso COFEPRIS: 2611072002A00152</span>
                 </div>
               </Card>
             </div>
@@ -1292,7 +1292,7 @@ export default function CancerTesticularContent() {
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="mt-2 text-quirurgico font-sans font-medium italic"
+              className="mt-2 text-quirurgico-claro font-sans font-medium italic"
             >
               &quot;No esperes dolor para consultar — el síntoma más común del cáncer testicular
               es una masa indolora.&quot;
@@ -1331,7 +1331,7 @@ export default function CancerTesticularContent() {
             >
               <p>Hospital Ángeles León — Consultorio 615, Torre II · Lun, Mar, Jue</p>
               <p>Hospital Christus Muguerza Altagracia — Cons. 724 · Mié, Vie</p>
-              <p className="mt-3 text-xs text-editorial/40">
+              <p className="mt-3 text-xs text-editorial/70">
                 Aviso de Publicidad COFEPRIS: 2611072002A00152
               </p>
             </motion.div>
