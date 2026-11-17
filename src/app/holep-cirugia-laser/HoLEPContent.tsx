@@ -875,8 +875,8 @@ export default function HoLEPContent() {
               transition={{ duration: 0.4 }}
               className="text-xl font-serif text-editorial/85 mb-10 max-w-2xl mx-auto"
             >
-              Agenda tu evaluación con el Dr. Quiroz. Determinaremos si HoLEP es la mejor
-              opción para tu caso específico.
+              Agenda tu evaluación con el Dr. Quiroz. Determinaremos si HoLEP es la opción adecuada
+              para tu caso específico.
             </motion.p>
             <motion.div
               variants={fadeUp}

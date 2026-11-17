@@ -584,7 +584,7 @@ export default function CancerProstataContent() {
                   tag: "Riesgo intermedio / alto · Localizado",
                   tagColor: "bg-blue-100 text-blue-700",
                   title: "Prostatectomía Robótica (Da Vinci)",
-                  body: "Cuando la cirugía es la mejor opción para tu caso, la vía robótica ofrece ventajas quirúrgicas importantes: visión 3D magnificada, precisión milimétrica, preservación de nervios, mínimo sangrado y hospitalización de 1–2 días. El Dr. Quiroz realizó su formación en cirugía robótica en el Hospital Albert Einstein (Brasil) y el INCan.",
+                  body: "Cuando la cirugía es la opción adecuada para tu caso, la vía robótica ofrece ventajas quirúrgicas importantes: visión 3D magnificada, gran precisión, preservación de nervios, mínimo sangrado y hospitalización de 1–2 días. El Dr. Quiroz realizó su formación en cirugía robótica en el Hospital Albert Einstein (Brasil) y el INCan.",
                   note: "Ventaja clave: el PSA cae a cero días después de la cirugía, lo que permite detectar recurrencia de forma temprana y precisa.",
                 },
                 {

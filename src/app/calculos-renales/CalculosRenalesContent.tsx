@@ -1102,7 +1102,7 @@ export default function CalculosRenalesContent() {
               transition={{ duration: 0.4 }}
               className="mt-4 text-lg text-slate-200"
             >
-              Una valoración completa determina el mejor tratamiento para tu cálculo y un
+              Una valoración completa determina el tratamiento más adecuado para tu cálculo y un
               plan personalizado para que no vuelva a aparecer. Agenda tu consulta con el
               Dr. Quiroz en León, Guanajuato.
             </motion.p>

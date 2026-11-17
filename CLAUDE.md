@@ -170,6 +170,8 @@ npx lighthouse https://urologiaroboticaleon.com/ --output=json \
 Línea base de producción, móvil y sin Kaspersky (5 nov 2026, antes de corregir el H1): home 96 ·
 /valores-antigeno 97 · /holep 89 · /cancer-prostata 73 (LCP 8 s). Accesibilidad 96-97, Best Practices
 100, SEO 100.
+Auditoría 17 nov 2026 (producción): home 93 · /cancer-prostata 96 (LCP 2.2 s) · /holep 97 ·
+/que-hace-un-urologo 98 · /cancer-prostata-avanzado 98. Accesibilidad, Best Practices y SEO en 100.
 
 ### LCP — el H1 no puede depender de una animación
 En las páginas interiores el LCP es el H1. Si está dentro de un `motion.*` con `initial` en opacidad
@@ -379,13 +381,14 @@ solo se infla por calificación de cartas Pokémon; "APE" por búsquedas en ingl
 
 ## Estado de seguridad (npm audit)
 
-Última revisión: **5 noviembre 2026**.
+Última revisión: **17 noviembre 2026**.
 
 | Fecha | Antes | Después | Acción |
 |---|---|---|---|
 | Jul 2026 | 6 (5 high, 1 critical) | 17 high, **0 critical** | `npm audit fix` (no-breaking, solo `package-lock.json`) |
 | 4 nov 2026 | 23 (1 critical, 6 high, 16 moderate) | 14 moderate, **0 high, 0 critical** | `npm audit fix` + piso de `next` a `^16.4.5` en package.json |
 | 5 nov 2026 | 14 moderate | 8 moderate | `eslint-config-next` 15.5.2 → 16.4.5 + `eslint.config.mjs` a formato flat nativo |
+| 17 nov 2026 | 7 moderate | **0** | `npm audit fix` (solo `package-lock.json`: la cadena de @typescript-eslint publicó su corrección) |
 
 **Resuelto en nov 2026:** `next` 16.2.12 → **16.4.5**. La versión anterior tenía
 avisos críticos de ejecución remota de código, entre ellos en el optimizador de
@@ -393,11 +396,7 @@ imágenes (SVG/AVIF), que corrigen 16.3.x y 16.4.1+. Con esto salieron también 
 `postcss` y `sharp` embebidos. Se subió el piso del rango en package.json para que
 un lockfile regenerado no pueda volver a una versión vulnerable.
 
-**Pendiente — cadena de eslint** (8 moderate: minimatch → @typescript-eslint →
-`eslint-config-next`, ya en su última versión). El fix que ofrece npm es bajar de versión
-(`eslint-config-next@15`) — **NO aplicar `--force`**. Es **tooling de desarrollo**, nunca se
-envía al navegador → riesgo real ~nulo. Se resuelve cuando salga una versión nueva.
-`npm run lint` reporta 82 errores de `react/no-unescaped-entities` (comillas en texto): solo estilo,
+**Sin vulnerabilidades pendientes** (17 nov 2026). `npm run lint` reporta 82 errores de `react/no-unescaped-entities` (comillas en texto): solo estilo,
 no afectan el build.
 
 Regla: en la auditoría semanal, correr `npm audit fix` (sin `--force`), probar con

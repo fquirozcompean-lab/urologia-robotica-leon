@@ -656,7 +656,7 @@ export default function CancerRenalContent() {
               className="text-slate-600 mb-8 max-w-2xl"
             >
               La evaluación completa caracteriza el tumor (tamaño, localización, extensión) y
-              evalúa la función renal — dos pilares para elegir el mejor tratamiento.
+              evalúa la función renal — dos pilares para elegir el tratamiento más adecuado.
             </motion.p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
               {[

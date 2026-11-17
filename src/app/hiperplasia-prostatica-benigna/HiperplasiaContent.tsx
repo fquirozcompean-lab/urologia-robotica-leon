@@ -1170,9 +1170,9 @@ export default function HiperplasiaContent() {
               </FAQItem>
 
               <FAQItem q="¿Cuál es la mejor cirugía para próstata grande?">
-                Para próstatas muy grandes (más de 80–100 g), el{" "}
+                No hay una cirugía "mejor" para todos. Para próstatas muy grandes (más de 80–100 g), el{" "}
                 <strong>HoLEP (láser de Holmio)</strong> o la{" "}
-                <strong>prostatectomía simple robótica</strong> son las mejores opciones. El
+                <strong>prostatectomía simple robótica</strong> son las opciones de elección. El
                 HoLEP puede tratar próstatas de cualquier tamaño con mínimo sangrado y
                 recuperación más rápida que la cirugía abierta. La elección depende también
                 de la experiencia del cirujano y los recursos disponibles.
@@ -1212,7 +1212,7 @@ export default function HiperplasiaContent() {
               transition={{ duration: 0.4 }}
               className="mt-4 text-lg text-slate-200"
             >
-              El primer paso es una valoración completa para elegir el mejor tratamiento para
+              El primer paso es una valoración completa para elegir el tratamiento más adecuado para
               ti. Agenda tu consulta con el Dr. Quiroz en León, Guanajuato.
             </motion.p>
             <motion.p

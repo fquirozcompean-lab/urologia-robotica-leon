@@ -110,7 +110,7 @@ const faqSchema = {
       name: "¿Cuál es la mejor cirugía para próstata grande?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Para próstatas muy grandes (más de 80–100 g), el HoLEP (láser de Holmio) o la prostatectomía simple robótica son las mejores opciones. El HoLEP puede tratar próstatas de cualquier tamaño con mínimo sangrado y recuperación más rápida que la cirugía abierta. La elección depende también de la experiencia del cirujano y los recursos disponibles.",
+        text: "No hay una cirugía \"mejor\" para todos. Para próstatas muy grandes (más de 80–100 g), el HoLEP (láser de Holmio) o la prostatectomía simple robótica son las opciones de elección. El HoLEP puede tratar próstatas de cualquier tamaño con mínimo sangrado y recuperación más rápida que la cirugía abierta. La elección depende también de la experiencia del cirujano y los recursos disponibles.",
       },
     },
     {
