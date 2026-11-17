@@ -244,15 +244,19 @@ export default function ResonanciaProstataContent() {
                 De la imagen a la biopsia de fusión
               </h2>
               <p className="mt-4 text-slate-700 leading-relaxed">
-                Cuando la resonancia detecta una lesión sospechosa, sus imágenes pueden{" "}
-                <strong>superponerse (fusionarse) con el ultrasonido</strong> en tiempo
-                real durante la biopsia. Así las muestras se toman exactamente del punto
-                sospechoso, en lugar de un muestreo al azar.
+                Cuando la resonancia detecta una lesión sospechosa, esa información guía la
+                biopsia. En la <strong>fusión cognitiva</strong>, que es la que realiza el Dr.
+                Quiroz, el urólogo estudia antes las imágenes y, durante la biopsia, dirige
+                muestras adicionales a la zona sospechosa con el ultrasonido, además de las
+                muestras ordenadas de toda la glándula.
               </p>
               <p className="mt-4 text-slate-700 leading-relaxed">
-                El resultado es un diagnóstico más certero: mayor detección de los tumores
-                que sí importan y menos punciones innecesarias. La resonancia y la biopsia
-                son <strong>complementarias</strong> — una localiza, la otra confirma.
+                Hacer la resonancia antes de la biopsia mejora la detección de los tumores que
+                sí importan y puede evitar biopsias innecesarias. La resonancia y la biopsia son{" "}
+                <strong>complementarias</strong>: una localiza, la otra confirma.{" "}
+                <Link href="/biopsia-de-prostata" className="text-acero font-medium hover:underline">
+                  Cómo es la biopsia de próstata →
+                </Link>
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <WAButtonConSelector
@@ -347,10 +351,11 @@ export default function ResonanciaProstataContent() {
               indicación se valora individualmente.
             </FAQItem>
             <FAQItem q="¿Qué es una biopsia de fusión?">
-              Es una biopsia que <strong>fusiona</strong> las imágenes de la resonancia con
-              el ultrasonido en tiempo real, de modo que las muestras se toman exactamente
-              de la zona sospechosa. Es más precisa que la biopsia por muestreo al azar,
-              especialmente en lesiones pequeñas.
+              Es una biopsia que usa la resonancia para dirigir muestras a la zona sospechosa.
+              Puede hacerse con un programa que superpone las imágenes al ultrasonido o de forma{" "}
+              <strong>cognitiva</strong>: el urólogo estudia la resonancia y dirige las muestras
+              con el ultrasonido. El Dr. Quiroz realiza la fusión cognitiva, junto con las
+              muestras ordenadas de toda la glándula.
             </FAQItem>
             <FAQItem q="¿La resonancia de próstata usa contraste o radiación?">
               La resonancia <strong>no utiliza radiación</strong>. La mpRM generalmente

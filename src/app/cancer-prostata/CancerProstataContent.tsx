@@ -463,9 +463,15 @@ export default function CancerProstataContent() {
                   </h4>
                   <p className="mt-1 text-sm text-slate-700 leading-relaxed">
                     Si la resonancia o el contexto clínico lo justifican, la biopsia se dirige
-                    a las zonas sospechosas (fusión resonancia-ultrasonido). En algunos
+                    a las zonas sospechosas (fusión cognitiva con la resonancia). En algunos
                     pacientes con resonancia sin hallazgos relevantes, se puede continuar con
-                    vigilancia del PSA en lugar de biopsiar.
+                    vigilancia del PSA en lugar de biopsiar.{" "}
+                    <Link
+                      href="/biopsia-de-prostata"
+                      className="text-acero font-medium hover:underline"
+                    >
+                      Cómo es la biopsia →
+                    </Link>
                   </p>
                 </li>
               </ol>
@@ -491,7 +497,7 @@ export default function CancerProstataContent() {
                 {
                   step: "04",
                   title: "Biopsia de próstata",
-                  desc: "Obtención de muestras de tejido prostático bajo guía de ultrasonido transrectal o fusión mpRM-ultrasonido para confirmación histológica.",
+                  desc: "Obtención de muestras de tejido prostático guiada por ultrasonido y, cuando hay resonancia, dirigida a las zonas sospechosas (fusión cognitiva) para confirmación histológica.",
                 },
                 {
                   step: "05",
@@ -937,7 +943,7 @@ export default function CancerProstataContent() {
               <FAQItem q="¿La biopsia de próstata es dolorosa?">
                 Se realiza con <strong>anestesia local o sedación</strong> y la molestia es
                 tolerable para la gran mayoría de los pacientes. Dura 15-20 minutos y se guía
-                por ultrasonido o fusión con resonancia magnética para mayor precisión. Puede
+                por ultrasonido y, cuando hay resonancia, con fusión cognitiva. Puede
                 haber molestias leves posteriores —pequeñas cantidades de sangre en orina o
                 semen— que se resuelven en días.
               </FAQItem>
@@ -968,13 +974,13 @@ export default function CancerProstataContent() {
 
               <FAQItem q="¿Cuánto cuesta una biopsia de próstata y en qué consiste?">
                 La biopsia obtiene pequeñas muestras de tejido prostático para confirmar o
-                descartar el cáncer. Puede realizarse por vía transrectal o, de forma más
-                precisa, por{" "}
-                <Link href="/resonancia-magnetica-prostata" className="text-acero font-medium hover:underline">
-                  fusión con la resonancia magnética
+                descartar el cáncer. Se guía por ultrasonido y, cuando hay resonancia, se dirigen
+                muestras a las zonas sospechosas (fusión cognitiva). Tiene un costo desde
+                $18,000 MXN, que incluye sala, servicio de anestesiología, equipo rentado y
+                patología.{" "}
+                <Link href="/biopsia-de-prostata" className="text-acero font-medium hover:underline">
+                  Todo sobre la biopsia de próstata →
                 </Link>
-                , que dirige las muestras a las zonas sospechosas. El costo se informa en la
-                consulta e incluye el procedimiento y el análisis patológico.
               </FAQItem>
 
               <FAQItem q="¿Los seguros médicos cubren el tratamiento del cáncer de próstata?">

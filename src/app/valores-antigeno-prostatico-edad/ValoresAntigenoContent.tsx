@@ -253,7 +253,7 @@ export default function ValoresAntigenoContent() {
               },
               {
                 t: "Biopsia solo si está indicada",
-                d: "Dirigida a las zonas sospechosas que muestre la resonancia.",
+                d: "Dirigida a las zonas sospechosas que muestre la resonancia (fusión cognitiva).",
               },
             ].map((p, i) => (
               <li key={p.t} className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
@@ -273,6 +273,10 @@ export default function ValoresAntigenoContent() {
               className="text-acero font-medium hover:underline"
             >
               Resonancia magnética de próstata y escala PI-RADS →
+            </Link>
+            <br />
+            <Link href="/biopsia-de-prostata" className="text-acero font-medium hover:underline">
+              Biopsia de próstata: cómo es y cuánto cuesta →
             </Link>
             <br />
             <Link href="/cancer-prostata" className="text-acero font-medium hover:underline">

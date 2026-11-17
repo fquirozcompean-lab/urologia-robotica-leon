@@ -139,7 +139,7 @@ const faqSchema = {
       name: "¿La biopsia de próstata es dolorosa?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Se realiza con anestesia local o sedación y la molestia es tolerable para la gran mayoría de los pacientes. Dura 15-20 minutos y se guía por ultrasonido o fusión con resonancia magnética para mayor precisión. Puede haber molestias leves posteriores —pequeñas cantidades de sangre en orina o semen— que se resuelven en días.",
+        text: "Se realiza con anestesia local o sedación y la molestia es tolerable para la gran mayoría de los pacientes. Dura 15-20 minutos y se guía por ultrasonido y, cuando hay resonancia, con fusión cognitiva. Puede haber molestias leves posteriores —pequeñas cantidades de sangre en orina o semen— que se resuelven en días.",
       },
     },
     {
@@ -171,7 +171,7 @@ const faqSchema = {
       name: "¿Cuánto cuesta una biopsia de próstata y en qué consiste?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La biopsia obtiene pequeñas muestras de tejido prostático para confirmar o descartar el cáncer. Puede realizarse por vía transrectal o, de forma más precisa, por fusión con la resonancia magnética, que dirige las muestras a las zonas sospechosas. El costo se informa en la consulta e incluye el procedimiento y el análisis patológico.",
+        text: "La biopsia obtiene pequeñas muestras de tejido prostático para confirmar o descartar el cáncer. Se guía por ultrasonido y, cuando hay resonancia, se dirigen muestras a las zonas sospechosas (fusión cognitiva). Tiene un costo desde $18,000 MXN, que incluye sala, servicio de anestesiología, equipo rentado y patología. Todo sobre la biopsia de próstata →",
       },
     },
     {

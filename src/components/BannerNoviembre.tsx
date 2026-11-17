@@ -29,7 +29,7 @@ export default function BannerNoviembre({ motivo }: { motivo: string }) {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-5">
         <div>
           <p className="font-sans font-bold text-petroleo text-lg">
-            Noviembre, mes de la salud del hombre: revisa tu próstata
+            Últimos días de noviembre, mes de la salud del hombre: revisa tu próstata
           </p>
           <p className="font-serif text-gris-profundo mt-1 max-w-2xl">
             En etapa inicial, el cáncer de próstata casi nunca da síntomas. Se recomienda

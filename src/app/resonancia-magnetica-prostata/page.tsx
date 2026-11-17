@@ -88,7 +88,7 @@ const faqSchema = {
       name: "¿Qué es una biopsia de fusión?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Es una biopsia que fusiona las imágenes de la resonancia con el ultrasonido en tiempo real, de modo que las muestras se toman exactamente de la zona sospechosa. Es más precisa que la biopsia por muestreo al azar, especialmente en lesiones pequeñas.",
+        text: "Es una biopsia que usa la resonancia para dirigir muestras a la zona sospechosa. Puede hacerse con un programa que superpone las imágenes al ultrasonido o de forma cognitiva: el urólogo estudia la resonancia y dirige las muestras con el ultrasonido. El Dr. Quiroz realiza la fusión cognitiva, junto con las muestras ordenadas de toda la glándula.",
       },
     },
     {
