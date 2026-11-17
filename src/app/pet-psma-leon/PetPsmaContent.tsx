@@ -313,6 +313,12 @@ export default function PetPsmaContent() {
               </div>
             ))}
           </div>
+          <p className="mt-6 text-slate-700 leading-relaxed">
+            Si el estudio muestra enfermedad fuera de la próstata:{" "}
+            <Link href="/cancer-prostata-avanzado" className="text-acero font-medium hover:underline">
+              cómo se trata hoy el cáncer de próstata avanzado →
+            </Link>
+          </p>
         </div>
       </section>
 

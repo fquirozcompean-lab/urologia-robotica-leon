@@ -195,7 +195,7 @@ const faqSchema = {
       name: "¿Cuántos años vive un hombre con cáncer de próstata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Depende sobre todo de la etapa en que se detecta. Cuando el cáncer está localizado en la próstata, la supervivencia a 5 años supera el 98% y la mayoría de los hombres vive muchos años; muchos cánceres de bajo riesgo nunca llegan a poner en peligro la vida. Cuando ya hay metástasis, la supervivencia a 5 años ronda un tercio de los pacientes, aunque los tratamientos actuales han prolongado de forma importante la vida de muchos de ellos. Cada caso tiene un pronóstico distinto que el urólogo oncólogo define con el grado, la etapa y el estado de salud del paciente.",
+        text: "Depende sobre todo de la etapa en que se detecta. Cuando el cáncer está localizado en la próstata, la supervivencia a 5 años supera el 98% y la mayoría de los hombres vive muchos años; muchos cánceres de bajo riesgo nunca llegan a poner en peligro la vida. Cuando ya hay metástasis, la supervivencia a 5 años ronda un tercio de los pacientes, aunque los tratamientos actuales han prolongado de forma importante la vida de muchos de ellos. Cada caso tiene un pronóstico distinto que el urólogo oncólogo define con el grado, la etapa y el estado de salud del paciente. Conoce el cáncer de próstata avanzado y su tratamiento →",
       },
     },
     {

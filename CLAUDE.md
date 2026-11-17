@@ -205,6 +205,7 @@ corregido Nov 2026). El contenedor del hero usa `initial={false}`.
 | `/cuestionario-ipss-prostata` | `app/cuestionario-ipss-prostata/` (herramienta — sub-página del hub HPB, sin card; enlazada desde HPB, medicamentos, Rezum y uroflujometría) |
 | `/que-hace-un-urologo` | `app/que-hace-un-urologo/` (pilar general — sin card; prioridad SEO del Dr.; link en footer, home, /agendar y /que-es-el-rinon; menciona consulta desde $1,000 MXN) |
 | `/resena` | `app/resena/` (noindex, NO va en sitemap — destino de los QR para pedir reseñas en Google) |
+| `/cancer-prostata-avanzado` | `app/cancer-prostata-avanzado/` (sub-página de /cancer-prostata — sin card; enlazada desde la FAQ de supervivencia de /cancer-prostata y desde el resultado de /pet-psma-leon; cross-link a segunda opinión) |
 | `/prostatitis` | `app/prostatitis/` |
 | `/que-es-el-rinon` | `app/que-es-el-rinon/` (pilar informativo renal — card en home Cat. 4) |
 | `/dolor-de-rinon` | `app/dolor-de-rinon/` (síntoma — card en home Cat. 4) |
@@ -242,6 +243,7 @@ links dentro de las páginas clínicas relacionadas.
   "¿Te salió el antígeno prostático (PSA) elevado?" en Diagnóstico) y
   /prevencion-cancer-prostata. Por su intención de búsqueda también lleva un link de
   texto permanente en el home, debajo de "Consultas frecuentes" (sigue sin card).
+- /cancer-prostata-avanzado → hub /cancer-prostata (enfermedad avanzada/metastásica).
 - /cuestionario-ipss-prostata → hub de próstata benigna (herramienta interactiva, misma regla).
 - /uroflujometria-leon → hub de próstata benigna: enlazada desde
   /hiperplasia-prostatica-benigna (sección de diagnóstico) y /medicamentos-prostata

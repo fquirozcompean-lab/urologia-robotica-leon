@@ -1001,7 +1001,10 @@ export default function CancerProstataContent() {
                 ronda un tercio de los pacientes, aunque los tratamientos actuales han
                 prolongado de forma importante la vida de muchos de ellos. Cada caso tiene un
                 pronóstico distinto que el urólogo oncólogo define con el grado, la etapa y el
-                estado de salud del paciente.
+                estado de salud del paciente.{" "}
+                <Link href="/cancer-prostata-avanzado" className="text-acero font-medium hover:underline">
+                  Conoce el cáncer de próstata avanzado y su tratamiento →
+                </Link>
               </FAQItem>
 
               <FAQItem q="¿Cuánto cuesta operarse de cáncer de próstata en León?">
