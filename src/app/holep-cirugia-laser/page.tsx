@@ -165,7 +165,7 @@ const faqSchema = {
       name: "¿Qué tan grande puede ser la próstata para HoLEP?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No hay límite superior. Se han tratado próstatas de más de 300 gramos con éxito. Es el único procedimiento láser que puede tratar próstatas gigantes sin cirugía abierta.",
+        text: "No hay límite superior. Se han tratado próstatas de más de 300 gramos con éxito. La enucleación endoscópica con láser, de holmio o de tulio, permite tratar próstatas muy grandes sin cirugía abierta.",
       },
     },
     {
@@ -213,7 +213,7 @@ const faqSchema = {
       name: "¿Qué diferencia HoLEP de otros láseres (GreenLight, Thulium)?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "HoLEP: enuclea (extrae) tejido completo, análisis patológico completo y trata cualquier tamaño. GreenLight/Thulium: vaporizan tejido, análisis incompleto, más limitados en próstatas grandes. HoLEP tiene más evidencia científica a largo plazo.",
+        text: "La enucleación, ya sea con láser de holmio (HoLEP) o de tulio (ThuLEP), extrae el tejido obstructivo completo: permite analizar todo el tejido en patología y tratar próstatas de cualquier tamaño. La vaporización (GreenLight o tulio en modo de vaporización) destruye el tejido, deja menos muestra para patología y es más limitada en próstatas grandes. HoLEP es la técnica de enucleación con más seguimiento a largo plazo. El Dr. Quiroz realiza enucleación con láser de holmio y con láser de tulio.",
       },
     },
     {
