@@ -435,6 +435,48 @@ export default function SobreMiContent() {
               </span>
             </motion.div>
           </div>
+
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mt-10 border border-acero/40 rounded-xl p-8"
+          >
+            <h3 className="text-editorial font-bold font-sans text-xl mb-1">
+              Investigación y presentaciones
+            </h3>
+            <p className="text-quirurgico-claro font-sans text-sm font-semibold mb-4">
+              Congreso de la Sociedad Mexicana de Urología, 2026
+            </p>
+            <p className="text-editorial/85 font-serif leading-relaxed">
+              <em>
+                Enucleación prostática con láser de fibra de tulio (ThuFLEP) para el
+                tratamiento del crecimiento prostático obstructivo: estudio retrospectivo de
+                experiencia clínica inicial y resultados clínicos.
+              </em>{" "}
+              Varela Barraza O, Sánchez Vázquez LG, Quiroz Compeán A. Residencia de Urología,
+              Hospital General de León.
+            </p>
+            <p className="text-editorial/85 font-serif leading-relaxed mt-3">
+              177 pacientes operados entre 2023 y 2026; el puntaje de síntomas urinarios (IPSS)
+              bajó en promedio de 17 a 4 puntos, con un día de estancia hospitalaria.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 font-sans text-sm font-semibold">
+              <Link href="/holep-cirugia-laser#experiencia" className="text-quirurgico-claro hover:underline">
+                Ver resultados completos →
+              </Link>
+              <a
+                href="https://www.instagram.com/p/DfpF_UAlqa2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-quirurgico-claro hover:underline"
+              >
+                Presentación en Instagram →
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 

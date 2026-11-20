@@ -680,8 +680,106 @@ export default function HoLEPContent() {
           </motion.div>
         </Section>
 
+        {/* EXPERIENCIA */}
+        <Section id="experiencia" className="bg-white">
+          <SectionTitle>Nuestra Experiencia en Enucleación con Láser</SectionTitle>
+          <GoldLine />
+          <div className="max-w-4xl mx-auto">
+            <p className="font-serif text-gris-profundo leading-relaxed text-lg mb-10 text-center">
+              En el Hospital General de León, donde el Dr. Quiroz es profesor titular de la
+              residencia de Urología, el equipo realiza la{" "}
+              <strong className="font-sans">enucleación prostática con láser de fibra de tulio
+              (ThuFLEP)</strong>: la misma estrategia de enucleación que HoLEP, con otro tipo de
+              láser. Los resultados de los primeros casos se presentaron en 2026 en el congreso
+              de la Sociedad Mexicana de Urología.
+            </p>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+              {[
+                { n: "177", t: "pacientes operados entre 2023 y 2026" },
+                { n: "17 → 4", t: "puntaje de síntomas IPSS antes y después" },
+                { n: "1 día", t: "de estancia hospitalaria en promedio" },
+                { n: "6 meses", t: "de seguimiento mínimo por paciente" },
+              ].map((d) => (
+                <motion.div
+                  key={d.t}
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4 }}
+                  className="rounded-xl bg-editorial border-t-4 border-acero p-5 text-center"
+                >
+                  <p className="font-sans text-3xl font-bold text-petroleo">{d.n}</p>
+                  <p className="font-serif text-sm text-gris-profundo mt-2 leading-snug">{d.t}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="overflow-x-auto rounded-xl border border-gris-premium/30">
+              <table className="w-full text-left text-sm">
+                <caption className="sr-only">
+                  Resultados de la serie de enucleación prostática con láser de fibra de tulio
+                </caption>
+                <thead className="bg-petroleo text-editorial">
+                  <tr>
+                    <th scope="col" className="px-4 py-3 font-sans font-semibold">Resultado</th>
+                    <th scope="col" className="px-4 py-3 font-sans font-semibold">Valor</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gris-premium/20 font-serif text-gris-profundo">
+                  {[
+                    ["Pacientes analizados", "143 de 177 consecutivos (tras criterios de exclusión)"],
+                    ["Síntomas urinarios (IPSS, 118 pacientes)", "de 17.1 a 4.0 puntos en promedio (p < 0.0001)"],
+                    ["Calidad de vida por síntomas urinarios después de la cirugía", "1.1 ± 1.1 (escala de 0, encantado, a 6, muy mal)"],
+                    ["Antígeno prostático (143 pacientes)", "de 5.47 a 0.80 ng/mL: baja 85% al retirar el tejido que crecía (p < 0.0001)"],
+                    ["Tiempo de cirugía", "137 ± 35 minutos"],
+                    ["Tejido extraído", "51 ± 38 gramos, analizado completo en patología"],
+                    ["Sangrado estimado", "279 ± 257 mL"],
+                    ["Estancia hospitalaria", "1.0 ± 0.6 días"],
+                    ["Síntomas residuales", "7.7% con IPSS mayor de 8 en el seguimiento"],
+                  ].map(([k, v]) => (
+                    <tr key={k} className="bg-white">
+                      <th scope="row" className="px-4 py-3 font-sans font-semibold text-petroleo align-top">
+                        {k}
+                      </th>
+                      <td className="px-4 py-3">{v}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-8 rounded-xl border-l-4 border-dorado bg-editorial p-6">
+              <p className="font-sans text-sm font-semibold text-petroleo mb-2">Trabajo presentado</p>
+              <p className="font-serif text-gris-profundo text-sm leading-relaxed">
+                Varela Barraza O, Sánchez Vázquez LG, Quiroz Compeán A.{" "}
+                <em>
+                  Enucleación prostática con láser de fibra de tulio (ThuFLEP) para el
+                  tratamiento del crecimiento prostático obstructivo: estudio retrospectivo de
+                  experiencia clínica inicial y resultados clínicos.
+                </em>{" "}
+                Residencia de Urología, Hospital General de León. Congreso de la Sociedad
+                Mexicana de Urología, 2026.
+              </p>
+              <p className="font-serif text-gris-profundo text-sm leading-relaxed mt-3">
+                Estudio retrospectivo de un solo centro. Son resultados de grupo: cada paciente
+                es distinto y el resultado individual se comenta en consulta.
+              </p>
+              <a
+                href="https://www.instagram.com/p/DfpF_UAlqa2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-3 font-sans text-sm font-semibold text-acero hover:underline"
+              >
+                Ver la presentación en Instagram →
+              </a>
+            </div>
+          </div>
+        </Section>
+
         {/* COSTO */}
-        <Section id="costo" className="bg-white">
+        <Section id="costo" className="bg-editorial">
           <SectionTitle>¿Cuánto cuesta HoLEP en León?</SectionTitle>
           <GoldLine />
           <motion.div
@@ -690,7 +788,7 @@ export default function HoLEPContent() {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="max-w-3xl mx-auto rounded-2xl border-2 border-dorado bg-editorial p-8 text-center"
+            className="max-w-3xl mx-auto rounded-2xl border-2 border-dorado bg-white p-8 text-center"
           >
             <p className="font-sans text-sm font-semibold uppercase tracking-widest text-dorado-oscuro mb-2">
               Cirugía láser HoLEP
@@ -784,7 +882,7 @@ export default function HoLEPContent() {
               },
               {
                 q: "¿Qué diferencia HoLEP de otros láseres (GreenLight, Thulium)?",
-                a: "La enucleación, ya sea con láser de holmio (HoLEP) o de tulio (ThuLEP), extrae el tejido obstructivo completo: permite analizar todo el tejido en patología y tratar próstatas de cualquier tamaño. La vaporización (GreenLight o tulio en modo de vaporización) destruye el tejido, deja menos muestra para patología y es más limitada en próstatas grandes. HoLEP es la técnica de enucleación con más seguimiento a largo plazo. El Dr. Quiroz realiza enucleación con láser de holmio y con láser de tulio.",
+                a: "La enucleación, ya sea con láser de holmio (HoLEP) o de tulio (ThuLEP o ThuFLEP), extrae el tejido obstructivo completo: permite analizar todo el tejido en patología y tratar próstatas de cualquier tamaño. La vaporización (GreenLight o tulio en modo de vaporización) destruye el tejido, deja menos muestra para patología y es más limitada en próstatas grandes. HoLEP es la técnica de enucleación con más seguimiento a largo plazo. El Dr. Quiroz realiza enucleación con láser de holmio y con láser de fibra de tulio.",
               },
               {
                 q: "¿Tengo que venir a León para el procedimiento?",
@@ -819,7 +917,9 @@ export default function HoLEPContent() {
                 El <strong className="font-sans">Dr. Alejandro Quiroz Compeán</strong> es
                 urólogo certificado con alta especialidad en Urología Oncológica y Cirugía
                 Robótica. Su formación en centros de excelencia internacionales le otorga el
-                dominio técnico necesario para HoLEP en próstatas de cualquier tamaño.
+                dominio técnico necesario para HoLEP en próstatas de cualquier tamaño. Es
+                profesor titular de la residencia de Urología del Hospital General de León, donde
+                su equipo presentó una serie de 177 enucleaciones con láser de fibra de tulio.
               </p>
               <ul className="space-y-2 font-serif text-gris-profundo text-sm mb-6">
                 <li>

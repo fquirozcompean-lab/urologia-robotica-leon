@@ -347,6 +347,15 @@ médica (ej. NO linkear cáncer renal → PET-PSMA: el PSMA es específico de pr
   "coordina". Tampoco "el estudio más preciso": usar "uno de los más precisos" o citar datos
   (proPSMA, Lancet 2020: exactitud 92% vs 65%).
 
+## Experiencia publicada: serie ThuFLEP (Nov 2026)
+Trabajo de la residencia del Hospital General de León (Varela Barraza O, Sánchez Vázquez LG,
+Quiroz Compeán A), presentado en el congreso de la SMU 2026; el resumen **no se publica**.
+177 operados 2023–2026, 143 analizados, IPSS 17.09→3.99, antígeno 5.47→0.80, estancia 1.03 d.
+Se muestra en /holep-cirugia-laser#experiencia y en /sobre-mi (Actividad Académica), con enlace a
+la publicación de Instagram. Reglas: citar las cifras tal cual del póster, aclarar que son
+resultados de grupo, y no afirmar que HoLEP es "el único" láser para próstatas grandes (el Dr.
+opera solo con fibra de tulio en el Hospital General).
+
 ## Jerarquía de especialidades para SEO
 1. Cáncer de próstata (hub principal)
 2. HoLEP / crecimiento prostático (+750% búsquedas — máxima prioridad de crecimiento)

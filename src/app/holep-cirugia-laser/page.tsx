@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     "cuanto cuesta holep León",
     "costo cirugía láser próstata",
     "precio holep León",
+    "ThuFLEP León",
+    "enucleación prostática láser de tulio",
+    "láser de tulio próstata León",
     "holep vs cirugia abierta",
     "cirugía láser próstata León Guanajuato",
   ],
@@ -213,7 +216,7 @@ const faqSchema = {
       name: "¿Qué diferencia HoLEP de otros láseres (GreenLight, Thulium)?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La enucleación, ya sea con láser de holmio (HoLEP) o de tulio (ThuLEP), extrae el tejido obstructivo completo: permite analizar todo el tejido en patología y tratar próstatas de cualquier tamaño. La vaporización (GreenLight o tulio en modo de vaporización) destruye el tejido, deja menos muestra para patología y es más limitada en próstatas grandes. HoLEP es la técnica de enucleación con más seguimiento a largo plazo. El Dr. Quiroz realiza enucleación con láser de holmio y con láser de tulio.",
+        text: "La enucleación, ya sea con láser de holmio (HoLEP) o de tulio (ThuLEP o ThuFLEP), extrae el tejido obstructivo completo: permite analizar todo el tejido en patología y tratar próstatas de cualquier tamaño. La vaporización (GreenLight o tulio en modo de vaporización) destruye el tejido, deja menos muestra para patología y es más limitada en próstatas grandes. HoLEP es la técnica de enucleación con más seguimiento a largo plazo. El Dr. Quiroz realiza enucleación con láser de holmio y con láser de fibra de tulio.",
       },
     },
     {
