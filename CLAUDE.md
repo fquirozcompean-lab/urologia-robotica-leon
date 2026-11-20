@@ -205,7 +205,7 @@ corregido Nov 2026). El contenedor del hero usa `initial={false}`.
 | `/prevencion-cancer-prostata` | `app/prevencion-cancer-prostata/` (sub-página de /cancer-prostata — sin card, marco de detección/evidencia) |
 | `/valores-antigeno-prostatico-edad` | `app/valores-antigeno-prostatico-edad/` (sub-página de /cancer-prostata — sin card; tabla por edad, total/libre, densidad; enlazada desde el bloque "antes de la biopsia" de /cancer-prostata y desde /prevencion-cancer-prostata) |
 | `/cuestionario-ipss-prostata` | `app/cuestionario-ipss-prostata/` (herramienta — sub-página del hub HPB, sin card; enlazada desde HPB, medicamentos, Rezum y uroflujometría) |
-| `/que-hace-un-urologo` | `app/que-hace-un-urologo/` (pilar general — sin card; prioridad SEO del Dr.; link en footer, home, /agendar y /que-es-el-rinon; menciona consulta desde $1,000 MXN) |
+| `/que-hace-un-urologo` | `app/que-hace-un-urologo/` (pilar general — sin card; prioridad SEO del Dr.; link en footer, home, /agendar y /que-es-el-rinon; menciona consulta desde $1,000 MXN; cubre también "qué es un urólogo y en qué se especializa" y cómo se forma — no crear otra página para esa intención, se canibalizarían) |
 | `/resena` | `app/resena/` (noindex, NO va en sitemap — destino de los QR para pedir reseñas en Google) |
 | `/biopsia-de-prostata` | `app/biopsia-de-prostata/` (sub-página de /cancer-prostata — sin card; enlazada desde Diagnóstico y la FAQ de costo de /cancer-prostata, /resonancia-magnetica-prostata y /valores-antigeno-prostatico-edad) |
 | `/cancer-prostata-avanzado` | `app/cancer-prostata-avanzado/` (sub-página de /cancer-prostata — sin card; enlazada desde la FAQ de supervivencia de /cancer-prostata y desde el resultado de /pet-psma-leon; cross-link a segunda opinión) |

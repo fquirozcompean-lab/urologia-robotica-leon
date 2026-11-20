@@ -73,11 +73,11 @@ export default function QueHaceUrologoContent() {
             Urología · León, Guanajuato
           </p>
           <h1 className="text-4xl md:text-5xl font-bold font-sans leading-tight mb-6">
-            ¿Qué hace un urólogo y cuándo debes ir?
+            ¿Qué es un urólogo, qué hace y cuándo debes ir?
           </h1>
           <p className="text-lg md:text-xl font-serif text-editorial/85 leading-relaxed">
             El urólogo atiende mucho más que la próstata. Aquí te explicamos qué problemas trata,
-            qué síntomas son motivo de consulta, cuándo es urgente y qué pasa en la primera visita.
+            en qué se especializa, cómo se forma, cuándo es urgente y qué pasa en la primera visita.
           </p>
         </div>
       </section>
@@ -121,6 +121,80 @@ export default function QueHaceUrologoContent() {
                 </ul>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* EN QUÉ SE ESPECIALIZA */}
+        <section>
+          <H2>¿En qué se especializa un urólogo?</H2>
+          <p className="text-slate-700 leading-relaxed mb-5">
+            Todo urólogo se forma en todas las áreas de la urología. Algunos, después de la
+            especialidad, hacen una <strong>alta especialidad</strong> (subespecialidad) para
+            concentrarse en un tipo de problema:
+          </p>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { t: "Urología oncológica", d: "Cáncer de próstata, riñón, vejiga, testículo y pene: diagnóstico, cirugía y seguimiento.", href: "/cancer-prostata", l: "Cáncer de próstata" },
+              { t: "Endourología y cálculos", d: "Procedimientos por endoscopia y con láser, sin heridas en la piel, para cálculos y obstrucciones.", href: "/calculos-renales", l: "Cálculos renales" },
+              { t: "Andrología y salud sexual", d: "Disfunción eréctil, problemas de eyaculación, fertilidad masculina y vasectomía.", href: "/disfuncion-erectil", l: "Disfunción eréctil" },
+              { t: "Urología funcional y femenina", d: "Incontinencia urinaria, vejiga hiperactiva y problemas para vaciar la vejiga, en hombres y mujeres.", href: "/uroflujometria-leon", l: "Uroflujometría" },
+              { t: "Urología pediátrica", d: "Problemas urológicos de niños, como testículo no descendido o alteraciones congénitas del riñón y la vejiga." },
+              { t: "Reconstructiva y trasplante", d: "Reparación de estrechez de uretra y lesiones, y trasplante de riñón." },
+            ].map((e) => (
+              <div key={e.t} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <h3 className="font-semibold text-slate-900">{e.t}</h3>
+                <p className="mt-1 text-sm text-slate-700 leading-relaxed">{e.d}</p>
+                {e.href && (
+                  <Link href={e.href} className="inline-block mt-2 text-sm text-acero font-medium hover:underline">
+                    {e.l} →
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
+          <p className="mt-5 text-slate-700 leading-relaxed">
+            La <strong>cirugía robótica y laparoscópica</strong> no es una subespecialidad sino
+            una forma de operar que se usa en varias de estas áreas, sobre todo en cáncer de
+            próstata y riñón.
+          </p>
+        </section>
+
+        {/* CÓMO SE FORMA */}
+        <section>
+          <H2>¿Cómo se forma un urólogo en México?</H2>
+          <ol className="space-y-3">
+            {[
+              ["Carrera de medicina", "De 6 a 7 años, incluyendo el internado y el servicio social."],
+              ["Examen Nacional de Residencias Médicas", "Para entrar a una residencia en un hospital reconocido."],
+              ["Cirugía general", "De 1 a 2 años de base quirúrgica antes de pasar a urología."],
+              ["Residencia de urología", "Varios años de formación de tiempo completo en el hospital. Entre la carrera y las residencias, son más de 10 años de preparación."],
+              ["Certificación", "El Consejo Nacional Mexicano de Urología (CONAMEU) evalúa al especialista y la certificación se renueva periódicamente."],
+              ["Alta especialidad (opcional)", "De 1 a 2 años más en un área, como urología oncológica."],
+            ].map(([t, d], i) => (
+              <li key={t} className="flex gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-acero text-white font-bold text-sm shrink-0">
+                  {i + 1}
+                </span>
+                <div>
+                  <h3 className="font-semibold text-slate-900">{t}</h3>
+                  <p className="mt-1 text-sm text-slate-700 leading-relaxed">{d}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <div className="mt-6 rounded-2xl border-l-4 border-dorado bg-editorial p-5">
+            <p className="font-semibold text-petroleo">La formación del Dr. Alejandro Quiroz</p>
+            <p className="mt-2 text-sm text-gris-profundo leading-relaxed">
+              Cirugía general y especialidad en Urología en el Instituto Nacional de Ciencias
+              Médicas y Nutrición Salvador Zubirán (INCMNSZ, UNAM); alta especialidad en Urología
+              Oncológica en el Instituto Nacional de Cancerología (INCan); posgrado en cirugía
+              robótica en el Hospital Israelita Albert Einstein (São Paulo, Brasil). Certificado
+              por CONAMEU y profesor titular de la residencia de Urología del Hospital General de
+              León.{" "}
+              <Link href="/sobre-mi" className="text-acero font-medium hover:underline">
+                Conoce al Dr. Quiroz →
+              </Link>
+            </p>
           </div>
         </section>
 
@@ -269,6 +343,31 @@ export default function QueHaceUrologoContent() {
               (próstata, testículos y pene). Diagnostica y trata problemas como crecimiento de
               próstata, cálculos renales, infecciones urinarias, disfunción eréctil y cánceres
               urológicos, con medicamentos o cirugía.
+            </FAQItem>
+            <FAQItem q="¿Qué es un urólogo y en qué se especializa?">
+              Es el médico cirujano especialista en el aparato urinario de hombres y mujeres y en
+              el aparato reproductor masculino. Todos los urólogos se forman en el área completa, y
+              algunos hacen una alta especialidad en urología oncológica, endourología y cálculos,
+              andrología y salud sexual, urología funcional y femenina, urología pediátrica,
+              reconstructiva o trasplante.
+            </FAQItem>
+            <FAQItem q="¿Cuántos años estudia un urólogo?">
+              En México, después de la carrera de medicina (6 a 7 años con internado y servicio
+              social), se hacen de 1 a 2 años de cirugía general y luego la residencia de urología:
+              en total, más de 10 años de formación. Quien hace una alta especialidad, como
+              urología oncológica, suma de 1 a 2 años más.
+            </FAQItem>
+            <FAQItem q="¿Qué es un urólogo oncólogo?">
+              Es un urólogo con alta especialidad en el diagnóstico y tratamiento del cáncer del
+              aparato urinario y genital masculino: próstata, riñón, vejiga, testículo y pene.
+              Realiza las biopsias y cirugías de estos tumores, y trabaja en equipo con oncología
+              médica y radioterapia.
+            </FAQItem>
+            <FAQItem q="¿Qué diferencia hay entre un urólogo y un andrólogo?">
+              En México, la andrología es un área de la urología: el andrólogo es un urólogo que se
+              enfoca en la salud sexual y reproductiva del hombre, como la disfunción eréctil, los
+              problemas de eyaculación y la fertilidad. Cualquier urólogo certificado atiende estos
+              problemas.
             </FAQItem>
             <FAQItem q="¿Cuándo debo ir al urólogo?">
               Cuando tengas sangre en la orina, ardor o infecciones urinarias que se repiten,

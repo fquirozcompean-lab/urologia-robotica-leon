@@ -2,11 +2,16 @@ import type { Metadata } from "next";
 import QueHaceUrologoContent from "./QueHaceUrologoContent";
 
 export const metadata: Metadata = {
-  title: "¿Qué Hace un Urólogo y Cuándo Ir? | Urólogo en León — Dr. Quiroz",
+  title: "¿Qué es un Urólogo y en qué se Especializa? Cuándo Ir | León — Dr. Quiroz",
   description:
-    "Qué atiende un urólogo, qué síntomas son motivo de consulta, cuándo es urgente y qué pasa en la primera visita. Consulta en León desde $1,000 MXN con el Dr. Alejandro Quiroz, urólogo oncólogo.",
+    "Qué es un urólogo, qué atiende, en qué se especializa y cómo se forma; cuándo ir y qué pasa en la primera visita. Consulta en León desde $1,000 MXN con el Dr. Alejandro Quiroz, urólogo oncólogo.",
   keywords: [
+    "qué es un urólogo",
+    "qué es un urólogo y en qué se especializa",
     "qué hace un urólogo",
+    "cuántos años estudia un urólogo",
+    "qué es un urólogo oncólogo",
+    "diferencia entre urólogo y andrólogo",
     "urólogo para qué sirve",
     "cuándo ir al urólogo",
     "urólogo en León",
@@ -16,9 +21,9 @@ export const metadata: Metadata = {
     "urólogo para mujeres",
   ],
   openGraph: {
-    title: "¿Qué Hace un Urólogo y Cuándo Ir? | Dr. Alejandro Quiroz — León",
+    title: "¿Qué es un Urólogo y en qué se Especializa? | Dr. Alejandro Quiroz — León",
     description:
-      "Qué atiende un urólogo, cuándo consultar y qué esperar de la primera visita. Consulta en León desde $1,000 MXN.",
+      "Qué es un urólogo, en qué se especializa, cuándo consultar y qué esperar de la primera visita. Consulta en León desde $1,000 MXN.",
     url: "https://urologiaroboticaleon.com/que-hace-un-urologo",
     siteName: "Urología Robótica León",
     images: [
@@ -34,9 +39,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "¿Qué Hace un Urólogo y Cuándo Ir? | Dr. Quiroz",
+    title: "¿Qué es un Urólogo y en qué se Especializa? | Dr. Quiroz",
     description:
-      "Qué atiende un urólogo, cuándo consultar y qué esperar de la primera visita. León, Guanajuato.",
+      "Qué es un urólogo, en qué se especializa, cuándo consultar y qué esperar de la primera visita. León, Guanajuato.",
     images: ["/og-image.jpg"],
   },
   alternates: {
@@ -54,6 +59,38 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "El urólogo es el médico y cirujano especialista en el aparato urinario de hombres y mujeres (riñones, uréteres, vejiga y uretra) y en el aparato reproductor masculino (próstata, testículos y pene). Diagnostica y trata problemas como crecimiento de próstata, cálculos renales, infecciones urinarias, disfunción eréctil y cánceres urológicos, con medicamentos o cirugía.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué es un urólogo y en qué se especializa?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Es el médico cirujano especialista en el aparato urinario de hombres y mujeres y en el aparato reproductor masculino. Todos los urólogos se forman en el área completa, y algunos hacen una alta especialidad en urología oncológica, endourología y cálculos, andrología y salud sexual, urología funcional y femenina, urología pediátrica, reconstructiva o trasplante.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuántos años estudia un urólogo?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "En México, después de la carrera de medicina (6 a 7 años con internado y servicio social), se hacen de 1 a 2 años de cirugía general y luego la residencia de urología: en total, más de 10 años de formación. Quien hace una alta especialidad, como urología oncológica, suma de 1 a 2 años más.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué es un urólogo oncólogo?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Es un urólogo con alta especialidad en el diagnóstico y tratamiento del cáncer del aparato urinario y genital masculino: próstata, riñón, vejiga, testículo y pene. Realiza las biopsias y cirugías de estos tumores, y trabaja en equipo con oncología médica y radioterapia.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué diferencia hay entre un urólogo y un andrólogo?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "En México, la andrología es un área de la urología: el andrólogo es un urólogo que se enfoca en la salud sexual y reproductiva del hombre, como la disfunción eréctil, los problemas de eyaculación y la fertilidad. Cualquier urólogo certificado atiende estos problemas.",
       },
     },
     {
@@ -128,7 +165,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "¿Qué hace un urólogo?",
+      name: "¿Qué es un urólogo?",
       item: "https://urologiaroboticaleon.com/que-hace-un-urologo",
     },
   ],
@@ -137,9 +174,9 @@ const breadcrumbSchema = {
 const medicalWebPageSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  name: "¿Qué hace un urólogo y cuándo ir?",
+  name: "¿Qué es un urólogo, qué hace y cuándo ir?",
   description:
-    "Guía sobre qué atiende la urología, qué síntomas son motivo de consulta, cuándo es urgente acudir y qué esperar de la primera consulta. Dr. Alejandro Quiroz Compeán, urólogo oncólogo en León, Guanajuato.",
+    "Guía sobre qué es un urólogo, en qué se especializa y cómo se forma, qué atiende la urología, qué síntomas son motivo de consulta, cuándo es urgente acudir y qué esperar de la primera consulta. Dr. Alejandro Quiroz Compeán, urólogo oncólogo en León, Guanajuato.",
   url: "https://urologiaroboticaleon.com/que-hace-un-urologo",
   specialty: "https://schema.org/Urologic",
   author: {
