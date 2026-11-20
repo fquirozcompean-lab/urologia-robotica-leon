@@ -681,6 +681,46 @@ export default function HoLEPContent() {
           </motion.div>
         </Section>
 
+        {/* COSTO */}
+        <Section id="costo" className="bg-white">
+          <SectionTitle>¿Cuánto cuesta HoLEP en León?</SectionTitle>
+          <GoldLine />
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="max-w-3xl mx-auto rounded-2xl border-2 border-dorado bg-editorial p-8 text-center"
+          >
+            <p className="font-sans text-sm font-semibold uppercase tracking-widest text-dorado-oscuro mb-2">
+              Cirugía láser HoLEP
+            </p>
+            <p className="font-sans text-4xl md:text-5xl font-bold text-petroleo mb-4">
+              Desde $90,000 MXN
+            </p>
+            <p className="font-serif text-gris-profundo leading-relaxed">
+              El monto final depende del tamaño de la próstata, los días de estancia y el
+              hospital. En la consulta recibes una cotización personalizada que detalla
+              honorarios médicos, hospital, anestesia, uso del láser y análisis patológico.
+            </p>
+            <p className="font-serif text-gris-profundo leading-relaxed mt-3">
+              Muchos seguros de gastos médicos cubren HoLEP: te entregamos la carta médica con
+              la indicación para tu aseguradora.
+            </p>
+            <div className="mt-6 flex justify-center">
+              <WASelectorLink
+                mensaje="Hola Dr. Quiroz, quiero una cotización para cirugía HoLEP de próstata."
+                motivo="holep-costo"
+              >
+                <span className="inline-flex items-center gap-2 bg-whatsapp text-white px-6 py-3 rounded-lg font-bold font-sans hover:opacity-90 transition cursor-pointer">
+                  Pedir mi cotización por WhatsApp
+                </span>
+              </WASelectorLink>
+            </div>
+          </motion.div>
+        </Section>
+
         {/* FAQ */}
         <Section id="faq" className="bg-white">
           <SectionTitle>Preguntas Frecuentes sobre HoLEP</SectionTitle>
@@ -737,7 +777,7 @@ export default function HoLEPContent() {
               },
               {
                 q: "¿Cuánto cuesta HoLEP en León?",
-                a: "El costo varía según el hospital y el tamaño prostático. Incluye honorarios médicos, hospital, anestesia, uso del láser y análisis patológico. Se ofrece cotización personalizada en consulta. Algunos seguros médicos cubren HoLEP.",
+                a: "La cirugía HoLEP con el Dr. Alejandro Quiroz tiene un costo desde $90,000 MXN. El monto final depende del tamaño de la próstata, los días de estancia y el hospital; en consulta se entrega una cotización personalizada que detalla honorarios médicos, hospital, anestesia, uso del láser y análisis patológico. Algunos seguros médicos cubren HoLEP.",
               },
               {
                 q: "¿Los seguros médicos cubren HoLEP?",

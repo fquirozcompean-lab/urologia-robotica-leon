@@ -67,11 +67,19 @@ const faqs: FAQ[] = [
   },
   {
     q: "¿Los hombres también tienen infecciones urinarias?",
-    a: "Sí, pero son mucho menos comunes. Cuando ocurren en hombres menores de 50 años siempre requieren investigación para descartar: hiperplasia prostática, prostatitis, cálculos, anomalías anatómicas. El tratamiento en hombres es más prolongado (7–14 días) y siempre debe basarse en un urocultivo.",
+    a: "Sí, pero son mucho menos comunes. En el hombre la infección urinaria se considera complicada y conviene investigar la causa a cualquier edad: crecimiento de la próstata, prostatitis, cálculos o alteraciones anatómicas. El tratamiento en hombres es más prolongado (7–14 días) y siempre debe basarse en un urocultivo.",
   },
   {
     q: "¿Qué es la bacteriuria asintomática? ¿Necesito antibiótico si tengo bacterias en la orina sin síntomas?",
     a: "La bacteriuria asintomática es la presencia de bacterias en la orina sin síntomas de infección. En la mayoría de personas NO requiere antibiótico: tratarla no previene infecciones futuras, pero sí aumenta la resistencia bacteriana. Solo se trata de forma obligatoria en mujeres embarazadas y antes de procedimientos urológicos invasivos. Si te recetaron antibiótico solo porque el análisis de orina mostró bacteria, pero no tienes síntomas, consulta si el tratamiento es realmente necesario.",
+  },
+  {
+    q: "¿Qué antibiótico es bueno para la infección urinaria?",
+    a: "Depende del tipo de infección y de la bacteria. En la cistitis no complicada de la mujer suelen usarse fosfomicina o nitrofurantoína, pero en hombres, en infecciones recurrentes o si hay fiebre, se necesita un urocultivo para elegir el antibiótico correcto. En México los antibióticos requieren receta: automedicarse favorece la resistencia y puede ocultar una infección más seria.",
+  },
+  {
+    q: "¿Cómo sé si la infección urinaria llegó al riñón?",
+    a: "La infección del riñón (pielonefritis) suele dar fiebre, escalofríos, dolor en la espalda baja o el costado, náuseas o vómito y malestar general, además del ardor al orinar. Es más seria que una cistitis y requiere valoración médica el mismo día; si hay vómito persistente, embarazo o un cálculo que obstruye, puede necesitar tratamiento en el hospital.",
   },
 ];
 
@@ -1085,6 +1093,25 @@ export default function InfeccionUrinariaContent() {
             {faqs.map((f, i) => (
               <FAQItem key={i} q={f.q} a={f.a} />
             ))}
+          </div>
+          <div className="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <h3 className="font-semibold text-slate-900 mb-3">Temas relacionados</h3>
+            <ul className="grid sm:grid-cols-2 gap-2 text-sm">
+              {[
+                { href: "/hematuria", t: "Sangre en la orina (hematuria)" },
+                { href: "/dolor-de-rinon", t: "Dolor de riñón: causas y cuándo preocuparse" },
+                { href: "/calculos-renales", t: "Cálculos renales y su relación con las infecciones" },
+                { href: "/prostatitis", t: "Prostatitis (próstata inflamada)" },
+                { href: "/hiperplasia-prostatica-benigna", t: "Crecimiento de la próstata" },
+                { href: "/que-hace-un-urologo", t: "¿Qué hace un urólogo y cuándo acudir?" },
+              ].map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className="text-blue-700 hover:text-blue-900 font-medium underline">
+                    {l.t} →
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 

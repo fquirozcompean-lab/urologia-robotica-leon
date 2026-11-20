@@ -449,6 +449,10 @@ actualiza ahí y los QR impresos siguen funcionando. `/resena` es la página par
 - Consulta desde **$1,000 MXN** → /que-hace-un-urologo (texto visible y FAQ).
 - Biopsia de próstata desde **$18,000 MXN**, incluye sala, anestesiología, equipo rentado y
   patología → /biopsia-de-prostata y FAQ de costo de /cancer-prostata.
+- HoLEP desde **$90,000 MXN** → sección #costo y FAQ de costo de /holep-cirugia-laser (el monto final
+  depende del tamaño de la próstata, días de estancia y hospital; cotización en consulta).
+- Cálculos renales: **sin costo publicado** (decisión del Dr.). Se explica que la variedad de
+  procedimientos y modificaciones cambia el costo y que se cotiza en consulta.
 Si un costo cambia, actualizar todas esas ubicaciones y correr `scripts/check-faq-sync.mjs --fix`.
 
 ### Biopsia de próstata: cómo se presenta

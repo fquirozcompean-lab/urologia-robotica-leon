@@ -161,7 +161,7 @@ const faqSchema = {
       name: "¿Los hombres también tienen infecciones urinarias?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí, pero son mucho menos comunes. Cuando ocurren en hombres menores de 50 años siempre requieren investigación para descartar: hiperplasia prostática, prostatitis, cálculos, anomalías anatómicas. El tratamiento en hombres es más prolongado (7–14 días) y siempre debe basarse en un urocultivo.",
+        text: "Sí, pero son mucho menos comunes. En el hombre la infección urinaria se considera complicada y conviene investigar la causa a cualquier edad: crecimiento de la próstata, prostatitis, cálculos o alteraciones anatómicas. El tratamiento en hombres es más prolongado (7–14 días) y siempre debe basarse en un urocultivo.",
       },
     },
     {
@@ -170,6 +170,22 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "La bacteriuria asintomática es la presencia de bacterias en la orina sin síntomas de infección. En la mayoría de personas NO requiere antibiótico: tratarla no previene infecciones futuras, pero sí aumenta la resistencia bacteriana. Solo se trata de forma obligatoria en mujeres embarazadas y antes de procedimientos urológicos invasivos. Si te recetaron antibiótico solo porque el análisis de orina mostró bacteria, pero no tienes síntomas, consulta si el tratamiento es realmente necesario.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué antibiótico es bueno para la infección urinaria?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Depende del tipo de infección y de la bacteria. En la cistitis no complicada de la mujer suelen usarse fosfomicina o nitrofurantoína, pero en hombres, en infecciones recurrentes o si hay fiebre, se necesita un urocultivo para elegir el antibiótico correcto. En México los antibióticos requieren receta: automedicarse favorece la resistencia y puede ocultar una infección más seria.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cómo sé si la infección urinaria llegó al riñón?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La infección del riñón (pielonefritis) suele dar fiebre, escalofríos, dolor en la espalda baja o el costado, náuseas o vómito y malestar general, además del ardor al orinar. Es más seria que una cistitis y requiere valoración médica el mismo día; si hay vómito persistente, embarazo o un cálculo que obstruye, puede necesitar tratamiento en el hospital.",
       },
     },
   ],

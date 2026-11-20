@@ -25,6 +25,9 @@ export const metadata: Metadata = {
     "hidronefrosis León",
     "cálculos en el uréter León",
     "urólogo litiasis León Guanajuato",
+    "costo tratamiento cálculos renales León",
+    "catéter doble J",
+    "qué no comer con piedras en el riñón",
   ],
   openGraph: {
     title: "Piedras en el Riñón (Cálculos Renales) en León | Dr. Quiroz Compeán",
@@ -129,6 +132,54 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Sí, la litiasis bilateral ocurre en aproximadamente el 15–20% de los pacientes. El tratamiento se prioriza según cuál cálculo cause más síntomas, obstrucción o riesgo de complicaciones. En casos seleccionados se pueden tratar ambos riñones en la misma sesión o en sesiones consecutivas.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuánto cuesta el tratamiento de cálculos renales en León?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Depende del caso. Hay mucha variedad de procedimientos y modificaciones que cambian el costo: el tamaño, el número y la localización de los cálculos, la técnica (litotripsia, ureteroscopía semirrígida o flexible con láser, nefrolitotomía percutánea), si se deja un catéter doble J, los días de hospital y el hospital. Con tus estudios de imagen se define el tratamiento y en la consulta se entrega una cotización personalizada.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué es el catéter doble J y cuánto tiempo se deja?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Es un tubo delgado y flexible que se coloca por dentro, del riñón a la vejiga, para que la orina drene mientras el uréter se desinflama. No se ve por fuera. Después de una ureteroscopía sin complicaciones suele dejarse de una a dos semanas; en otros casos, más tiempo. Puede causar ganas frecuentes de orinar, ardor o un poco de sangre en la orina. Es muy importante acudir a retirarlo en la fecha indicada: un catéter olvidado puede calcificarse y dañar el riñón.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué no debo comer si tengo piedras en el riñón?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Lo que más ayuda es reducir la sal, los alimentos procesados y embutidos, el exceso de carne roja y mariscos, y los refrescos y bebidas azucaradas. No conviene eliminar el calcio de los alimentos (leche, queso, yogur): el calcio de la dieta protege contra los cálculos. Limitar alimentos ricos en oxalato, como espinaca o chocolate, solo tiene sentido si tus cálculos son de oxalato. La dieta ideal se ajusta al tipo de cálculo identificado en el análisis.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿La cerveza o el limón ayudan a expulsar las piedras del riñón?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La cerveza no es un tratamiento: el alcohol deshidrata y sus purinas elevan el ácido úrico, lo que puede favorecer nuevos cálculos. El limón aporta citrato, que ayuda a prevenir algunos cálculos de calcio, pero no disuelve una piedra ya formada. Lo que sí ayuda es tomar suficiente agua y recibir una valoración para saber si el cálculo puede salir solo.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué estudio detecta mejor las piedras en el riñón?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La tomografía simple (sin contraste) es el estudio más preciso: muestra el tamaño, la localización y la densidad del cálculo, y si hay obstrucción. El ultrasonido no usa radiación y es útil como primer estudio, en el embarazo y para el seguimiento, pero puede no ver cálculos pequeños en el uréter. La radiografía simple no detecta todos los tipos de cálculo.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuándo un cálculo renal es una urgencia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Acude a urgencias si el dolor se acompaña de fiebre o escalofríos, si el dolor no cede con analgésicos, si hay vómito que no te permite tomar líquidos, si no puedes orinar, si tienes un solo riñón o si estás embarazada. Un riñón obstruido e infectado debe drenarse de inmediato.",
       },
     },
   ],

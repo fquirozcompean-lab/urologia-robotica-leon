@@ -4,7 +4,7 @@ import HoLEPContent from "./HoLEPContent";
 export const metadata: Metadata = {
   title: "HoLEP: Cirugía Láser de Próstata en León | Recuperación Rápida — Dr. Quiroz",
   description:
-    "Cirugía láser HoLEP para próstata grande en León, Guanajuato. Recuperación 24-48h, mínimo sangrado, resultados duraderos. Dr. Alejandro Quiroz, especialista certificado.",
+    "Cirugía láser HoLEP para próstata grande en León, Guanajuato. Hospitalización de 24-48 h, mínimo sangrado y costo desde $90,000 MXN. Dr. Alejandro Quiroz, urólogo certificado.",
   keywords: [
     "holep cirugia",
     "cirugía láser próstata León",
@@ -19,6 +19,8 @@ export const metadata: Metadata = {
     "holep cirugia recuperacion",
     "cirugia prostata grande León",
     "cuanto cuesta holep León",
+    "costo cirugía láser próstata",
+    "precio holep León",
     "holep vs cirugia abierta",
     "cirugía láser próstata León Guanajuato",
   ],
@@ -195,7 +197,7 @@ const faqSchema = {
       name: "¿Cuánto cuesta HoLEP en León?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El costo varía según el hospital y el tamaño prostático. Incluye honorarios médicos, hospital, anestesia, uso del láser y análisis patológico. Se ofrece cotización personalizada en consulta. Algunos seguros médicos cubren HoLEP.",
+        text: "La cirugía HoLEP con el Dr. Alejandro Quiroz tiene un costo desde $90,000 MXN. El monto final depende del tamaño de la próstata, los días de estancia y el hospital; en consulta se entrega una cotización personalizada que detalla honorarios médicos, hospital, anestesia, uso del láser y análisis patológico. Algunos seguros médicos cubren HoLEP.",
       },
     },
     {
